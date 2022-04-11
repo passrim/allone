@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>step5_NH e직장인대출_대출신청 및 약정서작성  - 대출</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>NH e직장인대출<span>대출신청 및 약정서 작성</span></h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">5</li>
+							<li class="is-off">6</li>
+						</ol>
+					</section>
+					<section class="topNotice">
+						<ul class="unorderList">
+							<li>NH e직장인대출 심사결과입니다.</li>
+						</ul>
+					</section>
+					<section class="fullWidth topbordered">
+						<h3 class=" bdB1">심사결과</h3>
+						<dl class="dataList bdzero">
+							<dt>대출가능금액</dt><dd><strong class="fz-14">55,000,000,000</strong> 원</dd>
+						</dl>
+					</section>
+					<section class="fullWidth topbordered">
+						<h3 class=" bdB1">대출금리</h3>
+						<dl class="dataList bdzero">
+							<dt>6개월 MOR 변동금리(A)</dt><dd>1.50%</dd>
+							<dt>가산금리(B)</dt><dd>1.50%</dd>
+							<dt>우대금리(C)</dt><dd>1.50%</dd>
+							<dt>대출금리(A+B+C)</dt><dd>2.50%</dd>
+							<dt>MOR고정금리(보간)(A)</dt><dd>1.50%</dd>
+							<dt>가산금리(B)</dt><dd>1.50%</dd>
+							<dt>우대금리(C)</dt><dd>1.50%</dd>
+							<dt>대출금리(A+B+C)</dt><dd>2.50%</dd>
+						</dl>
+					</section>
+					<section class="fullWidth topbordered">
+						<div class="requiredBox paddingAll pdT20 bdB1">
+							<h3 class=" flL mgT5">우대금리</h3>
+							<button type="button" class="btn secondary strokeType subSmallType flR">자세히</button>
+						</div>
+						<div class="checkbox withLabel centerLabel">
+							<input type="checkbox" id="checkbox01" name="checkbox"class="readOnly"onclick="return false;"><label for="checkbox01"><div><strong>급여이체자(전월 급여이체 실적기준)</strong><br><span class="fz-12">적용이율 2.50%</span></div></label>
+						</div><!-- 10/16 수정 -->
+						<div class="checkbox withLabel centerLabel">
+							<input type="checkbox" id="checkbox02" name="checkbox"class="readOnly"onclick="return false;"><label for="checkbox02"><div><strong>최근 3개월 카드이용액 100만원 이상</strong><br><span class="fz-12">적용이율 2.50%</span></div></label>
+						</div><!-- 10/16 수정 -->
+						<div class="paddingAll pdT20 pdB20">
+							<div class="requiredBox">
+								<p class="flL"><strong>우대금리 합계</strong></p>
+								<p class="flR"><strong class="greenOn">0.700%</strong></p>
+							</div>
+							<p class="certifyTxt fz-11 mgT5">대출신청금액으로 최종 실행됩니다</p>
+						</div>
+					</section>
+					<section class="fullWidth topbordered">
+						<h3 class=" bdB1">대출신청입력</h3>
+						<div class="paddingAll">
+							<label for="inputLabel1">대출신청금액</label>
+							<div class="numberInput">
+								<div class="balance balance-display" data-currency="원">
+									<input type="tel" id="inputLabel1" placeholder="1,000,000" class="formInput balance-input" name="">
+								</div>
+							</div>
+							<p class="certifyTxt fz-11 rightTxt mgT5">100만원 이상 10만원 단위로 입력</p><!-- 10/16 수정 -->
+							<label for="inputLabel2">대출 개시일</label>
+							<div class="textInput">
+								<input type="text" id="inputLabel2" placeholder="19701215" class="formInput" name="" disabled="disabled">
+								<button type="button" class="btn deleteBtn">삭제</button>
+							</div>
+							<label for="inputLabel3">대출기간만료일</label>
+							<div class="textInput">
+								<input type="text" id="inputLabel3" placeholder="19701215" class="formInput" name="" disabled="disabled">
+								<button type="button" class="btn deleteBtn">삭제</button>
+							</div>
+							
+							<!-- 2018-09-06 도움말을 위한 코드 수정  -->
+							<label for="selectLabel2" class="helpLabel">대출금 수령/자동이체 계좌 <i class="required"></i><button class="helpTooltip" name="tipbox11" title="펼쳐짐">도움말 <span></span></button>
+								<span class="helpBubble tipbox11"><button type="button" class="btn closeBtn">닫기</button>
+									<ul class="unorderList">
+										<li>대출이자는 대출입금계좌에서 자동이체됩니다.</li>
+										<li>자동이체계좌 변경은 개인인터넷뱅킹/자동이체 메뉴를 이용하시면 됩니다.</li>
+									</ul>
+								</span>
+							</label>
+							<!-- // 2018-09-06 도움말을 위한 코드 수정 -->
+							
+							<div class="select-input">
+								<select id="selectLabel1" class="formInput">
+									<option value="default" label="Select Default">Select Default</option>
+									<option value="option2" label="option2">Option2</option>
+									<option value="option3" label="option3">Option3</option>
+									<option value="option4" label="option4">Option4</option>
+								</select>
+							</div>
+							<button type="submit" class="btn secondary-gray strokeType mgT10">입금가능 여부조회</button>
+							
+							<label for="inputLabel5">자동이체일</label>
+							<div class="textInput">
+								<input type="text" id="inputLabel5" placeholder="19701215" class="formInput" name="" disabled="disabled">
+								<button type="button" class="btn deleteBtn">삭제</button>
+							</div>
+						</div>
+					</section>
+					<section class="fullWidth topbordered">
+						<h3 class=" bdB1">대출금리 변경 알림 신청 (SMS문자)</h3>
+						<div class="paddingAll">
+							<label for="inputLabel6">대출금리 변경 알림 신청</label>
+							<ul class="columnSet noGutterSet">
+								<li class="colItem">
+									<input type="radio" value="자택" name="autoTransfer" id="autoTrue" class="btn radioToggle">
+									<label for="autoTrue" class="inputLabel secondary strokeType">자택</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" value="직장" name="autoTransfer" id="autoFalse" class="btn radioToggle">
+									<label for="autoFalse" class="inputLabel secondary strokeType">직장</label>
+								</li>
+							</ul>
+							<label for="inputLabel7">대출원리금 납입 알림 신청</label>
+							<ul class="columnSet noGutterSet">
+								<li class="colItem">
+									<input type="radio" value="자택" name="autoTransfer" id="autoTrue" class="btn radioToggle">
+									<label for="autoTrue" class="inputLabel secondary strokeType">자택</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" value="직장" name="autoTransfer" id="autoFalse" class="btn radioToggle">
+									<label for="autoFalse" class="inputLabel secondary strokeType">직장</label>
+								</li>
+							</ul>
+							<label for="inputLabel8">대출 만기도래 알림 신청</label>
+							<ul class="columnSet noGutterSet">
+								<li class="colItem">
+									<input type="radio" value="자택" name="autoTransfer" id="autoTrue" class="btn radioToggle">
+									<label for="autoTrue" class="inputLabel secondary strokeType">자택</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" value="직장" name="autoTransfer" id="autoFalse" class="btn radioToggle">
+									<label for="autoFalse" class="inputLabel secondary strokeType">직장</label>
+								</li>
+							</ul>
+						</div>
+					</section>
+					<section class="topbordered">
+						<label for="inputLabel9">휴대폰번호</label>
+						<div class="textInput">
+							<input type="text" id="inputLabel9" placeholder="19701215" class="formInput" name="" disabled="disabled">
+							<button type="button" class="btn deleteBtn">삭제</button>
+						</div>
+						<label for="inputLabel10">우편발송지</label>
+						<ul class="columnSet noGutterSet">
+							<li class="colItem">
+								<input type="radio" value="자택" name="autoTransfer" id="autoTrue" class="btn radioToggle">
+								<label for="autoTrue" class="inputLabel secondary strokeType">자택</label>
+							</li>
+							<li class="colItem">
+								<input type="radio" value="직장" name="autoTransfer" id="autoFalse" class="btn radioToggle">
+								<label for="autoFalse" class="inputLabel secondary strokeType">직장</label>
+							</li>
+						</ul>
+						<label for="inputLabel11">주소</label>
+						<div class="textInput">
+							<input type="text" id="inputLabel3" placeholder="19701215" class="formInput" name="" disabled="disabled">
+							<button type="button" class="btn deleteBtn">삭제</button>
+						</div>
+						
+						<!-- 2018-09-06 도움말을 위한 코드 수정  -->
+						<label for="selectLabel2" class="helpLabel">권유직원번호(선택사항) <button class="helpTooltip" name="tipbox01" title="펼쳐짐">도움말 <span></span></button>
+							<span class="helpBubble tipbox01"><button type="button" class="btn closeBtn">닫기</button>
+								상품가입에 도움을 준 직원번호(숫자8자리)를 “직원찾기”로 검색하실 수 있습니다.
+							</span>
+						</label>
+						<!-- // 2018-09-06 도움말을 위한 코드 수정 -->
+							
+						<div class="search">
+							<input type="text" id="inputLabel5" placeholder="조회" class="formInput search-input">
+							<button type="button" class="btn deleteBtn" style="display: none;">삭제</button>
+							<button type="submit" id="" class="btn searchTxtBtn" name="">직원찾기</button>
+						</div>
+						<label for="inputLabel13">위드(WITH) 번호<button class="helpTooltip" name="" title="펼쳐짐">도움말 <span></span></button></label>
+						<div class="search">
+							<input type="text" id="inputLabel5" placeholder="조회" class="formInput search-input">
+							<button type="button" class="btn deleteBtn" style="display: none;">삭제</button>
+							<button type="submit" id="" class="btn searchTxtBtn" name="">확인</button>
+						</div>
+						<p class="noticeTxt">NH e직장인대출을 신청하시려면<br><span class="greenOn">[확인]</span> 버튼을 누르세요.</p>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

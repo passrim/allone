@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>신분증 촬영 실패 - 입출금계좌개설</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('#modalDefault', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="layerPop.open('#modalDefault', this); return false;">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- 팝업시작 -->
+		<div class="modalWrap" id="modalDefault">
+			<div class="modalDefault">
+				<div class="header">
+					<h1 class="headerTitle">안내메시지</h1>
+					<button type="button" class="btn closeBtn" id="defaultClose">닫기</button>
+				</div>
+				<div data-role="content" class="modal-contents">
+					<section class="pdT20 pdB20 with-fixedBtn">
+						<p class="modal-alert mgT0">
+							신분증 진위확인 승인이 아래의 이유로<br>
+							정상적으로 이루어지지 않았습니다.<br>
+							재촬영을 통해 다시 시도해주시기 바랍니다.
+						</p>
+						<p class="modal-alert leftTxt mgT10">
+							<strong class="dp-block">실패 사유</strong>
+							<span class="fz-12">(결과 2) 신청자 정보와 신분증 정보가 일치하지 않습니다.</span>
+						</p>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">닫기</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">재촬영</button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //팝업끝 -->
+
+	</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>step3_간편오토론Pop - 대출</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="layerPop.open('.modalWrap', this); return false;">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- 풀팝업 시작 -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header">
+					<h1 class="headerTitle">고객정보변경</h1>
+					<button type="button" class="btn closeBtn" id="fullClose">닫기</button>
+				</div>
+				<div data-role="content" class="modal-contents with-fixedBtn">
+					<section class="fullWidth">
+						<div class="requiredBox mgT20 pdRL15 pdB10 bdB1">
+							<h2>기본정보입력</h2>
+						</div>
+					</section>
+					<section class="with-fixedBtn">
+						<div class="formWrap">
+							<label for="inputLabel1">자택주소<i class="required"></i></label>
+							<ul class="columnSet withGutter mgB10">
+								<li class="colItem"><input type="text" id="inputLabel3" placeholder="농협" class="formInput" name="" disabled="disabled"></li>
+								<li class="colItem"><input type="text" id="inputLabel3" placeholder="농협" class="formInput" name="" disabled="disabled"></li>
+								<li class="colItem"><button type="submit" class="btn secondary strokeType inputScarch">주소찾기</button></li>
+							</ul>
+							<div class="textInput mgB10">
+								<input type="text" id="inputLabel3" placeholder="농협" class="formInput" name="" disabled="disabled">
+								<button type="button" class="btn deleteBtn" style="display: none;">삭제</button>
+							</div>
+							<div class="textInput">
+								<input type="text" id="inputLabel3" placeholder="농협" class="formInput" name="" disabled="disabled">
+								<button type="button" class="btn deleteBtn" style="display: none;">삭제</button>
+							</div>
+							<label for="inputLabel2">직장주소</label>
+							<ul class="columnSet withGutter mgB10">
+								<li class="colItem"><input type="text" id="inputLabel3" placeholder="농협" class="formInput" name="" disabled="disabled"></li>
+								<li class="colItem"><input type="text" id="inputLabel3" placeholder="농협" class="formInput" name="" disabled="disabled"></li>
+								<li class="colItem"><button type="submit" class="btn secondary strokeType inputScarch">주소찾기</button></li>
+							</ul>
+							<div class="textInput mgB10">
+								<input type="text" id="inputLabel3" placeholder="농협" class="formInput" name="" disabled="disabled">
+								<button type="button" class="btn deleteBtn" style="display: none;">삭제</button>
+							</div>
+							<div class="textInput">
+								<input type="text" id="inputLabel3" placeholder="농협" class="formInput" name="" disabled="disabled">
+								<button type="button" class="btn deleteBtn" style="display: none;">삭제</button>
+							</div>
+							<label for="inputLabel3">직장명</label>
+							<div class="textInput">
+								<input type="text" id="inputLabel3" placeholder="농협" class="formInput" name="" disabled="disabled">
+								<button type="button" class="btn deleteBtn" style="display: none;">삭제</button>
+							</div>
+							<label for="inputLabel4">주소명</label>
+							<div class="textInput">
+								<input type="text" id="inputLabel4" placeholder="포일동 숲속마을 ***" class="formInput" name="" disabled="disabled">
+								<button type="button" class="btn deleteBtn" style="display: none;">삭제</button>
+							</div>
+							<label for="inputLabel5">이메일<i class="required"></i></label>
+							<dl class="columnSet emailInput">
+								<dt class="colItem">
+									<input type="text" id="inputLabel5" placeholder="abcd" class="formInput" name="emailId">
+								</dt>
+								<dd class="colItem">
+									<label for="mailProvider" class="visualHide">Email Provider</label>
+									<div class="select-input">
+										<select id="mailProvider" class="formInput" name="">
+											<option value="gmail.com" label="gmail.com">gmail.com</option>
+											<option value="hanmail.net" label="hanmail.net">hanmail.net</option>
+											<option value="naver.com" label="naver.com">naver.com</option>
+											<option value="nate.com" label="nate.com">nate.com</option>
+											<option value="직접입력" label="direct input">직접입력</option>
+										</select>
+									</div>
+								</dd>
+							</dl>
+							<input type="text" id="inputLabel5" placeholder="직접입력" class="formInput mgT10" name="">
+							<label for="inputLabel6">자택전화번호</label>
+							<div class="textInput">
+								<input type="text" id="inputLabel4" placeholder="010-1234-5678" class="formInput" name="" disabled="disabled">
+								<button type="button" class="btn deleteBtn" style="display: none;">삭제</button>
+							</div>
+							<label for="inputLabel7">휴대전화번호</label>
+							<div class="textInput">
+								<input type="text" id="inputLabel4" placeholder="010-1234-5678" class="formInput" name="" disabled="disabled">
+								<button type="button" class="btn deleteBtn" style="display: none;">삭제</button>
+							</div>
+							<label for="inputLabel8">직장전화번호</label>
+							<div class="textInput">
+								<input type="text" id="inputLabel4" placeholder="010-1234-5678" class="formInput" name="" disabled="disabled">
+								<button type="button" class="btn deleteBtn" style="display: none;">삭제</button>
+							</div>
+						</div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">변경취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //풀팝업끝 -->
+
+	</body>
+</html>

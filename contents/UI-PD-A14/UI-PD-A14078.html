@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>NH - METRO 무계좌송금</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+		<script>
+		$(document).ready(function(){
+			$('#autoTrue').change(function(){
+				if($(this).is(':checked')) {
+					$('#toggleTab1').toggleClass('is-current');
+					$('#toggleTab2').toggleClass('is-current');
+				}
+			});
+			$('#autoFalse').change(function(){
+				if($(this).is(':checked')) {
+					$('#toggleTab2').toggleClass('is-current');
+					$('#toggleTab1').toggleClass('is-current');
+				}
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- breadcrumb -->
+					<section class="breadcrumb columnSet">
+						<h2>신청내역 확인</h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">3</li>
+							<li class="is-off">4</li>
+						</ol>
+					</section>
+					
+					<section class="fullWidth">
+						<span class="fieldNotes normal-info pdBoth15 rightTxt">현재시간 : 2017-06-06 13:15:59 </span> <!-- 2018-09-10 문구수정 -->
+						
+						<h3 class="bdT1">보내는 분 정보</h3>
+						<dl class="dataList bdB0">
+							<dt>영문이름</dt>
+							<dd></dd>
+							<dt>전화번호</dt>
+							<dd></dd>
+						</dl>
+						
+						<h3 class="topbordered">송금정보</h3>
+						<dl class="dataList bdB0">
+							<dt>사후관리점</dt>
+							<!-- 2018-10-12 전화번호 퍼블 변경  -->
+							<dd>**지점<br />
+							<a href="javascript: void(0);" class="tel" data-icon="phone"><span>02-***-25**</span></a></dd>
+							<dt>송금구분</dt>
+							<dd>건당 미화 3,000불 상당액 이하 소액 송금</dd>
+							<dt>송금액</dt>
+							<dd><em>USD 20,000.00</em></dd><!-- 2018-09-10 코드 추가 -->
+							<dt>송금수수료</dt>
+							<dd>보내는 분 부담</dd>
+							<dt>전신료</dt>
+							<dd>5,000원</dd>
+							<dt>해외은행수수료</dt>
+							<dd>[보내는 분 부담] USD 10.00</dd>
+							<dt>적용환율</dt>
+							<dd>1,121원</dd>
+							<dt>인출원화</dt>
+							<dd><em>298,730</em>원</dd><!-- 2018-09-10 코드 추가 -->
+							<dt>인출계좌번호</dt>
+							<dd>123-**-23423</dd>
+						</dl>		
+						
+						<h3 class="topbordered">받는 분 정보</h3>
+						<dl class="dataList bdB0">
+							<dt>영문 이름</dt>
+							<dd><em>Gil *** Hong</em></dd><!-- 2018-09-10 코드 추가 -->
+							<dt>전화번호</dt>
+							<dd><em>010-***-****</em></dd><!-- 2018-09-10 코드 추가 -->
+							<dt>수취국가</dt>
+							<dd>PH 필리핀</dd>
+							<dt>주소</dt>
+							<dd></dd>
+						</dl>
+						
+						<h3 class="topbordered">수취은행 정보</h3>
+						<dl class="dataList bdB0">
+							<dt>수취은행명</dt>
+							<dd>METRO BANK (MBTCPHMMXX)</dd>
+						</dl>
+						
+						<ul class="accordion topbordered bdB0"> <!-- 2018-09-10 클래스 추가 -->
+							<li>
+								<dl>
+									<dt class="js-active" aria-label="꼭 알아두세요!"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a></dt><!-- 2018-09-10 클래스 추가 -->
+									<dd>
+										<ul class="unorderList">
+											<li>환율 변동에 따라 조회시점과 실행시점의 환율이 다르게 적용되어 출금금액에서 차이가 발생할 수 있습니다.</li>
+											<li><span class="greenOn">송금하신 후에는 취소가 불가능하오니, 입력내용을 정확히 확인하신 후 [확인]버튼을 선택하여 주십시오.</span></li>
+										</ul>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+						</ul>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

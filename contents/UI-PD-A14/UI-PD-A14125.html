@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>이용안내 및 유의사항</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="javascript:void(0);">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header">
+					<h1 class="headerTitle">이용안내 및 유의사항</h1>
+					<button type="button" class="btn closeBtn" id="fullClose">닫기</button>
+				</div>
+				<div data-role="content" class="modal-contents">
+					<section>
+						<ul class="unorderList">
+							<li>동 서비스는 <span class="greenOn">「더모아외환서비스」</span>가 적용되지 않습니다.</li>
+							<li>동 서비스를 통한 해외송금 완료 후에는 취소 및 정정이 불가하므로, <span class="greenOn">송금정보(송금액, 수취인정보 등)를 정확히 확인 후 송금처리 하셔야 합니다.</span></li>
+							<li>해외송금 처리건에 대하여 수취정보변경 또는 송금취소(반환)가 필요한 경우에는 반드시 영업점을 방문하셔야 합니다.
+								<ul>
+									<li>단, 송금취소는 해외수취인에게 대금이 지급되지 않은 경우에 한하여 가능합니다.</li>
+									<li>송금 취소시에는 실제 해외로부터 반환받은 금액에서 제비용을 공제한 잔액을 송금받으실 때 환율(전신환매입율)로 환산하여 원화로 지급합니다.</li>
+									<li>기 지급하신 송금수수료 등은 환불해 드리지 않습니다.</li>
+								</ul>
+							</li>
+							<li>동 서비스는 고객님의 농협은행 원화예금계좌에서만 출금이 가능하며 출금계좌등록을 하셔야 합니다.
+								<ul>
+									<li>외화예금계좌 및 농축협계좌에서 출금은 불가합니다.</li>
+									<li>올원출금계좌 등록은 "설정>올원계좌등록/해지" 메뉴에서 등록할 수 있습니다.</li>
+								</ul>
+							</li>
+							<li>해외송금 완료 후 송금처리결과는 송금인이 수취인에게 직접 전달하여야 하며, 제3자에게 누출되지 않도록 유의하시기 바랍니다.</li>
+						</ul>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //fullPopup -->
+
+	</body>
+</html>

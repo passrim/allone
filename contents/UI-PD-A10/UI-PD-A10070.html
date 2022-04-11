@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>step3_범칙금내역확인 - 지방세 납부</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- breadcrumb -->
+					<section class="breadcrumb columnSet">
+						<h2>범칙금내역 확인</h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">3</li>
+							<li class="is-off">5</li>
+						</ol>
+					</section>
+					<!-- //breadcrumb -->
+					<section class="fullWidth">
+						<div class="serviceNote doneMsg">
+							OOO 님께서 납부를 요청하신<br>범칙금 고지내역 입니다.
+						</div>
+					</section>
+					<section class="fullWidth topbordered">
+						<h3>과태료 인터넷 청구서(금융결제원)</h3>
+						<dl class="dataList">
+							<dt>기관</dt><dd>경찰청 서울득별시지</dd>
+							<dt>징수기관계좌번호</dt><dd>1654564</dd>
+							<dt>년도</dt><dd>2018</dd>
+							<dt>과태료 납부고지서 번호</dt><dd>4657489723165540</dd>
+							<dt>납부자 번호</dt><dd>83**03-*******</dd>
+							<dt>납기일</dt><dd>2016-12-01</dd>
+							<dt>세목</dt><dd>1234567</dd>
+							<dt>금액</dt><dd>2,000,000 원</dd>
+							<dt>납부자</dt><dd>홍*동</dd>
+							<dt>주민등록번호</dt><dd>830***-*******</dd>
+							<dt>주소</dt><dd>서울특별시 중구</dd>
+							<dt>위반차량</dt><dd></dd>
+							<dt>납부기간</dt><dd>2016-12-01</dd>
+							<dt>납부금액</dt><dd>2,200,000 원</dd>
+							<dt>위반사항 발행일시</dt><dd>2016-10-10 12:12:34</dd>
+							<dt>위반장소</dt><dd>도로교통법 제160조 내지</dd>
+							<dt>위반내용</dt><dd>징수결의</dd>
+						</dl>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">납부</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>설정</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth">
+						<h3 class="serviceTitle">앱관리</h3>
+						<ul class="rowStyle settingList">
+							<li class="bdT0">
+								<dl>
+									<dt>최신버전 V.18.1</dt>
+									<dd>
+										<!-- dp-none 클래스로 노출 컨트롤 -->
+										<button type="button" class="btn submit subSmallType ">업데이트</button>
+										<span class="greenOn dp-none">현재 최신버전입니다.</span>
+									</dd>
+								</dl>
+								<div class="dataListGray">
+									<dl class="dataList bdB0">
+										<dt>현재버전</dt><dd class="greenOn">V.18.0</dd>
+										<dt>모델명</dt><dd>iPhone  10.5</dd>
+										<dt>OS버전</dt><dd>11.3.1</dd>
+									</dl>
+								</div>
+							</li>
+							<li>
+								<dl>
+									<dt>캐시 삭제</dt>
+									<dd><button type="button" class="btn secondary strokeType subSmallType">삭제</button></dd>
+								</dl>
+							</li>
+						</ul>
+					</section>
+					<section class="fullWidth topbordered">
+						<h3 class="serviceTitle">로그인</h3>
+						<ul class="rowStyle settingList">
+							<li class="bdT0">
+								<dl>
+									<dt>로그인 방식 설정</dt>
+									<dd><a href="javascript:;"><span>간편비밀번호</span></a></dd>
+								</dl>
+							</li>
+						</ul>
+					</section>
+					<section class="fullWidth topbordered">
+						<h3 class="serviceTitle">Push 알림</h3>
+						<ul class="rowStyle settingList">
+							<li class="setting bdT0">
+								<dl>
+									<dt>혜택정보 수신동의</dt>
+									<dd>
+										<span class="check-setting">
+											<input type="checkbox" id="pushSet2" checked="checked">
+											<label for="pushSet2">동의 여부</label>
+										</span>
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>기기 알림 상태</dt>
+									<dd><a href="javascript:;"><span>켜짐</span></a></dd>
+								</dl>
+							</li>
+							<li class="pdBoth15 pdB20 pdT5"> <!-- 2018-09-27 클래스 추가 -->
+								<span class="fieldNotes normal-info certifyTxt">휴대폰 기기 설정에서 ‘올원뱅크’알림이 “켜짐”일때만 Push 알림을 받으실 수 있습니다.</span>
+								<span class="dp-block"><button type="button" class="btn secondary strokeType subSmallType">알림함 확인</button></span>
+							</li>
+						</ul>
+					</section>
+					<section class="fullWidth topbordered no-fixed">
+						<h3 class="serviceTitle">개인설정</h3>
+						<ul class="rowStyle settingList">
+							<li class="bdT0">
+								<dl>
+									<dt>마이메뉴</dt>
+									<dd><a href="javascript:;">바로가기</a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>바코드결제 설정</dt>
+									<dd><a href="javascript:;"><span>하나로마트</span></a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>프로필이미지</dt>
+									<dd><a href="javascript:;">바로가기</a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>로딩이미지</dt>
+									<dd><a href="javascript:;">바로가기</a></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>가입해지</dt>
+									<dd><a href="javascript:;">바로가기</a></dd>
+								</dl>
+							</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

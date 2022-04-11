@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>골드바</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth">
+						<nav class="tabNav">
+							<ul class="columnSet">
+								<li class="colItem is-on" data-tab="tabCont1"><a href="javascript:;">(주)한국금거래소쓰리엠</a></li>
+								<li class="colItem" data-tab="tabCont2"><a href="javascript:;">(주)삼성금거래소</a></li>
+							</ul>
+						</nav>
+					</section>
+
+					<section class="fullWidth">
+						<h3 class="visualHide">(주)한국금거래소쓰리엠</h3>
+						<ul class="goldbarList">
+							<li>
+								<div class="imgBox">
+									<a href="javascript:void(0);" data-icon="zoom">
+										<img src="../../assets/img/goldbar/goldbar_3m1k.png" alt="1kg 골드바">
+									</a>
+								</div>
+								<div class="conBox">
+									<strong>1kg 골드바</strong>
+									<dl>
+										<dt>크기</dt><dd>50mm x 110mm</dd>
+										<dt>순도</dt><dd>금 99.99%</dd>
+										<dt>판매수수료율</dt><dd>5%</dd>
+									</dl>
+								</div>
+							</li>
+							<li>
+								<div class="imgBox">
+									<a href="javascript:void(0);" data-icon="zoom">
+										<img src="../../assets/img/goldbar/goldbar_3m100g.png" alt="100g 골드바">
+									</a>
+								</div>
+								<div class="conBox">
+									<strong>100g 골드바</strong>
+									<dl>
+										<dt>크기</dt><dd>25mm x 45mm</dd>
+										<dt>순도</dt><dd>금 99.99%</dd>
+										<dt>판매수수료율</dt><dd>5%</dd>
+									</dl>
+								</div>
+							</li>
+							<li>
+								<div class="imgBox">
+									<a href="javascript:void(0);" data-icon="zoom">
+										<img src="../../assets/img/goldbar/goldbar_3m10g.png" alt="10g 골드바">
+									</a>
+								</div>
+								<div class="conBox">
+									<strong>10g 골드바</strong>
+									<dl>
+										<dt>크기</dt><dd>15.5mm x 25.5mm</dd>
+										<dt>순도</dt><dd>금 99.99%</dd>
+										<dt>판매수수료율</dt><dd>7%</dd>
+									</dl>
+								</div>
+							</li>
+						</ul>
+					</section>
+
+					<section class="btmNotice topbordered with-fixedBtn">
+						<h3>골드바 판매정보</h3>
+						<ul class="unorderList">
+							<li>품질이 보증된 순도 99.99%의 바(bar) 형태의 금을 판매사((주)한국금거래소쓰리엠, (주)삼성금거래소)를 대행하여 NH농협은행에서 판매하는 상품입니다.</li>
+							<li>구매를 원하시면 <span class="greenOn">&quot;골드바 구매&quot;</span>버튼을 클릭하세요.</li>
+						</ul>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">골드바 가격조회</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">골드바 구매</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

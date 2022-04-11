@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>스마트 Talk</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content customerCenter" data-role="content">
+					<section class="fullWidth">
+						<div class="headArea">
+							<div class="boxCon mgB0"> <!-- 2018-11-02 클래스 추가  -->
+								<!-- 0803 : 마크업 변경 및 클래스 삽입 -->
+								<div class="objHead labelAdd">
+									<h3 class="dataTxt tTitle mgB0">고객님을 위한 맞춤 알립입니다.</h3> <!-- 2018-11-02 클래스 추가  -->
+								</div><!-- //0803  -->
+							</div>
+						</div>
+					</section>
+
+					<section class="fullWidth">
+						<div class="paddingAll">
+							<p>
+							<!-- 스마트톡 연관 컨텐츠가 뿌려지는 곳  -->
+								스마트톡 관련 텍스트가 여기에 뿌려집니다.<br />
+								장기미접속 회원<br />
+								고객님을 위한 맞춤 알립입니다.
+								
+							<!-- // 스마트톡 연관 컨텐츠가 뿌려지는 곳  -->
+							</p>
+						
+						</div>
+						<div class="centeredTxt pdT30 bdT1"><button type="button" class="btn secondary strokeType subSmallType subSmallType02">바로가기</button></div>
+					</section>
+					
+					<!-- 2018-10-19 버튼 클래스 및 타입 변경  -->
+					<button type="submit" class="btn submit primary selfBottom">목록</button>
+
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

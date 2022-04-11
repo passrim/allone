@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>카드</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- iFrame Content -->
+					<section class="fullWidth productDetails">
+						<span class="subTit">채움</span>
+						<h2 class="mainTit">올바른POINT체크카드</h2>
+						<p class="explainTxt">적립한도 없이 0.7%~1.5% 채움포인트 적립</p>
+						<div class="cardSection">
+							<div class="imgArea">
+								<img src="../../assets/img/card/card_pointCheck.png" style="width:185px" alt="올바른POINT체크카드">
+							</div>
+							<!-- 0823 수정 -->
+							<ul class="descBox case02 grid2">
+								<li class="item">
+									<strong class="title">W(JCB)<br>1만원 </strong>
+									<p class="con">기본 3,000원 + 제휴 7,000원</p>
+								</li>
+								<li class="item">
+									<strong class="title">VISA &middot; MasterCard <br>1만 2천원</strong>
+									<p class="con">기본 5,000원 + 제휴 7,000원</p>
+								</li>
+							</ul>
+						</div>
+					</section>
+					<!-- //iFrame Content -->
+
+					<section class="fullWidth">
+						<ul class="accordion">
+							<li>
+								<dl>
+									<dt class="js-active"><a href="javascript:;">상품 상세내용</a></dt>
+									<dd>
+										<!--cpLoadArea -->
+										<div class="cpLoadArea">
+											<h3>포인트 적립</h3>
+											<ul class="unorderList">
+												<li>적립한도 없이 0.7% ~ 1.5% 채움포인트 적립
+													<p>- 기본적립</p>
+													<table class="dataTable rowStyle">
+														<caption>포인트 적립</caption>
+														<colgroup>
+															<col style="width:20%"/>
+															<col style="width:20%"/>
+															<col style="width:20%"/>
+															<col style="width:20%"/>
+														</colgroup>
+														<thead>
+															<tr>
+																<th scope="col"><span class="visualHide">비고</span></th>
+																<th scope="col">전 가맹점<br>기본적립</th>
+																<th scope="col" colspan="3">하나로고객<br>우대적립</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<th scope="row">적립율</th>
+																<td>0.7%</td>
+																<td>0.8%</td>
+																<td>0.9%</td>
+																<td>1.0%</td>
+															</tr>
+															<tr>
+																<th scope="row">전월실적</th>
+																<td>조건없음</td>
+																<td>30만원 이상 <br> 100만원 미만</td>
+																<td>100만원 이상 <br> 200만원 미만</td>
+																<td>200만원 이상</td>
+															</tr>
+														</tbody>
+													</table>
+
+													<p>- 전 가맹점 기본적립</p>
+													<table class="dataTable rowStyle">
+														<caption>전 가맹점 기본 포인트 적립</caption>
+														<colgroup>
+															<col style="width:50%" />
+															<col style="auto" />
+														</colgroup>
+														<thead>
+															<tr>
+																<th scope="col">적립율</th>
+																<th scope="col" colspan="3">전월실적</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>0.7%</td>
+																<td>조건없음</td>
+															</tr>
+														</tbody>
+													</table>
+
+													<p>- 하나로고객 우대적립</p>
+													<table class="dataTable rowStyle">
+														<caption>전 가맹점 기본 포인트 적립</caption>
+														<colgroup>
+															<col style="width:50%" />
+															<col style="auto" />
+														</colgroup>
+														<thead>
+															<tr>
+																<th scope="col">적립율</th>
+																<th scope="col" colspan="3">전월실적</th>
+															</tr>
+														</thead>
+														<tbody>
+															
+															<tr>
+																<td>0.8%</td>
+																<td>30만원 이상 <br> 100만원 미만</td>
+															</tr>
+															<tr>
+																<td>0.9%</td>
+																<td>100만원 이상 <br> 200만원 미만</td>
+															</tr>
+															<tr>
+																<td>1.0%</td>
+																<td>200만원 이상</td>
+															</tr>
+														</tbody>
+													</table>
+												</li>
+											</ul>
+										</div>
+										<!--//cpLoadArea -->
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">전화신청</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">카드신청</button></li>
+					</ul>
+
+
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

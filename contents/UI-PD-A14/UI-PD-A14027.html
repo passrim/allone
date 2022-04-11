@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>외화 수령 영업점 검색</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="layerPop.open('.modalWrap', this); return false;">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header">
+					<h1 class="headerTitle">외화 수령 영업점 검색</h1>
+					<button type="button" class="btn closeBtn" id="fullClose">닫기</button>
+				</div>
+				<div data-role="content" class="modal-contents with-fixedBtn">
+					<section class="fullWidth">
+						<nav class="tabNav">
+							<ul class="columnSet">
+								<li class="colItem" data-tab="tabCont1"><a href="javascript:;">직접 검색</a></li>
+								<li class="colItem is-on" data-tab="tabCont2"><a href="javascript:;">현재위치로 검색</a></li>
+							</ul>
+						</nav>
+
+
+						<!-- #tabCont1 -->
+						<div id="tabCont2" class="tabContent is-current noPadding">
+							<h2 class="visualHide">직접 검색</h2><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+
+							<section class="fullWidth">
+								<div class="sectionWrap">
+									<p class="fz-12">반경 선택시 가까운 영업점이 표시됩니다.</p>
+
+									<ul class="columnSet noGutterSet mgT10">
+										<li class="colItem">
+											<input type="radio" id="f_m300" class="btn radioToggle" name="blockDate">
+											<label for="f_m300" class="inputLabel secondary strokeType">300M</label>
+										</li>
+										<li class="colItem">
+											<input type="radio" id="f_m500" class="btn radioToggle" name="blockDate">
+											<label for="f_m500" class="inputLabel secondary strokeType">500M</label>
+										</li>
+										<li class="colItem">
+											<input type="radio" id="f_k1" class="btn radioToggle" name="blockDate">
+											<label for="f_k1" class="inputLabel secondary strokeType">1KM</label>
+										</li>
+										<li class="colItem">
+											<input type="radio" id="f_k2" class="btn radioToggle" name="blockDate">
+											<label for="f_k2" class="inputLabel secondary strokeType">2KM</label>
+										</li>
+									</ul>
+								</div>
+							</section>
+
+							<section class="fullWidth">
+								<div class="map-api">
+									<button type="button" class="btn youareHere">현재위치로 검색</button>
+									<img src="../../assets/img/@tmp/map.png" alt="영업점 지도">
+								</div>
+							</section>
+
+							<section class="fullWidth">
+								<ul class="unorderList pdBoth15 mgB15 mgT5">
+									<li>가까운 지점을 조회합니다.</li>
+									<li class="greenOn">영업점을 방문하시기 전에 환전하실 외화금액 보유 여부를 꼭 재확인하시기 바랍니다.</li>
+								</ul>
+								<ul class="boardList showArrow toplined">
+									<!--  
+										조회결과가 없을 경우
+									<li>
+										<div class="boxHead noData">
+											<span>조회 결과가 없습니다.</span>
+										</div>
+									</li>
+									-->
+									<li>
+										<div>
+											<div class="objCon">
+												<strong class="dataTxt tTitle">**지점 (1KM)</strong>
+												<span class="dataTxt tAddr">서울특별시 강남구 ****</span>
+												<a href="tel:02-***-96**" class="mgT5" data-icon="phone"><span class="underline">02-****-96**</span></a>
+												<p class="mgT10 fz-12">미국달러(USD)/일본 엔(JPY)/유럽연합 유로(EUR)/중국 위안(CNY)/홍콩 달러(HKD)/호주 달러(AUD)</p>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div>
+											<div class="objCon">
+												<strong class="dataTxt tTitle">**지점 (1KM)</strong>
+												<span class="dataTxt tAddr">서울특별시 강남구 ****</span>
+												<a href="tel:02-***-96**" class="mgT5" data-icon="phone"><span class="underline">02-****-96**</span></a>
+												<p class="mgT10 fz-12">미국달러(USD)/일본 엔(JPY)/유럽연합 유로(EUR)/중국 위안(CNY)/홍콩 달러(HKD)/호주 달러(AUD)</p>
+											</div>
+										</div>
+									</li>
+								</ul>
+								<button type="button" class="btn more-btn bdB1">더보기(<span>1</span><span>10</span>)<span></span></button>
+							</section>
+						</div>
+						<!-- //#tabCont1 -->
+					</section>
+
+				</div>
+			</div>
+		</div>
+		<!-- //fullPopup -->
+
+	</body>
+</html>

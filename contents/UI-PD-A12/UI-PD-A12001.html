@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>홈 - Fun & Life</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth no-fixed">
+						<div class="funlife-listMain">
+							<nav class="tabNav tabOverflow">
+								<ul class="columnSet">
+									<li class="colItem is-on" data-tab="tabCont1"><a href="javascript:;">결제</a></li>
+									<li class="colItem" data-tab="tabCont2"><a href="javascript:;">쇼핑</a></li>
+									<li class="colItem" data-tab="tabCont3"><a href="javascript:;">FUN</a></li>
+									<li class="colItem" data-tab="tabCont4"><a href="javascript:;">LIFE</a></li>
+									<li class="colItem" data-tab="tabCont5"><a href="javascript:;">재태크</a></li>
+								</ul>
+							</nav>
+
+							<!-- 결제  -->
+							<div id="tabCont1" class="tabContent is-current funlife01">
+								<h2 class="visualHide">결제</h2><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+								<div class="topVisual"> <!-- 18.09.20 :: 비주얼 전체 변경 -->
+									<p class="imgTitle autoVisual">
+										<img src="../../assets/img/funlife/home_title01.png" alt="올원 X 코나카드로 자녀에게 용돈선물! 연회비 NO, 신용조회 NO, 제휴사 할인 혜택!"><!-- 181022 : 상단 visual 컨펌 디자인 적용 접근성 alt값 수정 -->
+									</p>
+									<p class="desc"><a href="javascript:;">바로가기</a></p>
+								</div>
+
+								<div>
+									<ul class="boardList toplined"> <!-- 18.09.20 :: showArrow 클래스 삭제 -->
+										<li>
+											<a href="javascript:;" class="boxHead">
+												<div class="objCon">
+													<strong class="dataTxt tTitle">올원<span class="kona"></span>코나카드</strong>
+													<span class="dataTxt tCon">매달 업데이트되는 이벤트로 365일 즐기자!<br>나만의 맞춤 예산과 디자인까지!</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" class="boxHead">
+												<div class="objCon">
+													<strong class="dataTxt tTitle">모바일 교통카드</strong>
+													<span class="dataTxt tCon">전국 어디서나 모바일 캐시비 하나면 끝!<br>편의점, 대형마트, 영화관 등 다양한 사용처</span>
+												</div>
+											</a>
+										</li>
+								</ul>
+								</div>
+							</div>
+							<!-- //결제  -->
+
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

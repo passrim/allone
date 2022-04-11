@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>베트남간편송금</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+		<script>
+		$(document).ready(function(){
+			$('#autoTrue').change(function(){
+				if($(this).is(':checked')) {
+					$('#toggleTab1').toggleClass('is-current');
+					$('#toggleTab2').toggleClass('is-current');
+				}
+			});
+			$('#autoFalse').change(function(){
+				if($(this).is(':checked')) {
+					$('#toggleTab2').toggleClass('is-current');
+					$('#toggleTab1').toggleClass('is-current');
+				}
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- breadcrumb -->
+					<section class="breadcrumb columnSet">
+						<h2>보내는 분/받는 분 정보 입력</h2>
+						<ol class="step columnSet">
+							<li class="is-on">1</li>
+							<li class="is-off">4</li>
+						</ol>
+					</section>
+					
+					<section class="with-fixedBtn fullWidth">
+						<fieldset class="formWrap">
+							<legend>송금용도</legend>
+							<ul class="columnSet withGutter marginB25">
+								<li class="colItem">
+									<!-- 2018-09-11 버튼명 변경-->
+									<button type="submit" class="btn call-datalist">신규입력 <i class="i-memo-import"></i></button> <!-- 2018-09-05 클래스 변경  -->
+								</li>
+								<li class="colItem">
+									<button type="submit" class="btn call-datalist">기본거래내역<br />정보가져오기 <i class="i-history-import"></i></button> <!-- 2018-09-05 클래스 변경  -->
+								</li>
+							</ul>
+							
+							<label for="inputLabel3">사후관리점 <i class="required"></i></label>
+							<div class="searchBar">
+								<input type="text" id="inputLabel2" placeholder="" aria-required="true" class="formInput" name="" disabled="disabled"><!-- 0913 : 접근성 레이블 제공 -->
+								<button type="submit" class="btn secondary floatSearch">조회하기</button>
+							</div>
+							<span class="fieldNotes normal-info">사후관리시 편리한 영업점을 선택해주세요.</span>
+						</fieldset>
+						
+						<h3>보내는 분 정보</h3>
+						<fieldset class="formWrap">
+							<legend>보내는 분 정보</legend>
+							<label for="inputLabel3">영문이름</label>
+							<div class="textInput">
+								<input type="text" id="inputLabel3" placeholder="" class="formInput" name="" disabled="disabled">
+							</div>
+							
+							<label for="inputLabel3">전화번호 <i class="required"></i></label>
+							<dl class="columnSet phoneInput">
+								<dt>
+									<label for="phoneNum" class="visualHide">전화번호 앞 세자리</label>
+									<div class="select-input">
+										<select id="phoneNum" class="formInput" name="" aria-required="true" >
+											<option value="010" label="010">010</option>
+											<option value="017" label="017">017</option>
+										</select>
+									</div>
+								</dt>
+								<dd>
+									<label for="inputLabel5" class="visualHide">전화번호 뒷자리</label> 
+									<input type="tel" id="inputLabel4" placeholder="-없이 입력" class="formInput" name="phone" maxlength="8">			
+								</dd>
+							</dl>
+							<span class="fieldNotes normal-info">즉시연락 가능한 전화번호를 입력해 주세요.</span>
+						</fieldset>
+						
+						<h3>받는 분 정보</h3>
+						<fieldset class="formWrap">
+							<legend>받는 분 정보</legend>
+							
+							<label for="autoTrue" class="inputLable visualHide">필수입력항목</label>
+							<ul class="columnSet noGutterSet">
+								<li class="colItem">
+									<input type="radio" value="Vimo eWallet" name="autoTransfer" id="autoTrue" class="btn radioToggle" checked="checked">
+									<label for="autoTrue" class="inputLabel secondary strokeType">Vimo eWallet</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" value="ATM CARD 출금" name="autoTransfer" id="autoFalse" class="btn radioToggle">
+									<label for="autoFalse" class="inputLabel secondary strokeType">ATM CARD 출금</label>
+								</li>
+							</ul>
+							<div class="tabContent noPadding is-current" id="toggleTab1">
+								<h3 class="visualHide">Vimo eWallet</h3><!-- 2018-09-10 탭 타이틀 추가 -->
+								<label class="mgT10" for="inputLabel3">휴대폰번호</label>
+								<div class="searchBar">
+									<input type="tel" id="inputLabel2" placeholder="" aria-required="true" class="formInput" name=""><!-- 0913 : 접근성 레이블 제공 -->
+									<button type="submit" class="btn secondary floatSearch">조회하기</button>
+								</div>
+								<label for="inputLabel3">영문이름 (성조 뺀 영문)</label>
+								<div class="textInput">
+									<input type="text" id="inputLabel3" placeholder="" class="formInput" name="" />
+								</div>
+								<label for="inputLabel3">CMND</label>
+								<div class="numberInput">
+									<input type="tel" id="inputLabel3" placeholder="" class="formInput" name="" />
+								</div>
+								<span class="fieldNotes normal-info">영문이름과 전화번호 및 CMND(베트남 개인번호)를 꼭 입력해주세요. 받는 분이 VIMO 회원이 아닌 경우, 송금이 불가합니다.</span>
+							</div>
+							
+							<div class="tabContent noPadding" id="toggleTab2">
+								<h3 class="visualHide">ATM CARD 출금</h3><!-- 2018-09-10 탭 타이틀 추가 -->
+								<label class="mgT10" for="inputLabel3">휴대폰번호</label>
+								<div class="searchBar">
+									<input type="tel" id="inputLabel2" placeholder="" aria-required="true" class="formInput" name=""><!-- 0913 : 접근성 레이블 제공 -->
+									<button type="submit" class="btn secondary floatSearch">조회하기</button>
+								</div>
+							
+								<label for="inputLabel3">영문이름 (카드 소유자 명, 성조 뺀 영문)</label>
+								<div class="textInput">
+									<input type="text" id="inputLabel3" placeholder="" class="formInput" name="" />
+								</div>
+								
+								<label for="selectLabel3">은행명</label>
+								<div class="select-input">
+									<select id="selectLabel3" class="formInput">
+										<option value="default" label="은행 선택">은행 선택</option>
+										<option value="option2" label="option2">Option2</option>
+										<option value="option3" label="option3">Option3</option>
+										<option value="option4" label="option4">Option4</option>
+									</select>
+								</div>
+								<label for="inputLabel3">카드번호</label>
+								<div class="numberInput">
+									<input type="tel" id="inputLabel3" placeholder="카드번호(-없이 입력)" class="formInput" name="" />
+								</div>
+								<span class="fieldNotes normal-info">받는 분 정보(영문이름, 휴대폰번호)를 확인하시고, 은행을 선택하신 뒤, 카드번호를 꼭 입력해주세요.</span>
+							</div>
+						</fieldset>
+					</section>
+					<button type="submit" class="btn primary submit selfBottom">다음</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>올원모임</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content alloneMeeting" data-role="content"> <!-- Category Class : alloneMeeting -->
+					<section class="fullWidth">
+						<div class="sectionWrap pdT10 mgB10">
+							<div class="selectSearchForm clearfix">
+								<div class="select-input span5" >
+									<label for="f_searchSelect" class="visualHide">조회조건선택</label>
+									<select id="f_searchSelect" class="formInput">
+										<option value="default" label="전체">전체</option>
+									</select>
+								</div>
+								<div class="search tag span7 last">
+									<label for="f_search" class="visualHide">검색어 입력</label>
+									<input type="text" id="f_search" placeholder="검색어 입력" class="formInput search-input bdzero">
+									<button type="button" class="btn deleteBtn">삭제</button>
+									<button type="submit" class="btn searchBtn" name="">조회</button>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!--// 0905 -->
+
+					<section class="fullWidth with-fixedBtn topbordered ">
+						<ul class="imgColList gridAll2 pad">
+							<li>
+								<a href="javascript:void(0);" class="boxHead">
+									<div class="objImg">
+										<!-- <img src="../../assets/img/poto_bg/financial_product_03.jpg" alt=""> -->
+										<div class="imgBg" style="background:url('../../assets/img/poto_bg/financial_product_03.jpg') center center no-repeat;background-size:cover"></div>
+									</div>
+									<div class="objCon">
+										<span class="txtLabel greenOn">정기</span>
+										<span class="tTitle">2018 올원뱅크 가입자 모임</span>
+									</div>
+								</a>
+							</li>
+							<li class="leader">
+								<a href="javascript:void(0);" class="boxHead">
+									<div class="objImg">
+										<div class="icon_leader02"><span class="visualHide">총무</span></div> <!--총무 뱃지 -->
+										<div class="imgBg" style="background:url('../../assets/img/@tmp/tmp_meet01.png') center center no-repeat;background-size:cover"></div>
+									</div>
+									<div class="objCon">
+										<span class="txtLabel greenOn">정기</span>
+										<span class="tTitle">2018 올원뱅크 가입자 모임</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="boxHead">
+									<div class="objImg">
+										<div class="imgBg" style="background:url('../../assets/img/poto_bg/financial_product_02.jpg') center center no-repeat;background-size:cover"></div>
+									</div>
+									<div class="objCon">
+										<span class="txtLabel greenOn">정기</span>
+										<span class="tTitle">2018 올원뱅크 가입자 모임</span>
+									</div>
+								</a>
+							</li>
+							<!-- //test -->
+							<!-- test -->
+							<li>
+								<a href="javascript:void(0);" class="boxHead">
+									<div class="objImg">
+										<div class="imgBg" style="background:url('../../assets/img/poto_bg/financial_product_01.jpg') center center no-repeat;background-size:cover"></div>
+									</div>
+									<div class="objCon">
+										<span class="txtLabel greenOn">정기</span>
+										<span class="tTitle">2018 올원뱅크 가입자 모임</span>
+									</div>
+								</a>
+							</li>
+							<!-- //test -->
+
+							<li>
+								<a href="javascript:void(0);" class="boxHead">
+									<div class="objImg">
+										<div class="imgBg" style="background:url('../../assets/img/@tmp/tmp_meet01.png') center center no-repeat;background-size:cover"></div>
+									</div>
+									<div class="objCon">
+										<span class="txtLabel greenOn">정기</span>
+										<span class="tTitle">2018 올원뱅크 가입자 모임</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="boxHead">
+									<div class="objImg">
+										<div class="imgBg" style="background:url('../../assets/img/card/thum_card_pi.png') center center no-repeat;background-size:cover"></div>
+									</div>
+									<div class="objCon">
+										<span class="txtLabel puppleOn">비정기</span> <!-- 0827 -->
+										<span class="tTitle">의왕시축구모임단</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="boxHead">
+									<div class="objImg">
+										<div class="imgBg" style="background:url('../../assets/img/@tmp/invite_rolling/06_01.jpg') center center no-repeat;background-size:cover"></div>
+									</div>
+									<div class="objCon">
+										<span class="txtLabel">회비없음</span>
+										<span class="tTitle">수원시아마추어축구</span>
+									</div>
+								</a>
+							</li>
+							<!-- test -->
+							<li class="">
+								<a href="javascript:void(0);" class="boxHead">
+									<div class="objImg">
+										<div class="imgBg" style="background:url('../../assets/img/@tmp/invite_rolling/01_01.jpg') center center no-repeat;background-size:cover"></div>
+									</div>
+									<div class="objCon">
+										<span class="txtLabel greenOn">정기</span>
+										<span class="tTitle">2018 올원뱅크 가입자 모임</span>
+									</div>
+								</a>
+							</li>
+							<!-- //test -->
+							<!-- test -->
+							<li>
+								<a href="javascript:void(0);" class="boxHead">
+									<div class="objImg">
+										<div class="imgBg" style="background:url('../../assets/img/@tmp/invite_rolling/03_01.jpg') center center no-repeat;background-size:cover"></div>
+									</div>
+									<div class="objCon">
+										<span class="txtLabel greenOn">정기</span>
+										<span class="tTitle">2018 올원뱅크 가입자 모임</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0);" class="boxHead">
+									<div class="objImg">
+										<div class="imgBg" style="background:url('../../assets/img/@tmp/invite_rolling/04_01.jpg') center center no-repeat;background-size:cover"></div>
+									</div>
+									<div class="objCon">
+										<span class="txtLabel">회비없음</span>
+										<span class="tTitle">수원시아마추어축구</span>
+									</div>
+								</a>
+							</li>
+							<li class="close"><!-- close : 페쇄 모임 -->
+								<a href="javascript:void(0);" class="boxHead">
+									<div class="objImg">
+										<p class="infoTitle">관리자에 의해 모임이 <br> 폐쇄되었습니다.</p>
+										<img src="../../assets/img/meeting/bg_default.png" alt=""> <!-- default  이미지 -->
+									</div>
+									<div class="objCon">
+										<span class="txtLabel">비정기</span>
+										<span class="tTitle">농협축구단</span>
+									</div>
+								</a>
+							</li>
+
+							<li class="invite"><!-- 초대 모임 -->
+								<div class="boxHead">
+									<div class="objImg">
+										<div class="btnWrap">
+											<p class="infoTitle02">김올리님이 <br> 초대한 모임입니다.</p>
+											<button type="button" class="btn secondary strokeType subSmallType">취소</button> <!-- 0905 수정 -->
+											<button type="button" class="btn secondary submit subSmallType">가입신청</button> <!-- 0905 수정 -->
+										</div>
+										<!-- <img src="../../assets/img/@tmp/tmp_meet01.png" alt=""> -->
+											<div class="imgBg" style="background:url('../../assets/img/@tmp/invite_rolling/04_02.jpg') center center no-repeat;background-size:cover"></div>
+										<!-- </div> --><!-- 0913 : 마크업 태그 수정 --> 
+									</div>
+									<div class="objCon">
+										<span class="txtLabel">비정기</span>
+										<span class="tTitle">아침조기축구모임</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="submit" class="btn primary submit">모임만들기</button></li>
+					</ul>
+
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

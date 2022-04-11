@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>step5_간편오토론pop - 대출</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>NH간편오토론<span>대출심사  정보입력</span></h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">5</li>
+							<li class="is-off">7</li>
+						</ol>
+					</section>
+					<section class="topNotice">
+						<div class="completeMsg stopMsg">
+							<strong>죄송합니다</strong>
+							<p>
+								당행 심사결과 신용등급이 NH간편오토론 기준 등급 미만이므로 NH간편오토론을 신청하실 수 없습니다.<br>
+								자세한 내용은 가까운 영업점 또는 스마트금융센터(16**-28**)에 문의하시기 바랍니다.
+							</p>
+						</div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

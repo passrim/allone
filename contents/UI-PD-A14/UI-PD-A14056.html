@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>WU-AUTOSEND</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth">
+						<!-- 2018-09-11 추가 -->
+						<div class="fxIntro pdT20">
+							<span class="westernunion"></span>
+							<h2>WU-AUTOSEND
+							<span>전세계 초고속 송금 서비스!</span>
+							</h2>
+							<p>전세계 200여 국가, 50만여 개의 웨스턴유니온<br />
+							가맹점을 통한 쉽고 빠른 송금 서비스!</p>
+						</div>
+						<div class="pdBoth15 mgT20">
+							<span class="dp-block fz-12">언어선택</span>
+							<!-- 2018-09-11 언어 선택 코드 변경  -->
+							<ul class="countryOpt language triple noGutterSet">
+								<li class="colItem korean">
+									<input type="radio" value="한국어" name="calendarType" id="korean" class="btn radioToggle" checked="checked">
+									<label for="korean" class="inputLabel strokeType">
+										<h3>한국어</h3>
+										KOREAN
+									</label>
+								</li>
+								<li class="colItem english">
+									<input type="radio" value="영어" name="calendarType" id="english" class="btn radioToggle">
+									<label for="english" class="inputLabel strokeType">
+										<h3>영어</h3>
+										ENGLISH
+									</label>
+								</li>
+								<li class="colItem vietnam">
+									<input type="radio" value="영어" name="calendarType" id="vietnamese" class="btn radioToggle">
+									<label for="vietnamese" class="inputLabel strokeType">
+										<h3>베트남어</h3>
+										VIETNAMESE
+									</label>
+								</li>
+							</ul>
+						</div>
+						
+						<!-- iframe 처리 예정 -->
+						<ul class="accordion topbordered">
+							<li>
+								<dl>
+									<dt class="js-active" aria-label="WU-AUTOSEND 란?"><a href="javascript:void();">WU-AUTOSEND</a></dt> <!-- 2018-10-25 문구 삭제 -->
+									<dd>
+										<iframe src="../../cms/fx/ABEF5020R_iframe01.html" class="iframes" style="height: 100%;"></iframe>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+							<li>
+								<dl>
+									<dt class="js-active" aria-label="환율 및 수수료 안내"><a href="javascript:void();">F/X Rate and Free</a></dt> <!-- 2018-10-25 타이틀 수정  -->
+									<dd>
+										<iframe src="../../cms/fx/ABEF5020R_iframe05.html" class="iframes" style="height: 100%;"></iframe>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+						</ul>
+						
+						<div class="pdBoth15 pdB20 mgT20">
+							<ul class="dataType-list dataType-list02 "><!-- 10/18 수정 -->
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id=""><label for="">체크</label>
+									</div>
+									<a href="javascript:void(0);"><span class="greenOn">[필수]</span>[중요] 이용안내 및 유의사항</a>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id=""><label for="">체크</label>
+									</div>
+									<a href="javascript:void(0);"><span class="greenOn">[필수]</span> 외환거래 기본약관 확인</a>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id=""><label for="">체크</label>
+									</div>
+									<a href="javascript:void(0);"><span class="greenOn">[필수]</span> NH특급송금서비스약관</a>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id=""><label for="">체크</label>
+									</div>
+									<a href="javascript:void(0);"><span class="greenOn">[필수]</span> 비대면NH웨스턴유니온자동송금거래약관</a>
+								</li>
+							</ul>	
+						</div>
+						<!-- iframe 처리 예정 -->
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">WU-AUTOSEND 진행</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>초대장 보내기</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+
+				//Slider
+				(function(){
+					var swiper = new Swiper('.swiper-container', {
+						pagination: {
+							el : '.swiper-pagination'
+							, clickable : true
+						}
+						, navigation : {
+							nextEl : '.controlBtn.nextBtn'
+							, prevEl : '.controlBtn.prevBtn'
+						}
+						, loop : true
+					});
+				})();
+			});
+		</script>
+
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content bigFont" data-role="content"><!-- 큰글형 : .bigFont -->
+					<section class="breadcrumb columnSet">
+						<h2>이미지 선택</h2>
+						<ol class="step columnSet twoSet">
+							<li class="is-on">1</li>
+							<li class="is-off">4</li>
+						</ol>
+					</section>
+
+					<section class="fullWidth with-fiexdBtn">
+						<nav class="boxTab clearfix">
+							<ul class="grid3">
+								<li class="on"><a href="javascript:;" role="button" title="선택됨">결혼</a></li>
+								<li><a href="javascript:;" role="button">부고</a></li>
+								<li><a href="javascript:;" role="button">첫돌/생일</a></li>
+								<li><a href="javascript:;" role="button">회갑/칠순</a></li>
+								<li><a href="javascript:;" role="button">기타</a></li>
+								<li class="empty"></li>
+							</ul>
+						</nav>
+					</section>
+
+					<section class="fullWidth topbordered">
+						<h2 class="visualHide">결혼</h2><!-- 접근성 탭 컨텐트 -->
+						<div class="sliderArea">
+							<div class="swiper-container">
+								<div class="swiper-wrapper"> <!-- 1010 : 이미지 추가 및 경로 수정-->
+									<div class="swiper-slide"><a href="javascript:;"><img src="../../assets/img/bank/invite_rolling/01_06.jpg" alt="우리 결혼합니다" /></a></div>
+									<div class="swiper-slide"><a href="javascript:;"><img src="../../assets/img/bank/invite_rolling/01_01.jpg" alt="결혼 초대장" /></a></div>
+									<div class="swiper-slide"><a href="javascript:;"><img src="../../assets/img/bank/invite_rolling/01_02.jpg" alt="결혼 초대장" /></a></div>
+									<div class="swiper-slide"><a href="javascript:;"><img src="../../assets/img/bank/invite_rolling/01_03.jpg" alt="결혼 초대장" /></a></div>
+									<div class="swiper-slide"><a href="javascript:;"><img src="../../assets/img/bank/invite_rolling/01_04.jpg" alt="결혼 초대장" /></a></div>
+									<div class="swiper-slide"><a href="javascript:;"><img src="../../assets/img/bank/invite_rolling/01_05.jpg" alt="결혼 초대장" /></a></div>
+								</div>
+								<div class="swiper-pagination"></div>
+							</div>
+							<a href="javascript:;" class="controlBtn nextBtn"></a>
+							<a href="javascript:;" class="controlBtn prevBtn"></a>
+						</div>
+
+						<!-- 0802 : 등록한 이미지만 노출되는 케이스 -->
+						<!-- <div class="imgArea">
+							<img src="../../assets/img/@tmp/invite_rolling/01_01.jpg" alt="결혼 초대장 배경이미지" />
+						</div> -->
+						<!-- //0802 : 등록한 이미지만 노출되는 케이스 -->
+
+						<div class="mgT10 mgR10 rightTxt">
+							<button type="button" class="btn secondary strokeType subSmallType">기본이미지보기</button>
+							<button type="button" class="btn secondary strokeType subSmallType">사진등록</button>
+						</div>
+					</section>
+
+					
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="submit" class="btn primary submit">다음</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

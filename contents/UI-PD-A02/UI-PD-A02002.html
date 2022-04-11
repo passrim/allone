@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>회원정보관리</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<div class="serviceNote">
+						<ul class="unorderList">
+							<li>메일을 제외한 고객정보는 영업점을 방문하시거나 스마트뱅킹에서 변경 가능합니다.</li>
+						</ul>
+					</div>
+					<section class="fullWidth">
+						<h3 class="bdB1">회원기본정보</h3>
+						<fieldset class="formWrap">
+							<legend>회원기본 정보 관리</legend>
+							
+							<!-- 성명  -->
+							<label for="inputLabel3">성명</label>
+							<div class="textInput">
+								<input type="text" id="inputLabel3" placeholder="김*리" class="formInput" name="" disabled="disabled">
+							</div>
+							
+							<!-- 연락처 -->
+							<label for="inputLabel1" aria-required="true">휴대폰</label>
+							<input type="tel" id="inputLabel1" placeholder="010-***-****" class="formInput" name="" disabled="disabled">
+							
+							<!-- 이메일 -->
+							<label for="inputLabel2">이메일</label>
+							<div class="searchBar">
+								<input type="text" id="inputLabel2" placeholder="Noe****@naver.com" class="formInput" name="" disabled="disabled">
+								<button type="submit" class="btn secondary floatSearch">변경</button>
+								<!--  등록된 이메일이 없을 경우
+								<input type="text" id="inputLabel2" placeholder="등록된 이메일이 없습니다." class="formInput" name="" disabled="disabled">
+								<button type="submit" class="btn secondary floatSearch">등록</button>
+								-->
+							</div>
+						</fieldset>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

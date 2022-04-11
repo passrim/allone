@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>자주쓰는 송금</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+
+				// $( "#sortable" ).sortable();
+				// $( "#sortable" ).disableSelection();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth with-fixedBtn">
+						<div class="titleArea"><!-- 0919 -->
+							<ul class="unorderList">
+								<li>좌측 버튼으로 순서를 변경하실 수 있습니다</li>
+							</ul>
+						</div>
+
+						<!-- 0919 -->
+						<ul class="boardList changeBtnList justify topbordered">
+							<li>
+								<div class="changeBtnBox">
+									<div class="changeBtnSet">
+										<button type="button" class="upBtn"><span class="visualHide">위로 이동</span></button>
+										<button type="button" class="downBtn"><span class="visualHide">아래로 이동</span></button>
+									</div>
+								</div>
+								<div class="formPad">
+									<div class="boxHead">
+										<div class="objHead">
+											<span class="dataTxt tName">내 계좌</span>
+											<div class="fx">
+												<a href="javascript:;" data-icon="editList" title="수정하기"><span class="visualHide">수정하기</span></a>
+												<a href="javascript:;" data-icon="deleteList" title="삭제하기"><span class="visualHide">삭제하기</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="changeBtnBox">
+									<div class="changeBtnSet">
+										<button type="button" class="upBtn"><span class="visualHide">위로 이동</span></button>
+										<button type="button" class="downBtn"><span class="visualHide">아래로 이동</span></button>
+									</div>
+								</div>
+								<div class="formPad">
+									<div class="boxHead">
+										<div class="objHead">
+											<span class="dataTxt tName">가족</span>
+											<div class="fx">
+												<a href="javascript:;" data-icon="editList" title="수정하기"><span class="visualHide">수정하기</span></a>
+												<a href="javascript:;" data-icon="deleteList" title="삭제하기"><span class="visualHide">삭제하기</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="changeBtnBox">
+									<div class="changeBtnSet">
+										<button type="button" class="upBtn"><span class="visualHide">위로 이동</span></button>
+										<button type="button" class="downBtn"><span class="visualHide">아래로 이동</span></button>
+									</div>
+								</div>
+								<div class="formPad">
+									<div class="boxHead">
+										<div class="objHead">
+											<span class="dataTxt tName">친구</span>
+											<div class="fx">
+												<a href="javascript:;" data-icon="editList" title="수정하기"><span class="visualHide">수정하기</span></a>
+												<a href="javascript:;" data-icon="deleteList" title="삭제하기"><span class="visualHide">삭제하기</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="changeBtnBox">
+									<div class="changeBtnSet">
+										<button type="button" class="upBtn"><span class="visualHide">위로 이동</span></button>
+										<button type="button" class="downBtn"><span class="visualHide">아래로 이동</span></button>
+									</div>
+								</div>
+								<div class="formPad">
+									<div class="boxHead">
+										<div class="objHead">
+											<span class="dataTxt tName">직장</span>
+											<div class="fx">
+												<a href="javascript:;" data-icon="editList" title="수정하기"><span class="visualHide">수정하기</span></a>
+												<a href="javascript:;" data-icon="deleteList" title="삭제하기"><span class="visualHide">삭제하기</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<!-- //0919 -->
+
+						<!-- drag & drop -->
+						<!-- <ul class="boardList justify drag-drop ui-sortable topbordered" data-role="drag-and-drop" id="sortable">
+							<li class="ui-sortable-handle">
+								<div class="dragbox">
+									<a href="javascript:;" data-icon='dragList' class="drag_btn" ><span class="visualHide">드래그</span></a>
+								</div>
+								<div class="formPad">
+									<div class="boxHead">
+										<div class="objHead">
+											<span class="dataTxt tName">내 계좌</span>
+											<div class="fx">
+												<a href="javascript:;" data-icon="editList" title="수정하기"><span class="visualHide">수정하기</span></a>
+												<a href="javascript:;" data-icon="deleteList" title="삭제하기"><span class="visualHide">삭제하기</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="ui-sortable-handle">
+								<div class="dragbox">
+									<a href="javascript:;" data-icon='dragList' class="drag_btn" ><span class="visualHide">드래그</span></a>
+								</div>
+								<div class="formPad">
+									<div class="boxHead">
+										<div class="objHead">
+											<span class="dataTxt tName">가족</span>
+											<div class="fx">
+												<a href="javascript:;" data-icon="editList" title="수정하기"><span class="visualHide">수정하기</span></a>
+												<a href="javascript:;" data-icon="deleteList" title="삭제하기"><span class="visualHide">삭제하기</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="ui-sortable-handle">
+								<div class="dragbox">
+									<a href="javascript:;" data-icon='dragList' class="drag_btn" ><span class="visualHide">드래그</span></a>
+								</div>
+								<div class="formPad">
+									<div class="boxHead">
+										<div class="objHead">
+											<span class="dataTxt tName">친구</span>
+											<div class="fx">
+												<a href="javascript:;" data-icon="editList" title="수정하기"><span class="visualHide">수정하기</span></a>
+												<a href="javascript:;" data-icon="deleteList" title="삭제하기"><span class="visualHide">삭제하기</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="ui-sortable-handle">
+								<div class="dragbox">
+									<a href="javascript:;" data-icon='dragList' class="drag_btn" ><span class="visualHide">드래그</span></a>
+								</div>
+								<div class="formPad">
+									<div class="boxHead">
+										<div class="objHead">
+											<span class="dataTxt tName">직장</span>
+											<div class="fx">
+												<a href="javascript:;" data-icon="editList" title="수정하기"><span class="visualHide">수정하기</span></a>
+												<a href="javascript:;" data-icon="deleteList" title="삭제하기"><span class="visualHide">삭제하기</span></a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul> -->
+
+						<div class="sectionWrap mgT0"><!-- 0829 -->
+							<button type="button" class="btn secondary-white">그룹추가 (최대10건)</button>
+						</div>
+
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

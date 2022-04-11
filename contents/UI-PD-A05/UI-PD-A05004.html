@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>알림함</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+		<script>
+		$(document).ready(function(){
+			$('#radio02_1').change(function(){
+				if($(this).is(':checked')) {
+					$('#toggleTab1').toggleClass('is-current');
+					$('#toggleTab2').toggleClass('is-current');
+					$('#toggleTab3').toggleClass('is-current');
+					$('#toggleTab4').toggleClass('is-current');
+				}
+			});
+			$('#radio02_2').change(function(){
+				if($(this).is(':checked')) {
+					$('#toggleTab2').toggleClass('is-current');
+					$('#toggleTab1').toggleClass('is-current');
+					$('#toggleTab3').toggleClass('is-current');
+					$('#toggleTab4').toggleClass('is-current');
+				}
+			});
+			$('#radio02_3').change(function(){
+				if($(this).is(':checked')) {
+					$('#toggleTab3').toggleClass('is-current');
+					$('#toggleTab1').toggleClass('is-current');
+					$('#toggleTab2').toggleClass('is-current');
+					$('#toggleTab4').toggleClass('is-current');
+				}
+			});
+			$('#radio02_4').change(function(){
+				if($(this).is(':checked')) {
+					$('#toggleTab4').toggleClass('is-current');
+					$('#toggleTab1').toggleClass('is-current');
+					$('#toggleTab2').toggleClass('is-current');
+					$('#toggleTab3').toggleClass('is-current');
+				}
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- 알림 컨테이너  -->
+					<div class="tabWrap alarm"> <!-- 2018-08-24 클래스 추가 -->
+						<section class="fullWidth">	
+							<!-- 알림 탭  -->				
+							<nav class="tabNav tabOverflow">
+								<ul class="columnSet">
+									<li class="colItem" data-tab="tabCont1"><a href="javascript:;">혜택정보</a></li>
+									<li class="colItem is-on" data-tab="tabCont2"><a href="javascript:;">금융정보</a></li>
+									<li class="colItem" data-tab="tabCont3"><a href="javascript:;">이벤트</a></li>
+									<li class="colItem" data-tab="tabCont4"><a href="javascript:;">새소식</a></li>
+									<li class="colItem" data-tab="tabCont5"><a href="javascript:;">커뮤니티</a></li>
+								</ul>
+							</nav>
+							<div class="tabMsg"> <!--// 2018-08-24 알림이 없을때 문구 노출 시에 메세지 영역은 삭제 -->
+								수신된 알림은 30일동안 보관됩니다. 
+							</div>
+							
+							<div id="toggleTab1" class="tabContent">
+							</div>
+
+							<!-- 금융정보 컨텐츠   -->
+							<div id="tabCont2" class="tabContent is-current"> 
+								<h2 class="visualHide">금융정보</h2><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+								<div class="tabWrap">
+									
+									<div class="columnSet poRelative">
+										<div class="select-input alarmSub">
+											<select id="selectLabel1" class="formInput">
+												<option value="default" label="전체">전체</option>
+												<option value="option2" label="이벤트">이벤트</option>
+												<option value="option3" label="리워드">리워드</option>
+												<option value="option4" label="마케팅">마케팅</option>
+												<option value="option4" label="스마트톡">스마트톡</option>
+											</select>
+										</div>
+										<button type="button" class="btn deleteAll-btn">전체삭제</button>
+									</div>
+								
+									<!-- div class="shortContent rowSet contentCentered"> <!-- // 2018-08-24 클래스 추가  
+										<i class="i-bell"></i>  2018-08-31 클래스 변경
+										새로운 알림이 없습니다.
+									</div -->
+									<ul class="alarmBox">
+										<li>
+											<a href="#">
+												<span class="alarm-transaction">송금</span>
+												<dl>
+													<dt>[송금완료]</dt>
+													<dd>홍길동님에게 송금한 500,000원이 송금완료 되었습니다.</dd>
+													<dd class="fz-12">2017-02-02 13:13:12</dd>
+												</dl>
+											</a>
+											<button type="button" class="deleteNotice" title="삭제하기">삭제</button>
+										</li>
+										<li>
+											<a href="#">
+												<span class="alarm-withdraw">출금알림</span>
+												<dl>
+													<dt>[출금알림]</dt>
+													<dd>홍길동님에게 송금한 500,000원이 송금완료 되었습니다.</dd>
+													<dd class="fz-12">2017-02-02 13:13:12</dd>
+												</dl>
+											</a>
+											<button type="button" class="deleteNotice" title="삭제하기">삭제</button>
+										</li>
+										<li>
+											<a href="#">
+												<span class="alarm-tax">지방세</span>
+												<dl>
+													<dt>[지방세]</dt>
+													<dd>홍길동님에게 송금한 500,000원이 송금완료 되었습니다.</dd>
+													<dd class="fz-12">2017-02-02 13:13:12</dd>
+												</dl>
+											</a>
+											<button type="button" class="deleteNotice" title="삭제하기">삭제</button>
+										</li>
+										<li>
+											<a href="#">
+												<span class="alarm-transaction">송금</span>
+												<dl>
+													<dt>[송금완료]</dt>
+													<dd>홍길동님에게 송금한 500,000원이 송금완료 되었습니다.</dd>
+													<dd class="fz-12">2017-02-02 13:13:12</dd>
+												</dl>
+											</a>
+											<button type="button" class="deleteNotice" title="삭제하기">삭제</button>
+										</li>
+										<li>
+											<a href="#">
+												<span class="alarm-withdraw">출금알림</span>
+												<dl>
+													<dt>[출금알림]</dt>
+													<dd>홍길동님에게 송금한 500,000원이 송금완료 되었습니다.</dd>
+													<dd class="fz-12">2017-02-02 13:13:12</dd>
+												</dl>
+											</a>
+											<button type="button" class="deleteNotice" title="삭제하기">삭제</button>
+										</li>
+										<li>
+											<a href="#">
+												<span class="alarm-tax">지방세</span>
+												<dl>
+													<dt>[지방세]</dt>
+													<dd>홍길동님에게 송금한 500,000원이 송금완료 되었습니다.</dd>
+													<dd class="fz-12">2017-02-02 13:13:12</dd>
+												</dl>
+											</a>
+											<button type="button" class="deleteNotice" title="삭제하기">삭제</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div id="toggleTab3" class="tabContent">
+							</div>
+
+							<div id="toggleTab4" class="tabContent">
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

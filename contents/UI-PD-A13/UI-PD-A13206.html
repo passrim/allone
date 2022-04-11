@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>골드바 가격조회</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth">
+						<div class="titleArea">
+							<ul class="unorderList">
+								<li>국제금가격(USD/T.oz) 1,000.00.원달러환율(/USD) 1,000.00</li>
+								<li>1g당 기준가격(원) 1,000.00</li>
+							</ul>
+							<span class="dataTxt tInfo noPadding fl">기준일시 2016-04-11 15:37:20</span> <!-- 1012 : fl 추가 :디자인 변경 가능성 다분-->
+						</div>
+					</section>
+
+					<!-- <section class="fullWidth topbordered"> -->
+					<section class="sectionWrap topbordered pdT10 pdBz"> <!-- 1019 -->
+						<h3>(주)한국금거래소쓰리엠</h3>
+						<table class="dataTable rowStyle">
+							<caption>기본 데이터 테이블</caption>
+							<thead>
+								<tr>
+									<th scope="col">종류<br>(수수료)</th>
+									<th scope="col">고객이 사실 때<br>(VAT 포함)</th>
+									<th scope="col">고객이<br>파실 때</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>10g <br>(5%)</td>
+									<td class="rightTxt">500,000원</td>
+									<td class="rightTxt">400,000원</td>
+								</tr>
+								<tr>
+									<td>100g <br>(5%)</td>
+									<td class="rightTxt">5,000,000원</td>
+									<td class="rightTxt">4,000,000원</td>
+								</tr>
+								<tr>
+									<td>1kg <br>(7%)</td>
+									<td class="rightTxt">50,000,000원</td>
+									<td class="rightTxt">44,000,000원</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<h3>(주)삼성금거래소</h3>
+						<table class="dataTable rowStyle mgB0">
+							<caption>기본 데이터 테이블</caption>
+							<thead>
+								<tr>
+									<th scope="col">종류<br>(수수료)</th>
+									<th scope="col">고객이 사실 때<br>(VAT 포함)</th>
+									<th scope="col">고객이<br>파실 때</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>37.5g <br>(4.5%)</td>
+									<td class="rightTxt">500,000원</td>
+									<td class="rightTxt">400,000원</td>
+								</tr>
+								<tr>
+									<td>187.5g <br>(4.7%)</td>
+									<td class="rightTxt">5,000,000원</td>
+									<td class="rightTxt">4,000,000원</td>
+								</tr>
+								<tr>
+									<td>375g <br>(5.5%)</td>
+									<td class="rightTxt">50,000,000원</td>
+									<td class="rightTxt">44,000,000원</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+
+					<section class="fullWidth with-fixedBtn topbordered">
+						<ul class="accordion"><!-- 2018-09-29 클래스 추가  -->
+							<li>
+								<dl>
+									<dt aria-label="꼭 알아두세요!" class="js-active"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a> <!-- 2018-09-28 클래스 추가 --></dt>
+									<dd>
+										<ul class="unorderList">
+											<li>기준가격은 국제 금가격과 원달러 환율의 변동에 따라 수시로 변경 고시됩니다.</li>
+											<li>고객이 사실 때 부가세(10%)가 별도 부과됩니다.</li>
+											<li>고객이 사실 때 금액 : 1g당 기준가격 x 중량 x (1+골드바 종류별 판매수수료율) x (1+부가가치세 10%)</li>
+											<li>고객이 파실 때 금액 : 1g당 기준가격 x 중량 x (1-매입수수료 율 5%), 파실 때는 부가세 없음</li>
+											<li>1g당 기준가격 : 국제금가격을 원달라 환율과 1g당 원화가격 으로 환산하여 은행이 고시하는 가격</li>
+											<li>국제금가격(USD/T.oz) : 런던금시장에서 거래되는 국제금시세</li>
+											<li>T.oz : 전세계적으로 사용되는 귀금속 중량 단위로 31.1034768g</li>
+										</ul>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+						</ul>
+					</section>
+
+					<button type="submit" class="btn primary submit selfBottom">골드바 구매</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

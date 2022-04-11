@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>골드바</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- breadcrumb -->
+					<section class="breadcrumb columnSet">
+						<h2>골드바 구매<span>종류 및 수량선택</span></h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">5</li>
+							<li class="is-off">7</li>
+						</ol>
+					</section>
+					<!-- //breadcrumb -->
+
+					<section class="fullWidth">
+						<div class="titleArea">
+							<ul class="unorderList pdT0">
+								<li>구매시 판매업체는 1개사만 선택 가능</li>
+								<li>1회 최대 구매수량은 5개이며, 구매횟수 제한은 없습니다.</li>
+							</ul>
+						</div>
+
+						<div class="sectionWrap topbordered">
+							<label for="autoTrue">구매하실 판매업체 선택</label>
+
+							<!-- <ul class="columnSet noGutterSet">
+								<li class="colItem">
+									<input type="radio" name="autoTransfer" id="autoTrue" class="btn radioToggle">
+									<label for="autoTrue" class="inputLabel secondary strokeType">(주)한국금거래소쓰리엠</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" name="autoTransfer" id="autoFalse" class="btn radioToggle">
+									<label for="autoFalse" class="inputLabel secondary strokeType">(주)삼성금거래소</label>
+								</li>
+							</ul> -->
+
+							<nav class="tabNavSub col6">
+								<ul class="columnSet noGutterSet">
+									<li class="colItem is-on" data-tab="tabSubCon01"><a href="javascript:;">(주)한국금거래소쓰리엠</a></li>
+									<li class="colItem" data-tab="tabSubCon02"><a href="javascript:;">(주)삼성금거래소</a></li>
+								</ul>
+							</nav>
+
+							<!-- tabContent  -->
+							<div id="tabSubCon01" class="tabContent noPadding is-current">
+								<h2 class="visualHide">(주)한국금거래소쓰리엠</h2>
+								<h3 class="labelTxt">구매하실 수량 선택</h3>
+								<ul class="goldbarNumList">
+									<li>
+										<div class="tCate "><span>10g</span></div>
+										<div class="calcWrap">
+											<div class="clacForm ">
+												<button type="submit" class="btn secondary" disabled="disabled"><i class="i-minus3"><span class="visualHide">감소</span></i></button>
+												<div class="balance balance-display">
+													<input type="text" id="" placeholder="" readonly="readonly" value="99" title="구매수량"><!-- 0913 : 접근성 레이블 제공 -->
+												</div>
+												<button type="submit" class="btn secondary"><i class="i-add"><span class="visualHide">증가</span></i></button>
+											</div>
+										</div>
+										<span class="tCost fr">529,551<em>원</em></span>
+									</li>
+									<li>
+										<div class="tCate "><span>100g</span></div>
+										<div class="calcWrap">
+											<div class="clacForm ">
+												<button type="submit" class="btn secondary" disabled="disabled"><i class="i-minus3"><span class="visualHide">감소</span></i></button>
+												<div class="balance balance-display">
+													<input type="text" id="" placeholder="" readonly="readonly" value="2" title="구매수량"><!-- 0913 : 접근성 레이블 제공 -->
+												</div>
+												<button type="submit" class="btn secondary"><i class="i-add"><span class="visualHide">증가</span></i></button>
+											</div>
+										</div>
+										<div class="tCost fr"><span>5,196,565<em>원</em></span></div>
+									</li>
+									<li>
+										<div class="tCate "><span>1kg</span></div>
+										<div class="calcWrap">
+											<div class="clacForm ">
+												<button type="submit" class="btn secondary" disabled="disabled"><i class="i-minus3"><span class="visualHide">감소</span></i></button>
+												<div class="balance balance-display">
+													<input type="text" id="" placeholder="" readonly="readonly" title="구매수량"><!-- 0913 : 접근성 레이블 제공 -->
+												</div>
+												<button type="submit" class="btn secondary"><i class="i-add"><span class="visualHide">증가</span></i></button>
+											</div>
+										</div>
+										<span class="tCost fr">51,965,661<em>원</em></span>
+									</li>
+								</ul>
+							</div>
+
+							<div id="tabSubCon02" class="tabContent noPadding">
+								<h2 class="visualHide">(주)삼성금거래소</h2>
+								<h3 class="labelTxt">구매하실 수량 선택</h3>
+								<ul class="goldbarNumList">
+									<li>
+										<div class="tCate "><span>37.5g(10돈)</span></div>
+										<div class="calcWrap">
+											<div class="clacForm ">
+												<button type="submit" class="btn secondary" disabled="disabled"><i class="i-minus3"><span class="visualHide">감소</span></i></button>
+												<div class="balance balance-display">
+													<input type="text" id="" placeholder="" readonly="readonly" title="구매수량"><!-- 0913 : 접근성 레이블 제공 -->
+												</div>
+												<button type="submit" class="btn secondary"><i class="i-add"><span class="visualHide">증가</span></i></button>
+											</div>
+										</div>
+										<span class="tCost fr">400,000<em>원</em></span>
+									</li>
+									<li>
+										<div class="tCate "><span>187.5g(50돈)</span></div>
+										<div class="calcWrap">
+											<div class="clacForm ">
+												<button type="submit" class="btn secondary" disabled="disabled"><i class="i-minus3"><span class="visualHide">감소</span></i></button>
+												<div class="balance balance-display">
+													<input type="text" id="" placeholder="" readonly="readonly" title="구매수량"><!-- 0913 : 접근성 레이블 제공 -->
+												</div>
+												<button type="submit" class="btn secondary"><i class="i-add"><span class="visualHide">증가</span></i></button>
+											</div>
+										</div>
+										<div class="tCost fr"><span>5,196,565<em>원</em></span></div>
+									</li>
+									<li>
+										<div class="tCate "><span>375g(100돈)</span></div>
+										<div class="calcWrap">
+											<div class="clacForm ">
+												<button type="submit" class="btn secondary" disabled="disabled"><i class="i-minus3"><span class="visualHide">감소</span></i></button>
+												<div class="balance balance-display">
+													<input type="text" id="" placeholder="" readonly="readonly" title="구매수량"><!-- 0913 : 접근성 레이블 제공 -->
+												</div>
+												<button type="submit" class="btn secondary"><i class="i-add"><span class="visualHide">증가</span></i></button>
+											</div>
+										</div>
+										<span class="tCost fr">51,965,661<em>원</em></span>
+									</li>
+								</ul>
+							</div>
+							<!-- //tabContent  -->
+
+							
+						</div>
+					</section>
+
+					<section class="fullWidth">
+						<div class="sectionWrap pdT0">
+							<button type="submit" class="btn secondary-gray">예상가격 조회</button>
+
+							<div class="paySumArea grid2 mgT30">
+								<span class="tTitle">총 구매 예상가격(VAT포함)</span>
+								<div class="numObj">
+									<span class="tSum03">200,000<em>원</em></span>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section class="fullWidth with-fixedBtn topbordered">
+						<ul class="accordion bdB0"><!-- 2018-09-29 클래스 추가  -->
+							<li>
+								<dl>
+									<dt aria-label="꼭 알아두세요!" class="js-active"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a> <!-- 2018-09-28 클래스 추가 --></dt>
+									<dd>
+										<ul class="unorderList">
+											<li>구매가격에는 VAT 및 판매수수료 포함</li>
+											<li>골드바 가격은 국제금가격 및 원달러 환율의 변동에 따라  실시간으로 변동 될 수 있으며, 조회가격과 실제 거래 가격이 다를 수 있으므로 유의하시기 바랍니다.</li>
+											<li>수수료 : 10g(5%)/100g(5%)/1kg(7%) 37.5g(4.5%)/187.5g(4.7%)/375g(5.5%)</li>
+										</ul>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+						</ul>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">다음</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>올원뱅크 검색서비스</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+				
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="layerPop.open('.modalWrap', this); return false;">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header bdB0">
+					<button type="button" class="btn closeBtn" id="fullClose">닫기</button>
+				</div>
+				<div data-role="content" class="search-contents">
+				
+					<!-- 음성검색 상단 컨텐츠 -->
+					<section class="fullWidth searchService">
+					
+						<!-- 상단 타이틀 -->
+						<div class="voice_headline">
+							<h2>올원뱅크<br />
+							음성서비스입니다.</h2>
+							<p class="mgT10">원하시는 서비스를 선택해주세요</p>
+						</div>
+						
+						<ul class="voiceServices">
+							<li>
+								<a href="javascript: void(0);">
+									<h3>올원송금</h3>
+									<p>성명과 금액만으로도 상대에게<br />송금이 가능합니다.</p>
+								</a>
+							</li>
+							<li>
+								<a href="javascript: void(0);">
+									<h3>자주쓰는 송금</h3>
+									<p>자주쓰는 송금에 등록된 상대에게만<br />송금이 가능합니다.</p>
+								</a>
+							</li>
+							<li>
+								<a href="javascript: void(0);">
+									<h3>메뉴이동</h3>
+									<p>원하시는 메뉴를 음성만으로 검색이<br />가능합니다.</p>
+								</a>
+							</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</div>
+		<!-- //fullPopup -->
+
+	</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>지문(face ID)인증 - AllOne BANK</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+				
+				var swiper = new Swiper('.login_banner', {
+					loop: true,
+					pagination: {
+						el: '.swiper-pagination',
+						clickable: true
+					},
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="centeredTxt with-fixedBtn">
+						<p class="mgT40 faceidTxt">로그인을 위해 FaceID영역을을<br>터치해주세요</p>
+						<button type="button" class="mgT50 btn"><img src="../../assets/img/ico_loginFace.png" width="75" border="0" alt="지문등록 아이콘" class="mgauto"></button>
+						<!-- <button type="button" class="btn secondary strokeType subSmallType subSmallType02 mgT25">처리중입니다</button>
+						<button type="button" class="btn secondary submit subSmallType subSmallType02 mgT25">실행</button> -->
+					</section>
+					<div class="selfBottom login_bannerBox">
+						<button type="submit" class="btn primary submit "><span class="loginBtnTxt">로그인 방식 변경하기</span></button>
+						
+						<iframe class="iframes" src="" title="개별 아이프레임 제목 삽입해주세요 (Dear.Dev)"></iframe>
+						<!-- <div class="swiper-container login_banner">
+							<div class="swiper-wrapper">
+								Slides
+								<div class="swiper-slide">
+									<a href="javascript: void(0)"><img src="../../assets/img/banner/login_banner01.jpg" alt="이벤트배너" /></a>
+								</div>	
+								<div class="swiper-slide">
+									<a href="javascript: void(0)"><img src="../../assets/img/banner/login_banner02.jpg" alt="이벤트배너" /></a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript: void(0)"><img src="../../assets/img/banner/login_banner03.jpg" alt="이벤트배너" /></a>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div> -->
+					</div>
+					
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>Step4 출금정보 입력 - 조회납부</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- breadcrumb -->
+					<section class="breadcrumb columnSet">
+						<h2>출금정보 입력</h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">4</li>
+							<li class="is-off">5</li>
+						</ol>
+					</section>
+					<!-- //breadcrumb -->
+
+					<section class="with-fixedBtn">
+						<form>
+							<fieldset class="formWrap">
+								<legend>Step4 출금정보 입력</legend>
+
+								<label for="selectLabel1">출금계좌 <i class="required"></i></label>
+								<div class="select-input">
+									<select id="selectLabel1" class="formInput">
+										<option value="default" value="00">123-****-****-89 NH All100플랜 통장</option>
+										<option value="option2" value="01">123-****-****-97 NH All100플랜 통장</option>
+										<option value="option3" value="02">123-****-****-74 NH All100플랜 통장</option>
+										<option value="option4" value="03">123-****-****-85 NH All100플랜 통장</option>
+									</select>
+								</div>
+								<span class="balance balance-currency" data-currency="원">잔액 <strong>10,000,000</strong></span>
+
+								<label for="inputLabel2">납부금액</label>
+								<div class="numberInput">
+									<div class="balance balance-display" data-currency="원">
+										<input type="tel" id="inputLabel2" value="1,000,000" class="formInput balance-input" name="" disabled="disabled" />
+									</div>
+								</div>
+
+								<label for="inputLabel3">계좌 비밀번호 <i class="required"></i></label>
+								<div class="numberInput">
+									<input type="password" id="inputLabel3" placeholder="계좌비밀번호 4자리 입력" maxlength="4" class="formInput" name="" />
+								</div>
+
+
+								<label for="inputLabel9">전화번호 <i class="required"></i></label>
+								<dl class="columnSet phoneInput">
+									<dt>
+										<label for="phoneNum" class="visualHide">전화번호 앞 세자리</label>
+										<div class="select-input">
+											<select id="phoneNum" class="formInput" name="" aria-required="true">
+												<option value="010" label="010">010</option>
+												<option value="017" label="017">017</option>
+											</select>
+										</div>
+									</dt>
+									<dd>
+										<label for="phoneNum" class="visualHide">전화번호 뒷 여섯자리</label>
+										<input type="tel" id="inputLabel10" placeholder="- 없이 입력" class="formInput" name="phone" maxlength="8" />
+									</dd>
+								</dl>
+							</fieldset>
+						</form>
+
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">납부</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

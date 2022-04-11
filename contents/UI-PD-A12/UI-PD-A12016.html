@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>올원모임</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content alloneMeeting" data-role="content"> <!-- Category Class : alloneMeeting -->
+					<section class="breadcrumb columnSet">
+						<h2>모임개설<span>회비정보 입력</span></h2>
+						<ol class="step columnSet twoSet">
+							<li class="is-on">1</li>
+							<li class="is-off">3</li>
+						</ol>
+					</section>
+
+					<section class="fullWidth">
+						<div class="sectionWrap">
+							<label for="f_se01">계좌선택</label>
+							<div class="select-input">
+								<select id="f_se01" class="formInput">
+									<option value="default" label="계좌선택">계좌선택</option>
+								</select>
+							</div>
+
+							<label for="f_se02">회비 납부일</label>
+							<div class="select-input">
+								<select id="f_se02" class="formInput">
+									<option value="default" label="납부일 선택">납부일 선택</option>
+								</select>
+							</div>
+
+							<label for="f_money">회비금액</label>
+							<div class="numberInput">
+								<div class="balance balance-display" data-currency="원">
+									<input type="tel" id="f_money" placeholder="" class="formInput balance-input" name="">
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<!-- <section class="fullWidth with-fixedBtn topbordered">
+						<div class="sectionWrap">
+							<label for="f_agrement">모임 약관동의</label>
+							<ul class="dataType-list agreement">
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="f_agrement"><label for="f_agrement">체크</label>
+									</div>
+									<a href="javascript:void(0);">전체동의</a>
+									<ul>
+										<li>
+											<div class="checkbox">
+												<input type="checkbox" id=""><label for="">체크</label>
+											</div>
+											<a href="javascript:void(0);">서비스 이용약관 동의</a>
+										</li>
+										<li>
+											<div class="checkbox">
+												<input type="checkbox" id=""><label for="">체크</label>
+											</div>
+											<a href="javascript:void(0);">개인정보제공동의</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</section> -->
+
+					<!-- 0927 -->
+					<section class="fullWidth topbordered with-fixedBtn">
+						<ul class="accordion bdB0">
+							<li>
+								<dl>
+									<dt class="js-active" aria-label="꼭 알아두세요!"><a href="javascript:void(0);">이용 전에 꼭 확인하세요!</a></dt>
+									<dd>
+										<dl class="numberList">
+											<dt><span>1</span></dt>
+											<dd><span class="plusName">더<sup>+</sup>모임</span> 서비스는 회원들 간 자유로운 의사소통 및 회비관리를 위한 서비스입니다. 다만, 사회통념상 미풍양속을 저해하는 등 유해한 콘텐츠로 판단되는 경우, 관리자에 의해 사전 예고없이 삭제되거나 모임이 폐쇄될 수 있습니다.</dd> <!-- 1017 -->
+											<dt><span>2</span></dt>
+											<dd>농협은행은 <span class="plusName">더<sup>+</sup>모임</span> 서비스 이용 과정에서 발생한 회원 간의 분쟁, 사기, 불법행위 등에 대해서는 책임지지 않습니다.</dd><!-- 1017 -->
+										</dl>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+
+						<div class="sectionWrap topbordered mgT0 pdB30 mgB30"> <!-- 2018-11-02 클래스 추가  -->
+							<div class="checkbox withLabel">
+								<input type="checkbox" id="chk_agree" ><label for="chk_agree">해당 내용에 동의합니다.</label>
+							</div>
+						</div>
+					</section><!-- //0927 -->
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="submit" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">다음</button></li>
+					</ul>
+
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

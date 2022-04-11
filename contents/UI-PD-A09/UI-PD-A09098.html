@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>초대장 보내기</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content bigFont" data-role="content"><!-- 큰글형 : .bigFont -->
+					<section class="fullWidth">
+						<div class="titleArea">
+							<div class="titleWrap">
+								<h2 class="tTitle fz-24">철이와 순이의 결혼식에 초대합니다</h2>
+								<span class="tDate">2017-10-18 19:57:57</span>
+							</div>
+						</div>
+					</section>
+
+					<section class="fullWidth toplined">
+						<div class="sectionWrap">
+							<dl class="dataList leftAlign noBorder noPadding">
+								<dt>구분</dt>
+								<dd>결혼</dd>
+								<dt>날짜/시간</dt>
+								<dd>2018-08-28 13:00</dd>
+								<dt>장소</dt>
+								<dd>행복정원</dd>
+								<dt>인사말</dt>
+								<dd>
+									서로 마주 보며 다져온 사랑을 이제 함께 한 곳을 바라보며 걸어갈 수 있는 큰 사랑으로 키우고자 합니다. <br>저희 두 사람이 사랑의 이름으로 지켜나갈 수 있게 앞날을 축복해 주시면 감사하겠습니다.
+									<div class="mgT20">
+										<button type="button" class="btn secondary strokeType subSmallType">모바일 초대장 보기</button>
+									</div>
+								</dd>
+							</dl>
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered">
+						<div class="completeMsg stopMsg">
+							<p class="desc1">입금 내역이 없습니다.</p>
+							<p class="desc2"></p>
+						</div>
+					</section>
+
+					<section class="fullWidth with-fixedBtn topbordered">
+						<div class="titleArea ">
+							<h3 class="tTitle">입금내역 (00명)</h3>
+						</div>
+
+						<ul class="boardList payType toplined"><!-- payType -->
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<div class="inlineWrap">
+											<span class="tCon">신*영</span>
+											<span class="tDate">(2018-05-25)</span>
+										</div>
+										<div class="inlineWrap">
+											<span class="tMoney">5,000원</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<div class="inlineWrap">
+											<span class="tCon">신*영</span>
+											<span class="tDate">(2018-05-25)</span>
+										</div>
+										<div class="inlineWrap">
+											<span class="tMoney">5,000원</span>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<div class="inlineWrap">
+											<span class="tCon">신*영</span>
+											<span class="tDate">(2018-05-25)</span>
+										</div>
+										<div class="inlineWrap">
+											<span class="tMoney">5,000원</span>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+
+						<div class="sectionWrap paySumArea grid2 mgT0">
+							<span class="tTitle">총 입금액</span>
+							<div class="numObj">
+								<span class="tSum greenOn">50,000<em class="greenOn">원</em></span>
+							</div>
+						</div>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="submit" class="btn primary submit">초대장 다시 보내기</button></li>
+					</ul>
+
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

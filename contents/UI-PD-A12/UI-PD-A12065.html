@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>쓰기/수정 - 올원커뮤니티</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('#modalDefault', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="layerPop.open('#modalDefault', this); return false;">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- 팝업시작 -->
+		<div class="modalWrap" id="modalDefault">
+			<div class="modalDefault">
+				<div class="header">
+					<h1 class="headerTitle">이모티콘</h1>
+					<button type="button" class="btn closeBtn" id="defaultClose">닫기</button>
+				</div>
+				<div data-role="content" class="modal-contents">
+					<section class="fullWidth">
+								<div id="tabCont1" class="tabContent is-current">
+									<h3 class="visualHide">올리</h3>
+									<ul class="emoList">
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/allre/allre1.png" alt="올리" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/allre/allre2.png" alt="올리 안녕" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/allre/allre3.png" alt="올리 점프" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/allre/allre4.png" alt="올리 친절" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/allre/allre5.png" alt="올리 화이팅" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/allre/allre6.png" alt="올리 올원" /></a></li>
+									</ul>
+								</div>
+								
+								<div id="tabCont2" class="tabContent">
+									<h3 class="visualHide">원이</h3>
+									<ul class="emoList">
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/woni/woni1.png" alt="원이" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/woni/woni2.png" alt="원이 슬픔" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/woni/woni3.png" alt="원이 선물 " /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/woni/woni4.png" alt="원이 안녕" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/woni/woni5.png" alt="원이 화이팅" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/woni/woni6.png" alt="원이 날개" /></a></li>
+									</ul>
+								</div>
+								
+								<div id="tabCont3" class="tabContent">
+									<h3 class="visualHide">단지</h3>
+									<ul class="emoList">
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/danji/danji1.png" alt="단지" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/danji/danji2.png" alt="단지 윙크" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/danji/danji3.png" alt="단지 웨딩" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/danji/danji4.png" alt="단지 안녕" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/danji/danji5.png" alt="단지 노래" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/danji/danji6.png" alt="단지 한아름" /></a></li>
+									</ul>
+								</div>
+								
+								<div id="tabCont4" class="tabContent">
+									<h3 class="visualHide">코리</h3>
+									<ul class="emoList">
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/kori/kori1.png" alt="코리" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/kori/kori2.png" alt="코리 최고" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/kori/kori3.png" alt="코리 기쁨" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/kori/kori4.png" alt="코리 안녕" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/kori/kori5.png" alt="코리 출장" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/kori/kori6.png" alt="코리 파이팅" /></a></li>
+									</ul>
+								</div>
+								
+								<div id="tabCont5" class="tabContent">
+									<h3 class="visualHide">달리</h3>
+									<ul class="emoList">
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/dalli/dalli1.png" alt="달리" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/dalli/dalli2.png" alt="달리 점프" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/dalli/dalli3.png" alt="달리 윙크" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/dalli/dalli4.png" alt="달리 여행" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/dalli/dalli5.png" alt="달리 오케이" /></a></li>
+										<li><a href="javascript:;"><img src="../../assets/img/emoticon/dalli/dalli6.png" alt="달리 비행기" /></a></li>
+									</ul>
+								</div>
+								
+								<div class="tabNav">
+									<ul class="columnSet iconTab">
+										<li class="colItem is-on" data-tab="tabCont1"><a><img src="../../assets/img/emoticon/allre/allre1.png" alt="올리" /></a>1</li>
+										<li class="colItem" data-tab="tabCont2"><a><img src="../../assets/img/emoticon/woni/woni1.png" alt="원이" /></a>2</li>
+										<li class="colItem" data-tab="tabCont3"><a><img src="../../assets/img/emoticon/danji/danji1.png" alt="단지" /></a>3</li>
+										<li class="colItem" data-tab="tabCont4"><a><img src="../../assets/img/emoticon/kori/kori1.png" alt="코리" /></a>4</li>
+										<li class="colItem" data-tab="tabCont5"><a><img src="../../assets/img/emoticon/dalli/dalli1.png" alt="달리" /></a>5</li>
+									</ul>
+								</div>
+					</section>
+				</div>
+			</div>
+		</div>
+		<!-- //팝업끝 -->
+
+	</body>
+</html>

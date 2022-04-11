@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>휴대전화 인증</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>휴대전화 인증</h2>
+						<ol class="step columnSet">
+							<li class="is-on is-done">1</li>
+							<li class="is-on">2</li>
+							<li class="is-off">5</li>
+						</ol>
+					</section>
+					<section>
+						<label for="inputLabel4">본인인증 <i class="required"></i></label>
+						<ul class="columnSet noGutterSet">
+							<li class="colItem">
+								<input type="radio" id="skT" class="btn radioToggle" value="SKT" name="mobileProvider">
+								<label for="skT" class="inputLabel secondary strokeType">SKT</label>
+							</li>
+							<li class="colItem">
+								<input type="radio" id="ktT" class="btn radioToggle" value="KT" name="mobileProvider">
+								<label for="ktT" class="inputLabel secondary strokeType">KT</label>
+							</li>
+							<li class="colItem">
+								<input type="radio" id="lgT" class="btn radioToggle" value="LG" name="mobileProvider">
+								<label for="lgT" class="inputLabel secondary strokeType">LGU+</label>
+							</li>
+						</ul>
+						<dl class="columnSet phoneInput">
+							<dt>
+								<label for="phoneNum" class="visualHide">핸드폰 첫 3자리</label> <!-- 2018-09-10 label 명 수정  -->
+								<div class="select-input">
+									<select id="phoneNum" class="formInput" name="">
+										<option value="010" label="010">010</option>
+										<option value="017" label="017">017</option>
+									</select>
+								</div>
+							</dt>
+							<dd>
+								<label for="inputLabel5" class="visualHide">핸드폰 끝 8자리</label>  <!-- 2018-09-10 label 명 수정 및 placeholder 수정 -->
+								<input type="tel" id="inputLabel4" placeholder="-없이 입력" class="formInput" name="phone" maxlength="8" />	
+								<!-- <button type="button" class="btn submit reAuth-btn">다시요청</button> -->
+							</dd>
+						</dl>
+
+						<p class="basisTxt mgT30 mgB10">본인인증을 위해 약관에 동의합니다.</p>
+						<ul class="dataType-list agreement">
+							<li>
+								<div class="checkbox withLabel allAgree">
+									<input type="checkbox" id=""><label for="">전체동의</label>
+								</div>
+								<ul>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:;"><spam class="greenOn">[필수]</spam> 개인정보 수집&middot;이용 동의</a>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:;"><spam class="greenOn">[필수]</spam> 개인정보제공 동의</a>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:;"><spam class="greenOn">[필수]</spam> 서비스 이용약관 동의</a>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:;"><spam class="greenOn">[필수]</spam> 통신사 이용약관 동의</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					
+					</section>
+					
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

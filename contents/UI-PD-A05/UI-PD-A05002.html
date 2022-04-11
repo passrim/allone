@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>알림함</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<div class="tabWrap alarm"> <!-- 2018-08-24 클래스 추가 -->
+						<section class="fullWidth">
+							<nav class="tabNav tabOverflow">
+								<ul class="columnSet">
+									<li class="colItem is-on" data-tab="tabCont1"><a href="javascript:;">혜택정보</a></li>
+									<li class="colItem" data-tab="tabCont2"><a href="javascript:;">금융정보</a></li>
+									<li class="colItem" data-tab="tabCont3"><a href="javascript:;">이벤트</a></li>
+									<li class="colItem" data-tab="tabCont4"><a href="javascript:;">새소식</a></li>
+									<li class="colItem" data-tab="tabCont5"><a href="javascript:;">커뮤니티</a></li>
+								</ul>
+							</nav>
+						
+							<div id="tabCont1" class="tabContent is-current">
+								<h2 class="visualHide">혜택정보</h2><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+								<div class="shortContent rowSet contentCentered"> <!-- 2018-08-24 클래스 추가 -->
+									<i class="i-bell redOn border"></i> <!-- 2018-08-31 클래스 변경 및 border 클래스 추가 -->
+									<h2>혜택정보 PUSH 알림 안내</h2>
+									<p>PUSH알림 수신 동의하시면 올원뱅크의<br />다양한 서비스 혜택을 받아 보실 수 있습니다.</p> <!--  2018-08-31 컨텐츠 수정 -->
+									<button type="button" class="btn secondary widthAuto">알림 수신 동의</button>
+								</div>
+							</div>
+							<div id="tabCont2" class="tabContent">
+								<h2 class="visualHide">금융정보</h2><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+								Tab Content1
+							</div>
+							<div id="tabCont3" class="tabContent">
+								<h2 class="visualHide">이벤트</h2><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+								Tab Content1
+							</div>
+						</section>
+					</div>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

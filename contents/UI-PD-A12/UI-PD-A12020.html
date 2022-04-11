@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>모임명</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content alloneMeeting" data-role="content"> <!-- Category Class : alloneMeeting -->
+					<section class="fullWidth">
+						<ul class="meetNav grid5"> <!-- 1002 : 접근성 -->
+							<li class="on"><a href="javascript:;" aria-selected="true" title="현재 탭"><span class="icon"></span>홈</a></li>
+							<li><a href="javascript:;" aria-selected="false"><span class="icon"></span>회비납부</a></li>
+							<li><a href="javascript:;" aria-selected="false"><span class="icon"></span>회비장부</a></li>
+							<li><a href="javascript:;" aria-selected="false"><span class="icon"></span>회비관리</a></li>
+							<li><a href="javascript:;" aria-selected="false"><span class="icon"></span>설정</a></li>
+						</ul>
+					</section>
+
+					<section class="fullWidth">
+						<h3 class="visualHide">홈</h3><!--접근성 탭 타이틀 -->
+
+						<div class="imgArea customSize homeImg"><!-- 0929 -->
+							<img src="../../assets/img/meeting/meetingSet.png" alt="모임설정">
+						</div>
+
+						<div class="titleArea meetHome">
+							<h3 class="tTitle">의왕시 올원뱅크 가입자 모임</h3>
+							<div class="titleWrap">
+								<span>멤버<em class="greenOn">15</em></span>
+								<!-- 2018-10-30 가입 대기 이동 버튼 추가  -->
+								<button type="button" class="btn waitingList">가입대기 <em>1</em>명</button>
+								<!-- // 2018-10-30 가입 대기 이동 버튼 추가  -->
+								<a href="javascript:;" data-icon="plus" class="greenOn">초대</a>
+								<!-- <a href="javascript:;" data-icon="editList" class="fr"> 글쓰기</a> -->
+								<button type="button" class="btn secondary submit widthAuto btn_write">글쓰기</button> <!-- 0822 -->
+							</div>
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered">
+						<p class="pdT30 pdB30 centeredTxt">첫 게시글을 작성해보세요 <br>나와 멤버가 쓴 글이 여기에 표시됩니다.</p>
+					</section>
+
+					<section class="fullWidth topbordered"><!-- 0822 -->
+						<ul class="noticeList">
+							<li>
+								<a href="javascript:;">
+									<div class="labelBox"><span class="txtLabel redOn">공지</span></div>
+									<span class="ellipsis">2018년을 시작하고 어느덧 여름이 다가옵니다</span> <!-- 0821 .ellipsis-->
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<div class="labelBox"><span class="txtLabel redOn">공지</span></div>
+									<span class="ellipsis"><!-- 0821 .ellipsis-->
+									회비 관련하여 중요공지 나갑니다. 현재 회비 미납된 회원이 많으므로, 회비납부 및 미납자에 대한 모임탈퇴 여부가
+									</span>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;">
+									<div class="labelBox"><span class="txtLabel greenOn">일정</span></div>
+									<span class="ellipsis">7월 모임 공지</span><!-- 0821 .ellipsis-->
+								</a>
+							</li>
+						</ul>
+					</section>
+
+					<section class="fullWidth topbordered">
+						<!-- 0827  -->
+						<ul class="boardList meetHome">
+							<li>
+								<a href="javascript:;" class="boxHead">
+									<div class="objHead">
+										<strong class="dataTxt tName ">김올리</strong>
+									</div>
+									<div class="objCon">
+										<span class="dataTxt tCon ellipsis">11친애하는 모임 여러분들 이번 서울/경기 정모 소식을 알려드립니다~~ 다들 꼭 참석하셔서 즐거운 시간 보냈으면 합니다. 내일 모임에서 차로</span>
+										<span class="more">더보기</span>
+									</div>
+									<div class="objFoot">
+										<span class="dataTxt tDate">2017-10-18 19:57:57</span>
+										<span class="commentCounter type02"><em>15</em></span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="boxHead">
+									<div class="objHead">
+										<strong class="dataTxt tName ">조미리</strong>
+									</div>
+									<div class="objCon">
+										<span class="dataTxt tCon ellipsis">조미리 님이 모임에 가입했습니다.</span>
+									</div>
+									<div class="objFoot">
+										<span class="dataTxt tDate">2017-10-18 19:57:57</span>
+										<span class="commentCounter type02"><em>15</em></span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="boxHead">
+									<div class="objHead">
+										<strong class="dataTxt tName ">메아리</strong>
+									</div>
+									<div class="objCon">
+										<span class="dataTxt tCon ellipsis">친애하는 모임 여러분들 이번 서울/경기 정모 소식을 알려드립니다~~ 다들 꼭 참석하셔서 즐거운 시간 보냈으면 합니다. 내일 모임에서 차로</span>
+										<span class="more">더보기</span>
+									</div>
+								</a>
+								<div class="boxFoot">
+									<ul class="imgArea">
+										<li><img src="../../assets/img/meeting/meetingSet.png" alt="모임설정"></li>
+									</ul>
+									<ul class="imgArea grid2 pad">
+										<li><img src="../../assets/img/meeting/meetingSet.png" alt="모임설정"></li>
+										<li><img src="../../assets/img/meeting/meetingSet.png" alt="모임설정"></li>
+									</ul>
+									<div class="objFoot">
+										<span class="dataTxt tDate">2017-10-18 19:57:57</span>
+										<span class="commentCounter type02"><em>15</em></span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<a href="javascript:;" class="boxHead">
+									<div class="objHead">
+										<strong class="dataTxt tName ">메아리</strong>
+									</div>
+									<div class="objCon">
+										<span class="dataTxt tCon ellipsis">친애하는 모임 여러분들 이번 서울/경기 정모 소식을 알려드립니다~~ 다들 꼭 참석하셔서 즐거운 시간 보냈으면 합니다. 내일 모임에서 차로</span>
+										<span class="more">더보기</span>
+									</div>
+									<div class="objFoot">
+										<span class="dataTxt tDate">2017-10-18 19:57:57</span>
+										<span class="commentCounter type02"><em>15</em></span>
+									</div>
+								</a>
+								<!-- 0829 삭제 -->
+								<!-- <div class="boxFoot">
+									<ul class="introVodList">
+										<li>
+											<a href="javascript:;" class="boxHead" title="2016 올원뱅크 광고영상">
+												<div class="imgArea">
+													<img src="../../assets/img/aboutApp/vod02.png" alt="2016 올원뱅크 광고영상">
+												</div>
+											</a>
+										</li>
+									</ul>
+									<div class="objFoot">
+										<span class="dataTxt tDate">2017-10-18 19:57:57</span>
+										<span class="commentCounter type02"><em>15</em></span>
+									</div>
+								</div> -->
+							</li>
+							<li>
+								<a href="javascript:;" class="boxHead">
+									<div class="objHead">
+										<strong class="dataTxt tName ">메아리</strong>
+									</div>
+									<div class="objCon">
+										<div class="noticerBox">
+											<span class="visualHide">공지</span>
+											<strong class="tTxt">7월 모임 공지 합니다.</strong>
+											<span class="tDate">2017-10-18 19:00</span>
+										</div>
+									</div>
+									<div class="objFoot">
+										<span class="dataTxt tDate">2017-10-18 19:57:57</span>
+										<span class="commentCounter type02"><em>15</em></span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:;" class="boxHead">
+									<div class="objHead">
+										<strong class="dataTxt tName ">메아리</strong>
+									</div>
+									<div class="objCon">
+										<span class="dataTxt tCon ellipsis">
+											맛집 공유 드릴게요~ 휴가 때 꼭 가보세요~
+											<br>
+											<span class="linkBox">http://naver.com/ABcertyerer</span> <!-- 0829 -->
+										</span>
+									</div>
+									<div class="objFoot">
+										<span class="dataTxt tDate">2017-10-18 19:57:57</span>
+										<span class="commentCounter type02"><em>15</em></span>
+									</div>
+								</a>
+								<!-- <div class="boxFoot">
+									<div class="linkBox">
+										<a href="javascript:;">http://naver.com/ABcertyerer</a>
+									</div>
+									<div class="objFoot">
+										<span class="dataTxt tDate">2017-10-18 19:57:57</span>
+										<span class="commentCounter type02"><em>15</em></span>
+									</div>
+								</div> -->
+							</li>
+						</ul>
+
+						<button type="button" class="btn more-btn">더보기(<span>1</span><span>10</span>)<span></span></button>
+					</section><!-- 0913 : 마크업 태그 수정 --> 
+
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

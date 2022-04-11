@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>계좌확인 - 입출금계좌개설</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>Magic Tree (매직트리)<span>계좌확인</span></h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">3</li>
+							<li class="is-off">6</li>
+						</ol>
+					</section>
+					<section class="fullWidth">
+						<!-- 181001 : dummyImg 삭제  -->
+						<div class="completeMsg onlyMsg bgMsg newAccountMsg step03"> <!-- 181001 :: 비주얼 마크업 전체 적용 -->
+							<p class="desc1 _2">인증하신 타행계좌로 <span class="dp-inblock"><strong class="greenOn">1원</strong>을 보내드렸습니다.</span><br>타행계좌의 입금내역에 표시된 <span class="dp-inblock"><strong class="greenOn">숫자 6자리</strong>를 입력해주세요.</span></p>
+						</div>
+					</section>
+
+					<section>
+							<label for="inputLabel1">인증 문구 입력</label>
+							<div class="columnSet">
+								<strong class="inputNameTag">NH</strong>
+								<input type="password" id="inputLabel1" placeholder="6자리 숫자 입력" class="formInput colItem" maxlength="4">
+							</div>
+
+							<label for="inputLabel2">받는계좌</label>
+							<div class="search rightTxt ">
+								<input type="text" id="inputLabel2" placeholder="농협 123-12**-12**-12" class="formInput" disabled="disabled">
+								<button type="button" class="btn secondary strokeType subSmallType mgT10">계좌변경</button>
+							</div>
+
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">다음</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

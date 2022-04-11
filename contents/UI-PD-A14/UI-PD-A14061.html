@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>WU-AUTOSEND 신청</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="javascript:void(0);">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header">
+					<h1 class="headerTitle">WU-AUTOSEND 신청</h1>
+					<button type="button" class="btn closeBtn" id="fullClose">닫기</button>
+				</div>
+				<div data-role="content" class="modal-contents">
+					<section class="fullWidth with-fixedBtn">
+					
+						<h3>보내는 분 정보</h3>
+						<dl class="dataList bdB0">
+							<dt>영문 이름</dt>
+							<dd>Gil *** Hong</dd>
+						</dl>
+						
+						<h3 class="topbordered">송금 정보</h3>
+						<dl class="dataList bdB0">
+							<dt>송금금액</dt>
+							<dd>USD 20,000.00</dd>
+							<dt>송금수수료</dt>
+							<dd>USD 10.00</dd>
+							<dt>적용환율</dt>
+							<dd>1,212원</dd>
+							<dt>인출원화</dt>
+							<dd>298,730원</dd>
+							<dt>인출계좌번호</dt>
+							<dd>123-**-23423</dd>
+						</dl>	
+						
+						<h3 class="topbordered">받는 분 정보</h3>
+						<dl class="dataList">
+							<dt>영문 이름</dt>
+							<dd>Gil *** Hong</dd>
+							<dt>수취은행 국가명</dt>
+							<dd>USA</dd>
+							<dt>수취 주/도시</dt>
+							<dd>NEW YORK</dd>
+						</dl>
+						<span class="fieldNotes normal-info pdBoth15 mgB15"> - 송금신청 내용을 다시 한번 확인해주시고 송금신청 버튼을 눌러주세요. 송금신청 후에는 취소가 불가합니다.</span>
+					</section>
+					<ul class="columnSet selfBottom marginT10">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">송금신청</button></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //fullPopup -->
+
+	</body>
+</html>

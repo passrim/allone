@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>step3_오토리스_정보확인 - 대출</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>오토리스<span>정보확인</span></h2>
+						<ol class="step columnSet">
+							<li class="is-on is-done">1</li>
+							<li class="is-on">3</li>
+							<li class="is-off">4</li>
+						</ol>
+					</section>
+					<section class="fullWidth">
+						<dl class="dataList bdT0">
+							<dt>성명</dt><dd>홍*동</dd>
+							<dt>연락처</dt><dd>010-3***-12**</dd>
+							<dt>견적서 수령방법</dt><dd>이메일/dad1**@naver.com</dd>
+							<dt>차량/모델명</dt><dd>국산차/그랜저</dd>
+							<dt>월 예산(리스료)</dt><dd>20만원 ~ 40만원</dd>
+							<dt>추가의견</dt><dd>다음달 정도 차량 구입예정인데 SM차량 모델중에 어떤 차량이 좋은지 추천바랍니다. 주로 회사 출퇴근 및 외근을 많이 다닙니다.</dd>
+						</dl>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

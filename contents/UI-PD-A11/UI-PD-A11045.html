@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>충전 미완료 내역</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth no-fixed">
+						<h3>2017-04-02 13:13:13</h3>
+						<dl class="dataList bdB0">
+							<dt>구분</dt><dd class="redOn">충전미완료</dd>
+							<dt>사용금액</dt><dd>39,000 원</dd>
+						</dl>
+						<div class="rightTxt pdRL15 pdB20 bdB1">
+							<button type="button" class="btn secondary strokeType subSmallType">내 계좌로 환불</button>
+							<button type="button" class="btn secondary-gray subSmallType">충전 재실행</button>
+						</div>
+						<h3>2017-04-02 13:13:13</h3>
+						<dl class="dataList bdB0">
+							<dt>구분</dt><dd class="redOn">충전미완료</dd>
+							<dt>사용금액</dt><dd>39,000 원</dd>
+						</dl>
+						<div class="rightTxt pdRL15 pdB20 bdB1">
+							<button type="button" class="btn secondary strokeType subSmallType">내 계좌로 환불</button>
+							<button type="button" class="btn secondary-gray subSmallType">충전 재실행</button>
+						</div>
+						<h3>2017-04-02 13:13:13</h3>
+						<dl class="dataList bdB0">
+							<dt>구분</dt><dd class="redOn">충전미완료</dd>
+							<dt>사용금액</dt><dd>39,000 원</dd>
+						</dl>
+						<div class="rightTxt pdRL15 pdB20 bdB1">
+							<button type="button" class="btn secondary strokeType subSmallType">내 계좌로 환불</button>
+							<button type="button" class="btn secondary-gray subSmallType">충전 재실행</button>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

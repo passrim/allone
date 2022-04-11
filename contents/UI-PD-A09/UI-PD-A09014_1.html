@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>뱅크</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="layerPop.open('.modalWrap', this); return false;">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header">
+					<h1 class="headerTitle">자주쓰는 계좌/연락처</h1>
+					<button type="button" class="btn closeBtn" id="fullClose">닫기</button>
+				</div>
+				<div data-role="content" class="modal-contents addErrorPage"> <!-- 1015 : addErrorPage -->
+					<section class="with-fixedBtn fullWidth">
+						<nav class="tabNav tabOverflow">
+							<ul class="columnSet">
+								<li class="colItem is-on" data-tab="tabCont1"><a href="javascript:;">전체</a></li>
+								<li class="colItem" data-tab="tabCont2"><a href="javascript:;">가족</a></li>
+								<li class="colItem" data-tab="tabCont3"><a href="javascript:;">친구</a></li>
+								<li class="colItem" data-tab="tabCont4"><a href="javascript:;">직장</a></li>
+								<li class="colItem" data-tab="tabCont5"><a href="javascript:;">모임</a></li>
+								<li class="colItem" data-tab="tabCont6"><a href="javascript:;">설정</a></li>
+								<li class="colItem" data-tab="tabCont7"><a href="javascript:;">설정</a></li>
+							</ul>
+						</nav>
+
+						<!-- <section class="with-fixedBtn fullWidth vmAlign"> -->
+						<section class="fullWidth"><!-- 1015 : vmAlign 삭제 -->
+							<div class="completeMsg stopMsg">
+								<p class="desc1">등록된 내역이 없습니다.</p>
+								<p class="desc2">자주쓰는 연락처는 자주 사용하는 <br> 송금인의 휴대폰번호 또는 계좌번호를 <br>미리 등록하여 쉽고 빠르게 이용하실 수 있는 <br>서비스 입니다. </p>
+							</div>
+						</section>
+
+						<div id="tabCont1" class="tabContent pdzero is-current">
+							<h2 class="visualHide">전체</h2><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+							<section class="fullWidth">
+								<div class="titleArea">
+									<strong class="tTitle">전체 (<em>00</em>명)</strong>
+								</div>
+								<ul class="boardList justify toplined">
+									<li>
+										<div class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">홍*동</span>
+												<div class="fx">
+													<a href="javascript:;" data-icon="editList" title="수정하기"><span class="visualHide">수정하기</span></a>
+													<a href="javascript:;" data-icon="deleteList" title="삭제하기"><span class="visualHide">삭제하기</span></a>
+												</div>
+											</div>
+										</div>
+										<div class="boxFoot">
+											<ul class="dataLinkList showArrow noPad">
+												<li>
+													<a href="javascript:;">
+														<dl class="dataList">
+															<dt><span class="tData">휴대폰 번호</span></dt>
+															<dd><span class="tValue">010-****-1234</span></dd>
+														</dl>
+													</a>
+												</li>
+												<li>
+													<a href="javascript:;">
+														<dl class="dataList">
+															<dt><span class="tData">계좌번호</span></dt>
+															<dd><span class="tValue">1234**********123</span></dd>
+														</dl>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<div class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">김*이</span>
+												<div class="fx">
+													<a href="javascript:;" data-icon="editList" title="수정하기"><span class="visualHide">수정하기</span></a>
+													<a href="javascript:;" data-icon="deleteList" title="삭제하기"><span class="visualHide">삭제하기</span></a>
+												</div>
+											</div>
+										</div>
+										<div class="boxFoot ">
+											<ul class="dataLinkList showArrow noPad">
+												<li>
+													<a href="javascript:;">
+														<dl class="dataList">
+															<dt><span class="tData">휴대폰 번호</span></dt>
+															<dd><span class="tValue">010-****-1234</span></dd>
+														</dl>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<div class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">김*이</span>
+												<div class="fx">
+													<a href="javascript:;" data-icon="editList" title="수정하기"><span class="visualHide">수정하기</span></a>
+													<a href="javascript:;" data-icon="deleteList" title="삭제하기"><span class="visualHide">삭제하기</span></a>
+												</div>
+											</div>
+										</div>
+										<div class="boxFoot ">
+											<ul class="dataLinkList showArrow noPad">
+												<li>
+													<a href="javascript:;">
+														<dl class="dataList">
+															<dt><span class="tData">계좌번호</span></dt>
+															<dd><span class="tValue">1234**********123</span></dd>
+														</dl>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</section>
+						</div>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">그룹편집</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">계좌/연락처 주가</button></li><!-- 1017 -->
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //fullPopup -->
+
+	</body>
+</html>

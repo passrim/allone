@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>step4_회원정보확인/입력 - 회원가입</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>회원정보확인/입력<span>Create/Confirm a Profile</span></h2>
+						<ol class="step columnSet">
+							<li class="is-on is-done">1</li>
+							<li class="is-on">4</li>
+							<li class="is-off">6</li>
+						</ol>
+					</section>
+
+					<section class="with-fixedBtn">
+						<label for="inputLabel1">성명(Name) <i class="required"></i></label>
+						<div class="textInput">
+							<input type="text" id="inputLabel1" placeholder="김*리" class="formInput" name="">
+						</div>
+
+						<label for="inputLabel2">생년월일(Birth Of Date) <i class="required"></i></label>
+						<div class="textInput">
+							<input type="text" id="inputLabel2" placeholder="1981년 01월 01일" class="formInput" name="">
+						</div>
+
+						<label for="inputLabel3">휴대폰(Cell Phone Number) <i class="required"></i></label>
+						<div class="textInput">
+							<input type="text" id="inputLabel2" placeholder="010-****-1324" class="formInput" name="">
+						</div>
+
+						<label for="inputLabel4">E-Mail</label>
+						<dl class="columnSet emailInput">
+							<dt class="colItem">
+								<input type="text" id="inputLabel4" placeholder="abcd" class="formInput" name="emailId">
+							</dt>
+							<dd class="colItem">
+								<label for="mailProvider" class="visualHide">Email Provider</label>
+								<div class="select-input">
+									<select id="mailProvider" class="formInput" name="">
+										<option value="gmail.com" label="gmail.com">gmail.com</option>
+										<option value="hanmail.net" label="hanmail.net">hanmail.net</option>
+										<option value="naver.com" label="naver.com">naver.com</option>
+										<option value="nate.com" label="nate.com">nate.com</option>
+										<option value="직접입력" label="direct input">직접입력</option>
+									</select>
+								</div>
+							</dd>
+						</dl>
+						<input type="text" id="inputLabel4" placeholder="직접입력" class="formInput mgT10" name=""><!-- 집접입력시 나타남 -->
+
+						<!-- 181018 : 권유직원 및 관리영업점 설정 수정 추가  -->
+						<div class="suggestSettting mgT25"><!-- 181018 : suggestSettting 마크업으로 감싸기 -->
+							<label for="inputLabel5">권유직원</label>
+							<div class="search default">
+								<input type="text" id="inputLabel5" placeholder="조회" class="formInput search-input" disabled="disabled">
+								<button type="submit" id="" class="btn searchTxtBtn" name="" disabled="disabled">직원찾기</button>
+							</div>
+							<!-- check box 활성화 시 
+							<div class="search active">
+								<input type="text" id="inputLabel5" value="조회" class="formInput search-input" disabled="disabled">
+								<button type="submit" id="" class="btn searchTxtBtn" name="">직원찾기</button>
+							</div>
+							 -->
+
+							<label for="inputLabel6">관리영업점</label>
+							<div class="search default">
+								<input type="text" id="inputLabel6" placeholder="조회" class="formInput search-input" disabled="disabled">
+								<button type="submit" id="" class="btn searchTxtBtn" name="" disabled="disabled">영업점 찾기</button>
+							</div>
+							<!-- check box 활성화 시 
+							<div class="search active">
+								<input type="text" id="inputLabel6" value="조회" class="formInput search-input"disabled="disabled">
+								<button type="submit" id="" class="btn searchTxtBtn" name="" >영업점 찾기</button>
+							</div>
+							 -->
+
+							</div>
+
+							<!-- 181018 : 체크박스 추가  -->
+							<div class="checkbox withLabel checkSetBox mgT10">
+								<input type="checkbox" id="checkSetBox01"><label for="checkSetBox01">권유직원 및 관리영업점 수정</label>
+							</div>
+						</div	>
+						<!--//181018 : 권유직원 및 관리영업점 설정 수정 추가  -->
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

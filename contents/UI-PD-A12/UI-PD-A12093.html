@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>납부명단관리</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+
+				//초성검색
+				$('.initial li > a').each(function(){
+					$(this).on({
+						click : function(){
+							var $id = $(this).data('loc');
+							var headrH = $('header').outerHeight();
+							if(!$('#'+$id).length) return false;
+							var goPos = $('#'+$id).offset().top - headrH;
+							$(document).scrollTop(goPos);
+							return false;
+						}
+					});
+				});
+
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content alloneMeeting" data-role="content"> <!-- Category Class : alloneMeeting -->
+
+					<section class="fullWidth with-fiexdBtn nameManage grid2">
+
+						<!-- LeftArea -->
+						<div class="leftArea">
+							<ul class="boardList">
+								<li>
+									<div class="boxHead">
+										<div class="objHead">
+											<span class="dataTxt tTitle">가올원 회비</span>
+											<strong class="tMoney02 blueOn">228,651<em>원</em></strong>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="boxHead">
+										<div class="objHead">
+											<span class="dataTxt tTitle">가올원 회비</span>
+											<strong class="tMoney02 blueOn">228,651<em>원</em></strong>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="boxHead">
+										<div class="objHead">
+											<span class="dataTxt tTitle">가올원 회비</span>
+											<strong class="tMoney02 blueOn">228,651<em>원</em></strong>
+										</div>
+									</div>
+								</li>
+
+								<li>
+									<div class="boxHead">
+										<div class="objHead">
+											<span class="dataTxt tTitle">가올원 회비</span>
+											<strong class="tMoney02 blueOn">228,651<em>원</em></strong>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="boxHead">
+										<div class="objHead">
+											<span class="dataTxt tTitle">가올원 회비 End</span>
+											<strong class="tMoney02 blueOn">228,651<em>원</em></strong>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- //LeftArea -->
+
+						<!-- RightArea -->
+						<div class="rightArea">
+							<ul class="boardList justify">
+								<li id="aa">
+									<div class="checkbox">
+										<input type="checkbox" id="ch01_01"><label for="ch01_01">체크</label><!-- label for & id 확인  -->
+									</div>
+									<div class="formPad small">
+										<label for="ch01_01" class="boxHead"><!-- label for & id 확인  -->
+											<div class="objHead">
+												<span class="dataTxt tName">김올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch01_02"><label for="ch01_02">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch01_02" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">김올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch01_03"><label for="ch01_03">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch01_03" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">김올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch01_04"><label for="ch01_04">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch01_04" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">김올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch01_05"><label for="ch01_05">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch01_05" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">김올리 End</span>
+											</div>
+										</label>
+									</div>
+								</li>
+
+								<li id="ab">
+									<div class="checkbox">
+										<input type="checkbox" id="ch02_01"><label for="ch02_01">체크</label><!-- label for & id 확인  -->
+									</div>
+									<div class="formPad small">
+										<label for="ch02_01" class="boxHead"><!-- label for & id 확인  -->
+											<div class="objHead">
+												<span class="dataTxt tName">나올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch02_02"><label for="ch02_02">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch02_02" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">나올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch02_03"><label for="ch02_03">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch02_03" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">나올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch02_04"><label for="ch02_04">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch02_04" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">나올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch02_05"><label for="ch02_05">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch02_05" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">나올리 End</span>
+											</div>
+										</label>
+									</div>
+								</li>
+
+								<li id="ac">
+									<div class="checkbox">
+										<input type="checkbox" id="ch03_01"><label for="ch03_01">체크</label><!-- label for & id 확인  -->
+									</div>
+									<div class="formPad small">
+										<label for="ch03_01" class="boxHead"><!-- label for & id 확인  -->
+											<div class="objHead">
+												<span class="dataTxt tName">다올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch03_02"><label for="ch03_02">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch03_02" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">다올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch03_03"><label for="ch03_03">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch03_03" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">다올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch03_04"><label for="ch03_04">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch03_04" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">다올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch03_05"><label for="ch03_05">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch03_05" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">다올리 End</span>
+											</div>
+										</label>
+									</div>
+								</li>
+
+								<li id="ad">
+									<div class="checkbox">
+										<input type="checkbox" id="ch04_01"><label for="ch04_01">체크</label><!-- label for & id 확인  -->
+									</div>
+									<div class="formPad small">
+										<label for="ch04_01" class="boxHead"><!-- label for & id 확인  -->
+											<div class="objHead">
+												<span class="dataTxt tName">라올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch04_02"><label for="ch04_02">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch04_02" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">라올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch04_03"><label for="ch04_03">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch04_03" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">라올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch04_04"><label for="ch04_04">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch04_04" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">라올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch04_05"><label for="ch04_05">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch04_05" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">라올리 End</span>
+											</div>
+										</label>
+									</div>
+								</li>
+
+								<li id="ae">
+									<div class="checkbox">
+										<input type="checkbox" id="ch05_01"><label for="ch05_01">체크</label><!-- label for & id 확인  -->
+									</div>
+									<div class="formPad small">
+										<label for="ch05_01" class="boxHead"><!-- label for & id 확인  -->
+											<div class="objHead">
+												<span class="dataTxt tName">마올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch05_02"><label for="ch05_02">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch05_02" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">마올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch05_03"><label for="ch05_03">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch05_03" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">마올리 End</span>
+											</div>
+										</label>
+									</div>
+								</li>
+
+								<li id="af">
+									<div class="checkbox">
+										<input type="checkbox" id="ch06_01"><label for="ch06_01">체크</label><!-- label for & id 확인  -->
+									</div>
+									<div class="formPad small">
+										<label for="ch06_01" class="boxHead"><!-- label for & id 확인  -->
+											<div class="objHead">
+												<span class="dataTxt tName">바올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch06_02"><label for="ch06_02">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch06_02" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">바올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch06_03"><label for="ch06_03">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch06_03" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">바올리 End</span>
+											</div>
+										</label>
+									</div>
+								</li>
+
+								<li id="ag">
+									<div class="checkbox">
+										<input type="checkbox" id="ch07_01"><label for="ch07_01">체크</label><!-- label for & id 확인  -->
+									</div>
+									<div class="formPad small">
+										<label for="ch07_01" class="boxHead"><!-- label for & id 확인  -->
+											<div class="objHead">
+												<span class="dataTxt tName">사올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch07_02"><label for="ch07_02">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch07_02" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">사올리 End</span>
+											</div>
+										</label>
+									</div>
+								</li>
+
+								<li id="ah">
+									<div class="checkbox">
+										<input type="checkbox" id="ch08_01"><label for="ch08_01">체크</label><!-- label for & id 확인  -->
+									</div>
+									<div class="formPad small">
+										<label for="ch08_01" class="boxHead"><!-- label for & id 확인  -->
+											<div class="objHead">
+												<span class="dataTxt tName">이올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch08_02"><label for="ch08_02">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch08_02" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">이올리 End</span>
+											</div>
+										</label>
+									</div>
+								</li>
+
+								<li id="ai">
+									<div class="checkbox">
+										<input type="checkbox" id="ch09_01"><label for="ch09_01">체크</label><!-- label for & id 확인  -->
+									</div>
+									<div class="formPad small">
+										<label for="ch09_01" class="boxHead"><!-- label for & id 확인  -->
+											<div class="objHead">
+												<span class="dataTxt tName">정올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch09_02"><label for="ch09_02">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch09_02" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">정올리 End</span>
+											</div>
+										</label>
+									</div>
+								</li>
+
+								<li id="aj">
+									<div class="checkbox">
+										<input type="checkbox" id="ch10_01"><label for="ch10_01">체크</label><!-- label for & id 확인  -->
+									</div>
+									<div class="formPad small">
+										<label for="ch10_01" class="boxHead"><!-- label for & id 확인  -->
+											<div class="objHead">
+												<span class="dataTxt tName">차올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch10_02"><label for="ch10_02">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch10_02" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">차올리 End</span>
+											</div>
+										</label>
+									</div>
+								</li>
+
+								<li id="ak">
+									<div class="checkbox">
+										<input type="checkbox" id="ch11_01"><label for="ch11_01">체크</label><!-- label for & id 확인  -->
+									</div>
+									<div class="formPad small">
+										<label for="ch11_01" class="boxHead"><!-- label for & id 확인  -->
+											<div class="objHead">
+												<span class="dataTxt tName">카올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch11_02"><label for="ch11_02">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch11_02" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">카올리 End</span>
+											</div>
+										</label>
+									</div>
+								</li>
+
+								<li id="al">
+									<div class="checkbox">
+										<input type="checkbox" id="ch12_01"><label for="ch12_01">체크</label><!-- label for & id 확인  -->
+									</div>
+									<div class="formPad small">
+										<label for="ch12_01" class="boxHead"><!-- label for & id 확인  -->
+											<div class="objHead">
+												<span class="dataTxt tName">타올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch12_02"><label for="ch12_02">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch12_02" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">타올리 End</span>
+											</div>
+										</label>
+									</div>
+								</li>
+
+								<li id="am">
+									<div class="checkbox">
+										<input type="checkbox" id="ch13_01"><label for="ch13_01">체크</label><!-- label for & id 확인  -->
+									</div>
+									<div class="formPad small">
+										<label for="ch13_01" class="boxHead"><!-- label for & id 확인  -->
+											<div class="objHead">
+												<span class="dataTxt tName">파올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch13_02"><label for="ch13_02">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch13_02" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">파올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch13_03"><label for="ch13_03">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch13_03" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">파올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch13_04"><label for="ch13_04">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch13_04" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">파올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch13_05"><label for="ch13_05">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch13_05" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">파올리 End</span>
+											</div>
+										</label>
+									</div>
+								</li>
+
+								<li id="an">
+									<div class="checkbox">
+										<input type="checkbox" id="ch14_01"><label for="ch14_01">체크</label><!-- label for & id 확인  -->
+									</div>
+									<div class="formPad small">
+										<label for="ch14_01" class="boxHead"><!-- label for & id 확인  -->
+											<div class="objHead">
+												<span class="dataTxt tName">하올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch14_02"><label for="ch14_02">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch14_02" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">하올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch14_03"><label for="ch14_03">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch14_03" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">하올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch14_04"><label for="ch14_04">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch14_04" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">하올리</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch14_05"><label for="ch14_05">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch14_05" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">하올리 End</span>
+											</div>
+										</label>
+									</div>
+								</li>
+
+								<li id="ao">
+									<div class="checkbox">
+										<input type="checkbox" id="ch15_01"><label for="ch15_01">체크</label><!-- label for & id 확인  -->
+									</div>
+									<div class="formPad small">
+										<label for="ch15_01" class="boxHead"><!-- label for & id 확인  -->
+											<div class="objHead">
+												<span class="dataTxt tName">allOne</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch15_02"><label for="ch15_02">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch15_02" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">allOne</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch15_03"><label for="ch15_03">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch15_03" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">allOne</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch15_04"><label for="ch15_04">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch15_04" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">allOne</span>
+											</div>
+										</label>
+									</div>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id="ch15_05"><label for="ch15_05">체크</label>
+									</div>
+									<div class="formPad small">
+										<label for="ch15_05" class="boxHead">
+											<div class="objHead">
+												<span class="dataTxt tName">allOne End</span>
+											</div>
+										</label>
+									</div>
+								</li>
+
+
+							</ul>
+						</div>
+						<!-- //RightArea -->
+
+					</section>
+
+					<!-- 초성검색 -->
+					<ul class="initial">
+						<li><a href="javascript:;" data-loc="aa" title="ㄱ 자음목록 바로가기">ㄱ</a></li>
+						<li><a href="javascript:;" data-loc="ab" title="ㄴ 자음목록 바로가기">ㄴ</a></li>
+						<li><a href="javascript:;" data-loc="ac" title="ㄷ 자음목록 바로가기">ㄷ</a></li>
+						<li><a href="javascript:;" data-loc="ad" title="ㄹ 자음목록 바로가기">ㄹ</a></li>
+						<li><a href="javascript:;" data-loc="ae" title="ㅁ 자음목록 바로가기">ㅁ</a></li>
+						<li><a href="javascript:;" data-loc="af" title="ㅂ 자음목록 바로가기">ㅂ</a></li>
+						<li><a href="javascript:;" data-loc="ag" title="ㅅ 자음목록 바로가기">ㅅ</a></li>
+						<li><a href="javascript:;" data-loc="ah" title="ㅇ 자음목록 바로가기">ㅇ</a></li>
+						<li><a href="javascript:;" data-loc="ai" title="ㅈ 자음목록 바로가기">ㅈ</a></li>
+						<li><a href="javascript:;" data-loc="aj" title="ㅊ 자음목록 바로가기">ㅊ</a></li>
+						<li><a href="javascript:;" data-loc="ak" title="ㅋ 자음목록 바로가기">ㅋ</a></li>
+						<li><a href="javascript:;" data-loc="al" title="ㅌ 자음목록 바로가기">ㅌ</a></li>
+						<li><a href="javascript:;" data-loc="am" title="ㅍ 자음목록 바로가기">ㅍ</a></li>
+						<li><a href="javascript:;" data-loc="an" title="ㅎ 자음목록 바로가기">ㅎ</a></li>
+						<li><a href="javascript:;" data-loc="ao" title="기타 자음목록 바로가기">#</a></li>
+					</ul>
+
+					<ul class="columnSet selfBottom marginT10">
+						<li class="colItem"><button type="submit" class="btn primary submit">저장</button></li>
+					</ul>
+
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

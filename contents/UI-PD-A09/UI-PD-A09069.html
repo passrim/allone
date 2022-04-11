@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>경조금 송금</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+
+				//받는분
+				(function(){
+					$('#autoTrue').change(function(){
+						if($(this).is(':checked')) {
+							$('#toggleTab1').toggleClass('is-current');
+							$('#toggleTab2').toggleClass('is-current');
+						}
+					});
+					$('#autoFalse').change(function(){
+						if($(this).is(':checked')) {
+							$('#toggleTab2').toggleClass('is-current');
+							$('#toggleTab1').toggleClass('is-current');
+						}
+					});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content bigFont" data-role="content"><!-- 큰글형 : .bigFont -->
+					<section class="breadcrumb columnSet">
+						<h2>받는분/통장표시내용 입력</h2>
+						<ol class="step columnSet">
+							<li class="is-on is-done">1</li>
+							<li class="is-on">3</li>
+							<li class="is-off">4</li>
+						</ol>
+					</section>
+
+					<section class="fullWidth">
+						<div class="sectionWrap">
+						<!--0912 -  받는분 -------------------- -->
+							<label for="autoTrue" aria-required="true">받는분 <i class="required"></i></label>
+							<ul class="columnSet noGutterSet marginT15">
+								<li class="colItem">
+									<input type="radio" value="계좌번호" name="f_auto" id="autoTrue" class="btn radioToggle" checked="checked">
+									<label for="autoTrue" class="inputLabel secondary strokeType">계좌번호</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" value="휴대폰" name="f_auto" id="autoFalse" class="btn radioToggle" >
+									<label for="autoFalse" class="inputLabel secondary strokeType">연락처</label>
+								</li>
+							</ul>
+							<!-- 계좌번호 -->
+							<div class="tabContent noPadding is-current" id="toggleTab1">
+								<h3 class="visualHide">받는분 계좌번호 정보</h3>
+
+								<!-- 1008 -->
+								<label for="ip_bank" class="visualHide">은행선택</label>
+								<div class="select-input disabled"><!-- 1015 : disabled 추가 -->
+									<button type="button" id="ip_bank" class="btn formInput" title="은행선택" >NH농협</button>
+								</div>
+								<label for="ip_account" class="visualHide">계좌번호</label>
+								<div class="numberInput mgT10">
+									<input type="text" id="ip_account" placeholder="-없이 입력" maxlength="16" class="formInput" name="">
+								</div>
+								<!-- //1008 -->
+								<!-- <ul class="columnSet withGutter mgT10">
+									<li class="rowSpan6">
+										<div class="select-input">
+											<button type="button" class="btn formInput" title="은행선택">NH농협</button>
+										</div>
+									</li>
+									<li class="rowSpan6">
+										<label for="ip_account" class="visualHide">계좌번호</label>
+										<div class="numberInput">
+											<input type="tel" id="ip_account" placeholder="-없이 입력" maxlength="16" class="formInput" name="">
+										</div>
+									</li>
+								</ul> -->
+								<div class="mgT10 rightTxt txtBtnArea">
+									<button type="button" class="btn subSmallType">최근송금계좌</button>
+									<!-- <button type="button" class="btn subSmallType">내계좌</button> -->
+								</div>
+							</div>
+							<!-- //계좌번호 -->
+							<!-- 연락처 -->
+							<div class="tabContent noPadding" id="toggleTab2">
+								<h3 class="visualHide">받는분 연락처 정보</h3>
+								<label for="ip_name" class="visualHide">성명 </label>
+								<div class="search mgT10">
+									<input type="text" id="ip_name" placeholder="성명" class="formInput search-input" >
+									<button type="submit" class="btn searchAddrBtn" name=""><span class="visualHide">주소록</span></button>
+								</div>
+								<dl class="columnSet phoneInput mgT10">
+									<dt>
+										<label for="phoneNum" class="visualHide">연락처 첫 세자리 선택</label>
+										<div class="select-input">
+											<select id="phoneNum" class="formInput" name="">
+												<option value="010" label="010">010</option>
+												<option value="017" label="017">017</option>
+											</select>
+										</div>
+									</dt>
+									<dd>
+										<label for="inputLabel5" class="visualHide">연락처 나머지 자리 입력</label>
+										<input type="tel" id="inputLabel4" placeholder="-없이 입력" class="formInput" name="phone" maxlength="8">
+									</dd>
+								</dl>
+							</div>
+							<!-- //연락처 -->
+						<!-- // 0912 받는분 ---------------------->
+
+							<!-- <label for="f_form01">받는분<i class="required"></i></label>
+							<div class="textInput">
+								<input type="text" id="f_form01" placeholder="성명 휴대폰번호/계좌번호" class="formInput" name="">
+								<button type="button" class="btn deleteBtn">삭제</button>
+							</div> -->
+
+							<label for="f_form02">내통장 표시</label>
+							<div class="textInput">
+								<input type="text" id="f_form02" placeholder="미입력 시 받는분 이름 표시" class="formInput" name="">
+								<button type="button" class="btn deleteBtn">삭제</button>
+							</div>
+
+							<label for="f_form03">받는 통장 표시</label>
+							<div class="textInput">
+								<input type="text" id="f_form03" placeholder="미입력 시 보내는분 이름 표시" class="formInput" name="">
+								<button type="button" class="btn deleteBtn">삭제</button>
+							</div>
+						</div>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">이전</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">다음</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

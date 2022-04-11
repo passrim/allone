@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>쉐어하우스</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth">
+						<div class="completeMsg onlyMsg shareMsg bgMsg">
+							<strong>한국에서 방 찾을 때는 언제나</strong>
+							<p class="mgB15">컴앤스테이에서 쉐어하우스 생활을 시작하세요.</p>
+						</div>
+					</section>
+					<section class="topbordered"> <!-- 0929 :: topbordered 추가 -->
+						<ul class="dataType-list agreement">
+							<li>
+								<div class="checkbox">
+									<input type="checkbox" id=""><label for="">체크</label>
+								</div>
+								<a href="javascript:;">전체동의</a>
+								<ul>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:;"><span class="greenOn">[필수]</span> 서비스 이용약관</a>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:;"><span class="greenOn">[필수]</span> 개인정보 취급방침</a>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:;"><span class="greenOn">[필수]</span> 개인정보 제3자 제공</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="submit" class="btn primary submit">서비스 동의 및 시작</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

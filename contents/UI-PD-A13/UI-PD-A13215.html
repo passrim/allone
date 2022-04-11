@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>금시세조회</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth">
+						<nav class="tabNav">
+							<ul class="columnSet">
+								<li class="colItem is-on" data-tab="tabCont1"><a href="javascript:;">차트별</a></li>
+								<li class="colItem" data-tab="tabCont2"><a href="javascript:;">기간별</a></li>
+							</ul>
+						</nav>
+
+						<!-- #tabCont1 -->
+						<div id="tabCont1" class="tabContent is-current noPadding">
+							<h2 class="visualHide">챠트별</h2> <!-- 접근성 탭 컨텐트명 -->
+
+							<section class="fullWidth">
+								<div class="sectionWrap">
+									<ul class="columnSet noGutterSet">
+										<li class="colItem">
+											<input type="radio" id="f_time" class="btn radioToggle" name="blockDate">
+											<label for="f_time" class="inputLabel secondary strokeType">실시간</label>
+										</li>
+										<li class="colItem">
+											<input type="radio" id="f_month" class="btn radioToggle" name="blockDate">
+											<label for="f_month" class="inputLabel secondary strokeType">1개월</label>
+										</li>
+										<li class="colItem">
+											<input type="radio" id="f_year" class="btn radioToggle" name="blockDate">
+											<label for="f_year" class="inputLabel secondary strokeType">1년</label>
+										</li>
+										<li class="colItem">
+											<input type="radio" id="f_year3" class="btn radioToggle" name="blockDate">
+											<label for="f_year3" class="inputLabel secondary strokeType">3년</label>
+										</li>
+									</ul>
+								</div>
+							</section>
+
+							<section class="fullWidth">
+								<div class="sectionWrap pdT0">
+									<p class="certifyTxt">1g당 국내금기준가격(원)/한국금거래소쓰리엠 제공</p>
+									<div class="chartArea" style="background-color:#f5f5f5;"></div>
+									<p class="certifyTxt">한국금거래소에서 제공하는 차트입니다.</p>
+								</div>
+							</section>
+
+							<section class="fullWidth toplined">
+								<div class="boxHead noData paddingAll bdB1">
+									<span>조회내역이 없습니다.</span>
+								</div>
+								<dl class="dataList goldPrice noBorder">
+									<dt>날짜/시간</dt>
+									<dd><span class="tValue">2017-03-03 14:03:31</span></dd>
+									<dt>국제가(USD/T.oz)</dt>
+									<dd><span class="tValue">1,000,000 USD</span></dd>
+									<dt>환율(\/USD)</dt>
+									<dd><span class="tValue">10,000원</span></dd>
+									<dt>국내기준가(\/g)</dt>
+									<dd><span class="tValue">10,000원</span></dd>
+								</dl>
+								<dl class="dataList goldPrice noBorder">
+									<dt>날짜/시간</dt>
+									<dd><span class="tValue">2017-03-03 14:03:31</span></dd>
+									<dt>국제가(USD/T.oz)</dt>
+									<dd><span class="tValue">1,000,000USD</span></dd>
+									<dt>환율(\/USD)</dt>
+									<dd><span class="tValue">10,000원</span></dd>
+									<dt>국내기준가(\/g)</dt>
+									<dd><span class="tValue">10,000원</span></dd>
+								</dl>
+								<dl class="dataList goldPrice noBorder">
+									<dt>날짜/시간</dt>
+									<dd><span class="tValue">2017-03-03 14:03:31</span></dd>
+									<dt>국제가(USD/T.oz)</dt>
+									<dd><span class="tValue">1,000,000 USD</span></dd>
+									<dt>환율(\/USD)</dt>
+									<dd><span class="tValue">10,000원</span></dd>
+									<dt>국내기준가(\/g)</dt>
+									<dd><span class="tValue">10,000원</span></dd>
+								</dl>
+
+								<div class="toplined">
+									<button type="button" class="btn more-btn">더보기(<span>1</span><span>10</span>)<span></span></button>
+								</div>
+							</section>
+						</div>
+						<!-- //#tabCont1 -->
+					</section>
+
+					<button type="submit" class="btn primary submit selfBottom">다음</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

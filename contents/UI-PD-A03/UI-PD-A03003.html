@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>상담톡 도움말</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="layerPop.open('.modalWrap', this); return false;">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header">
+					<h1 class="headerTitle">상담톡 도움말</h1>
+					<button type="button" class="btn closeBtn" id="fullClose">닫기</button>
+				</div>
+				<div data-role="content" class="modal-contents">
+					<section class="fullWidth">
+						<nav class="tabNav">
+							<ul class="columnSet">
+								<li class="colItem" data-tab="tabCont1"><a href="javascript:;" title="도움말">도움말</a></li>
+								<li class="colItem is-on" data-tab="tabCont2"><a href="javascript:;" title="고객센터 안내">고객센터 안내</a></li>
+							</ul>
+						</nav>
+						
+						<div id="tabCont1" class="tabContent fullWidth">
+							<h3 class="visualHide">고객센터 안내</h3><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+							<p class="paddingAll">올원뱅크의 인공지능AI 상담톡입니다. 상담톡은 다음과 같은 서비스를 제공합니다.</p>
+							<ul class="accordion bdT1">
+								<li>
+									<dl>
+										<dt aria-label="상담톡이란?"><a href="javascript: void(0);">상담톡이란?</a></dt>
+										<dd>
+											<p>상담톡은 올원뱅크의 인공지능AI 챗봇서비스입니다.<br />
+											상담톡에서는 다음과 같은 서비스를 이용하실 수 있습니다.</p>
+											<ul class="unorderList">
+												<li>올원뱅크 메뉴 찾기</li>
+												<li>조회서비스
+													<ul>
+														<li>올원계좌조회</li>
+														<li>NH농협은행 전계좌조회</li>
+														<li>최근송금내역조회</li>
+													</ul>
+												</li>
+												<li>송금서비스
+													<ul>
+														<li>최근송금 재송금</li>
+														<li>자주쓰는송금</li>
+														<li>자주쓰는계좌/연락처송금</li>
+														<li>해봄적금</li>
+														<li>올원외화포켓입금</li>
+													</ul>
+												</li>
+												<li>상품추천서비스</li>
+												<li>올원뱅크에 대해 질문하기(Q&A)</li>
+											</ul>
+										</dd>
+									</dl><!-- END OF TOGGLE -->
+								</li>
+				
+								<li>
+									<dl>
+										<dt class="js-active" aria-label="메뉴찾기"><a href="javascript: void(0);">메뉴찾기</a></dt>
+										<dd>
+											<p>상담톡이 올원뱅크 내의 메뉴를 빠르게 안내해드립니다.</p>
+											<br />
+											[메뉴 검색 시 다음과 같이 입력 또는 선택해 주세요.]<br />
+											<ul class="unorderList">
+												<li>올원송금 찾아줘</li>
+												<li>올원송금 메뉴</li>
+												<li>송금 메뉴 어딨어?</li>
+											</ul>
+											<br />
+											[메뉴 이동 시]<br />
+											<ul class="unorderList">
+												<li>해당 메뉴를 선택합니다.</li>
+												<li>해당 메뉴를 입력합니다.</li>
+											</ul>
+										</dd>
+									</dl><!-- END OF TOGGLE -->
+								</li>
+								
+								<li>
+									<dl>
+										<dt aria-label="조회서비스"><a href="javascript: void(0);">조회서비스</a></dt>
+										<dd>
+											<p>상담톡에서 간편하게 계좌조회를 할 수 있습니다.</p>
+											<br />
+											[조회서비스 이용 시 다음과 같이 입력 또는 선택해 주세요.]<br />
+											<ul class="unorderList">
+												<li>올원계좌 조회해줘</li>
+												<li>올원계좌 보여줘</li>
+												<li>올원 잔액 알려줘</li>
+												<li>전체계좌 조회해줘</li>
+											</ul>
+										</dd>
+									</dl><!-- END OF TOGGLE -->
+								</li>
+								
+								<li>
+									<dl>
+										<dt aria-label="상품추천"><a href="javascript: void(0);">상품추천</a></dt>
+										<dd>
+											<p>상담톡에서 입력 또는 선택만으로 빠르게 송금할 수 있습니다.</p>
+											<br />
+											[송금서비스 이용 시 다음과 같이 입력 또는 선택해 주세요.]<br />
+											<ul class="unorderList">
+												<li>최근내역에서 송금할래</li>
+												<li>송금할래</li>
+												<li>자주쓰는송금 해줘</li>
+												<li>외화포켓 입금 해줘</li>
+											</ul>
+										</dd>
+									</dl><!-- END OF TOGGLE -->
+								</li>
+								<li>
+									<dl>
+										<dt aria-label="송금서비스"><a href="javascript: void(0);">송금서비스</a></dt>
+										<dd>
+											<p>상담톡에서 빅데이터 분석을 통해 고객님에게 딱! 맞는 상품을 추천해드립니다.</p>
+											<br />
+											[상품추천을 원하는 경우, 다음과 같이 입력 또는 선택해 주세요.]<br />
+											<ul class="unorderList">
+												<li>상품추천 해줘</li>
+												<li>상품 찾아줘</li>
+												<li>목돈굴리기 알려줘</li>
+												<li>대출 상품 알려줘</li>
+											</ul>
+											<br />
+											[추천 받은 상품을 자세히 보고 싶은 경우]<br />
+											<ul class="unorderList">
+												<li>해당 메뉴(자세히 보기, 가입하기)를 선택합니다.</li>
+												<li>해당 메뉴를 입력 또는 선택합니다.</li>
+												<li>OOO 상품 보여줘</li>
+												<li>OOOO 상품 가입</li>
+											</ul>
+										</dd>
+									</dl><!-- END OF TOGGLE -->
+								</li>
+								<li>
+									<dl>
+										<dt aria-label="Q&A"><a href="javascript: void(0);">Q&A</a></dt>
+										<dd>
+											<p>올원뱅크에 대해 궁금하신 점을 무엇이든지 물어볼 수 있습니다.</p>
+											<br />
+											[공금한 점을 키워드 또는 문장으로 입력 또는 선택해 주세요.]<br />
+											<ul class="unorderList">
+												<li>올원송금이 뭐야?</li>
+												<li>환전 수수료 알려줘</li>
+												<li>모델명 및 OS저번은 어디서 확인하나요?</li>
+												<li>공과금 납부시간은?</li>
+												<li>바코드 결제는 얼마까지 이용할 수 있어?</li>
+											</ul>
+											<br />
+											* 상담톡 Q&A 서비스에서는 만족도 평가를 통해 더 많은 질문에 맞춤 답변을 드릴 수 있도록 꾸준히 노력합니다.
+										</dd>
+									</dl><!-- END OF TOGGLE -->
+								</li>
+							</ul>
+						</div>
+						
+						<div id="tabCont2" class="tabContent is-current fullWidth">
+							<ul class="unorderList paddingAll">
+								<li>상담톡 또는 올원뱅크 이용 시 문의사항이 있는 경우 <span class="greenOn">고객행복센터</span> 상담원이 안내해 드립니다.</li>
+							</ul>
+							
+							<ul class="boardList justify toplined">
+							<li>
+								<div class="boxHead">
+									<div class="objCon">
+										<strong class="dataTxt tTitle">올원서비스 상담</strong>
+										<a href="tel:1661-3000" data-icon="phone"><span>1661-3000</span></a><!-- 2018-10-25 수정 -->
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objCon">
+										<strong class="dataTxt tTitle">금융상품 상담</strong>
+										<a href="tel:1600-2800" data-icon="phone"><span>1600-2800</span></a><!-- 2018-10-25 수정 -->
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objCon">
+										<strong class="dataTxt tTitle">올원장애 상담</strong>
+										<a href="tel:1661-3000" data-icon="phone"><span>1661-3000</span></a>
+									</div>
+								</div>
+							</li>
+						</ul>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+		<!-- //fullPopup -->
+
+	</body>
+</html>

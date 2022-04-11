@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>올원모임</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="layerPop.open('.modalWrap', this); return false;">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header">
+					<h1 class="headerTitle">더<sup>+</sup>모임 안내</h1>
+					<button type="button" class="btn closeBtn" id="fullClose">닫기</button>
+				</div>
+				<div data-role="content" class="modal-contents">
+
+					<section class="fullWidth">
+						<div class="titleArea">
+							<ul class="unorderList">
+								<li>동호회, 스터디, 여행 등의 모임을 올원뱅크에서 더 즐겁게 소통하고, 더 손쉽게 회비 관리할 수 있습니다. 모임의 총무를 맡고 있다면 지금 바로 이용해 보세요!</li>
+							</ul>
+						</div>
+
+						<div class="serviceGuide topbordered">
+							<div class="guideWrap">
+								<h3 class="title">모임개설</h3>
+								<p class="desc1"><span class="greenOn">모임통장을 연결</span>하고, 모임을 소개할 멋진 사진과<br>개성 있는 이름으로 모임을 만들어 보세요!</p>
+								<div class="imgArea">
+									<img src="../../assets/img/service_guide/meet01.png" alt="모임만들기">
+								</div>
+							</div>
+
+							<div class="guideWrap">
+								<h3 class="title">회비납부</h3>
+								<p class="desc1"><span class="greenOn">계좌번호 외울 필요도 없이 간편하게</span><br>회비를 납부할 수 있습니다.</p>
+								<div class="imgArea">
+									<img src="../../assets/img/service_guide/meet02.png" alt="회비납부 간편송금 금액입력">
+								</div>
+							</div>
+
+							<div class="guideWrap">
+								<h3 class="title">회비장부</h3>
+								<p class="desc1">모임 통장의 <span class="greenOn">거래 내역을 불러오거나,<br>직접 등록</span>하여 회비장부를 작성할 수 있습니다.</p>
+								<div class="imgArea">
+									<img src="../../assets/img/service_guide/meet03.png" alt="모임의 회비 거래 내역 관리">
+								</div>
+							</div>
+
+							<div class="guideWrap">
+								<h3 class="title">회비관리</h3>
+								<p class="desc1"><span class="greenOn">통장의 거래내역과 회원 명단을 한눈에!</span><br>비교하며 납부/미납 체크를 해보세요.</p>
+								<div class="imgArea">
+									<img src="../../assets/img/service_guide/meet04.png" alt="회비명단관리 조회">
+								</div>
+							</div>
+
+							<!-- <div class="guideWrap">
+								<h3 class="title">회비 운용(NH모여라통장)</h3>
+
+								<p class="desc1">모임 통장에 차곡차고 쌓인 회비,<br><span class="greenOn">더+높은 금리로 회비를 운용</span>해 보세요.</p>
+								<div class="imgArea">
+									<img src="../../assets/img/service_guide/meet04_01.png" alt="the 모임 (회비 자금 관리)">
+								</div>
+							</div> -->
+
+							<div class="guideWrap">
+								<h3 class="title">설정</h3>
+								<p class="desc1">모임의 정보를 확인하고 <span class="greenOn">멤버관리, 통장관리,<br>총무변경, 회원탈퇴, 모임폐쇄</span>를 할 수 있습니다.</p>
+								<div class="imgArea">
+									<img src="../../assets/img/service_guide/meet05.png" alt="모임정보">
+								</div>
+							</div>
+						</div>
+					</section>
+
+				</div>
+			</div>
+		</div>
+		<!-- //fullPopup -->
+
+	</body>
+</html>

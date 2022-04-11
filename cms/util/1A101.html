@@ -1,0 +1,84 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>비대면 신규고객</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/styles/cms.css">
+	<style>
+		body{background:transparent;}
+	</style>
+	<script type="text/javascript">
+		function openPdfView(url){
+			var domain = parent.common_cfGetDomainProp("AB");
+			//var fullUrl = 'https://docs.google.com/gview?embedded=true&url=' + (domain + url);
+			var fullUrl = domain + url;
+			
+			parent.$AB_OPA.openWeb(fullUrl , '');
+		}
+	</script>	
+</head>
+<body>
+	<section class="fullWidth">
+		<div class="proposeTopVisual Visual01">
+			<h3 class="PTV_title">올원뱅크<br>신규가입을 환영합니다!</h3>
+			<strong class="PTV_text02">24시간 365일 잠들지 않는 내 손안의 은행</strong>
+			<p class="PTV_text">올원뱅크의 신규 서비스와 추천 서비스를<br>안내해 드립니다. 많은 이용 바랍니다.</p>
+		</div>
+	</section>
+	<section class="fullWidth">
+		<div class="prd-listMain">
+			<div>
+				<ul class="boardList showArrow toplined">
+					<li>
+						<a href="javascript:;" class="boxHead" onclick="javascript:parent.$ABCOMMON.customNavigate('NABOT1001R');">
+							<div class="objCon">
+								<strong class="dataTxt tTitle">올원송금</strong>
+								<span class="dataTxt tCon">휴대폰 번호만으로 간편하게<br>최대 300만원까지 빠르게 송금</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;" class="boxHead" onclick="javascript:parent.$ABCOMMON.customNavigate('NABME8001R');">
+							<div class="objCon">
+								<strong class="dataTxt tTitle">금융상품몰</strong>
+								<span class="dataTxt tCon">올원뱅크 전용 상품과 NH금융그룹의<br>다양한 금융상품을 만날 수 있습니다.</span>
+							</div>
+						</a>
+					</li>
+					<li>
+						<a href="javascript:;" class="boxHead" onclick="javascript:parent.$ABCOMMON.customNavigate('NABCB0001R');">
+							<div class="objCon">
+								<strong class="dataTxt tTitle">상담톡</strong>
+								<span class="dataTxt tCon">상담톡에서는 올원뱅크 Q&A, 올원송금 및<br>조회서비스와 맞춤상품도 추천해드려요.</span>
+							</div>
+						</a>
+					</li>
+					<li class="bdB0">
+						<a href="javascript:;" class="boxHead" onclick="javascript:parent.$ABCOMMON.customNavigate('NABEF5009I');">
+							<div class="objCon">
+								<strong class="dataTxt tTitle">감동! 외화선물</strong>
+								<span class="dataTxt tCon">가족, 친구, 연인이 여행갈 때, 우대환율까지 더해진<br>외화선물을 이용해보세요.</span>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- 금융리포트 -->
+		<div class="proposeBanner topbordered">
+			<a href="javascript:openPdfView('/content/cms/util/1A101.pdf');" class="eventBanner" style="background-color: #ceeddd;">
+				<img src="../../assets/img/banner/propose_banner.jpg" border="0" alt="이달의 금융 리포트를 확인하세요. 금융 리포트는 PDF 파일로 다운로드 됩니다.">
+			</a>
+			<p class="fourBallList">※ 출처 : <a href="javascript:;" onclick="javascript:parent.$AB_OPA.openWeb('http://naver.me/FGmRvte1','defaultCallback01');">NH투자증권 공식포스트</a></p>
+		</div>
+		<!-- 은퇴설계 전문웹진 샘플 -->
+		<!-- <div class="proposeBanner topbordered">
+			<a href="javascript:;" onclick="javascript:parent.$AB_OPA.openEmbeddedWeb(0, 0, 'http://all100plan.com', 'All100플랜');" class="eventBanner" style="background-color: #ceeddd;">
+				<img src="../../assets/img/banner/propose_banner_01.jpg" border="0" alt="은퇴설계 전문웹진. 각종 정보로 가득한 All100플랜 웹진">
+			</a>			
+		</div>	 -->
+	</section>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>승인내역조회</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="javascript:void(0);">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header">
+					<h1 class="headerTitle">승인내역조회</h1>
+					<button type="button" class="btn closeBtn" id="fullClose">닫기</button>
+				</div>
+				<div data-role="content" class="modal-contents">
+					<section class="fullWidth with-fixedBtn">
+						<dl class="dataList bdT0">
+							<dt>거래일자</dt><dd>2017-05-14</dd>
+							<dt>카드번호</dt><dd>4906-****-****-1358</dd>
+							<dt>승인번호</dt><dd>381293</dd>
+							<dt>가맹점번호</dt><dd>31302103</dd>
+							<dt>가맹점명</dt><dd>셀렉토커피의왕포일점</dd>
+							<dt>대표자명</dt><dd>홍길동</dd>
+							<dt>주소</dt><dd>경기도 의왕시 붓들로34 107호</dd>
+							<dt>전화번호</dt><dd>070-1234-1324</dd>
+							<dt>이용금액</dt><dd><strong>30,000</strong> 원</dd>
+							<dt>할인가맹점여부</dt><dd>-</dd>
+							<dt>포인트적립 <span class="dp-inblock">가맹점여부</span></dt><dd>포인트적립가맹점</dd>
+						</dl>
+					</section>
+
+					<button type="submit" class="btn primary submit selfBottom">확인</button>
+				</div>
+			</div>
+		</div>
+		<!-- //fullPopup -->
+
+	</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>쓰기/수정 - 올원커뮤니티</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content AlloneComm write" data-role="content">
+					<section class="pdT0"><!-- 181002 : 동의항목 마크업 추가  -->
+						<ul class="dataType-list dataType-list02 mgT15">
+							<li>
+								<div class="checkbox">
+									<input type="checkbox" id=""><label for="">체크</label>
+								</div>
+								<a href="javascript:void(0);"><span class="greenOn">[필수]</span> 개인정보 수집 &middot; 동의</a>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<label for="inputLabel1">작성자</label>
+						<div class="textInput">
+							<input type="text" id="inputLabel1" value="김*원" class="formInput" name="" disabled>
+						</div>
+
+						<label for="selectLabel2">게시글 유형</label>
+						<div class="select-input">
+							<select id="selectLabel2" class="formInput">
+								<option value="default" label="유형선택">유형선택</option>
+								<option value="option2" label="유형선택2">유형선택2</option>
+								<option value="option3" label="유형선택3">유형선택3</option>
+								<option value="option4" label="유형선택4">유형선택4</option>
+							</select>
+						</div>
+
+						<label for="inputLabel3">제목</label>
+						<div class="textInput">
+							<input type="text" id="inputLabel3" placeholder="제목을 입력하세요" class="formInput" name="">
+							<button type="button" class="btn deleteBtn">삭제</button><!-- 181022 : [레드마인] #1346 / 필드우측 전체삭제 X버튼  -->
+						</div>
+						<div class="textAreaSt3">
+							<textarea class="textArea" title="내용을 입력하세요." placeholder="올원뱅크에 대해 공유하고 싶은 내용을 남겨주세요. (키보드 이모티콘은 사용 불가)"></textarea>
+						</div>
+
+					</section>
+
+					<section class="fullWidth">
+						<div class="paddingAll pdT0">
+							<ul class="imageThumbs">
+								<li><a href="#"><img src="../../assets/img/the-k_img01.jpg" alt=""></a><button type="button" class="close">닫기</button></li>
+								<li><a href="#"><img src="../../assets/img/the-k_img02.jpg" alt=""></a><button type="button" class="close">닫기</button></li>
+								<li><a href="#"><img src="../../assets/img/the-k_award03.jpg" alt=""></a><button type="button" class="close">닫기</button></li>
+								<li>
+									<div class="fileUploader">
+										<button type="button" class="uploadBtn">파일 업로드</button>
+										<input type="file" name="fileUpload"><!-- 0913 : 접근성 레이블 제공 -->
+									</div>
+								</li>
+							</ul>
+							<ul class="dataType">
+								<li data-type="camera"><a href="javascript:;" class="active">사진 찍기</a></li><!-- 181002 : 사진 찍기 유틸메뉴 추가  -->
+								<li data-type="image"><a href="javascript:;" class="active">이미지업로드</a></li>
+								<li data-type="url"><a href="javascript:;">링크 추가</a></li>
+								<li data-type="icon"><a href="javascript:;">이모티콘 추가</a></li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered">
+						<ul class="accordion bdB0"><!-- 2018-09-18 클래스 추가 -->
+							<li>
+								<dl>
+									<dt aria-label="꼭 알아두세요!" class="js-active"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a> <!-- 2018-09-18 클래스 추가  -->
+									<dd>
+										<ul class="unorderList">
+											<li>이미지 파일은 최대 3개까지 등록이 가능합니다.</li>
+											<li>욕설, 비난 등 적절치 않은 문구 및 내용은 사전동의 없이 삭제처리 될 수 있습니다.</li>
+											<li>등록된 내용은 마이올원> 내 활동내역을 통해 삭제 및 편집이 가능합니다.</li>
+										</ul>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">등록</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

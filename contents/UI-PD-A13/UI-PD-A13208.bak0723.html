@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>골드바</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- breadcrumb -->
+					<section class="breadcrumb columnSet">
+						<h2>골드바 구매<span>상품개요</span></h2>
+						<ol class="step columnSet twoSet">
+							<li class="is-on ">1</li>
+							<li class="is-off">7</li>
+						</ol>
+					</section>
+					<!-- //breadcrumb -->
+
+					<section class="fullWidth">
+						<nav class="tabNav">
+							<ul class="columnSet">
+								<li class="colItem is-on" data-tab="tabCont1"><a href="javascript:;">(주)한국금거래소쓰리엠</a></li>
+								<li class="colItem" data-tab="tabCont2"><a href="javascript:;">(주)삼성금거래소</a></li>
+							</ul>
+						</nav>
+
+						<div id="tabCont1" class="tabContent is-current noPadding">
+							<h3 class="visualHide">(주)한국금거래소쓰리엠</h3>
+							<div class="titleArea">
+								<p class="tTitle">LS-Nikko동제련㈜이 제조하고 ㈜한국금거래소쓰리엠이 순도 99.99와 질량을 보증합니다.</p>
+							</div>
+
+							<table class="dataTable colStyle mgT0">
+								<caption>기본 데이터 테이블</caption>
+								<colgroup>
+									<col style="width:25%"/>
+									<col />
+									<col />
+									<col />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">중량</th>
+										<td>10g</td>
+										<td>100g</td>
+										<td>1kg</td>
+									</tr>
+									<tr>
+										<th scope="row">크기</th>
+										<td>15.5x25.5mm</td>
+										<td>25x45mm</td>
+										<td>50x110mm</td>
+									</tr>
+									<tr>
+										<th scope="row">소재</th>
+										<td>금 99.99%</td>
+										<td>금 99.99%</td>
+										<td>금 99.99%</td>
+									</tr>
+									<tr>
+										<th scope="row">고객이 사실 때 수수료율 <br>(부가가치세 10% 추가)</th>
+										<td>7%</td>
+										<td>5%</td>
+										<td>5%</td>
+									</tr>
+									<tr>
+										<th scope="row">고객이 파실 때 수수료율</th>
+										<td>5%</td>
+										<td>5%</td>
+										<td>5%</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //#tabCont1 -->
+
+						<!-- #tabCont2 -->
+						<div id="tabCont2" class="tabContent noPadding">
+							<h3 class="visualHide">(주)삼성금거래소</h3>
+							<div class="titleArea">
+								<p class="tTitle">LS-Nikko동제련㈜에서 공급받은 순도 99.99%의 금을 (주)삼성금거래소가 제조하고 질량과 순도를 보증합니다</p>
+							</div>
+
+							<table class="dataTable colStyle mgT0">
+								<caption>기본 데이터 테이블</caption>
+								<colgroup>
+									<col style="width:25%"/>
+									<col />
+									<col />
+									<col />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">중량</th>
+										<td>37.5g(10돈)</td>
+										<td>187.5g(50돈)</td>
+										<td>375g(100돈)</td>
+									</tr>
+									<tr>
+										<th scope="row">크기</th>
+										<td>22 x 37mm</td>
+										<td>32 x 52mm</td>
+										<td>58 x 85mm</td>
+									</tr>
+									<tr>
+										<th scope="row">소재</th>
+										<td>금 99.99%</td>
+										<td>금 99.99%</td>
+										<td>금 99.99%</td>
+									</tr>
+									<tr>
+										<th scope="row">고객이 사실 때 수수료율 <br>(부가가치세 10% 추가)</th>
+										<td>5.5%</td>
+										<td>4.7%</td>
+										<td>4.5%</td>
+									</tr>
+									<tr>
+										<th scope="row">고객이 파실 때 수수료율</th>
+										<td>5%</td>
+										<td>5%</td>
+										<td>5%</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- //#tabCont2 -->
+					</section>
+
+					<section class="fullWidth">
+						<div class="sectionWrap pdT0 ">
+							<ul class="unorderList">
+								<li>고객이 파실때 수수료율 : 5%</li>
+								<li>LS-Nikko동제련㈜ : 국내에서 유일하게 런던금시장 연합회(LBMA)의 &apos;Good Delivery List&apos;에 등록된 회사</li>
+								<li>고객이 사실 때 금액 : 1g당 기준가격 X 중량 X (1 + 골드바 종류별 판매수수료율) X (1 + 부가가치세 10%)</li>
+								<li>고객이 파실 때 금액 : 1g당 기준가격 X 중량 X (1 - 매입수수료율 5%), 파실 때에는 부가세 없음</li>
+								<li>1g당 기준가격 : 국제금가격을 원달러 환율과 1g당 원화가격으로 환산하여 은행이 고시하는 가격</li>
+								<li>수수료 : 금 실물구입비용, 골드바 제조비용, 보안물류비용, 판매업체 수수료, 은행수수료 등이 포함</li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="fullWidth with-fixedBtn topbordered">
+						<ul class="accordion">
+							<li class="on">
+								<dl>
+									<dt class="js-active" aria-label="꼭 알아두세요!"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a></dt>  <!-- 2018-09-07 클래스 추가 -->
+									<dd class="dp-block">
+										<ul class="unorderList">
+											<li>골드바 실물수령은 신청하신 고객 본인만 가능합니다. (대리인 수령불가)</li>
+											<li>지정하신 실물수령 영업점은 변경할 수 없습니다.</li>
+											<li>기타 문의는 영업점 또는 고객행복센터로 문의하시기 바랍니다.
+												<br>
+												농협 고객행복센터 <a href="tel:15**-21**" class="greenOn underline ">15**-21**</a>, 서비스번호 : 929
+											</li>
+										</ul>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+						</ul>
+					</section>
+
+					<button type="submit" class="btn primary submit selfBottom">다음</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

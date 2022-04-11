@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>결제 - 바코드결제</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth no-fixed"> <!-- 2018-10-17 클래스 추가  -->
+						<div class="accountSelect">
+							<div class="select-input" data-account-name="NH All100플랜 저축통장" data-account-number="123-345-23423423">
+								<select id="selectLabel1" class="formInput account-label">
+									<option value="option2" label="NH All100플랜 저축통장 123-456-789987">NH All100플랜 저축통장 123-456-789987</option>
+									<option value="option3" label="NH All100플랜 저축통장 456-465-345324">NH All100플랜 저축통장 456-465-345324</option>
+									<option value="option4" label="NH All100플랜 저축통장 243-243-532432">NH All100플랜 저축통장 243-243-532432</option>
+								</select>
+								<span></span>
+							</div>
+							<ul class="columnSet accountBalance columnSet-valign-end">
+								<li>
+									<button type="button" class="btn barcodeHide">계좌숨기기</button>
+								</li>
+								<li class="rowSpan6 rightTxt">
+									잔액 <span>3,615,532</span>원
+								</li>
+							</ul>
+						</div>
+						<!-- s 계좌 숨겼을때  
+						<div class="barcodeUtil">
+							<h3 class="BU_title">올원뱅크 바코드결제</h3>
+							<p class="BU_text">계좌번호 및 잔액을 확인하세요.</p>
+							<button type="button" class="btn barcodeSee">계좌보기</button>
+						</div-->
+						<!-- e 계좌 숨겼을때  -->
+						<div class="centeredTxt">
+							<ul class="barcodeTab">
+								<li><button type="button" class="btn">하나로마트</button></li>
+								<li class="is-on"><button type="button" class="btn">Mtic</button></li>
+								<li><button type="button" class="btn">GS25</button></li>
+							</ul>
+						</div>
+						<div class="barcodeMart">
+							<h3 class="allianceTitle">제휴가맹점들</h3>
+							<div class="barcodeBox">
+								<p>아래를 눌러 바코드를 생성해주세요.</p>
+								<!-- <p>점원에게 <span class="greenOn">"엠틱모바일결제"</span>라고 해주세요!</p> -->
+								<div class="barcodeResetUtil">
+									<!-- <span class="flL redOn"><button type="button" class="btn barcodeReset02">새로고침</button>01:21</span><span class="flR">결제가능금액 <em class="redOn">300,000 원</em></span>  -->
+									<!-- 바코드 생성 되었을때 -->
+								</div>
+								<div class="barcodeImgBox">
+									<img src="../../assets/img/img_barcode.png" width="300" border="0" alt="바코드 이미지"> <!-- 2018-10-02 이미지 사이즈 변경  -->
+									<button type="button" class="btn barcodeReset">새로고침</button>
+								</div>
+								<!-- <p class="barcodeNumber">4321 9876 1234 5678<button type="button" class="btn barcodeBig">바코드 크게보기</button></p> -->
+								<!-- 바코드 생성 되었을때 -->
+							</div>
+							<ul class="barcodeBtnUtil">
+								<li><button type="button" class="btn ">결제내역조회</button></li>
+								<li><button type="button" class="btn ">가맹점보기</button></li>
+							</ul>
+							<!-- 2018-10-17 고객센터 정보 추가  -->
+							<div class="cs-info">
+								<p class="error-csInfo pdzero"><span class="iconTel">고객행복센터</span> : <a href="tel:1661-3000">1661-3000</a></p>
+								<!-- <span>고객행복센터 </span><a href="tel:1661-3000" data-icon="phone"><span>1661-3000</span></a> -->
+							</div>
+						</div>
+					</section>
+					
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>지방세전자고지 서비스해지</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- breadcrumb -->
+					<section class="breadcrumb columnSet">
+						<h2>신청 해지</h2>
+						<ol class="step columnSet twoSet">
+							<li class="is-on">1</li>
+							<li class="is-off">2</li>
+						</ol>
+					</section>
+					<!-- //breadcrumb -->
+
+					<section class="lastStep fullWidth">
+						<div class="fineBox">
+							<p class="fineTit">지방세전자고지 서비스해지</p>
+							<p class="fz-12">지방세전자고지 서비스를 해지하시겠습니까?</p>
+							<p class="greenOn mgT10">신청일자: 2016-03-01</p> <!-- 2018-10-02 신청일자 스타일 변경 코드 위치 변경  -->
+						</div>
+					</section>
+					<button type="submit" class="btn primary submit selfBottom">서비스해지</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

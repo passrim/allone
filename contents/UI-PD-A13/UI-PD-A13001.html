@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>입출금계좌계설 - 금융상품몰</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content " data-role="content">
+					<section class="fullWidth no-fixed">
+						<div class="prd-listMain">
+							<nav class="tabNav tabOverflow pageTab">
+								<ul class="columnSet">
+									<li class="colItem is-on" data-tab="tabCont1"><a href="javascript:;">입출금계좌개설</a></li>
+									<li class="colItem" data-tab="tabCont2"><a href="javascript:;">예/적금</a></li>
+									<li class="colItem" data-tab="tabCont3"><a href="javascript:;">대출</a></li>
+									<li class="colItem" data-tab="tabCont4"><a href="javascript:;">펀드</a></li>
+									<li class="colItem" data-tab="tabCont5"><a href="javascript:;">외화예금</a></li>
+									<li class="colItem" data-tab="tabCont6"><a href="javascript:;">카드</a></li>
+									<li class="colItem" data-tab="tabCont7"><a href="javascript:;">보험</a></li>
+									<li class="colItem" data-tab="tabCont8"><a href="javascript:;">골드바</a></li>
+								</ul>
+							</nav>
+
+							<!-- 입출금계좌개설  -->
+							<div id="tabCont1" class="tabContent is-current prd01"> <!-- topVisual 상품별 클래스 기입 포인트 -->
+								<h2 class="visualHide">입출금계좌개설</h2>
+								<div class="topVisual">
+									<ul class="logoArea">
+										<li><span class="logo">NH농협은행</span></li>
+									</ul>
+									<h3>영업점 방문 없이<br>모바일로 간편하게!</h3>
+									<p class="subTitle fz-18"><span class="important">NH주거래우대통장</span></p>
+									<dl class="subDesc columnSet mgT10"><!-- 클래스 추가-->
+										<dt class="fz-12">Step 1.</dt><!-- 클래스 추가-->
+										<dd class="fz-12">금융수수료 면제 혜택 체크<br>(타행 현금인출 수수료도 면제!)</dd><!-- 클래스 추가-->
+									</dl>
+									<dl class="subDesc columnSet">
+										<dt class="fz-12">Step 2.</dt><!-- 클래스 추가-->
+										<dd class="fz-12">내가 받을 수 있는 우대 금리 확인</dd><!-- 클래스 추가-->
+									</dl>
+									<p class="subDesc mgT5 fz-12">지금 시작하세요.</p><!-- 클래스 변경 & 추가-->
+									<div class="btn_bottom"><button type="submit" class="btn">자세히 보기</button></div>
+								</div>
+								<ul class="boardList toplined"><!-- 0918 -->
+									<li>
+										<a href="javascript:;" class="boxHead">
+											<div class="objCon">
+												<p class="dataTxt tTitle">NH주거래우대통장</p> <!-- 2018-09-19 strong 태그가 p태그로 변경  --><!-- 2018-10-16 수정 -->
+												<span class="dataTxt tCon">금융 수수료에 금리까지 우대받는 주거래 우대 통장</span><!-- 2018-10-16 수정 -->
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;" class="boxHead">
+											<div class="objCon">
+												<p class="dataTxt tTitle">NH카카오페이통장</p> <!-- 2018-09-19 strong 태그가 p태그로 변경  -->
+												<span class="dataTxt tCon">올원뱅크와 카카오페이가 만나 즐거운 혜택을 드립니다.</span>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;" class="boxHead">
+											<div class="objCon">
+												<p class="dataTxt tTitle">Magic Tree(매직트리)</p> <!-- 2018-09-19 strong 태그가 p태그로 변경  -->
+												<span class="dataTxt tCon">가입은 편하게, 우대금리는 높게 모두가 원하는 입출금 통장</span>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;" class="boxHead">
+											<div class="objCon">
+												<p class="dataTxt tTitle">NH모여라통장</p> <!-- 2018-09-19 strong 태그가 p태그로 변경  -->
+												<span class="dataTxt tCon">회비관리 어렵지 않아요. 모임통장 하나면 고민 해결!</span>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;" class="boxHead">
+											<div class="objCon">
+												<p class="dataTxt tTitle">입출금계좌개설 FAQ</p> <!-- 2018-09-19 strong 태그가 p태그로 변경  -->
+												<span class="dataTxt tCon">입출금계좌개설을 위한 궁금증 해결</span>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<!-- //입출금계좌개설  -->
+
+							<!-- 예/적금 -->
+							<div id="tabCont2" class="tabContent">
+								<h2 class="visualHide">예/적금</h2><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+								<div class="topVisual">
+									<!-- <img src="../../assets/img/dummy_prd01.png" alt="" class="dummyImg"> -->
+									<button type="submit" class="btn secondary-gray">신청하기</button>
+								</div>
+								<div class="prdList type02">
+									<ul class="aBlock">
+										<li>
+											<a href="javascript:;">
+												<div>
+													<p class="name">e금리우대예금</p>
+													<p class="desc">인터넷 및 스마트뱅킹 전용거치식 예금</p>
+												</div>
+												<div>
+													<p class="perLow">최저 연 0.50%<span>(12개월 이상)</span></p>
+													<p class="perHigh"><span>최고</span>2.50%</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;">
+												<div>
+													<p class="name">e금리우대적금</p>
+													<p class="desc">인터넷 및 스마트뱅킹 전용 적금</p>
+												</div>
+												<div>
+													<p class="perLow">최저 연 0.50%<span>(12개월 이상)</span></p>
+													<p class="perHigh"><span>최고</span>2.50%</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;">
+												<div>
+													<p class="name">주택청약종합저축</p>
+													<p class="desc">적금형식/일시예치식</p>
+												</div>
+												<div>
+													<p class="perLow">최저 연 0.50%<span>(12개월 이상)</span></p>
+													<p class="perHigh"><span>최고</span>2.50%</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;">
+												<div>
+													<p class="name">NH 오토적금</p>
+													<p class="desc">자동차 구매전용 적립식 상품</p>
+												</div>
+												<div>
+													<p class="perLow">최저 연 0.50%<span>(12개월 이상)</span></p>
+													<p class="perHigh"><span>최고</span>2.50%</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;">
+												<div>
+													<p class="name">네이버페이통장</p>
+													<p class="desc">네이버와 연계된 특별한 통장상품</p>
+												</div>
+												<div>
+													<p class="perLow">최저 연 0.50%<span>(12개월 이상)</span></p>
+													<p class="perHigh"><span>최고</span>2.50%</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;">
+												<div>
+													<p class="name">모임통장(입출금)</p>
+													<p class="desc">모임서비스를 위한 우대금리 적용통장</p>
+												</div>
+												<div>
+													<p class="perLow">최저 연 0.50%<span>(12개월 이상)</span></p>
+													<p class="perHigh"><span>최고</span>2.50%</p>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;">
+												<div>
+													<p class="name">NH 해봄적금</p>
+													<p class="desc">빠르고 간편한 올원뱅크 전용상품</p>
+												</div>
+												<div>
+													<p class="perLow">최저 연 0.50%<span>(12개월 이상)</span></p>
+													<p class="perHigh"><span>최고</span>2.50%</p>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- //예/적금 -->
+
+							<div id="tabCont3" class="tabContent">대출</div>
+							<div id="tabCont4" class="tabContent">펀드</div>
+							<div id="tabCont5" class="tabContent">외환</div>
+							<div id="tabCont6" class="tabContent">카드</div>
+							<div id="tabCont7" class="tabContent">보험</div>
+							<div id="tabCont8" class="tabContent">골드바</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

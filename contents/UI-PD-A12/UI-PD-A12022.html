@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>초대장(web)</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type03", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content alloneMeeting" data-role="content"> <!-- Category Class : alloneMeeting -->
+					<section class="fullWidth">
+						<div class="logoArea"><!-- 0822 -->
+							<img src="../../assets/img/h2_logo.png" alt="AllOne BANK">
+						</div>
+						<div class="imgArea customSize"><!-- 0929 -->
+							<img src="../../assets/img/meeting/meetingSet.png" alt="모임설정">
+						</div>
+
+						<div class="sectionWrap centeredTxt mgT10">
+							<p class="fz-16"><strong>올원뱅크가입자모임</strong></p>
+							<p class="fz-12 mgT10"><span>김*리 님</span>이 당신을 초대합니다.</p>
+						</div>
+
+						<div class="sectionWrap centeredTxt mgT10">
+							<button type="submit" class="btn secondary-gray submit">올원뱅크 앱이 없나요? 설치하기</button>
+							<button type="submit" class="btn secondary-white mgT10">이미 앱이 있다면, 올원뱅크 가기</button>
+
+							<!-- <ul class="rectBox grid2 pad">
+								<li>
+									<a href="javascript:;">
+										<span class="tCon">올원뱅크 앱이 없나요?</span>
+										<strong class="tTitle">설치하기</strong>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+										<span class="tCon">이미 앱이 있다면,</span>
+										<strong class="tTitle">올원뱅크 가기</strong>
+									</a>
+								</li>
+							</ul> -->
+						</div>
+					</section>
+
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

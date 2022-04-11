@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>Step2 지로입력납부 - MICR 지로입력납부</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- breadcrumb -->
+					<section class="breadcrumb columnSet">
+						<h2>MICR 지로입력납부</h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">2</li>
+							<li class="is-off">5</li>
+						</ol>
+					</section>
+					<!-- //breadcrumb -->
+
+					<section class="with-fixedBtn">
+						<form>
+							<fieldset class="formWrap">
+								<legend>Step2 MICR 지로입력납부</legend>
+
+								<label for="inputLabel1">지로번호</label>
+								<div class="textInput">
+									<input type="text" id="inputLabel1" placeholder="3001187" class="formInput"  name="" disabled="disabled" />
+									<button type="button" class="btn deleteBtn">삭제</button>
+								</div>
+
+								<label for="inputLabel2">청구기관</label>
+								<div class="textInput">
+									<input type="text" id="inputLabel2" placeholder="한국도로공사" class="formInput"  name="" disabled="disabled" />
+									<button type="button" class="btn deleteBtn">삭제</button>
+								</div>
+
+								<label for="inputLabel3">고객조회번호 <i class="required"></i></label>
+								<div class="numberInput">
+									<input type="tel" id="inputLabel3" placeholder="고객조회번호 입력" class="formInput" />
+								</div>
+
+								<label for="inputLabel4">납부자명 <i class="required"></i></label>
+								<div class="textInput">
+									<input type="text" id="inputLabel4" placeholder="납부자명 입력" class="formInput" name="" />
+									<button type="button" class="btn deleteBtn">삭제</button>
+								</div>
+
+								<label for="inputLabel5">납부금액 <i class="required"></i></label>
+								<div class="numberInput">
+									<div class="balance balance-display" data-currency="원">
+										<input type="tel" id="inputLabel5" placeholder="납부금액 입력" class="formInput balance-input utf8" name="" /> <!-- 2018-10-08 클래스 추가  -->
+									</div>
+								</div>
+
+								<label for="inputLabel6">납부연월(회차) <i class="required"></i></label>
+								<div class="calendar">
+									<input type="text" id="inputLabel6" placeholder="납부연월 선택" class="formInput search-input" />
+									<button type="submit" id="" class="btn calendarBtn" name="" onclick="javascript:return false;">캘린더</button>
+								</div>
+
+								<label for="inputLabel7">납부자 확인정보 <i class="required"></i></label>
+								<div class="textInput">
+									<input type="text" id="inputLabel7" placeholder="확인정보 입력" class="formInput" name="" />
+									<button type="button" class="btn deleteBtn">삭제</button>
+								</div>
+
+								<label for="inputLabel8">전화번호 <i class="required"></i></label>
+								<dl class="columnSet phoneInput">
+									<dt>
+										<label for="phoneNum" class="visualHide">핸드폰 앞자리</label>
+										<div class="select-input">
+											<select id="phoneNum" class="formInput" name="">
+												<option value="010" label="010">010</option>
+												<option value="017" label="017">017</option>
+											</select>
+										</div>
+									</dt>
+									<dd>
+										<input type="tel" id="inputLabel9" placeholder="- 없이 입력" class="formInput" name="phone" maxlength="8" />
+									</dd>
+								</dl>
+
+							</fieldset>
+						</form>
+
+					</section>
+
+					<button type="submit" class="btn primary submit selfBottom">다음</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

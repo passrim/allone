@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>국가별 은행코드 입력방법</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="javascript:void(0);">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header">
+					<h1 class="headerTitle">국가별 은행코드 입력방법</h1>
+					<button type="button" class="btn closeBtn" id="fullClose">닫기</button>
+				</div>
+				<div data-role="content" class="modal-contents with-fixedBtn">
+					<section>
+						<label for="inputLabel1">국가별 은행코드 입력</label>
+						<div class="searchBar">
+							<input type="text" id="inputLabel3" placeholder="국가코드2자리 + 은행코드2자리" class="formInput" name=""><!-- 0913 : 접근성 레이블 제공 -->
+							<button type="submit" class="btn secondary floatSearch">다시입력</button>
+						</div>
+						<span class="fieldNotes normal-info"> 정확한 은행코드를 입력하셔야 합니다.(예시. FW123456789)</span>
+						
+						<table class="dataTable rowStyle">
+							<caption>국가별 은행코드</caption>
+							<thead>
+								<tr>
+									<!-- 테이블간의 넓이 조정시 class rowSpan1, rowSpan2, rowSpan3, rowSpan4, rowSpan6 추가 -->
+									<!-- rowSpan6 : 50%, rowSpan4 : 33.33%, rowSpan3 : 25% -->
+									<th scope="col" class="rowSpan4">송금할 국가</th>
+									<th scope="col" class="rowSpan3">국가별코드</th>
+									<th scope="col" class="rowSpan3">국가별숫자</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>USA(미국)</td>
+									<td>FW</td>
+									<td>123456789</td>
+								</tr>
+								<tr>
+									<td>AUSTRIA(오스트리아)</td>
+									<td>AT</td>
+									<td>12345</td>
+								</tr>
+								<tr>
+									<td>AUSTRALIA(호주)</td>
+									<td>AU</td>
+									<td>123456</td>
+								</tr>
+								<tr>
+									<td>GERMANY(독일)</td>
+									<td>BL</td>
+									<td>12345678</td>
+								</tr>
+								<tr>
+									<td>CANADA(캐나다)</td>
+									<td>CC</td>
+									<td>123456789</td>
+								</tr>
+								<tr>
+									<td>UNITED KINGDOM(영국)</td>
+									<td>SC</td>
+									<td>123456</td>
+								</tr>
+							</tbody>
+						</table>
+					</section>
+					<section class="fullWidth with-fixedBtn">
+						<ul class="accordion topbordered bdB0"><!-- 2018-09-28 클래스 추가  -->
+							<li>
+								<dl>
+									<dt class="js-active" aria-label="꼭 알아두세요!"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a></dt><!-- 2018-09-28 클래스 추가  -->
+									<dd>
+										<ul class="unorderList">
+											<li><strong>국가별 은행코드(National Clearing System Code)란?</strong><br />
+												각 나라별로 은행마다 고유의 번호를 부여하여 송금 등의 업무를 전산으로 처리하기 위한 Code로서 Clearing System Code를 입력하시면 정확한 송금이 가능하며, 송금 받는 은행의 수작업 처리로 인한 수수료 부과, 송금지연 등의 문제를 예방할 수 있습니다.
+											</li>
+										</ul>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+						</ul>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+		<!-- //fullPopup -->
+
+	</body>
+</html>

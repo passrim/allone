@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>캐시비 선물</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth">
+						<nav class="tabNav">
+							<ul class="columnSet">
+								<li class="colItem is-on" data-tab="tabCont1"><a href="javascript:;">캐시비 선물</a></li>
+								<li class="colItem" data-tab="tabCont2"><a href="javascript:;">캐시비 요청</a></li>
+							</ul>
+						</nav>
+					
+						<!-- 캐시비 선물  -->
+						<div id="tabCont1" class="tabContent is-current">
+							<h2 class="visualHide">캐시비 선물</h2><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+							<div class="affiliateLogo cashBee">
+								<h2>올원뱅크 캐시비 선물이 완료되었습니다.</h2>
+							</div>
+							<dl class="dataList">
+								<dt>선물일시</dt>
+								<dd>2018-06-28 17:00:00</dd>
+								<dt>상태</dt>
+								<dd><span>캐시비 선물완료</span></dd>
+								<dt>받는분</dt>
+								<dd>김*영 / 010-****-****</dd>
+								<dt>보낼메시지</dt>
+								<dd>캐시비 선물입니다. 최대 40자까지 입력 가능합니다.</dd>
+								<dt>선물 금액</dt>
+								<dd>99,999,999원</dd>
+								<dt>선물 후 잔액</dt>
+								<dd>99,999,999원</dd>
+							</dl>
+						</div>
+						
+						<!-- 캐시비 요청 -->
+						<div id="tabCont2" class="tabContent">
+							<h2 class="visualHide">캐시비 요청</h2><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+							<label for="inputLabel2">요청 금액 <i class="required"></i></label>
+							<div class="balance balance-display" data-currency="원">
+								<input type="tel" id="inputLabel2" placeholder="0" class="formInput balance-input" name="" aria-required="true">
+							</div>
+							
+							<label for="inputLabel3">요청 받는분 <i class="required"></i></label>
+							<div class="search">
+								<input type="text" id="inputLabel3" placeholder="성명 휴대폰번호" class="formInput search-input" disabled="disabled" aria-required="true">
+								<button type="submit" id="" class="btn searchTxtBtn" name="">주소록</button>
+							</div>
+							
+							<label for="inputLabel4">보낼 메시지</label>
+							<div class="textInput">
+								<input type="text" id="inputLabel4" placeholder="캐시비 선물입니다.(최대 40자)" class="formInput">
+							</div>
+						</div>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">선물함</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

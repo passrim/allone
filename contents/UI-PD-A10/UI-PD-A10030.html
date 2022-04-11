@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>지방세 납부</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- breadcrumb -->
+					<section class="breadcrumb columnSet">
+						<h2>고지확인</h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">3</li>
+							<li class="is-off">5</li>
+						</ol>
+					</section>
+					<!-- //breadcrumb -->
+
+					<section class="with-fixedBtn fullWidth">
+						<ul class="rowStyle bdB0">
+							<li class="bdT0">
+								<dl class="dataList bdzero">
+									<dt>지자체</dt>
+									<dd>서울시 중구</dd>
+									<dt>세목</dt>
+									<dd>주민세(개인균등주소지할)</dd>
+									<dt>납부기한</dt>
+									<dd>2018-08-05</dd>
+									<dt>납부금액</dt>
+									<dd>60,000원</dd>
+								</dl>
+								<div class="actionBox onlyBtn">
+									<button type="submit" class="btn secondary">자세히보기</button>
+								</div>
+							</li>
+						</ul>
+					</section>
+					<section class="fullWidth topbordered">
+						<ul class="accordion">
+							<li>
+								<dl>
+									<dt class="js-active"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a></dt> <!-- 2018-09-07 클래스 추가 -->
+									<dd>
+										<ul class="unorderList">
+											<li>고지내역은 해당 지자체 DB에서 실시간으로 조회된 결과입니다.</li>
+											<li>지방자치단체의 요청에 따라 납부취소가 허용되지 않으므로 과오납하신 경우 해당 지방자치단체로 환급신청하시기 바랍니다.</li>
+											<li>납부희망일은 신청일 기준 익영업일로부터 "납기내일자" 전영업일까지 지정할 수 있습니다.(현재기준 최대 2개월 이내)</li>
+											<li>토/일/공휴일은 납부희망일로 지정할 수 없습니다.</li>
+											<li>예약납부 취소는 납부희망일 전영업일까지 가능합니다.</li>
+											<li>예약납부 납부희망일 17:00부터 계좌에서 출금되므로 잔고를 유지해주세요.</li>
+											<li>납부희망일 이전 또는 당일에 전자납부하시는 경우 이중납부 될 수 있으니 양지하시기 바랍니다.</li>
+										</ul>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+						</ul>
+					</section>
+					<button type="submit" class="btn primary submit selfBottom">확인</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

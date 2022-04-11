@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>진행단계 확인 - 입출금계좌개설</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+
+					Layout.stepAccount();
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>Magic Tree (매직트리)<span>진행단계 확인</span></h2>
+					</section>
+					<section class="fullWidth bdT1">
+						<h3 class="serviceTitle"><span class="greenOn">홍길동</span>님의 입출금계좌개설 진행 현황입니다.</h3>
+						<ul class="unorderList paddingAll">
+							<li>고객님은 12월 22일에 입출금계좌개설을 진행하던 <span class="greenOn">&#39;매직트리&#39;</span> 상품이 있습니다.</li>
+							<li>&#39;매직트리&#39;상품으로 가입을 계속 진행하시려면 <span class="greenOn">이어서 진행</span>해주시고, &#39;매직트리&#39;상품으로 처음부터 다시 진행하시려면 <span class="greenOn">계좌개설취소</span> 후 진행해 주시기 바랍니다.</li>
+						</ul>
+					</section>
+					<section class="fullWidth topbordered stepNewAccount">
+						<ul class="columnSet">
+							<li>
+								<p><span class="date">2018-04-15</span> 신청</p>
+								<h3>NH X 카카오페이통장</h3>
+							</li>
+							<li class="rightTxt rowSpan4">
+								<button type="button" class="btn secondary-gray">계좌개설취소</button>
+							</li>
+						</ul>
+						<div class="stepHistory">
+							<ol class="step columnSet">
+								<li class="is-off "><span>신분증<em class="dp-inblock">촬영</em></span></li>
+								<li class="is-on skype is-done"><span>영상통화</span></li>
+								<!-- <li class="is-on"><span>계좌확인</span></li> -->
+								<li class="is-on is-done"><span>정보입력</span></li>
+								<li class="is-on"><span>상품가입</span></li>
+								<li class="is-on"><span>완료</span></li>
+							</ol>
+						</div>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">나중에 진입</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">이어서 진행</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

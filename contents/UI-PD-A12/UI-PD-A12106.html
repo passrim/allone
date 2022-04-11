@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>홈 - Fun & Life</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth no-fixed">
+						<div class="funlife-listMain">
+							<nav class="tabNav tabOverflow">
+								<ul class="columnSet">
+									<li class="colItem" data-tab="tabCont1"><a href="javascript:;">결제</a></li>
+									<li class="colItem is-on" data-tab="tabCont2"><a href="javascript:;">쇼핑</a></li>
+									<li class="colItem" data-tab="tabCont3"><a href="javascript:;">FUN</a></li>
+									<li class="colItem" data-tab="tabCont4"><a href="javascript:;">LIFE</a></li>
+									<li class="colItem" data-tab="tabCont5"><a href="javascript:;">재태크</a></li>
+								</ul>
+							</nav>
+
+							<!-- 쇼핑  -->
+							<div id="tabCont2" class="tabContent is-current funlife02">
+								<h2 class="visualHide">쇼핑</h2><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+								<div class="topVisual"> <!-- 18.09.20 :: 비주얼 전체 변경 -->
+									<p class="imgTitle autoVisual">
+										<img src="../../assets/img/funlife/home_title02.png" alt="고마운 분께 작은 마음을 담아! 나른한 오후 달달한 커피와 디저트를 전해 주세요."><!-- 181024 : [레드마인] #1678 / 상단 visual 접근성 alt값 수정 --><!-- 181022 : 상단 visual 컨펌 디자인 적용 접근성 alt값 수정 -->
+									</p>
+									<p class="desc"><a href="javascript:;">바로가기</a></p>
+								</div>
+
+								<div>
+									<ul class="boardList toplined"> <!-- 18.09.20 :: showArrow 클래스 삭제 -->
+										<li>
+											<a href="javascript:;" class="boxHead">
+												<div class="objCon">
+													<strong class="dataTxt tTitle">기프티쇼(모바일 쿠폰)</strong>
+													<span class="dataTxt tCon">커피, 외식, 영화 등 다양한 브랜드의 상품을<br>친구, 지인들에게 선물해 보세요</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" class="boxHead">
+												<div class="objCon">
+													<strong class="dataTxt tTitle">HOT!잇템</strong>
+													<span class="dataTxt tCon">유명 브랜드 및 중소기업 상품을 저렴한 가격으로<br>타임세일 및 기획전</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" class="boxHead">
+												<div class="objCon">
+													<strong class="dataTxt tTitle">모바일상품권</strong>
+													<span class="dataTxt tCon">감사한 마음을 전해 보세요<br>온라인/오프라인 상품권 구매 </span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" class="boxHead">
+												<div class="objCon">
+													<strong class="dataTxt tTitle">농산물장터(농협몰)</strong>
+													<span class="dataTxt tCon">대한민국 안심장터 농협몰!<br>최고 품질과 합리적인 가격의 농축산물</span>
+												</div>
+											</a>
+										</li>
+								</ul>
+								</div>
+							</div>
+							<!-- //쇼핑  -->
+
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>앱 접근 권한 안내(안드로이드)</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="layerPop.open('.modalWrap', this); return false;">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header">
+					<h1 class="headerTitle">앱 접근 권한 안내</h1>
+					<button type="button" class="btn closeBtn" id="fullClose">닫기</button>
+				</div>
+				<div data-role="content" class="modal-contents with-fixedBtn">
+					<section class="topNotice">
+						<h3 class="fz-16">올원뱅크 이용을 위해 다음 접근권한 허용이 필요합니다.</h3>
+						<p class="basisTxt grayOn pdB10">필수적 접근 권한 항목은 올원뱅크 앱의 실행을 위해 반드시 필요하며 허용하지 않을 경우 서비스 이용이 제한됩니다.</p>
+						<p class="basisTxt grayOn pdB15">선택적 접근 권한 항목은 접근권한을 허용하지 않아도 서비스 이용은 가능하나, 일부 기능 사용에 제한이 있을 수 있습니다.</p>
+
+						<h3 class="serviceTitle bdT1 bdB0 pdT15 pdBothz greenOn">필수적 접근 권한</h3>
+						<div class="btmNotice">
+							<ul class="unorderList">
+								<li>
+									<strong class="title"><span class="blueOn">[필수]</span> 저장공간</strong>
+									앱 설치 및 공인인증서, 앱의 콘텐츠와 이미지 저장을 위해 사용합니다.
+								</li>
+								<li>
+									<strong class="title"><span class="blueOn">[필수]</span> 전화</strong>
+									전자금융 사기예방 등을 위해 기기 정보를 확인합니다.
+								</li>
+								<li>
+									<strong class="title"><span class="blueOn">[필수]</span> SMS</strong>
+									SMS 인증 시 인증번호 자동 확인을 위해 사용됩니다.
+								</li>
+							</ul>
+						</div>
+
+						<h3 class="serviceTitle bdT1 bdB0 pdT15 pdBothz greenOn">선택적 접근 권한</h3>
+						<div class="btmNotice">
+							<ul class="unorderList">
+								<li>
+									<strong class="title"><span class="blueOn">[선택]</span> 주소록</strong>
+									올원송금, 환전송금 등에서 상대방의 연락처 정보를 사용하기 위해 접근합니다.
+								</li>
+								<li>
+									<strong class="title"><span class="blueOn">[선택]</span> 카메라</strong>
+									<!-- 181017 : 문구 수정  -->
+									입출금계좌개설 시 신분증촬영, 영상통화 인증 및 QR결제 이용 시 사용됩니다.
+								</li>
+								<li>
+									<strong class="title"><span class="blueOn">[선택]</span> 위치</strong>
+									위치기반으로 영업점 찾기 등을 위해 사용합니다.
+								</li>
+								<li>
+									<strong class="title"><span class="blueOn">[선택]</span> 마이크</strong>
+									<!-- 181017 : 문구 수정  -->
+									음성송금서비스, 음성메뉴이동서비스, 입출금계좌개설 영상통화 인증 이용 시 사용합니다.
+								</li>
+							</ul>
+							<ul class="unorderList hyphenList mgT10">
+								<li>안드로이드OS 6.0미만 버전 스마트폰을 이용하시는 경우 선택적 접근권한 없이 모두 필수적 접근권한으로 적용될 수 있습니다.</li>
+							</ul>
+						</div>
+					</section>
+					<section class="with-fixedBtn fullWidth topbordered">
+						<h3 class="serviceTitle bdB0 pdBz">접근권한 설정안내</h3> <!-- 2018-11-02 클래스 추가  -->
+						<div class="paddingAll">
+							<p class="basisTxt">설정> 애플리케이션 관리자> 올원뱅크> 권한</p>
+							<p class="basisTxt mgT10"><button type="button" class="btn secondary strokeType subSmallType">설정 바로가기</button></p>
+						</div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+		<!-- //fullPopup -->
+
+	</body>
+</html>

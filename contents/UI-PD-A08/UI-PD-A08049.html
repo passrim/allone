@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>Step1_회원인증 - 간편비밀번호 재등록</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>회원인증<span>Identity Verification</span></h2>
+						<ol class="step columnSet twoSet">
+							<li class="is-on">1</li>
+							<li class="is-off">4</li>
+						</ol>
+					</section>
+
+					<section class="fullWidth">
+						<nav class="tabNav">
+							<ul class="columnSet">
+								<li class="colItem" data-tab="tabCont1"><a href="javascript:;">계좌번호<span>Account Number</span></a></li>
+								<li class="colItem is-on" data-tab="tabCont2"><a href="javascript:;">공인인증서<span>Public Certification</span></a></li>
+							</ul>
+						</nav>
+						<div id="tabCont1" class="tabContent noPadding">
+							<h2 class="visualHide">계좌번호 (Account Number)</h2><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+							<p class="basisTxt">보유하고 계신 은행의 계좌번호를 입력하세요.</p>
+							<div class="paddingAll">
+								<label for="selectLabel1">은행명 (Bank Name) <i class="required"></i></label>
+								<div class="select-input">
+									<select id="selectLabel1" class="formInput">
+										<option value="default" label="선택">은행 선택</option>
+										<option value="option2" label="선택2">선택2</option>
+										<option value="option3" label="선택3">선택3</option>
+										<option value="option4" label="선택4">선택4</option>
+									</select>
+								</div>
+
+								<label for="inputLabel2">계좌번호 (Account Number) <i class="required"></i></label>
+								<input type="tel" id="inputLabel2" placeholder="- 없이 입력" class="formInput" name="account"/>
+
+								<label for="inputLabel3">주민번호 (Alien Registration Number) <i class="required"></i></label>
+								<ul class="columnSet socialnumInput">
+									<li>
+										<label for="inputLabel3" class="visualHide">Number Input</label>
+										<div class="numberInput">
+											<input type="tel" id="inputLabel3" placeholder="19701215" class="formInput" maxlength="8">
+										</div>
+									</li>
+									<li>
+										<label for="inputLabel3" class="visualHide">Number Input</label>
+										<div class="columnSet withGutter col-valign">
+											<input type="tel" id="inputLabel3" placeholder="1" class="formInput" maxlength="1">
+											<i class="i-circle colItem"></i> <i class="i-circle colItem"></i> <i class="i-circle colItem"></i> <i class="i-circle colItem"></i> <i class="i-circle colItem"></i> <i class="i-circle colItem"></i>
+										</div>
+									</li>
+								</ul>
+
+								<ul class="columnSet selfBottom">
+									<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+									<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+								</ul>
+
+							</div>
+						</div>
+						<div id="tabCont2" class="tabContent noPadding is-current">
+							<h2 class="visualHide">공인인증서 (Public Certification)</h2><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+							<!-- 공인인증서 있는 경우 -->
+							<p class="basisTxt paddingSide mgT20 mgB15">아래 공인인증서 선택 후 인증서 암호를 입력하세요.</p>
+							<div class="paddingSide">
+								<ul class="shieldListBox marginT5">
+									<li class="on">
+										<a href="javascript:;">
+											<div class="shield-ok">사용가능한인증서</div>
+											<div class="listBox">
+												<legend>인증서 세부내용 테이블</legend>
+												<p class="name">김올리</p>
+												<dl>
+													<dt>발급일</dt><dd>2018.05.01</dd>
+													<dt>구분</dt><dd>은행개인</dd>
+													<dt>만료일</dt><dd>2019.05.01</dd>
+												</dl>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;">
+											<div class="shield-expire">만료인증서</div>
+											<div class="listBox">
+												<legend>인증서 세부내용 테이블</legend>
+												<p class="name">김올리</p>
+												<dl>
+													<dt>발급일</dt><dd>2017.03.01</dd>
+													<dt>구분</dt><dd>은행개인</dd>
+													<dt>만료일</dt><dd>2018.03.01</dd>
+												</dl>
+											</div>
+										</a>
+									</li>
+									<li class="no">
+										<a href="javascript:;">
+											<div class="shield-sceap">폐기인증서</div>
+											<div class="listBox">
+												<legend>인증서 세부내용 테이블</legend>
+												<p class="name">김올리</p>
+												<dl>
+													<dt>발급일</dt><dd>2017.03.01</dd>
+													<dt>구분</dt><dd>은행개인</dd>
+													<dt>만료일</dt><dd>2018.03.01</dd>
+												</dl>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<!-- //공인인증서 있는 경우 -->
+
+							<!-- 공인인증서 없는 경우 -->
+							<!-- <div class="completeMsg stopMsg">
+								<strong>등록된 공인인증서가 없습니다.</strong>
+								<p class="mgB15">인증서가 없는 경우 인증서 가져오기를 선택하여 인증서를 가져오신 후 사용 가능합니다.</p>
+								<button type="button" class="btn secondary strokeType subSmallType subSmallType02">인증서 가져오기</button>
+							</div> -->
+							<!-- //공인인증서 없는 경우 -->
+
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

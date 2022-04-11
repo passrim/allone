@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>외화포켓예금</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('#modalDefault', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+	<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="layerPop.open('#modalDefault', this); return false;">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- 팝업 시작 -->
+		<div class="modalWrap" id="modalDefault">
+			<div class="modalDefault">
+				<div class="header">
+					<h1 class="headerTitle">해지구분 안내</h1>
+					<button type="button" class="btn closeBtn" id="defaultClose">닫기</button>
+				</div>
+				<div data-role="content" class="modal-contents">
+					<section class="no-fixed prdHistory">
+						<ul class="unorderList">
+							<li>분할인출이란?<br>
+								- 올원외화포켓적립예금의 만기일 전에 예금의 해지없이 적립 금액을 인출하는 것을 말합니다. <br>- 적립회차별로 인출이 가능하며, 한 회차의 일부 금액의 인출은 불가합니다.
+							</li>
+							<li>중도해지란?<br>
+								- 올원외화포켓적립예금의 만기일 전에 예금을 전체 해지하는 것을 말합니다
+							</li>
+							<li>만기해지란?<br>
+								- 올원외화포켓적립예금의 만기일 이후에 예금을 전체 해지하는 것을 말합니다.
+							</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+		</div>
+		<!-- //팝업 끝 -->
+
+	</body>
+</html>

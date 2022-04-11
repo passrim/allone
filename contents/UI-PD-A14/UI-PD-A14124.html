@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>베트남간편송금</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth">
+						<div class="pdBoth15 mgT20">
+							<span class="dp-block fz-12">언어선택</span>
+							<!-- 2018-09-11 언어 선택 코드 변경  -->
+							<ul class="countryOpt language triple noGutterSet">
+								<li class="colItem korean">
+									<input type="radio" value="한국어" name="calendarType" id="korean" class="btn radioToggle" checked="checked">
+									<label for="korean" class="inputLabel strokeType">
+										<h3>한국어</h3>
+										KOREAN
+									</label>
+								</li>
+								<li class="colItem english">
+									<input type="radio" value="영어" name="calendarType" id="english" class="btn radioToggle">
+									<label for="english" class="inputLabel strokeType">
+										<h3>영어</h3>
+										ENGLISH
+									</label>
+								</li>
+								<li class="colItem vietnam">
+									<input type="radio" value="영어" name="calendarType" id="vietnamese" class="btn radioToggle">
+									<label for="vietnamese" class="inputLabel strokeType">
+										<h3>베트남어</h3>
+										VIETNAMESE
+									</label>
+								</li>
+							</ul>
+						</div>
+					</section>
+					<section>
+						<!-- iframe 처리 예정 -->
+						<iframe src="../../cms/fx/ABVN0201I_iframe01.html" class="iframes"></iframe>
+						<!-- iframe 처리 예정 -->
+					</section>
+					
+					<section>
+						<ul class="dataType-list dataType-list02 "><!-- 10/18 수정 -->
+							<li>
+								<div class="checkbox">
+									<input type="checkbox" id=""><label for="">체크</label>
+								</div>
+								<a href="javascript:void(0);">[중요] 이용안내 및 유의사항</a>
+							</li>
+							<li>
+								<div class="checkbox">
+									<input type="checkbox" id=""><label for="">체크</label>
+								</div>
+								<a href="javascript:void(0);"> 외환거래 기본약관 확인</a>
+							</li>
+						</ul>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit twoLine">베트남간편송금 진행</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

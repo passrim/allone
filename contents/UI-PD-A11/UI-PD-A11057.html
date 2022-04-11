@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>어린이/청소년 해지</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth">	
+						<div class="affiliateLogo cashBee">
+							<h2>어린이/청소년 할인등록 해지</h2>
+							<p>등록하신 어린이/청소년 할인 등록을 해지하시면<br />할인 혜택을 받으실 수 없습니다.<br />
+								또한, 할인/해지 등록 신청은 신청 종류에 상관없이<br />1일 1회만 가능합니다.
+							</p>
+						</div>
+						<ul class="accordion topbordered">
+							<li>
+								<dl>
+									<dt class="js-active" aria-label="꼭 알아두세요!"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a></dt>  <!-- 2018-09-07 클래스 추가 -->
+									<dd>
+										<ul class="unorderList">
+											<li>일반인이 청소년/어린이 카드를 사용하다 적발되면 관련법에 의거하여 해당 승차구간 운임과 그 30배의 부가운임을 징수하오니 유의하시기 바랍니다.</li>
+										</ul>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+						</ul>
+					</section>
+					<button type="submit" class="btn primary submit selfBottom">등록 해지</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

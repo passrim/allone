@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>너도나도 환전신청</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+		<script>
+		$(document).ready(function(){
+			$('#autoTrue').change(function(){
+				if($(this).is(':checked')) {
+					$('#toggleTab1').toggleClass('is-current');
+					$('#toggleTab2').toggleClass('is-current');
+				}
+			});
+			$('#autoFalse').change(function(){
+				if($(this).is(':checked')) {
+					$('#toggleTab2').toggleClass('is-current');
+					$('#toggleTab1').toggleClass('is-current');
+				}
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- breadcrumb -->
+					<section class="breadcrumb columnSet">
+						<h2>환전정보입력 및 신청내역 확인</h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">4</li>
+							<li class="is-off">5</li> <!-- 2018-09-10 breadcrumb 숫자 변경 -->
+						</ol>
+					</section>
+					
+					<section>
+						<!-- 환전목적 -->
+						<label for="inputLabel1">환전목적</label>
+						<div class="textInput">
+							<input type="text" id="inputLabel1" class="formInput" placeholder="해외여행경비" disabled="disabled" />
+						</div>
+						
+						<!-- 통화선택 -->
+						<label for="selectLabel3">통화선택 <i class="required"></i></label>
+						<div class="select-input">
+							<select id="selectLabel3" class="formInput" aria-required="true">
+								<option value="default" label="통화선택">통화선택</option>
+								<option value="option2" label="option2">Option2</option>
+								<option value="option3" label="option3">Option3</option>
+								<option value="option4" label="option4">Option4</option>
+							</select>
+						</div>
+						<span class="fieldNotes normal-info">외화수령영업점: <span class="greenOn">강남역지점</span> 기준</span>
+						
+						<!-- 환전금액 -->
+						<ul class="columnSet noGutterSet marginT15">
+							<li class="colItem">
+								<input type="radio" value="외화입력" name="autoTransfer" id="autoTrue" class="btn radioToggle" checked="checked">
+								<label for="autoTrue" class="inputLabel secondary strokeType">외화입력</label>
+							</li>
+							<li class="colItem">
+								<input type="radio" value="원화입력" name="autoTransfer" id="autoFalse" class="btn radioToggle">
+								<label for="autoFalse" class="inputLabel secondary strokeType">원화입력</label>
+							</li>
+						</ul>
+						
+						<!-- 외화입력 -->
+						<div class="tabContent noPadding is-current" id="toggleTab1">
+							<h3 class="visualHide">외화입력 탭</h3> <!-- 2018-09-10 탭 타이틀 추가 -->
+							<div class="numberInput foreignCurrency">
+								<div class="balance balance-display" data-currency="USD"> <!-- data-currency 입력에 따른 외화 단위가 입력창 압쪽에 디스플레이  -->
+									<input type="tel" id="inputLabel5" placeholder="0" class="formInput balance-input" name=""  aria-required="true" />
+									<input type="tel" id="inputLabel5" placeholder="00" class="formInput balance-input" maxlength="2" name="" disabled="disabled" />
+								</div>
+							</div>
+							<button type="submit" class="btn secondary marginT10">계산하기</button>
+							<dl class="dataList foreignBalance calc"><!-- 2018-09-12 클래스 추가 -->
+								<dt class="korea"><!-- 2018-09-12 클래스 추가 -->
+									<span>KRW 원화</span><br />
+									(적용환율: 1204.45원)<!-- 2018-09-10 span 위치 변경 -->
+								</dt>
+								<dd><span>300,000</span>원</dd><!-- 2018-09-10 span 위치 변경 -->
+							</dl>
+						</div>
+						
+						<!-- 원화입력 -->
+						<div class="tabContent noPadding" id="toggleTab2">
+							<h3 class="visualHide">원화입력 탭</h3> <!-- 2018-09-10 탭 타이틀 추가 -->
+							<div class="numberInput">
+								<div class="balance balance-display" data-currency="원">
+									<label for="inputLabel5" class="visualHide">원화 환전금액 입력</label>
+									<input type="tel" id="inputLabel5" placeholder="1,000,000" class="formInput balance-input" name=""  aria-required="true">
+								</div>
+							</div>
+							<span class="balance balance-currency greenOn" data-currency="원"> <strong class="greenOn">일백만</strong></span>
+							<button type="submit" class="btn secondary marginT10">계산하기</button>
+							
+							<dl class="dataList foreignBalance calc"><!-- 2018-09-12 클래스 추가 -->
+								<dt class="us"><!-- 2018-09-12 클래스 추가 -->
+									<span>USD 외화</span><br /> <!-- 2018-09-10 span 위치 변경 및 추가 -->
+									(적용환율: 1204.45원)
+								</dt>
+								<dd>USD <span>362.25</span></dd> <!-- 2018-09-10 span 위치 변경 및 추가 -->
+							</dl>
+						</div>
+						<span class="fieldNotes normal-info">신청가능금액 : 원화기준 10만원 ~ 100만원 상당</span>
+						
+						<label for="inputLabel5">환급계좌 <i class="required"></i></label>
+						
+						<!-- 비로그인시 노출 (타행 선택 시 노출)-->
+						<ul class="columnSet withGutter">
+							<li class="rowSpan4">
+								<div class="select-input">
+									<button type="button" class="btn formInput">은행선택</button>
+								</div>
+							</li>
+							<li class="rowSpan7">
+								<label for="inputLabel6" class="visualHide">계좌번호 입력</label>
+								<div class="numberInput">
+									<input type="tel" id="inputLabel6" placeholder="계좌번호 입력" maxlength="16" class="formInput" name="" aria-required="true" />
+								</div>
+							</li>
+						</ul>
+						<label for="inputLabel7" class="visualHide">예금주명 입력</label> 
+						<div class="search">
+							<input type="text" id="inputLabel7" placeholder="예금주명 입력" class="formInput" name="" aria-required="true" />
+							<button type="submit" class="btn searchTxtBtn">계좌확인</button>
+						</div>
+							
+						<!-- 로그인시 노출 (올원 출금계좌가 있는 고객에게 노출) -->
+						<div class="select-input dp-none">
+							<select id="selectLabel1" class="formInput" aria-required="true">
+								<option value="default" label="올원출금계좌">올원출금계좌</option>
+								<option value="option2" label="option2">Option2</option>
+								<option value="option3" label="option3">Option3</option>
+								<option value="option4" label="option4">Option4</option>
+							</select>
+						</div>
+					</section>
+					<section class="fullWidth topbordered">
+						<ul class="accordion bdB0"> <!-- 2018-09-10 클래스 추가 -->
+							<li>
+								<dl>
+									<dt class="js-active" aria-label="꼭 알아두세요!"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a></dt> <!-- 2018-09-04 클래스 추가 -->
+									<dd>
+										<ul class="unorderList">
+											<li>신청하신 원화금액은 외화통화로 계산(최소단위 제외)됩니다.</li>
+											<li>우대환율적용은 다음 단계에서 확인 가능합니다.</li>
+											<li class="greenOn">환급계좌가 해지된 경우에는 자동환급이 불가하오니, 해지 계획이 없는 계좌를 등록해 주시기 바랍니다.</li>
+										</ul>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+						</ul>
+					</section>
+					<button type="submit" class="btn primary submit selfBottom">다음</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

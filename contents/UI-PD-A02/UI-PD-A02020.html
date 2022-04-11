@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>마이올원 - 내 활동내역</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+				
+				$('.graphBase').each(function(){
+					$(this).find('.graphActive').animate({
+						width:$(this).attr('data-percent')
+					}, 3000);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="no-fixed fullWidth">
+						<div class="AlloneComm myActivity">
+							<nav class="tabNav tabOverflow pageTab"> <!-- pageTab 클래스 제거 시 페이지 이동이 아닌 탭기능 구현 가능 -->
+								<ul class="columnSet">
+									<li class="colItem" data-tab="tabCont1"><a href="javascript:;">올원커뮤니티</a></li>
+									<li class="colItem" data-tab="tabCont2"><a href="javascript:;">모임</a></li>
+									<li class="colItem is-on" data-tab="tabCont3"><a href="javascript:;">이벤트 참여</a></li>
+									<li class="colItem" data-tab="tabCont4"><a href="javascript:;">상품상담</a></li>
+								</ul>
+							</nav>
+
+							<div id="tabCont3" class="tabContent is-current myAct03">
+								<h2 class="visualHide">이벤트 참여</h2><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+								<ul class="boardList">
+									<li>
+										<div class="hasButton">
+											<a href="javascript:;" class="boxHead pdB30">
+												<div class="objHead">
+													<span class="txtLabel greenOn">진행</span>
+												</div>
+												<div class="objCon">
+													<span class="dataTxt tTitle">현대자동차 구매고객 금리우대 이벤트</span>
+													<span class="dataTxt tDate">2016-03-15</span>
+												</div>
+											</a>
+											<div class="boxFoot posRight">
+												<a href="javascript:void(0);" class="heartBtn on" role="button" title="좋아요 선택"><em>100</em></a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="hasButton">
+											<a href="javascript:;" class="boxHead pdB30">
+												<div class="objHead">
+													<span class="txtLabel">종료</span>
+												</div>
+												<div class="objCon">
+													<span class="dataTxt tTitle">농협 신용카드 결제계좌 대고객 이벤트</span>
+													<span class="dataTxt tDate">2016-03-15</span>
+												</div>
+											</a>
+											<div class="boxFoot posRight">
+												<a href="javascript:void(0);" class="heartBtn" role="button" title="좋아요 선택"><em>100</em></a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="hasButton">
+											<a href="javascript:;" class="boxHead pdB30">
+												<div class="objHead">
+													<span class="txtLabel">종료</span>
+												</div>
+												<div class="objCon">
+													<span class="dataTxt tTitle">인천공항 선착순 커피 제공 이벤트</span>
+													<span class="dataTxt tDate">2016-03-15</span>
+												</div>
+											</a>
+											<div class="boxFoot posRight">
+												<a href="javascript:void(0);" class="heartBtn" role="button" title="좋아요 선택"><em>100</em></a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="hasButton">
+											<a href="javascript:;" class="boxHead pdB30">
+												<div class="objHead">
+													<span class="txtLabel greenOn">진행</span>
+												</div>
+												<div class="objCon">
+													<span class="dataTxt tTitle">올원뱅크 200만 기념 특판예금 가입 이벤트!</span>
+													<span class="dataTxt tDate">2016-03-15</span>
+												</div>
+											</a>
+											<div class="boxFoot posRight">
+												<a href="javascript:void(0);" class="heartBtn" role="button" title="좋아요 선택"><em>100</em></a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="hasButton">
+											<a href="javascript:;" class="boxHead pdB30">
+												<div class="objHead">
+													<span class="txtLabel greenOn">진행</span>
+												</div>
+												<div class="objCon">
+													<span class="dataTxt tTitle">국내주식 수수료가 평생무료! 이벤트</span>
+													<span class="dataTxt tDate">2016-03-15</span>
+												</div>
+											</a>
+											<div class="boxFoot posRight">
+												<a href="javascript:void(0);" class="heartBtn" role="button" title="좋아요 선택"><em>100</em></a>
+											</div>
+										</div>
+									</li>
+									<!-- <li>
+										<div class="boxHead noData">
+											<span>조회내역이 없습니다.</span>
+										</div>
+									</li> -->
+								</ul>
+								<button type="button" class="btn more-btn">더보기(<span>1</span><span>10</span>)<span></span></button>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>NH투자증권 - 사고보험금 청구내역 조회</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class=" ">
+						<ul class="unorderList">
+							<li>검색하고자 하시는 단계를 클릭하시면 단계별 진행현황조회가 가능합니다.</li>
+						</ul>
+					</section>
+					<section class="fullWidth topbordered">
+						<nav class="tabNav">
+							<ul class="columnSet stepBtnBox">
+								<li class="colItem stepType is-on" data-tab="tabCont1"><a href="javascript:;" role="tab" aria-selected="true" title="현재 탭"><p class="ST_tit">STEP 1</p><p class="ST_txt">보험금<br>청구</p></a></li>
+								<li class="colItem stepType" data-tab="tabCont2"><a href="javascript:;" role="tab" aria-selected="true" title="현재 탭"><p class="ST_tit">STEP 2</p><p class="ST_txt">청구서<br>등록</p></a></li>
+								<li class="colItem stepType" data-tab="tabCont3"><a href="javascript:;" role="tab" aria-selected="true" title="현재 탭"><p class="ST_tit">STEP 3</p><p class="ST_txt">보험<br>사고조사</p></a></li>
+								<li class="colItem stepType" data-tab="tabCont4"><a href="javascript:;" role="tab" aria-selected="true" title="현재 탭"><p class="ST_tit">STEP 4</p><p class="ST_txt">보험<br>사고심사</p></a></li>
+								<li class="colItem stepType" data-tab="tabCont5"><a href="javascript:;" role="tab" aria-selected="true" title="현재 탭"><p class="ST_tit">STEP 5</p><p class="ST_txt">처리<br>완료</p></a></li>
+								
+							</ul>
+						</nav>
+						<div id="tabCont1" class="tabContent stepContent is-current">
+							<div class="taxPay-heading">
+								<h3 class="blackOn">보험금 청구 진행현황</h3>
+								<div class="btnRightBox">
+									<span class="fz-11">STEP 1 보험금청구</span>
+								</div>
+								<!-- 버튼이 하나일때는 div로 안감싸고 버튼만 있어도 됨 -->
+							</div>
+							<dl class="dataList bdB0">
+								<dt>접수번호</dt><dd>11111111-111111111</dd>
+								<dt>접수일</dt><dd>2018-05-05</dd>
+								<dt>담당자</dt><dd>홍*동</dd>
+								<dt>연락처</dt><dd>02-12**-12**</dd>
+							</dl>
+						</div>
+						<div id="tabCont2" class="tabContent stepContent">
+							<div class="taxPay-heading">
+								<h3 class="blackOn">보험금 청구 진행현황</h3>
+								<div class="btnRightBox">
+									<span class="fz-11">STEP 2 청구서 등록</span>
+								</div>
+								<!-- 버튼이 하나일때는 div로 안감싸고 버튼만 있어도 됨 -->
+							</div>
+							<dl class="dataList bdB0">
+								<dt>접수번호</dt><dd>11111111-111111111</dd>
+								<dt>접수일</dt><dd>2018-05-05</dd>
+								<dt>담당자</dt><dd>홍*동</dd>
+								<dt>연락처</dt><dd>02-12**-12**</dd>
+							</dl>
+						</div>
+						<div id="tabCont3" class="tabContent stepContent">
+							<div class="taxPay-heading">
+								<h3 class="blackOn">보험금 청구 진행현황</h3>
+								<div class="btnRightBox">
+									<span class="fz-11">STEP 3 보험사고조사</span>
+								</div>
+								<!-- 버튼이 하나일때는 div로 안감싸고 버튼만 있어도 됨 -->
+							</div>
+							<dl class="dataList bdB0">
+								<dt>접수번호</dt><dd>11111111-111111111</dd>
+								<dt>접수일</dt><dd>2018-05-05</dd>
+								<dt>담당자</dt><dd>홍*동</dd>
+								<dt>연락처</dt><dd>02-12**-12**</dd>
+							</dl>
+						</div>
+						<div id="tabCont4" class="tabContent stepContent">
+							<div class="taxPay-heading">
+								<h3 class="blackOn">보험금 청구 진행현황</h3>
+								<div class="btnRightBox">
+									<span class="fz-11">STEP 4 보험사고심사</span>
+								</div>
+								<!-- 버튼이 하나일때는 div로 안감싸고 버튼만 있어도 됨 -->
+							</div>
+							<dl class="dataList bdB0">
+								<dt>접수번호</dt><dd>11111111-111111111</dd>
+								<dt>접수일</dt><dd>2018-05-05</dd>
+								<dt>담당자</dt><dd>홍*동</dd>
+								<dt>연락처</dt><dd>02-12**-12**</dd>
+							</dl>
+						</div>
+						<div id="tabCont5" class="tabContent stepContent">
+							<div class="taxPay-heading">
+								<h3 class="blackOn">보험금 청구 진행현황</h3>
+								<div class="btnRightBox">
+									<span class="fz-11">STEP 5 처리완료</span>
+								</div>
+								<!-- 버튼이 하나일때는 div로 안감싸고 버튼만 있어도 됨 -->
+							</div>
+							<dl class="dataList bdB0">
+								<dt>접수번호</dt><dd>11111111-111111111</dd>
+								<dt>접수일</dt><dd>2018-05-05</dd>
+								<dt>담당자</dt><dd>홍*동</dd>
+								<dt>연락처</dt><dd>02-12**-12**</dd>
+							</dl>
+						</div>
+					</section>
+					<section class="fullWidth topbordered">
+						<div class="fullWidth" >
+							<h3 class="">보험금 지급현황</h3>
+							<dl class="dataList">
+								<dt>지급일(완료일)</dt><dd></dd>
+								<dt>지급보험금(원)</dt><dd></dd>
+								<dt>수령인</dt><dd></dd>
+								<dt>은행명</dt><dd></dd>
+								<dt>계좌번호</dt><dd></dd>
+							</dl>
+						</div>
+					</section>
+					<section class="fullWidth">
+						<p class="certifyTxt fz-11 paddingAll pdT5">상기 금액은 지연이자, 세금, 배당금 등이 계산된 수령일별 실지급 금액입니다.</p>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">목록</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">담보별 지급금액</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>TOSS 송금 직접받기</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type03", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth">
+						<div class="titleArea">
+							<p class="tInfo"><span class="greenOn">홍*동</span>님이 보내신<span class="greenOn"> 50,000원</span>을 받을 계좌를 입력해주세요. </p>
+						</div>
+					</section>
+
+					<section class="with-fixedBtn topbordered">
+						<div class="sectionWrap">
+							<ul class="columnSet withGutter">
+								<li class="rowSpan4">
+									<div class="select-input disabled"><!-- 1015 : disabled 추가 -->
+										<button type="button" class="btn formInput" title="은행선택">NH농협</button>
+									</div>
+								</li>
+								<li class="rowSpan7">
+									<label for="f_account" class="visualHide">계좌번호 입력</label>
+									<div class="numberInput">
+										<input type="tel" id="f_account" placeholder="계좌번호 입력 (-없이 입력)" maxlength="16" class="formInput" name="">
+									</div>
+								</li>
+							</ul>
+						</div>
+						<!-- 2018-10-17 전체동의가 필요없는 경우 
+						<ul class="dataType-list dataType-list02 mgT20">
+							<li>
+								<div class="checkbox">
+									<input type="checkbox" id=""><label for="">체크</label>
+								</div>
+								<a href="javascript:;">개인정보 수집 및 이용동의</a>
+							</li>
+						</ul>
+						 -->
+						<ul class="dataType-list agreement mgT20">
+							<li>
+								<div class="checkbox withLabel allAgree">
+									<input type="checkbox" id=""><label for="">전체동의</label>
+								</div>
+								<ul>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:;">개인정보 수집 및 이용동의</a>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:;">개인정보 제3자 제공 및 위탁처리</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<button type="button" class="btn primary submit selfBottom">확인</button>
+
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

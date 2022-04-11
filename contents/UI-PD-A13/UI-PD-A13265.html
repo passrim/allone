@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>외화예금</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample'); 
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="layerPop.open('#modalFull', this); return false;">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header">
+					<h1 class="headerTitle">입력정보확인</h1>
+					<button type="button" class="btn closeBtn" id="fullClose">닫기</button>
+				</div>
+				<div data-role="content" class="modal-contents">
+					<section class="">
+						<iframe class="iframes" src="../../cms/market/ABME8028R_iframe04.html" title="개별 아이프레임 제목 삽입해주세요 (Dear.Dev)"></iframe>
+					</section>
+					<section class="fullWidth with-fixedBtn topbordered">
+						<h3>신청정보</h3>
+						<dl class="dataList">
+							<dt>연회비</dt><dd>100,000원</dd>
+							<dt>브랜드</dt><dd>VISA</dd>
+							<dt>카드등급</dt><dd>00 일</dd>
+							<dt>카드발급대상</dt><dd>본인</dd>
+						</dl>
+						<h3>기본정보</h3>
+						<dl class="dataList">
+							<dt>한글성명</dt><dd>1</dd>
+							<dt>영문성명</dt><dd>2</dd>
+							<dt>주민번호</dt><dd>3</dd>
+							<dt>자택전화</dt><dd>4</dd>
+							<dt>자택주소</dt><dd>5</dd>
+							<dt>E-mail</dt><dd>6</dd>
+						</dl>
+						<h3>소득정보</h3>
+						<dl class="dataList">
+							<dt>직장명</dt><dd>1</dd>
+							<dt>직장전호</dt><dd>2</dd>
+							<dt>직장주소</dt><dd>3</dd>
+						</dl>
+						<h3>기타정보</h3>
+						<dl class="dataList">
+							<dt>청구서 수령지</dt><dd>1</dd>
+							<dt>카드 수령지</dt><dd>2</dd>
+							<dt>배송동의</dt><dd>3</dd>
+							<dt>SMS서비스신청</dt><dd>4</dd>
+							<dt>추천인코드</dt><dd>5</dd>
+							<dt>신분증 진위확인</dt><dd>6</dd>
+						</dl>
+						<p class="paddingAll basisTxt">개인 신용정보 마케팅 동의/거부 내역 전자금융거래 기본약관 YYYY년 MM월DD일 마케팅에 동의하셨고, <span class="greenOn">SMS/전화/이메일/서면 수신<span>동의 처리되었습니다.<br>농협 계열사 마케팅에 <span class="greenOn">동의</span> 하셨습니다.</p>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><a href="#" class="btn primary cancel">취소</a></li>
+						<li class="colItem"><a href="#" class="btn primary submit">확인</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //fullPopup -->
+
+	</body>
+</html>

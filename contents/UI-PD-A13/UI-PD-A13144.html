@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>step3_NH간편오토론_개인고객 정보확인  - 대출</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>NH모바일 전세대출<span>아파트 시세조회</span></h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">4</li>
+							<li class="is-off">8</li>
+						</ol>
+					</section>
+					<section class="fullWidth">
+						<dl class="dataList bdT0 bdB0">
+							<dt>건물명</dt><dd><strong>개포4차우성(양재우성)</strong></dd>
+							<dt>면적(㎡)</dt><dd>112.39</dd>
+							<dt>전용면적(㎡)</dt><dd>84.6</dd>
+							<dt>매매가<br>(일반평균가)</dt><dd>하위평균가(130,000)<br>일반평균가(132,000)<br>상위평균가(134,000)</dd>
+							<dt>전.월세 시세<br>(전세금, 보증부 월세)</dt><dd>임대하한가(100,000)<br>임대상한가(110,000)</dd>
+							<dt>조사일자</dt><dd>2017-05-29</dd>
+							<dt>단위</dt><dd>만원</dd>
+						</dl>
+					</section>
+					<section class="fullWidth with-fixedBtn topbordered">
+						<h3 class="bdB1">계약정보입력</h3>
+						<div class="formWrap paddingAll">
+							<label for="inputLabel1">1. 거주(예정) 동/호수 입력</label>
+							<ul class="columnSet withGutter mgB10">
+								<li class="colItem"><input type="text" id="inputLabel1" placeholder="농협" class="formInput mgR5" style="width:80%;" name=""><span>동</span></li>
+								<li class="colItem"><input type="text" id="inputLabel1" placeholder="농협" class="formInput mgR5" style="width:80%;" name=""><span>호</span></li>
+							</ul>
+							<label for="inputLabel2">2. 전세계약 형태</label>
+							<div class="radioBtn withLabel marginB20">
+								<input type="radio" id="radio01" name="radio01">
+								<label for="radio01"><div><p class="fz-14">신규 임대차 계약 (신규임차자금)</p><p class="certifyTxt mgT5">전세잔금일과 전입일 중 빠른 날로부터 3개월 이내 신청 시</p></div></label>
+							</div>
+							<div class="radioBtn withLabel twoLine">
+								<input type="radio" id="radio02" name="radio01">
+								<label for="radio02"><div><p class="fz-14">기존 임대차 계약 (생활자금)</p><p class="certifyTxt mgT5">전세잔금일과 전입일 중 빠른 날로부터 3개월 이후 신청 시</p></div></label>
+							</div>
+							<label for="inputLabel3">3. 임대차 계약금액(보증금)</label>
+							<div class="balance balance-display" data-currency="원">
+								<input type="tel" id="inputLabel3" placeholder="1,000,000" class="formInput balance-input" name="">
+							</div>
+							<label for="inputLabel4">임대차 계약금액(월세)</label>
+							<div class="balance balance-display" data-currency="원">
+								<input type="tel" id="inputLabel4" placeholder="1,000,000" class="formInput balance-input" name="">
+							</div>
+							
+							<!-- 2018-09-06 도움말을 위한 코드 수정  -->
+							<label for="inputLabel5" class="helpLabel">4. 거주(예정)아파트 근저당 설정금액 <button class="helpTooltip" name="tipbox01" title="펼쳐짐">도움말 <span></span></button>
+								<span class="helpBubble tipbox01"><button type="button" class="btn closeBtn">닫기</button>
+									현재 대출이 있어 설정되어 있으나, 대출실행일(잔금일) 이전 상환 예정 시 미입력 가능
+								</span>
+							</label>
+							<!-- // 2018-09-06 도움말을 위한 코드 수정 -->
+
+							<div class="balance balance-display" data-currency="원">
+								<input type="tel" id="inputLabel5" placeholder="1,000,000" class="formInput balance-input" name="">
+							</div>
+						</div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

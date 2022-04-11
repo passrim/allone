@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>너도나도 환전신청</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- breadcrumb -->
+					<section class="breadcrumb columnSet">
+						<h2>신청 결과</h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">5</li> <!-- 2018-09-06 스텝 숫자 변경 -->
+						</ol>
+					</section>
+					
+					<div class="completeMsg">
+						<h2>올원뱅크 환전을 이용해 주셔서 감사합니다.</h2> <!-- 2018-09-06 문구 삭제 -->
+						<p>가상계좌로 30분 이내 입금하지 않으시면 환전신청이 자동취소 처리됩니다.</p>
+					</div>
+					<section class="fullWidth topbordered">
+						<!-- 2018-09-10 환전번호 추가  -->
+						<h3>환전번호</h3>
+						<dl class="dataList bdB0">
+							<dt>환전번호</dt>
+							<dd></dd>
+						</dl>
+						
+						<h3 class="topbordered">외화수령인</h3>
+						<dl class="dataList bdB0">
+							<dt>성명</dt>
+							<dd>이*협</dd>
+							<dt>주민번호</dt>
+							<dd>80****-*******</dd>
+						</dl>
+						<h3 class="topbordered">외화환전 정보</h3>
+						<dl class="dataList bdB0">
+							<dt>환전신청일</dt>
+							<dd>2018-08-01</dd>
+							<dt>외화수령일</dt>
+							<dd>2018-08-01</dd>
+							<!-- 181012 : [레드마인] #711 적용  -->
+							<dt><strong class="greenOn">가상계좌번호</strong></dt>
+							<dd><strong class="greenOn">농협은행 302-****-****-91</strong></dd>
+							<dt><strong class="greenOn">예금주</strong></dt>
+							<dd><strong class="greenOn">농협은행 가상계좌번호</strong></dd>
+							<dt><strong class="greenOn">입금금액</strong></dt>
+							<dd><strong class="greenOn">298,730원</strong></dd>
+							<dt><strong class="greenOn">환전금액</strong></dt>
+							<dd><strong class="greenOn">USD 361.00</strong></dd>
+							<!--//181012 : [레드마인] #711 적용  -->
+							<dt>고시환율</dt>
+							<dd>1,194.23원</dd>
+							<dt>우대율</dt>
+							<dd>90%</dd>
+							<dt>우대원화금액</dt>
+							<dd>2,012원</dd>
+							<dt>적용환율</dt>
+							<dd>1,184.23원</dd>
+							<dt>환급계좌번호</dt>
+							<dd>국민은행 302-****-****-91</dd>
+							<dt>수령인</dt>
+							<dd>김*영</dd>
+							<dt>생년월일</dt>
+							<dd>850122-1******</dd>
+							<dt>전화번호</dt>
+							<dd>010-34**-21**</dd>
+						</dl>
+						<h3 class="topbordered">외화수령점 정보</h3>
+						<dl class="dataList">
+							<dt>외화수령점</dt>
+							<dd>20**지점</dd>
+							<dt>주소</dt>
+							<dd>서울특별시 강남구 *******</dd>
+							<dt>전화번호</dt>
+							<!-- 2018-10-12 전화번호 퍼블 변경  -->
+							<dd><a href="javascript: void(0);" class="tel" data-icon="phone"><span>02-73*-32**</span></a></dd>
+						</dl>
+						<!-- 2018-10-12 버튼 위치 변경  -->
+						<ul class="columnSet withGutter marginT10 pdB10 pdBoth15">
+							<li class="colItem"><button type="button" class="btn secondary strokeType">SMS 보내기</button></li>
+							<li class="colItem"><button type="submit" class="btn secondary strokeType">카카오톡 보내기</button></li>
+						</ul>
+						<!-- 2018-09-28 아이프레임  title 변경 -->
+						<iframe src="../../cms/fx/ABEF5034R_iframe05.html" class="iframes defaultBanner bgPhoto" title="해외여행보험 다이렉트"></iframe><!-- 0913 : 접근성 제목 제공  -->
+					</section>
+					<section class="fullWidth topbordered">
+						<ul class="accordion bdB0"> <!-- 2018-09-28 클래스 추가 -->
+							<li>
+								<dl>
+									<dt class="js-active" aria-label="꼭 알아두세요!"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a></dt><!-- 2018-09-04 클래스 추가 -->
+									<dd>
+										<ul class="unorderList hyphenList marginT10">
+											<li>외화수령일 익영업일로부터 7영업일까지 미수령할 경우 자동 재환전(되팔기)됩니다. 자동 재환전(되팔기)시 지정한 환매계좌로 입금되며 환율변동에 따른 손실발생 가능합니다. (본지점매매율 적용)</li>
+											<li>신청 후 30분 이내 가상계좌 미입금 시 환전이 자동취소 됩니다.</li>
+										</ul>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+						</ul>
+					</section>
+					<button type="submit" class="btn primary submit selfBottom">확인</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

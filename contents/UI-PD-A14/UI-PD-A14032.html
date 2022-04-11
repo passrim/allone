@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>재환전(되팔기) 신청</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth">
+						<h3>외화 재환전 정보</h3>
+						<dl class="dataList">
+							<dt>환전번호</dt>
+							<dd>CI**********</dd>
+							<dt>성명(환전신청인)</dt>
+							<dd>이*협</dd>
+							<dt>환전통화/금액</dt>
+							<dd>USD 20,000.00</dd>
+							<dt>수령 예정일</dt>
+							<dd>2018-07-03</dd>
+							<dt>재환전 예정일</dt>
+							<dd>2018-07-03</dd>
+							<dt>변경재환전일(입금예정일)</dt>
+							<dd>2018-07-03</dd>
+							<dt>환율적용</dt>
+							<dd>재환전 입금일의 1회차 매매기준율 적용</dd>
+							<dt>올원원화입금계좌</dt>
+							<dd>123-**-23423</dd>
+						</dl>
+					</section>
+					<section>
+						<span class="fieldNotes normal-info greenOn"> 재환전 되팔기 신청하시겠습니가? (신청 후 취소 불가합니다)</span>
+						
+						<ul class="dataType-list agreement">
+							<li>
+								<div class="checkbox">
+									<input type="checkbox" id=""><label for="">체크</label>
+								</div>
+								<a href="javascript:void(0);">재환전 되팔기란?</a>
+							</li>
+							<li>
+								<div class="checkbox">
+									<input type="checkbox" id=""><label for="">체크</label>
+								</div>
+								<a href="javascript:void(0);">재환전 되팔기 신청 시 유의사항</a>
+							</li>
+						</ul>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">재환전(되팔기) 신청</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

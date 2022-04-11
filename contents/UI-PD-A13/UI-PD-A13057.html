@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title> step4.상품가입완료 - 네이버페이통장 - 예/적금</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet twoSet">
+						<h2>네이버페이통장<span>상품가입완료</span></h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-off is-done">3</li>
+							<li class="is-on">4</li>
+						</ol>
+					</section>
+
+					<section class="fullWidth">
+						<div class="completeMsg bdB1">
+							<strong><span class="greenOn">네이버페이통장</span><br>가입이 완료되었습니다.</strong>
+						</div>
+						<dl class="dataList">
+							<dt>개설 예금주명</dt><dd>김*협</dd>
+							<dt>계약기간</dt><dd>1년(12개월)</dd>
+							<dt>예치금액</dt><dd>3,000,000원</dd>
+							<dt>만기일</dt><dd>2018-01-01</dd>
+							<dt>이자지급구분</dt><dd>매월지급식</dd>
+							<dt>비과세종합저축가입여부</dt><dd>일반가입</dd>
+							<dt>기본이율(1)</dt><dd>연 2,00%</dd>
+							<dt>종별</dt><dd>만기자유형</dd>
+							<dt>우대이율(2)</dt><dd>연 2,00%</dd>
+							<dt>만기이자액(세전)</dt><dd>1,000원</dd>
+							<dt>적용이율(1+2)</dt><dd>연 2,00%</dd>
+							<dt>만기지급액(세전)</dt><dd>2,043,240원</dd>
+							<dt>만기시 안내 수신동의</dt><dd>이메일</dd>
+							<dt>만기시 자동해지여부</dt><dd>만기시 자동해지함</dd>
+							<dt>출금계좌번호</dt><dd>3**-12-1**45*</dd>
+							<dt>권유직원번호</dt><dd>12345678</dd>
+							<dt>개설 영업점</dt><dd>대명동지점</dd>
+						</dl>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

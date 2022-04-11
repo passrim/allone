@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>설정 - 로그인 방식 설정</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="topNotice">
+						<ul class="unorderList">
+							<li>올원뱅크는 간편비밀번호 외에도 지문인증, 패턴, 공인인증서 등 다양한 로그인 방식을 제공합니다.</li> <!-- 2018-10-04 문구 수정 -->
+							<li>로그인 시 사용할 기본 방식을 선택/변경하실 수 있습니다.</li>
+						</ul>
+					</section>
+					<section class="fullWidth topbordered inputRowList loginSetting">
+						<ul class="rowStyle dlData bdB1">
+							<li class="bdT0 columnSet">
+								<div class="radioBtn withLabel rowSpan8">
+									<input type="radio" id="login01" name="loginOption" checked/>
+									<label for="login01">간편비밀번호</label>
+								</div>
+								<div class="registration"><button type="button" class="btn secondary strokeType subSmallType">재등록</button></div>
+							</li>
+							<li class="columnSet">
+								<div class="radioBtn withLabel rowSpan8">
+									<input type="radio" id="login02" name="loginOption" disabled/>
+									<label for="login02">지문인증(or Face ID)</label>
+								</div>
+								<div class="registration"><button type="button" class="btn secondary strokeType subSmallType">등록</button></div>
+							</li>
+							<li class="columnSet">
+								<div class="radioBtn withLabel rowSpan8">
+									<input type="radio" id="login03" name="loginOption"/>
+									<label for="login03">패턴</label>
+								</div>
+								<div class="registration"><button type="button" class="btn secondary strokeType subSmallType">재등록</button></div>
+							</li>
+							<li class="columnSet">
+								<div class="radioBtn withLabel rowSpan8">
+									<input type="radio" id="login04" name="loginOption"/>
+									<label for="login04">공인인증서</label>
+								</div>
+							</li>
+							<li class="columnSet">
+								<div class="radioBtn withLabel rowSpan8">
+									<input type="radio" id="login05" name="loginOption" disabled/>
+									<label for="login05">안심보안카드</label>
+								</div>
+							</li>
+							<li class="columnSet">
+								<div class="radioBtn withLabel rowSpan8">
+									<input type="radio" id="login06" name="loginOption">
+									<label for="login06">NH스마트인증</label>
+								</div>
+							</li>
+						</ul>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

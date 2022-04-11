@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>리워드</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="layerPop.open('.modalWrap', this); return false;">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header">
+					<h1 class="headerTitle">리워드 사용방법</h1>
+					<button type="button" class="btn closeBtn" id="fullClose">닫기</button>
+				</div>
+				<div data-role="content" class="modal-contents with-fixedBtn">
+					<section class="rewardUtilize">
+						<p class="rewardSaving">올원뱅크 활동에 따라 적립되는 서비스로<br>이벤트 응모 및 당양한 경품 응모에 사용할 수 있습니다.</p>
+					</section>
+					<section class="fullWidth no-fixed">
+						<nav class="tabNav">
+							<ul class="columnSet">
+								<li class="colItem " data-tab="tabCont1"><a href="javascript:;">사용방법</a></li>
+								<li class="colItem" data-tab="tabCont2"><a href="javascript:;">사용방법</a></li>
+								<li class="colItem is-on" data-tab="tabCont3"><a href="javascript:;">적립방법</a></li>
+							</ul>
+						</nav>
+						<div id="tabCont3" class="tabContent is-current">
+							<h3 class="visualHide">적립방법</h3><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+							<ul class="rewardNumberList">
+								<li>
+									<dl>
+										<dt>올원뱅크 최초 로그인</dt>
+										<dd>
+											올원뱅크 가입 후 최초 로그인 하시면 1회에 한하여 <span class="greenOn">50캔디</span> 적립<br>(※ 기존 사용자가 올원뱅크 회원탈퇴 후 재가입의 경우 해당되지 않음)
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>최초 계좌 등록</dt>
+										<dd>
+											올원뱅크 계좌 등록 시 1회에 한하여 <span class="greenOn">30 캔디</span> 적립<br>(※ 기존 사용자가 올원뱅크 회원탈퇴 후 재가입-재등록의 경우 해당되지 않음)
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>입출금계좌개설</dt>
+										<dd>
+											입출금계좌개설 시 1회에 한하여 <span class="greenOn">30 캔디</span> 적립
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>올원송금</dt>
+										<dd>
+											<ul class="unorderList fz-14">
+												<li>계좌송금 시 일 4회(거래완료 건)에 한하여 건 별  <span class="greenOn">5 캔디</span> 적립</li>
+												<li>휴대폰송금 시 일2회(거래완료 건)에 한하여 건  <span class="greenOn">5 캔디</span> 적립</li>
+											</ul>
+										</dd>
+									</dl>
+								</li>
+								<!-- <li>
+									<dl>
+										<dt>바코드 결제</dt>
+										<dd>
+											바코드 결제 시 일 4건(거래완료 건)에 한해서 건 별 <span class="greenOn">5 캔디</span> 적립
+										</dd>
+									</dl>
+								</li> -->
+								<li>
+									<dl>
+										<dt>환전 및 환전 선물 시</dt>
+										<dd>
+											환전 및 환전 선물 시 월 2회(거래완료 건)에 한해서 건 별 <span class="greenOn">5 캔디</span> 적립
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>상품가입 시</dt>
+										<dd>
+											신규로 상품가입 시 월(3회)에 한하여 <span class="greenOn">20 캔디</span> 적립<br>(※ 대출관련 상품 제외)
+										</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt>로그인 시</dt>
+										<dd>
+											로그인 시 일(1회)에 한하여 <span class="greenOn">2 캔디</span> 적립 <!-- 1002 :문구수정-->
+										</dd>
+									</dl>
+								</li>
+								<!-- <li>
+									<dl>
+										<dt>커뮤니티 참여</dt>
+										<dd>
+											<ul class="unorderList fz-14">
+												<li>커뮤니티 게시글 작성 시 일(4회)에 한하여 <span class="greenOn">5 캔디</span> 적립</li>
+												<li>커뮤니티 답글 작성 시 일(1회)에 한하여 <span class="greenOn">2캔디</span> 적립<br>(※본인이 작성한 글에 대한 댓글은 적립에서 제외)</li>
+											</ul>
+										</dd>
+									</dl>
+								</li> -->
+								<li>
+									<dl>
+										<dt>모임 참여</dt>
+										<dd>
+											<ul class="unorderList fz-14">
+												<li>모임개설 시 일(3회)에 한하여 <span class="greenOn">20 캔디</span> 적립</li>
+												<li>모임참여 시 일(6회)에 한하여  <span class="greenOn">5 캔디</span> 적립</li>
+												<!-- <li>모임 소식/일정 작성 시 일(4회)에 한하여 <span class="greenOn">5 캔디</span> 적립</li>
+												<li>모임 댓글 작성 시 일(1회)에 한하여 <span class="greenOn">2캔디</span> 적립<br>(※본인이 작성한 글에 대한 댓글은 적립에서 제외)</li> -->
+											</ul>
+										</dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+					</section>
+
+				</div>
+			</div>
+		</div>
+		<!-- //fullPopup -->
+
+	</body>
+</html>

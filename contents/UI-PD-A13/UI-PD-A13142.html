@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>step3_NH간편오토론_개인고객 정보확인  - 대출</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>NH모바일 전세대출<span>아파트 시세조회</span></h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">4</li>
+							<li class="is-off">8</li>
+						</ol>
+					</section>
+					<section class="fullWidth with-fixedBtn topbordered">
+						<div class="formWrap paddingAll mgB0">
+							<label for="inputLabel3">아파트 소재지(읍/면/동)</label>
+							<div class="searchInput">
+								<div class="search tag">
+									<input type="text" id="inputLabel3" placeholder="검색어 입력" class="formInput search-input">
+									<button type="button" class="btn deleteBtn">삭제</button>
+									<button type="submit" class="btn searchBtn" name="">조회</button>
+								</div>
+							</div>
+						</div>
+						<!-- s 소재지 정보가 있을경우 -->
+						<ul class="boardList justify  toplined"> <!-- 0831 : checkTop 삭제 -->
+							<li>
+								<div class="formPad">
+									<div class="boxHead pdT10 pdB10">
+										<dl class="dataList">
+											<dt>시도명</dt>
+											<dd>서울특별시</dd>
+											<dt>구명</dt>
+											<dd>서초구</dd>
+											<dt>동명</dt>
+											<dd>양재동</dd>
+										</dl>
+									</div>
+									<div class="boxFoot">
+										<button type="submit" class="btn secondary">선택</button>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="formPad">
+									<div class="boxHead pdT10 pdB10">
+										<dl class="dataList">
+											<dt>시도명</dt>
+											<dd>서울특별시</dd>
+											<dt>구명</dt>
+											<dd>서초구</dd>
+											<dt>동명</dt>
+											<dd>양재동</dd>
+										</dl>
+									</div>
+									<div class="boxFoot">
+										<button type="submit" class="btn secondary">선택</button>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<button type="button" class="btn more-btn">더보기(<span>1</span><span>10</span>)<span></span></button>
+						<!-- //e 소재지 정보가 있을경우 -->
+						<!-- s 소재지 정보가 없을경우 -->
+						<p class="centeredTxt pdT30 bdT1">소재지 정보가 없습니다.<br>다시 조회하시기 바랍니다.</p>
+						<!-- //e 소재지 정보가 없을경우 -->
+					</section>
+
+					
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>뱅크 - 모바일 초대장</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type02", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="layerPop.open('.modalWrap', this); return false;">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header">
+					<h1 class="headerTitle">미리보기</h1>
+					<button type="button" class="btn closeBtn" id="fullClose">닫기</button>
+				</div>
+				<!--
+					[category Class]
+					.invitePreview.invite01 : 결혼
+					.invitePreview.invite02 : 부고 (*** current***)
+					.invitePreview.invite03 : 첫돌생일
+					.invitePreview.invite04 : 회갑칠순
+					.invitePreview.invite05 : 기타
+				 -->
+				<div data-role="content" class="modal-contents with-fixedBtn invitePreview invite02"><!-- category Class -->
+					<section class="fullWidth">
+						<h2 class="visualHide">부고</h2>
+						<div class="imgArea">
+							<!-- <img src="../../assets/img/@tmp/invite_rolling/02_05.jpg" alt=""/> -->
+							<img src="../../assets/img/bank/invite_rolling/02_06.jpg" alt="부고"/><!-- 1010 : 이미지 경로 수정-->
+						</div>
+
+						<div class="sectionWrap">
+							<!-- topSection -->
+							<div class="topSection">
+								<div class="imgTitleArea">
+									<img src="../../assets/img/bank/txt_invite02.png" style="width:204px" alt="삼가 고인의 명복을 빕니다."/>
+									<!-- <p>삼가 고인의 명복을 빕니다.</p> --><!-- 텍스트로만 사용시  -->
+								</div>
+
+								<div class="thumBgArea"></div><!-- 0921 -->
+
+								<div class="mentArea">
+									최올리님의 부친 최장인님이 8월 16일 <br>향년 82세로 별세하셨기에 삼가 알려드립니다.
+								</div>
+
+								<div class="locationArea">
+									<dl class="dataList leftAlign noBorder ">
+										<dt>별세일</dt><dd>2018년 7월 28일(토)</dd>
+										<dt>빈소</dt>
+										<dd>
+											<p>한림대병원 장례식장 201호</p>
+											<small>(경기도 안양시 동안구 평촌동 87-3)</small>
+										</dd>
+										<dt>발인일</dt><dd>2018년 7월 30일(월)</dd>
+										<dt>장지</dt><dd>경기도 의왕시 의왕추모공원</dd>
+									</dl>
+								</div>
+							</div>
+							<!-- topSection -->
+
+							<!-- mapSection -->
+							<div class="mapSection">
+								<h3 class="visualHide">일시 &amp; 장소</h3>
+								<div class="mapArea">
+									<img src="../../assets/img/@tmp/map.png" alt="장례식장 지도">
+								</div>
+							</div>
+							<!-- //mapSection -->
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered">
+						<aside class="etcSection">
+							<p class="ect_notice">직접 조문이 어려운 분들을 위하여 안내해 드립니다.</p>
+							<div class="ect_bankNum">
+								<span class="txt01">농협은행</span>
+								<span class="txt02">123-*****-*****-89</span>
+								<span class="txt03" >김농협</span>
+							</div>
+						</aside>
+					</section>
+
+
+				</div>
+			</div>
+		</div><!-- 0913 : 마크업 태그 수정 -->
+		<!-- //#fullPopup -->
+
+	</body>
+</html>

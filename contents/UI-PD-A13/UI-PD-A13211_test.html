@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>골드바</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- breadcrumb -->
+					<section class="breadcrumb columnSet">
+						<h2>골드바 구매 </h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">3</li>
+							<li class="is-off">7</li>
+						</ol>
+					</section>
+					<!-- //breadcrumb -->
+
+					<section class="with-fixedBtn">
+						<form>
+							<fieldset class="formWrap">
+								<legend>Step4 출금정보 입력</legend>
+
+								<label for="selectLabel1">출금계좌번호</label>
+								<div class="select-input">
+									<select id="selectLabel1" class="formInput">
+										<option>출금계좌번호 선택</option>
+										<option>123-****-****-74 NH All100플랜 통장</option>
+										<option>123-****-****-85 NH All100플랜 통장</option>
+									</select>
+								</div>
+
+								<label for="ch01_01">현금영수증 발급신청</label>
+								<ul class="marginT10 grid2">
+									<li class="radioBtn withLabel">
+										<input type="radio" id="ch01_01" name="ch01_01"><label for="ch01_01">현금영수증</label>
+									</li>
+									<li class="radioBtn withLabel">
+										<input type="radio" id="ch01_02" name="ch01_01"><label for="ch01_02">발급생략</label>
+									</li>
+								</ul>
+								<ul class="grid3 pad">
+									<li>
+										<label for="phoneNum01_01" class="visualHide">phone start number</label>
+										<input type="tel" id="phoneNum01_01" placeholder="" class="formInput" >
+									</li>
+									<li>
+										<label for="phoneNum01_01" class="visualHide">phone second number</label>
+										<input type="tel" id="phoneNum01_01" placeholder="" class="formInput" >
+									</li>
+									<li>
+										<label for="phoneNum01_01" class="visualHide">phone third number</label>
+										<input type="tel" id="phoneNum01_01" placeholder="" class="formInput" >
+									</li>
+								</ul>
+								<dl class="noticeInfo important marginT10">
+									<dt>중요</dt>
+									<dd>발급 생략을 선택하신 경우 추가발급 요청이 불가합니다.</dd>
+								</dl>
+
+								<label for="ch02_01">SMS발송여부</label>
+								<ul class="grid2 marginT10">
+									<li class="radioBtn withLabel">
+										<input type="radio" id="ch02_01" name="ch02_01"><label for="ch02_01">SMS발송</label>
+									</li>
+									<li class="radioBtn withLabel">
+										<input type="radio" id="ch02_02" name="ch02_01"><label for="ch02_02">SMS 발송 거절</label>
+									</li>
+								</ul>
+								<ul class="grid3 pad marginB10">
+									<li>
+										<label for="phoneNum02_01" class="visualHide">phone start number</label>
+										<input type="tel" id="phoneNum02_01" placeholder="" class="formInput" >
+									</li>
+									<li>
+										<label for="phoneNum02_01" class="visualHide">phone second number</label>
+										<input type="tel" id="phoneNum02_01" placeholder="" class="formInput" >
+									</li>
+									<li>
+										<label for="phoneNum02_01" class="visualHide">phone third number</label>
+										<input type="tel" id="phoneNum02_01" placeholder="" class="formInput" >
+									</li>
+								</ul>
+								<dl class="noticeInfo important marginB10">
+									<dt>중요</dt>
+									<dd>골드바가 영업점에 도착하면 자동으로 안내 SMS를 발송하는 서비스 입니다.</dd>
+								</dl>
+
+								<label for="ip_search_local">지점영업점</label>
+								<div class="search ">
+									<input type="text" id="ip_search_local" placeholder="조회" class="formInput search-input">
+									<button type="button" class="btn deleteBtn" style="display: inline-block;">삭제</button>
+									<button type="submit" id="" class="btn searchBtn" name="">조회</button>
+								</div>
+
+								<ul class="unorderList">
+									<li>구매일로부터 통상 3영업일 이내에 지정하신 영업점에서 골드바 실물수령이 가능합니다.</li>
+									<li>골드바 수령은 구매고객 본인만 가능하며, 신분증 지참하시고 내점하셔야 합니다.</li>
+								</ul>
+
+								<label for="ip_search_num">권유직원번호 <strong>(선택사항)</strong> <button class="btn helpTooltip">도움말</button></label>
+								<div class="search marginB10">
+									<input type="text" id="ip_search_num" placeholder="조회" class="formInput search-input">
+									<button type="button" class="btn deleteBtn" style="display: inline-block;">삭제</button>
+									<button type="submit" id="" class="btn searchBtn" name="">조회</button>
+								</div>
+								<dl class="noticeInfo important marginB10">
+									<dt>중요</dt>
+									<dd>상품가입에 도움을 준 직원번호(숫자 8자리)를 &quot;직원찾기&quot;로 검색하실 수 있습니다.</dd>
+								</dl>
+							</fieldset>
+						</form>
+
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">다음</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

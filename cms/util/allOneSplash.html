@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>스플래시</title>
+		<!-- <script type="text/javascript" src="../../guide_include/head.js"></script> --><!-- 개발시 재작업 바랍니다.-->
+		<link rel="stylesheet" type="text/css" href="../../assets/dist/css/swiper.min.css">
+		<link rel="stylesheet" type="text/css" href="../../assets/css/main.css">
+		<script type="text/javascript" src="../../assets/dist/js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="../../assets/dist/js/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="../../assets/dist/js/jquery.ui.touch-punch.min.js"></script>
+		<script type="text/javascript" src="../../assets/dist/js/swiper.min.js"></script>
+		<script type="text/javascript" src="../../assets/js/common.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					//includePub.init("header_type01", loginFlag);//개발시 삭제
+					//Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body class="noScroll">
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #container -->
+			<div id="container">
+				<div class="content splashPage" data-role="content">
+					<img src="../../assets/img/splash/splash_allone.png" alt="24시간! 365일! 잠들지 않는 올원뱅크" class="splash_allone">
+					<img src="../../assets/img/splash/splash_copyright.png" alt="모바일 접근성 인증마크, copyright 2018. NH Nonghyup Bank" class="splash_copyright">
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

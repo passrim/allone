@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>2018 AllOne</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="layerPop.open('.modalWrap', this); return false;">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header">
+					<h1 class="headerTitle">위드(WITH) 번호</h1>
+					<button type="button" class="btn closeBtn" id="fullClose">닫기</button>
+				</div>
+				<div data-role="content" class="modal-contents with-fixedBtn">
+					<section class="with-fixedBtn">
+						<h2>위드(WITH)포인트 란?</h2>
+						<ul class="unorderList">
+							<li>
+								고객님이 가입한 대출상품을 다른 고객에게 소개하여 가입하게 한 경우 농협 채움포인트를 적립해 드리는 서비스입니다.
+								<ul>
+									<li>적립기준 : 대출금액 500만원 이상으로 대출신청 시 위드(With)번호를 입력한 경우</li>
+									<li>적립한도 : 최고 20,000p(소개한 포인트, 소개받은 포인트 각 10,000p)</li>
+									<li>적립시기 : 전월말 기준 익월 10일</li>
+								</ul>
+							</li>
+							<li>NH채움카드를 소지한 경우에만 포인트가 적립됩니다.</li>
+							<li>위드(With)번호는 대출 계좌번호(13자리 숫자)입니다.</li>
+							<li>적립시기에 적립기준을 미충족하는 경우 소급하여 처리되지 않습니다.</li>
+						</ul>
+					</section>
+					<button type="submit" class="btn primary submit selfBottom" onclick="layerPop.close('.modalWrap');return false;">확인</button>
+
+				</div>
+			</div>
+		</div>
+		<!-- //fullPopup -->
+
+	</body>
+</html>

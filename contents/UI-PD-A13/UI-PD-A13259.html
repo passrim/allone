@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>카드</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>올바른POINT체크카드<span>약관동의</span></h2>
+						<ol class="step columnSet">
+							<li class="is-on is-done">1</li>
+							<li class="is-on">3</li> <!-- 1004 -->
+							<li class="is-off">4</li>
+						</ol>
+					</section>
+					<section>
+						<ul class="dataType-list agreement">
+							<li>
+								<div class="checkbox withLabel allAgree">
+									<input type="checkbox" id=""><label for="">전체동의</label>
+								</div>
+								<ul>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:void(0);">채움 체크카드 개인회원 표준약관</a>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:void(0);"><span class="greenOn">[필수]</span> 신용정보 제공·이용에 대한 고객권리 안내문</a>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:void(0);"><span class="greenOn">[필수]</span> 개인(신용)정보 수집·이용 동의서</a>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:void(0);"><span class="greenOn">[필수]</span> 개인(신용)정보 제공 동의서</a>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:void(0);"><span class="greenOn">[필수]</span> 개인(신용)정보 조회 동의서</a>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:void(0);"><span class="greenOn">[필수]</span> 고객정보취급방침</a>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:void(0);"><span class="greenOn">[필수]</span> NH농협카드 표준 전자금융거래기본약관</a>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:void(0);"><span class="greenOn">[필수]</span> NH멤버스 회원약관</a>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:void(0);">[선택]현금카드기능신청 약관</a>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:void(0);">[선택]채움카드 바로알림서비스(SMS) 이용 약관</a>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:void(0);">[선택]개인(신용)정보 제공 동의서(부정사용)</a>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:void(0);">[선택]개인(신용)정보 제공 동의서(마케팅)</a>
+									</li>
+									
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:void(0);">[선택]카드이용권유</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+						<label for="inputLabel3" class="mgT25">가입권유 연락방식 선택</label>
+						<!-- 2018-10-08 코드 수정  -->
+						<ul class="columnSet leftedColumn withWrap bottomGutter mgT10">
+							<li class="rowSpan4">
+								<div class="checkbox withLabel">
+									<input type="checkbox" id=""><label for="">전체</label>
+								</div>
+							</li>
+							<li class="rowSpan4">
+								<div class="checkbox withLabel">
+									<input type="checkbox" id=""><label for="">전화</label>
+								</div>
+							</li>
+							<li class="rowSpan4">
+								<div class="checkbox withLabel">
+									<input type="checkbox" id=""><label for="">문자메시지</label>
+								</div>
+							</li>
+
+							<li class="rowSpan4">
+								<div class="checkbox withLabel">
+									<input type="checkbox" id=""><label for="">이메일</label>
+								</div>
+							</li>
+							<li class="rowSpan4">
+								<div class="checkbox withLabel">
+									<input type="checkbox" id=""><label for="">우편</label>
+								</div>
+							</li>
+						</ul>
+					</section>
+					<section class="fullWidth with-fixedBtn topbordered">
+						<ul class="accordion bdB0"><!-- 2018-09-29 클래스 추가  -->
+							<li>
+								<dl>
+									<dt class="js-active" aria-label="꼭 알아두세요!"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a></dt>  <!-- 2018-09-07 클래스 추가 -->
+									<dd>
+										<ul class="unorderList">
+											<li>고객님께서 동의하시면 당사가 제공하는 유익한 서비스나 제휴혜택, 마케팅 등을 전화, 휴대폰 문자메시지, 서면, 이메일 등을 받아보실 수 있습니다.</li>
+											<li>카드이용 안내에 동의하셨더라도 신용정보의 이용 및 보호에 관한 법률에 따라 이용권유 목적의 연락에 대한 중단을 언제라도 카드사에 요청할 수 있습니다.(대표전화 : 1644-4000 / 홈페이지 : http://banking.nonghyup.com)</li>
+											<li>갱신 및 상품서비스 변경 안내 등 필수 고지사항은 상기 동의 대상에서 제외됩니다.</li>
+											<li>상기 내용이 변동되는 경우 인터넷 홈페이지 게시 등을 통해 그 내용을 안내해드리며, 본 동의서는 이 계약이 성립되지 않는 경우 그 시점으로부터 효력을 상실합니다.</li>
+										</ul>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

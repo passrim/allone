@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>서비스 동의 - 쇼핑</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="pdT0">
+						<div class="completeMsg onlyMsg shoppingMsg pdT30 pdB10"> <!-- 0929 :: pdT30 pdB10 클래스 추가 / 비주얼 마크업 변경 -->
+							<strong>오늘의 쇼핑을 위한 HOT!잇템</strong>
+							<p class="mgB15">경품응모, 타임세일, 기획전 등 다양하고<br>특별한 쇼핑을 해보세요.</p>
+						</div>
+					</section>
+					<section class="topbordered"> <!-- 0929 :: section 분리 -->
+						<ul class="dataType-list agreement">
+							<li>
+								<div class="checkbox">
+									<input type="checkbox" id=""><label for="">체크</label>
+								</div>
+								<a href="javascript:;">전체동의</a>
+								<ul>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:;"><span class="greenOn">[필수]</span>서비스 이용약관</a>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:;"><span class="greenOn">[필수]</span>개인정보 취급방침</a>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:;"><span class="greenOn">[필수]</span>개인정보 수집이용</a>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:;"><span class="greenOn">[필수]</span>개인정보 제3자 제공 및 위탁처리</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="submit" class="btn primary submit">서비스 동의 및 시작</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

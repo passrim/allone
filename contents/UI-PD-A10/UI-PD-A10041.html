@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>지방세전자고지 신청이력</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth">
+						<h3>적용정보</h3>
+						<dl class="dataList">
+							<dt>적용기관</dt>
+							<dd>신한은행</dd>
+							<dt>신청일자</dt>
+							<dd>2016-03-01</dd>
+							<dt>송달방식</dt>
+							<dd>스마트폰 앱</dd>
+						</dl>
+						
+						<h3>변경정보</h3>
+						<dl class="dataList">
+							<dt>변경 적용기관</dt>
+							<dd>국민은행/농협은행</dd>
+							<dt>변경 신청일자</dt>
+							<dd>2016-03-01</dd>
+							<dt>변경적용일자</dt>
+							<dd>2016-03-01</dd>
+						</dl>
+						<dl class="dataList">
+							<dt>신청상태</dt>
+							<dd>변경 예정</dd>
+							<dt>적용 앱</dt>
+							<dd>NH뱅킹/올원뱅크/콕뱅크</dd>
+						</dl>
+						<div class="paddingAll rightTxt"><button type="button" class="btn secondary strokeType subSmallType">전자고지함 바로가기</button></div>
+					</section>
+					<section class="fullWidth topbordered">
+						<ul class="accordion">
+							<li>
+								<dl>
+									<dt class="js-active"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a></dt> <!-- 2018-09-07 클래스 추가 -->
+									<dd>
+										<ul class="unorderList">
+											<li>고객님은 농협을 통해 지방세 전자고지서를 송달받고 있습니다.</li>
+											<li>당원 고지서 송달을 즉시 해지하실 경우 아래 해지하기 버튼을 누르십시요.</li>
+											<li>단, 월 초 서비스 해지시 당월 고지서는 전자고지서로 수신을 못받을 수 있으니 주의하시기 바랍니다.</li>
+										</ul>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+						</ul>
+					</section>
+					<ul class="columnSet selfBottom">
+						<!-- <li class="colItem"><button type="button" class="btn primary cancel">해지하기</button></li> -->
+						<li class="colItem"><button type="submit" class="btn primary submit">신청하기</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

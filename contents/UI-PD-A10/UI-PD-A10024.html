@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>지방세 납부</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- breadcrumb -->
+					<section class="breadcrumb columnSet">
+						<h2>납부 선택</h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">2</li>
+							<li class="is-off">5</li>
+						</ol>
+					</section>
+					<!-- //breadcrumb -->
+					
+					<section class="fullWidth">
+						<div class="serviceNote">
+							<ul class="unorderList">
+								<li>전체납부 혹은 선택납부를 선택해주세요.</li>
+								<li>선택납부는 납부하실 항목을 선택 하신 후, 최대 10건까지 동시 납부하실 수 있습니다.</li>
+							</ul>
+						</div>
+					</section>
+					<section class="fullWidth">
+						<h3 class="taxPay-heading">납부의무자정보</h3>
+						<div class="serviceNote pdzero">
+							<dl class="dataList bdB0">
+								<dt>납부의무자 성명</dt>
+								<dd>홍*동</dd>
+								<dt>총 고지건 수</dt>
+								<dd>120건</dd>
+								<dt>총 납부금액</dt>
+								<dd><span>300,000</span>원</dd>
+							</dl>
+						</div>
+						<h3 class="taxPay-heading bdB1">고지내역</h3>
+						<div class="paddingAll">
+							<table class="dataTable rowStyle">
+								<caption>선택 테이블</caption>
+								<thead>
+									<tr>
+										<th scope="col" class="rowSpan2">
+											<div class="checkbox">
+												<input type="checkbox" id=""><label for="">체크</label>
+											</div>
+										</th>
+										<th scope="col" colspan="2">지방세 정보</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td colspan="2">조회내역이 없습니다.</td>
+									</tr>
+									<tr>
+										<td>
+											<!-- 선택형 테이블 체크박스 -->
+											<div class="checkbox">
+												<input type="checkbox" id=""><label for="">체크</label>
+											</div>
+											<!-- // 선택형 테이블 체크박스 -->
+										</td>
+										<td>
+											<!-- class가 threeEle를 추가시, 3개의 리스트 정보만 우선 노출 후, 확장시 전체 데이터 노출 -->
+											<dl class="dataList">
+												<dt>지자체</dt>
+												<dd>서울시 중구</dd>
+												<dt>세금명</dt>
+												<dd>주민세(개인균등주소지할)</dd>
+												<dt>고지구분</dt>
+												<dd>수시</dd>
+												<dt>납부기한</dt>
+												<dd>2016/03/03</dd>
+												<dt>납부금액</dt>
+												<dd>60,000원</dd>
+											</dl>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<!-- 선택형 테이블 체크박스 -->
+											<div class="checkbox">
+												<input type="checkbox" id=""><label for="">체크</label>
+											</div>
+											<!-- // 선택형 테이블 체크박스 -->
+										</td>
+										<td>
+											<!-- class가 threeEle를 추가시, 3개의 리스트 정보만 우선 노출 후, 확장시 전체 데이터 노출 -->
+											<dl class="dataList">
+												<dt>지자체</dt>
+												<dd>서울시 중구</dd>
+												<dt>세금명</dt>
+												<dd>주민세(개인균등주소지할)</dd>
+												<dt>고지구분</dt>
+												<dd>수시</dd>
+												<dt>납부기한</dt>
+												<dd>2016/03/03</dd>
+												<dt>납부금액</dt>
+												<dd>60,000원</dd>
+											</dl>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</section>
+					<button type="submit" class="btn primary submit selfBottom">납부하기</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

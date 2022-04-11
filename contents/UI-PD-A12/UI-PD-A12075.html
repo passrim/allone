@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>재취업- All100플랜</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container"> 
+				<div class="content" data-role="content">
+					<section class="fullWidth no-fixed">
+						<div class="plan-listMain">
+							<nav class="tabNav tabOverflow pageTab">
+								<ul class="columnSet">
+									<li class="colItem" data-tab="tabCont1"><a href="javascript:;">은퇴설계</a></li>
+									<li class="colItem" data-tab="tabCont2"><a href="javascript:;">귀농&middot;귀촌</a></li>
+									<li class="colItem is-on" data-tab="tabCont3"><a href="javascript:;">재취업</a></li>
+									<li class="colItem" data-tab="tabCont4"><a href="javascript:;">창업</a></li>
+								</ul>
+							</nav>
+
+							<div id="tabCont1" class="tabContent">은퇴설계</div>
+							<div id="tabCont2" class="tabContent">귀농귀촌</div>
+
+							<!-- 재취업  -->
+							<div id="tabCont3" class="tabContent is-current plan03"> <!-- topVisual 카테고리별 클래스 기입 포인트 -->
+								<h2 class="visualHide">재취업</h2><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+								<div class="topVisual">
+									<h2><img src="../../assets/img/funlife/visual_plan03.png" alt=""><!-- 18.10.01 : 이미지 적용  --></h2>
+									<p class="subTitle"><strong>행복한 노후를 위해<br />재취업에 관련된 정보를 제공합니다.</strong></p><!-- 2018-10-22 줄바꿈을 위한 코드 수정  -->
+								</div>
+								<ul class="boardList showArrow toplined">
+									<li>
+										<a href="javascript:;" class="boxHead">
+											<div class="objCon">
+												<strong class="dataTxt tTitle">워크넷</strong>
+												<span class="dataTxt tCon">고용노동부 고용정보시스템, 구직/구인 등 일자리 채용정보, <span class="dp-inblock">직업훈련/실업대책/고용보험 안내</span></span>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;" class="boxHead">
+											<div class="objCon">
+												<strong class="dataTxt tTitle">서울특별시 50+ 포털</strong>
+												<span class="dataTxt tCon">호모헌드레드 Homo Hundred 시대, <br>서울시  50+ 세대의 인생후반 설계를 지원하고 <span class="dp-inblock">새로운 50+ 문화를 창조하는 싱크탱크</span></span>
+											</div>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;" class="boxHead">
+											<div class="objCon">
+												<strong class="dataTxt tTitle">올워크</strong>
+												<span class="dataTxt tCon">50세 이상 경력자의 재취업을 도와드리는 국내 유일의 <span class="dp-inblock">전문 구인구직 취업 사이트</span></span>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<!-- //재취업  -->
+
+							<div id="tabCont4" class="tabContent">창업</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>초대장 보내기</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth">
+						<!-- 기간조회 -->
+						<div class="periodSearch mgT15">
+							<ul class="columnSet noGutterSet">
+								<li class="colItem">
+									<input type="radio" id="today" class="btn radioToggle" value="today" name="mobileProvider">
+									<label for="today" class="inputLabel secondary strokeType">당일</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" id="1week" class="btn radioToggle" value="1week" name="mobileProvider">
+									<label for="1week" class="inputLabel secondary strokeType">1주일</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" id="1month" class="btn radioToggle" value="1month" name="mobileProvider">
+									<label for="1month" class="inputLabel secondary strokeType">1개월</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" id="3month" class="btn radioToggle" value="3month" name="mobileProvider">
+									<label for="3month" class="inputLabel secondary strokeType">3개월</label>
+								</li>
+								<li class="svgBtn detailSearch">
+									<input type="checkbox" id="detailBtn"><label for="detailBtn">상세검색</label>
+								</li>
+							</ul>
+						</div>
+						<div class="periodBox">
+							<ul class="columnSet calendarInput">
+								<li class="colItem">
+									<div class="calendar">
+										<input type="text" id="ip_calendar01_01" title="조회 시작일" placeholder="2018-05-01" class="formInput search-input"><!-- 0913 : 접근성 레이블 및 타이틀 반영 -->
+										<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+									</div>
+								</li>
+								<li class="colItem">
+									<div class="calendar">
+										<input type="text" id="ip_calendar01_02" title="조회 종료일" placeholder="2018-05-01" class="formInput search-input"><!-- 0913 : 접근성 레이블 및 타이틀 반영 -->
+										<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+									</div>
+								</li>
+							</ul>
+
+							<label for="inputLabel6">정렬순서</label>
+							<ul class="columnSet noGutterSet">
+								<li class="colItem">
+									<input type="radio" id="listNew" class="btn radioToggle" value="listNew" name="listOrder">
+									<label for="listNew" class="inputLabel secondary">최근순</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" id="listPast" class="btn radioToggle" value="listPast" name="listOrder">
+									<label for="listPast" class="inputLabel secondary">과거순</label>
+								</li>
+							</ul>
+							<button type="submit" class="btn secondary-gray">조회</button>
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered">
+						<ul class="boardList justify showArrow">
+							<!-- 1018 : Case1. 금액 내용 한줄로 갈때 -->
+							<li>
+								<div class="hasButton"><!-- .hasButton : boxFoot 에 버튼 있을 경우 -->
+									<a href="javascript:;" class="boxHead ">
+										<div class="objHead">
+											<span class="dataTxt tDate">2017-10-18 19:57:57</span>
+											<span class="dataTxt tInfo blueOn">결혼</span>
+										</div>
+										<div class="objCon">
+											<span class="dataTxt tTitle">금액 내용 한줄로 갈때</span>
+											<span class="dataTxt tMoney mgL10">3.000.000<em>원</em></span>
+										</div>
+									</a>
+									<div class="boxFoot posRight">
+										<button type="button" class="btn secondary strokeType subSmallType">모바일 초대장 보기</button> <!-- 1018 -->
+										<button type="button" class="btn btn secondary-gray subSmallType">초대장 다시 보내기</button>
+									</div>
+								</div>
+							</li>
+							<!-- //Case1. 금액 내용 한줄로 갈때 -->
+
+							<!-- 1010 : Case2. 금액 내용 두줄로 갈때 -->
+							<li>
+								<div class="hasButton"><!-- .hasButton : boxFoot 에 버튼 있을 경우 -->
+									<a href="javascript:;" class="boxHead ">
+										<div class="objHead">
+											<span class="dataTxt tDate">2017-10-18 19:57:57</span>
+											<span class="dataTxt tInfo blueOn">결혼</span>
+										</div>
+										<div class="objCon">
+											<span class="dataTxt tTitle">금액 내용 두줄로 갈때</span>
+										</div>
+										<div class="objCon">
+											<span class="dataTxt tMoney fr">3.000.000<em>원</em></span>
+										</div>
+									</a>
+									<div class="boxFoot posRight">
+										<button type="button" class="btn secondary strokeType subSmallType">모바일 초대장 보기</button> <!-- 1018 -->
+										<button type="button" class="btn btn secondary-gray subSmallType">초대장 다시 보내기</button>
+									</div>
+								</div>
+							</li>
+							<!-- //1010 : Case2. 금액 내용 두줄로 갈때 -->
+							<li>
+								<div class="hasButton"><!-- .hasButton : boxFoot 에 버튼 있을 경우 -->
+									<a href="javascript:;" class="boxHead">
+										<div class="objHead">
+											<span class="dataTxt tDate">2017-10-18 19:57:57</span>
+											<span class="dataTxt tInfo blueOn">첫돌/생일</span>
+										</div>
+										<div class="objCon">
+											<span class="dataTxt tTitle">장군이의 첫번째 생일 잔치에 초대합니다</span>
+										</div>
+									</a>
+									<div class="boxFoot posRight">
+										<button type="button" class="btn secondary strokeType subSmallType">모바일 초대장 보기</button> <!-- 1018 -->
+										<button type="button" class="btn btn secondary-gray subSmallType">초대장 다시 보내기</button>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead noData">
+									<span>조회내역이 없습니다.</span>
+								</div>
+							</li>
+						</ul>
+					</section>
+
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

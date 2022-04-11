@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>올원모임 - 모임</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content alloneMeeting errorPage" data-role="content"> <!-- Category Class : alloneMeeting --><!-- 1012 -->
+					<section class="with-fixedBtn fullWidth">
+						<div class="completeMsg stopMsg pdT0 paddingSide"><!-- 1012 -->
+							<p class="desc1">등록된 올원계좌가 없습니다.</p>
+							<p class="desc2">회비 없음을 선택하시거나 올원뱅크에서 <br>입출금계좌개설 후, 이용해주시기 바랍니다. <br>이용중인 농협은행 계좌가 없으신 경우, <br>모임 통장을 새로 개설해 주세요.</p>
+							<button type="button" class="btn secondary strokeType subSmallType subSmallType02 mgT15">올원계좌등록</button>
+						</div>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="submit" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">모임통장 개설하기</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

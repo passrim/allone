@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>충전자동알림</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section>
+						<label for="selectLabel1" class="inputLable">잔액</label>
+						<div class="select-input">
+							<select id="selectLabel1" class="formInput">
+								<option value="default" label="3,000원 미만 시">3,000원 미만 시</option>
+								<option value="option2" label="5,000원 미만 시">5,000원 미만 시</option>
+								<option value="option3" label="7,000원 미만 시">7,000원 미만 시</option>
+								<option value="option4" label="10,000원 미만 시">10,000원 미만 시</option>
+								<option value="option5" label="15,000원 미만 시">15,000원 미만 시</option>
+								<option value="option6" label="20,000원 미만 시">20,000원 미만 시</option>
+							</select>
+						</div>
+						
+						<label for="selectLabel2" class="inputLable">충전금액</label>
+						<div class="select-input">
+							<select id="selectLabel2" class="formInput">
+								<option value="default" label="10,000원 충전">10,000원 충전</option>
+								<option value="option2" label="20,000원 충전">20,000원 충전</option>
+								<option value="option3" label="30,000원 충전">30,000원 충전</option>
+								<option value="option4" label="50,000원 충전">50,000원 충전</option>
+								<option value="option5" label="70,000원 충전">70,000원 충전</option>
+								<option value="option6" label="100,000원 충전">100,000원 충전</option>
+								<option value="option7" label="200,000원 충전">200,000원 충전</option>
+							</select>
+						</div>
+						
+					</section>
+					<section class="fullWidth topbordered">
+						<ul class="accordion">
+							<li>
+								<dl>
+									<dt class="js-active" aria-label="꼭 알아두세요!"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a></dt>  <!-- 2018-09-07 클래스 추가 -->
+									<dd>
+										<ul class="unorderList">
+											<li>충전 자동 알림이 설정된 상태에서 올원뱅크 앱 재설치 시, 설정된 잔액 및 충전 금액 정보가 삭제되어 충전 알림 재설정이 필요합니다.</li>
+										</ul>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+						</ul>
+					</section>
+					<button type="submit" class="btn primary submit selfBottom">자동알림 설정</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

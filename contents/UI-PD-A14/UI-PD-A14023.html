@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>외화선물 보내기</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- breadcrumb -->
+					<section class="breadcrumb columnSet">
+						<h2>신청 결과</h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">2</li>
+						</ol>
+					</section>
+					
+					<section>
+						<div class="completeMsg"> <!-- 2018-09-13 클래스 삭제 -->
+							<h2>짝짝짝! 외화선물 보내기가 신청완료 되었습니다.</h2>
+							<p>혹시라도 선물 받는 분에게 SMS(카카오톡)보내기를 하지
+							않으셨다면, 선물 받는 분의 선물확인이 불가하니 꼭
+							SMS(카카오톡)을 보내주세요!<br />
+							(중복 송신이라도 선물중복 수령은 불가합니다)<br />
+							환전 신청일 기준 1개월 이내에 수령하지 않을 경우, 자동재환전(되팔기)처리 됩니다.</p>
+						</div>
+					</section>
+					
+					<section class="with-fixedBtn fullWidth">
+						<h3 class="topbordered">환전번호</h3>
+						<dl class="dataList bdB0">
+							<dt>환전번호</dt>
+							<dd class="greenOn">CI**********</dd> <!-- 2018-09-27 클래스 추가  -->
+						</dl>
+						
+						<h3 class="topbordered">외화 선물 받는 분</h3>
+						<dl class="dataList bdB0">
+							<dt>성명</dt>
+							<dd><strong>이*협</strong></dd>
+							<dt>휴대폰</dt>
+							<dd>010-****-56**</dd>
+						</dl>
+						
+						<h3 class="topbordered">외화선물 정보</h3>
+						<dl class="dataList">
+							<dt>선물신청일</dt> <!-- 2018-09-27 문구수정 -->
+							<dd>2018-07-03</dd>
+							<dt>선물수령기한</dt>
+							<dd>2018-07-03</dd>
+							<dt>선물금액</dt>
+							<dd>USD 20,000.00</dd>
+							<dt>고시환율</dt>
+							<dd>1,194.23원</dd>
+							<dt>우대율</dt>
+							<dd>90%</dd>
+							<dt>우대원화금액</dt>
+							<dd>2,012원</dd>
+							<dt>적용환율</dt>
+							<dd>1,184.23원</dd>
+							<dt>인출원화</dt>
+							<dd>298,730원</dd>
+						</dl>
+						<!-- 2018-10-12 버튼 순서 변경  -->
+						<ul class="columnSet withGutter marginT10 pdB10 pdBoth15">
+							<li class="colItem"><button type="button" class="btn secondary strokeType">SMS 보내기</button></li>
+							<li class="colItem"><button type="submit" class="btn secondary strokeType">카카오톡 보내기</button></li>
+						</ul>
+						<!-- 2018-09-19 아이프레임 추가 -->
+						<iframe src="../../cms/fx/ABEF5034R_iframe05.html" class="iframes defaultBanner" title="환전 이벤트 배너"></iframe><!-- 0913 : 접근성 제목 제공  -->
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">외화선물 내역조회</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

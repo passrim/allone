@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>관리비 등록/수정 - 아파트관리비납부</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="topNotice">
+						<ul class="unorderList">
+							<li>기존 등록된 납부내역을 수정하거나 등록합니다.</li>
+						</ul>
+					</section>
+
+					<section class="fullWidth with-fixedBtn topbordered">
+						<div class="formWrap paddingAll">
+							<label for="inputLabel1">관리비 명<i class="required"></i></label>
+							<div class="textInput">
+								<input type="text" id="inputLabel1" placeholder="관리비 명 입력" class="formInput" name="">
+								<button type="button" class="btn deleteBtn" style="display: none;">삭제</button>
+							</div>
+	
+							<label for="inputLabel2">관리비 입금은행<i class="required"></i></label>
+							<ul class="columnSet withGutter">
+								<li class="rowSpan4">
+									<div class="select-input">
+										<button type="button" class="btn formInput">은행선택</button>
+									</div>
+								</li>
+								<li class="rowSpan7">
+									<label for="inputLabel6" class="visualHide">관리비 입금은행</label>
+									<div class="numberInput">
+										<input type="tel" id="inputLabel6" placeholder="계좌번호 입력" maxlength="16" class="formInput" name="">
+									</div>
+								</li>
+							</ul>
+							<div class="search mgT10">
+								<input type="text" id="inputLabel5" placeholder="예금주명 입력" class="formInput search-input" ><!-- 0913 : 접근성 레이블 제공 -->
+								<button type="button" class="btn deleteBtn" style="display: none;">삭제</button>
+								<button type="submit" id="" class="btn searchTxtBtn" name="">계좌확인</button>
+							</div>
+							<label for="inputLabel2">아파트 정보 입력<i class="required"></i></label>
+							<dl class="columnSet aptlInput">
+								<dt class="colItem">
+									<input type="text" id="inputLabel3" placeholder="동 입력" class="formInput" name=""><!-- 0913 : 접근성 레이블 제공 -->
+								</dt>
+								<dt class="colItem">
+									<input type="text" id="inputLabel4" placeholder="호수 입력" class="formInput" name=""><!-- 0913 : 접근성 레이블 제공 -->
+								</dt>
+							</dl>
+						</div>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

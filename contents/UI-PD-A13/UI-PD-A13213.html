@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>골드바</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- breadcrumb -->
+					<section class="breadcrumb columnSet">
+						<h2>골드바 구매<span>구매결정</span></h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">6</li>
+							<li class="is-off">7</li>
+						</ol>
+					</section>
+					<!-- //breadcrumb -->
+
+					<section class="fullWidth">
+						<dl class="dataList noBorder">
+							<dt>구매인</dt>
+							<dd>홍길동</dd>
+							<dt>구매내용</dt>
+							<dd>
+								<p class="fz-12">37.5g(10돈) / 1개 / <strong>500,000</strong>원</p>
+								<p class="fz-12">187.5g(10돈) / 1개 /<strong>500,000</strong>원</p>
+								<p class="fz-12">375g(10돈) / 1개 /<strong>500,000</strong>원</p>
+							</dd>
+							<dt>구매가격(세전)</dt>
+							<dd>10,000,000원</dd>
+							<dt>부가세금액</dt>
+							<dd>5,000원</dd>
+							<dt>구매가격(세후)</dt>
+							<dd>10,000,000워</dd>
+							<dt>골드바 결제 예상 <br>금액(출금금액)</dt>
+							<dd><strong>10,000,000원</strong></dd>
+							<dt>골드바 상품수령 <br>영업점</dt>
+							<dd>서대문점</dd>
+							<dt>현금영수증</dt>
+							<dd>발급(010-123-1**1)</dd>
+						</dl>
+
+						<!-- <table class="dataTable colStyle">
+							<caption>기본 데이터 테이블</caption>
+							<tbody>
+								<tr>
+									<th scope="row">구매인</th>
+									<td class="rightTxt">홍길동</td>
+								</tr>
+								<tr>
+									<th scope="row">구매내용</th>
+									<td class="rightTxt">
+										<p>37.5g(10돈) / 1개 / <strong>500,000</strong>원</p>
+										<p>187.5g(10돈) / 1개 /<strong>500,000</strong>원</p>
+										<p>375g(10돈) / 1개 /<strong>500,000</strong>원</p>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">구매가격(세전)</th>
+									<td class="rightTxt">10,000,000원</td>
+								</tr>
+								<tr>
+									<th scope="row">부가세금액</th>
+									<td class="rightTxt">5,000원</td>
+								</tr>
+								<tr>
+									<th scope="row">구매가격(세후)</th>
+									<td class="rightTxt">10,000,000워</td>
+								</tr>
+								<tr>
+									<th scope="row">골드바 결제 예상 <br>금액(출금금액)</th>
+									<td class="rightTxt"><strong>10,000,000원</strong></td>
+								</tr>
+								<tr>
+									<th scope="row">골드바 상품수령 <br>영업점</th>
+									<td class="rightTxt">서대문점</td>
+								</tr>
+								<tr>
+									<th scope="row">현금영수증</th>
+									<td class="rightTxt">발급(010-123-1**1)</td>
+								</tr>
+							</tbody>
+						</table> -->
+					</section>
+
+					<section class="fullWidth with-fixedBtn topbordered">
+						<ul class="accordion bdB0"><!-- 2018-09-29 클래스 추가  -->
+							<li>
+								<dl>
+									<dt aria-label="꼭 알아두세요!" class="js-active"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a> <!-- 2018-09-28 클래스 추가 -->
+									<dd>
+										<ul class="unorderList">
+											<li>주문일(D)로부터 “D+3영업일에 실물수령 영업점에서 골드바 실물을 수령하시기 바랍니다(단, 최대 7영업일 소요 가능)</li>
+											<li>(예)주문일(월요일) ->실물수령일(목요일)</li>
+											<li>(예)주문일(금요일) ->실물수령일(수요일)</li>
+										</ul>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+						</ul>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">구매</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

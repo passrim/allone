@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>자주쓰는 송금 - 뱅크</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content errorPage" data-role="content"> <!-- 1012 -->
+					<!-- <section class="fullWidth with-fixedBtn">
+						<div class="visualArea undefined">
+							<div class="titleBox">
+								<p class="desc1">등록된 그룹이 없습니다.</p>
+							</div>
+						</div>
+						<div class="sectionWrap toplined">
+							<button type="button" class="btn secondary widthAuto fr">그룹추가(최대10건)</button>
+						</div>
+					</section> -->
+
+					<!-- 0829 -->
+					<section class="with-fixedBtn fullWidth">
+						<div class="completeMsg stopMsg pdT0"> <!-- 1012 -->
+							<p class="desc1">등록된 그룹이 없습니다.</p>
+							<button type="button" class="btn secondary widthAuto mgT20">그룹추가 (최대10건)</button>
+						</div>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

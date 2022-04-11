@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>지문등록 - 지문(face ID) 등록</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth">
+						<div class="fingerprintBox">
+							<p class="fingerprintTxt">
+								<span class="dp-inblock">지문(Face ID)등록 서비스는 </span>
+								<span class="dp-inblock">본인의 지문 또는 Face ID를 통해 </span>
+								<span class="dp-inblock">간편하게 올원뱅크 서비스를 </span>
+								<span class="dp-inblock">이용하실 수 있는 서비스입니다. </span>
+								<span class="dp-inblock">지문 지원기기는 하단에서 확인 하실 수 있습니다.</span>
+							</p>
+							<p class="certifyTxt mgT5">※ 아이폰X는 Face ID로 이용 가능합니다.</p>
+						</div>
+						<h3 class="bdB1">지원기기</h3>
+						<div class="paddingAll">
+							<p><strong class="blackOn">지문인증 기능이 지원되는 스마트폰</strong></p>
+							<ul class="unorderList mgT5">
+								<li class="fz-14">안드로이드 6.0이상 (갤럭시S5 이상)</li>
+								<li class="fz-14">iOS 8.0이상 (아이폰 5S 이상)</li>
+							</ul>
+							<p class="certifyTxt fz-11 mgT5">제조사 및 스마트폰 환경에 따라 일부폰은 서비스 이용이 불가할 수 있습니다.</p>
+						</div>
+					</section>
+					<section class="fullWidth with-fixedBtn topbordered">
+						<ul class="accordion">
+							<li>
+								<dl>
+									<dt class="js-active"><a href="javascript:;" class="pinned">꼭 알아두세요!</a></dt><!-- 2018-09-07 클래스 추가 -->
+									<dd>
+										<ul class="unorderList">
+											<li>지문인증 서비스는 본인인증(USIM/ARS/SMS) 후 가입이 가능합니다.</li>
+											<li>고객님의 지문정보는 스마트 기기에서 암호화 되어 관리됩니다.</li>
+											<li>지문인증 등록은 1인 1폰으로 제한됩니다.</li>
+											<li>스마트 기기에 미리 지문이 등록되어야 합니다.</li>
+										</ul>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+						</ul>
+					</section>
+					<button type="submit" class="btn primary submit selfBottom">지문인증 등록/변경</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

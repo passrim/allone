@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>골드바</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- breadcrumb -->
+					<section class="breadcrumb columnSet">
+						<h2>골드바 구매<span>구매안내</span> </h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">2</li>
+							<li class="is-off">7</li>
+						</ol>
+					</section>
+					<!-- //breadcrumb -->
+
+					<div class="titleArea">
+						<ul class="unorderList"><!--1017 -->
+							<li>구매대상 : 실명의 개인(미성년자의 경우 법정대리인 동의가 필요하며 영업점에서만 구매 가능합니다.)</li>
+							<li>거래시간 : 은행 영업일 <strong>09:00 ~ 16:00</strong></li>
+							<!-- <li>거래방식 : 고객의 당행 출금계좌에서 출금방식으로 거래 구매하신 날로부터 통산 3영업일 이내에 구매고객 본인이 지정한 영업점에서 골드바 실물을 수령 할 수 있습니다.</li> -->
+							<li>거래방식 : 고객의 당행 출금계좌에서 출금방식으로 거래 (올원계좌만 사용가능)</li>
+							<li>구매하신 날로부터 통상 3영업일 이내에 구매고객 본인이 지정한 영업점에서 골드바 실물을 수령 할 수 있습니다.</li>
+							<li>소득세법에 따라 현금영수증 발급이 가능합니다.</li>
+						</ul>
+					</div>
+
+					<section class="fullWidth with-fixedBtn topbordered">
+						<ul class="accordion bdB0">
+							<li>
+								<dl>
+									<dt aria-label="꼭 알아두세요!" class="js-active"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a> <!-- 2018-09-28 클래스 추가 --></dt>
+									<dd>
+										<ul class="unorderList">
+											<li>골드바 구매 후 권종 교환,취소(환불,정정)는 절대불가 하오니 유의하시기 바랍니다.</li>
+											<li>실물수령은 구매하신 본인만 수령할 수 있습니다.(실명확 인증표 지참)</li>
+											<li>실물수령을 위해 지정한 영업점은 변경할 수 없습니다.</li>
+											<li>국제금시세 및 골드바 수급상황에 따라 판매가 제한될 수 있습니다.</li>
+										</ul>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+						</ul>
+
+						<div class="sectionWrap topbordered mgT0">
+							<div class="checkbox withLabel">
+								<input type="checkbox" id="chk_agree" ><label for="chk_agree">상기 설명 및 유의사항을 충분히 확인하고 골드바 구매를 진행 하시겠습니까?</label>
+							</div>
+						</div>
+					</section>
+
+					<button type="submit" class="btn primary submit selfBottom">다음</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

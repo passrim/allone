@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>변경신청 대상 확인 - 자동납부 등록내역조회/변경</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- breadcrumb -->
+					<section class="breadcrumb columnSet">
+						<h2>자동납부 등록내역조회/변경신청</h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">2</li>
+							<li class="is-off">4</li>
+						</ol>
+					</section>
+					<!-- //breadcrumb -->
+
+					<section class="fullWidth">
+						<h3 class="bdB1">자동납부 변경신청 대상 확인: 총 <span>00</span>건</h3>
+						<div class="paddingAll">
+							<p class="rightTxt mgT10">출금계좌: 000-0000-0000</p>
+							<table class="dataTable rowStyle dList">
+								<caption>자동납부 변경신청 대상 확인; 자동납부 내역 상세의 정보로 제공</caption>
+								<thead>
+									<tr>
+										<th scope="col" >자동납부내역</th>
+									</tr>
+								</thead>
+								<tbody>
+									<!-- 2018-10-15 내역이 없을 경우 추가  -->
+									<tr>
+										<td>조회내역이 없습니다.</td>
+									</tr>
+									<tr>
+										<td>
+											<div>
+												<dl class="dataList">
+													<dt>기관명</dt>
+													<dd>Sktelcom</dd>
+													<dt>기관번호</dt>
+													<dd>99660121</dd>
+													<dt>납부자번호</dt>
+													<dd></dd>
+												</dl>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</section>
+
+					<section class="topbordered fullWidth with-fixedBtn">
+						<ul class="accordion">
+							<li>
+								<dl>
+									<dt class="js-active"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a></dt> <!-- 2018-09-07 클래스 추가 -->
+									<dd>
+										<ul class="unorderList">
+											<li><strong class="title">서비스 이용시간</strong>(조회) 09:00 ~ 22:00(변경) 평일 09:00 ~ 22:00</li>
+											<li>등록내역은 변경신청당일 22:00까지 ‘변경신청결과 조회/취소’ 에서 취소가 가능합니다.</li>
+											<li>신청처리결과는 반드시 확인하시기 바라며, 오류발생 시 이용기관으로 확인하여 주시기 바랍니다.</li>
+										</ul>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+						</ul>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">신청</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

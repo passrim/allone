@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>카드</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+
+				//신분증 진위여부
+				$('#autoTrue').change(function(){
+					if($(this).is(':checked')) {
+						$('#toggleTab1').toggleClass('is-current');
+						$('#toggleTab2').toggleClass('is-current');
+					}
+				});
+				$('#autoFalse').change(function(){
+					if($(this).is(':checked')) {
+						$('#toggleTab2').toggleClass('is-current');
+						$('#toggleTab1').toggleClass('is-current');
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>올바른POINT체크카드<span>종류선택</span></h2>
+						<ol class="step columnSet twoSet">
+							<li class="is-on">1</li>
+							<li class="is-off">4</li>
+						</ol>
+					</section>
+
+					<section class="fullWidth">
+						<div class="titleArea">
+							<h3 class="tTitle">연회비</h3>
+							<ul class="unorderList">
+								<li>연회비 없음</li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="fullWidth with-fixedBtn ">
+						<div class="sectionWrap">
+							<label for="ra_cardCate01">카드종류
+								<button class="helpTooltip" name="tipbox01" title="확인방법 안내 팝업 열기">도움말 </button> <!-- 1018 -->
+							</label>
+							<ul class="columnSet noGutterSet rowSpan6"><!-- 0919 -->
+								<li class="colItem">
+									<input type="radio" id="ra_cardCate01" class="btn radioToggle" name="ra_cardCate" disabled="disabled" checked="checked">
+									<label for="ra_cardCate01" class="inputLabel secondary strokeType">VISA</label>
+								</li>
+							</ul>
+							
+							<!-- <label for="ra_traffic01" class="helpLabel">후불교통카드 기능
+								<button class="helpTooltip" name="tipbox01" title="펼쳐기">도움말 </button>
+								<span class="helpBubble tipbox01"><button type="button" class="btn closeBtn">닫기</button>
+									<ul class="unorderList">
+										<li>결제계좌가 본인의 농협계좌인 경우만  가능하며, 현금인출 비밀번호는 카드비밀번호와 동일합니다.</li>
+									</ul>
+								</span>
+							</label> -->
+							<label for="ra_traffic01" class="helpLabel">후불교통카드 기능</label><!-- 0928 -->
+							<ul class="columnSet noGutterSet">
+								<li class="colItem">
+									<input type="radio" id="ra_traffic01" class="btn radioToggle" name="ra_traffic" checked="checked">
+									<label for="ra_traffic01" class="inputLabel secondary strokeType">신청</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" id="ra_traffic02" class="btn radioToggle" name="ra_traffic">
+									<label for="ra_traffic02" class="inputLabel secondary strokeType">미신청</label>
+								</li>
+							</ul>
+
+							<!-- 0928 -->
+							<!-- <label for="f_curCard">현금카드기능 신청</label>
+							<div class="select-input">
+								<select id="f_curCard" class="formInput">
+									<option value="default" label="미신청">미신청</option>
+								</select>
+							</div>
+
+							<label for="f_password03">계좌비밀번호</label>
+							<div class="search">
+								<input type="password" id="f_password03" placeholder="숫자 4자리" class="formInput" maxlength="4">
+								<button type="submit" id="" class="btn searchTxtBtn" name="">계좌확인</button>
+							</div>
+							<span class="fieldNotes normal-info">3회 이상 오류 시 서비스 제한</span> -->
+						</div>
+
+						<div class="sectionWrap  pdT10">
+							<label for="autoTrue">신분증 진위여부 확인</label>
+							<ul class="columnSet noGutterSet">
+								<li class="colItem">
+									<input type="radio" name="radioToggle" id="autoTrue" checked="checked" class="btn radioToggle">
+									<label for="autoTrue" class="inputLabel secondary strokeType">주민등록증</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" name="radioToggle" id="autoFalse" class="btn radioToggle">
+									<label for="autoFalse" class="inputLabel secondary strokeType">운전면허증</label>
+								</li>
+							</ul>
+
+							<!-- 주민등록증 --><!-- 0919 -->
+							<div class="tabContent is-current noPadding" id="toggleTab1">
+								<label for="ip_jumin01_01" class="visualHide">주민등록증 발급일자</label>
+								<div class="clearfix"><!-- 0919 -->
+									<div class="dash_input span6">
+										<label for="ip_jumin01_01" class="visualHide">발급년도 4자리</label>
+										<input type="text" id="ip_jumin01_01" placeholder="YYYY" class="formInput">
+									</div>
+									<div class="dash_input span3">
+										<label for="ip_jumin01_02" class="visualHide">발급월 2자리</label>
+										<input type="text" id="ip_jumin01_02" placeholder="MM" class="formInput">
+									</div>
+									<div class="dash_input span3 last">
+										<label for="ip_jumin01_03" class="visualHide">발급일 2자리</label>
+										<input type="text" id="ip_jumin01_03" placeholder="DD" class="formInput">
+									</div>
+								</div>
+							</div>
+
+							<!-- 운전면허증 --><!-- 0919 -->
+							<div class="tabContent noPadding clearfix" id="toggleTab2">
+								<label for="ip_drive01_01" class="visualHide">운전면허증</label>
+								<ul class="columnSet phoneNumInput">
+									<li>
+										<label for="ip_drive01_01" class="visualHide">발급 지역 선택</label>
+										<div class="textInput">
+											<input type="text" id="ip_drive01_01" placeholder="" class="formInput">
+										</div>
+									</li>
+									<li>
+										<label for="ip_drive01_02" class="visualHide">운전면허번호 두번째 2자리</label>
+										<div class="numberInput">
+											<input type="tel" id="ip_drive01_02" placeholder="" class="formInput" maxlength="2">
+										</div>
+									</li>
+									<li>
+										<label for="ip_drive01_03" class="visualHide">운전면허번호 세번째 6자리</label>
+										<div class="columnSet withGutter col-valign">
+											<input type="tel" id="ip_drive01_03" placeholder="" class="formInput" maxlength="6">
+										</div>
+									</li>
+									<li>
+										<label for="ip_drive01_04" class="visualHide">운전면허번호 네번째 2자리</label>
+										<div class="columnSet withGutter col-valign">
+											<input type="tel" id="ip_drive01_04" placeholder="" class="formInput"  maxlength="2">
+										</div>
+									</li>
+								</ul>
+								
+
+								<!-- <label for="ip_drive01_01" class="visualHide">운전면허증</label>
+								<div class="select-input span4">
+									<select id="ip_drive01_01" class="formInput" title="발급 지역 선택">
+										<option>선택</option>
+									</select>
+								</div>
+								<div class="span8 last clearfix">
+									<div class="dash_input span3">
+										<label for="ip_drive01_02" class="visualHide">운전면허번호 두번째 2자리</label>
+										<input type="text" id="ip_drive01_02" placeholder="" class="formInput">
+									</div>
+									<div class="dash_input span6">
+										<label for="ip_drive01_03" class="visualHide">운전면허번호 세번째 6자리</label>
+										<input type="text" id="ip_drive01_03" placeholder="" class="formInput span6">
+									</div>
+									<div class="dash_input span3 last">
+										<label for="ip_drive01_04" class="visualHide">운전면허번호 네번째 2자리</label>
+										<input type="text" id="ip_drive01_04" placeholder="" class="formInput">
+									</div>
+								</div> -->
+
+							</div>
+
+						</div>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

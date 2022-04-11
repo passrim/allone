@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>너도나도 환전신청 내역조회</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+		<script>
+		$(document).ready(function(){
+			$('#autoTrue').change(function(){
+				if($(this).is(':checked')) {
+					$('#toggleTab1').toggleClass('is-current');
+					$('#toggleTab2').toggleClass('is-current');
+				}
+			});
+			$('#autoFalse').change(function(){
+				if($(this).is(':checked')) {
+					$('#toggleTab2').toggleClass('is-current');
+					$('#toggleTab1').toggleClass('is-current');
+				}
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth">
+						<nav class="tabNav">
+							<ul class="columnSet">
+								<li class="colItem is-on" data-tab="tabCont1"><a href="javascript:;">너도나도 환전신청<br />(가상계좌 방식)</a></li>
+								<li class="colItem" data-tab="tabCont2"><a href="javascript:;">알뜰 환전신청<br />(계좌출금 방식)</a></li>
+							</ul>
+						</nav>
+
+						<div class="serviceNote">
+							<ul class="unorderList">
+								<li>너도나도 환전신청(가상계좌방식) 내역은 환전번호 또는 개인정보를 입력하여 조회하실 수 있습니다.</li>
+								<li>알뜰 환전신청 내역은 로그인하신 후 조회하실 수 있습니다.</li>
+							</ul>
+						</div>
+					</section>
+					<section class="with-fixedBtn">
+						<h2 class="visualHide">너도나도 환전신청(가상계좌 방식)</h2> <!-- 2018-09-10 탭 타이틀 추가 -->
+						<form>
+							<fieldset class="formWrap">
+								<legend>환전 방식 선택</legend>
+
+								<ul class="columnSet noGutterSet marginB10">
+									<li class="colItem">
+										<input type="radio" value="환전번호입력" name="paySelect" id="autoTrue"  checked="checked" class="btn radioToggle">
+										<label for="autoTrue" class="inputLabel secondary strokeType">환전번호입력</label>
+									</li>
+									<li class="colItem">
+										<input type="radio" value="개인정보입력" name="paySelect" id="autoFalse" class="btn radioToggle">
+										<label for="autoFalse" class="inputLabel secondary strokeType">개인정보입력</label>
+									</li>
+								</ul>
+								<!-- 환전번호 입력 영역 -->
+								<div id="toggleTab1" class="tabContent pdT0 is-current"> <!-- is-current 추가시 해당 서비스의 컨텐츠가 노출 -->
+									<h3 class="visualHide">환전번호 입력 탭</h3> <!-- 2018-09-10 탭 타이틀 추가 -->
+									<!-- 환전번호 입력 -->
+									<label for="inputLabel1">환전번호입력  <i class="required"></i></label>
+									<div class="numberInput">
+										<input type="tel" id="inputLabel1" placeholder="환전번호 14자리 입력" class="formInput" name="">
+									</div>
+									<span class="fieldNotes normal-info">너도나도 환전신청 시 환전번호를 입력해 주세요.</span>
+									
+									<!-- 조회기간 -->
+									<label for="inputLabel2">조회기간</label>
+									<ul class="columnSet calendarInput">
+										<li class="colItem">
+											<label for="ip_calendar01_01" class="visualHide">시작일 설정</label> <!-- 0913 : 접근성 레이블 및 타이틀 반영 -->
+											<div class="calendar">
+												<input type="text" id="ip_calendar01_01" placeholder="" class="formInput search-input">
+												<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+											</div>
+										</li>
+										<li class="colItem">
+											<label for="ip_calendar01_02" class="visualHide">종료일 설정</label> 
+											<div class="calendar">
+												<input type="text" id="ip_calendar01_02" placeholder="" class="formInput search-input"><!-- 0913 : 접근성 레이블 및 타이틀 반영 -->
+												<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+											</div>
+										</li>
+									</ul>
+									<span class="fieldNotes normal-info">너도나도 환전 거래내역 조회는 조회당일로부터 과거 2개월 간만 가능합니다.</span><!-- 2018-09-10 문구수정 -->
+								</div>
+
+								<!-- 개인정보 입력 영역  -->
+								<div id="toggleTab2" class="tabContent pdT0">
+								<h3 class="visualHide">개인정보 입력 탭</h3> <!-- 2018-09-10 탭 타이틀 추가 -->
+									<!-- 이름 -->
+									<label for="inputLabel3">성명 <i class="required"></i></label> 
+									<div class="textInput">
+										<input type="text" id="inputLabel3" placeholder="이름 입력" class="formInput" name="" aria-required="true" />
+									</div>
+									
+									<!-- 생년월일 -->
+									<label for="inputLabel2">생년월일 <i class="required"></i></label> 
+									<ul class="columnSet socialnumInput">
+										<li>
+											<label for="inputLabel2" class="visualHide">생년월일 6자리</label> 
+											<div class="numberInput">
+												<input type="tel" id="inputLabel5" placeholder="생년월일 입력" class="formInput" maxlength="6" aria-required="true" />
+											</div>
+										</li>
+										<li>
+											<label for="inputLabel6" class="visualHide">주민등록번호 뒷 7자리</label>
+											<div class="numberInput">
+												<input type="tel" id="inputLabel6" placeholder="주민번호 뒷자리 입력" class="formInput" maxlength="7" aria-required="true" />
+											</div>
+										</li>
+									</ul>
+									
+									<!-- 2018-09-10 생년월일 설명 문구 삭제  -->
+									
+									<!-- 연락처 -->
+									<label for="inputLabel1">전화번호 <i class="required"></i></label>
+									<dl class="columnSet phoneInput">
+										<dt>
+											<label for="phoneNum" class="visualHide">핸드폰 앞자리</label>
+											<div class="select-input">
+												<select id="phoneNum" class="formInput" name="" aria-required="true">
+													<option value="010" label="010">010</option>
+													<option value="017" label="017">017</option>
+												</select>
+											</div>
+										</dt>
+										<dd>
+											<label for="inputLabel4" class="visualHide">핸드폰 뒷자리</label> 
+											<input type="tel" id="inputLabel4" placeholder="-없이 입력" class="formInput" name="phone" maxlength="8">	
+										</dd>
+									</dl>
+									
+									<!-- 조회기간 -->
+									<label for="inputLabel2">조회기간</label>
+									<ul class="columnSet calendarInput">
+										<li class="colItem">
+											<label for="ip_calendar02_01" class="visualHide">시작일 설정</label> 
+											<div class="calendar">
+												<input type="text" id="ip_calendar02_01" placeholder="" class="formInput search-input"><!-- 0913 : 접근성 레이블 및 타이틀 반영 -->
+												<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+											</div>
+										</li>
+										<li class="colItem">
+											<label for="ip_calendar02_02" class="visualHide">종료일 설정</label> 
+											<div class="calendar">
+												<input type="text" id="ip_calendar02_02" placeholder="" class="formInput search-input"><!-- 0913 : 접근성 레이블 및 타이틀 반영 -->
+												<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+											</div>
+										</li>
+									</ul>
+									<span class="fieldNotes normal-info">너도나도 환전 거래내역 조회는 조회당일로부터 과거 2개월 간만 가능합니다.</span><!-- 2018-09-10 문구수정 -->
+								</div>
+							</fieldset>
+						</form>
+					</section>
+					<button type="submit" class="btn primary submit selfBottom">조회</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

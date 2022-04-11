@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>NH투자증권 - 보장자산진단</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth">
+						<dl class="dataList bdzero">
+							<dt>기준일자</dt><dd>2018-05-28</dd>
+							<dt>보험현황</dt><dd>1건</dd>
+							<dt>금액</dt><dd>100,000원</dd>
+						</dl>
+					</section>
+					<section class="fullWidth topbordered">
+						<h3>사망 시 가족을 위한 보장</h3>
+						<table class="dataTable colStyle">
+							<caption>기본 데이터 테이블</caption>
+							<tbody>
+								<tr>
+									<th scope="row">보장자산<br>(일반사항)</th>
+									<td>300만원</td>
+								</tr>
+								<tr>
+									<th scope="row">암사망</th>
+									<td>300만원</td>
+								</tr>
+								<tr>
+									<th scope="row">교통재해사망</th>
+									<td>300만원</td>
+								</tr>
+							</tbody>
+						</table>
+						<ul class="unorderList hyphenList pdT5 pdB20 pdRL15">
+							<li class="certifyTxt fz-11">“재해”는 우발적인 외래의 사고로써 상품별 “재해분류표”에서 규정한 사고를 말합니다.</li>
+							<li class="certifyTxt fz-11">“교통재해”는 교통기관에 의해 발생한 외래의 사고로써 “교통 재해분류표”에서 규정한 사고를 말합니다.</li>
+						</ul>
+					</section>
+					<section class="fullWidth topbordered">
+						<h3>질병-사고발생시 치료를 위한 보장</h3>
+						<table class="dataTable colStyle">
+							<caption>기본 데이터 테이블</caption>
+							<tbody>
+								<tr>
+									<th scope="row">뇌출혈진단</th>
+									<td>300만원</td>
+								</tr>
+								<tr>
+									<th scope="row">급성심근결색증진단</th>
+									<td>300만원</td>
+								</tr>
+								<tr>
+									<th scope="row">고액암</th>
+									<td>300만원</td>
+								</tr>
+								<tr>
+									<th scope="row">일반암</th>
+									<td>300만원</td>
+								</tr>
+							</tbody>
+						</table>
+						
+						<ul class="unorderList hyphenList pdT5 pdB20 pdRL15">
+							<li class="certifyTxt fz-11">본 자료는 고객님의 보험에 대한 개괄적인 이해를 돕기 위한 것으로서, 보험 계약별로 보장내용 등이 다를 수 있으므로 자세한 사항은 약관을 참조해 주시기 바랍니다.</li>
+							<li class="certifyTxt fz-11">본 자료는 보험금 등의 지급근거가 될 수  없으며, 농협생명은 본 자료에 근거한 어떠한 권리나 의무를 갖거나 부담하지 않습니다.</li>
+						</ul>
+					</section>
+					<section class="fullWidth topbordered no-fixed">
+						<h3 class="bdB1">보장자산 결과 과부족내역</h3>
+						<div class="rightTxt pdRL15 pdT20 pdB5">
+							<span class="fz-11">(단위 : 만원)</span>
+						</div>
+						<div class="pdRL15">
+							<table class="dataTable rowStyle">
+								<caption>기본 데이터 테이블</caption>
+								<thead>
+									<tr>
+										<!-- 테이블간의 넓이 조정시 class rowSpan1, rowSpan2, rowSpan3, rowSpan4, rowSpan6 추가 -->
+										<!-- rowSpan6 : 50%, rowSpan4 : 33.33%, rowSpan3 : 25% -->
+										<th scope="col" class="rowSpan3">구분</th>
+										<th scope="col" class="rowSpan3">현재보장</th>
+										<th scope="col" class="rowSpan3">표준보장</th>
+										<th scope="col" class="rowSpan3">과부족</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>암사망</td>
+										<td>300</td>
+										<td>100,000</td>
+										<td class="greenOn">-9,700</td>
+									</tr>
+									<tr>
+										<td>일반사망</td>
+										<td>300</td>
+										<td>100,000</td>
+										<td class="greenOn">9,700</td>
+									</tr>
+									<tr>
+										<td>교통재해 사망</td>
+										<td>300</td>
+										<td>100,000</td>
+										<td class="greenOn">9,700</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<ul class="unorderList hyphenList pdT5 pdB20 pdRL15">
+							<li class="certifyTxt fz-11">상기내용은 고객님의 이해를 돕기위한 것으로 실제와 다를 수 있습니다.</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

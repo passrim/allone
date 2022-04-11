@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>채팅상담</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div class="topAdvice">
+							<h3>올원뱅크 상담원은 항상<br>고객님의 문의를 기다리고 있습니다.</h3>
+							<p>올원뱅크에서 제공하는 채팅상담 서비스를 통해 상품내용이나 가입방법 등 고객님께서 평소에 궁금하셨던 상품과 관련한 내용들을 상담사와의 채팅을 통해 실시간으로 확인하실 수 있습니다.</p>
+						</div>
+						<div class="adviceUtil">
+							<ul class="adviceList">
+								<li class="step1_1">
+									<dl>
+										<dt>1. 채팅창 실행하기</dt>
+										<dd>채팅상담하기 버튼을 선택하시면 채팅창이 실행됩니다.</dd>
+									</dl>
+								</li>
+								<li class="step1_2">
+									<dl>
+										<dt>2. 채팅서비스 진행</dt>
+										<dd>선택하신 상담분류를 기준으로 전문상담사와 채팅을 진행합니다.</dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+					</section>
+					<section class="fullWidth topbordered">
+						<ul class="accordion">
+							<li>
+								<dl>
+									<dt class="js-active" aria-label="꼭 알아두세요!"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a></dt>  <!-- 2018-09-07 클래스 추가 -->
+									<dd>
+										<ul class="unorderList">
+											<li>고객 상담시간(09:00~18:00)에만 채팅상담을 이용하실 수 있습니다.</li>
+										</ul>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+						</ul>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="submit" class="btn primary submit">채팅상담하기</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

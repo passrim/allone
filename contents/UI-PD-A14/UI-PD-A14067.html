@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>NH - AGRI 무계좌 해외송금</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- breadcrumb -->
+					<section class="breadcrumb columnSet">
+						<h2>보내는 분/받는 분 정보 입력</h2>
+						<ol class="step columnSet">
+							<li class="is-on">1</li>
+							<li class="is-off">4</li>
+						</ol>
+					</section>
+					
+					<section class="with-fixedBtn fullWidth">
+						<fieldset class="formWrap">
+							<legend>송금용도</legend>
+							<ul class="columnSet withGutter marginB25">
+								<li class="colItem">
+									 <!-- 2018-09-11 문구변경  -->
+									<button type="submit" class="btn call-datalist">미리메모내역<br />가져오기 <i class="i-memo-import"></i></button> <!-- 2018-09-05 클래스 변경  -->
+								</li>
+								<li class="colItem">
+									<button type="submit" class="btn call-datalist">과거송금<br />조회 후 송금 <i class="i-history-import"></i></button> <!-- 2018-09-05 클래스 변경  -->
+								</li>
+							</ul>
+
+							<label for="inputLabel3">송금용도</label>
+							<ul class="columnSet noGutterSet">
+								<li class="colItem">
+									<input type="radio" value="내국인" name="residential" id="autoTrue" class="btn radioToggle" checked="checked">
+									<label for="autoTrue" class="inputLabel secondary strokeType">내국인</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" value="외국인" name="residential" id="autoFalse" class="btn radioToggle">
+									<label for="autoFalse" class="inputLabel secondary strokeType">외국인</label>
+								</li>
+							</ul>
+							
+							<label for="inputLabel3" class="visualHide">송금유형</label>
+							<!--  div class="textInput">
+								<input type="text" id="inputLabel3" placeholder="지급증빙서류미제출송금" class="formInput" name="" disabled="disabled">
+							</div-->
+							<div class="select-input">
+								<select id="inputLabel3" class="formInput" name="" aria-required="true" >
+									<option value="국내단기취업자임금" label="국내단기취업자임금">국내단기취업자임금</option>
+									<option value="국내장기취업자임금" label="국내장기취업자임금">국내장기취업자임금</option>
+								</select>
+							</div>
+							<label for="inputLabel3">사후관리점 <i class="required"></i></label>
+							<div class="searchBar">
+								<input type="text" id="inputLabel2" placeholder="" aria-required="true" class="formInput" name="" disabled="disabled"><!-- 0913 : 접근성 레이블 제공 -->
+								<button type="submit" class="btn secondary floatSearch">조회하기</button>
+							</div>
+							<span class="fieldNotes normal-info">사후관리시 편리한 영업점을 선택해주세요.</span>
+						</fieldset>
+						
+						<h3>보내는 분 정보</h3>
+						<fieldset class="formWrap">
+							<legend>보내는 분 정보</legend>
+							<label for="inputLabel3">영문이름</label>
+							<div class="textInput">
+								<input type="text" id="inputLabel3" placeholder="" class="formInput" name="" disabled="disabled">
+							</div>
+							
+							<label for="inputLabel3">전화번호 <i class="required"></i></label>
+							<dl class="columnSet phoneInput">
+								<dt>
+									<label for="phoneNum" class="visualHide">전화번호 앞 세자리</label>
+									<div class="select-input">
+										<select id="phoneNum" class="formInput" name="" aria-required="true" >
+											<option value="010" label="010">010</option>
+											<option value="017" label="017">017</option>
+										</select>
+									</div>
+								</dt>
+								<dd>
+									<label for="inputLabel5" class="visualHide">전화번호 뒷자리</label> 
+									<input type="tel" id="inputLabel4" placeholder="-없이 입력" class="formInput" name="phone" maxlength="8">			
+								</dd>
+							</dl>
+							<span class="fieldNotes normal-info">즉시연락 가능한 전화번호를 입력해 주세요.</span>
+						</fieldset>
+						
+						<h3>받는 분 정보</h3>
+						<fieldset class="formWrap">
+							<legend>받는 분 정보 </legend>
+							<label for="inputLabel3">영문이름 <i class="required"></i></label>
+							<div class="textInput">
+								<input type="text" id="inputLabel3" placeholder="" class="formInput" name=""aria-required="true" />
+							</div>
+							<span class="fieldNotes normal-info">부족한 경우 영문 주소란에 연속하여 입력합니다.</span>
+							
+							<label for="inputLabel3">전화번호 <i class="required"></i></label>
+							<div class="textInput">
+								<input type="text" id="inputLabel3" placeholder="-없이 입력" class="formInput" name="" aria-required="true" />
+							</div>
+							<span class="fieldNotes normal-info">일부은행의 경우 받는 분에게 연락합니다.</span>
+							
+							<label for="selectLabel1">주소 <i class="required"></i></label>
+							<div class="textInput">
+								<label for="inputLabel5" class="visualHide">상세주소 입력</label>
+								<input type="text" id="inputLabel3" placeholder="상세주소 입력" class="formInput" name="" aria-required="true"  />
+							</div>
+							
+							<div class="textInput">
+								<label for="inputLabel5" class="visualHide">나머지 주소입력</label>
+								<input type="text" id="inputLabel3" placeholder="나머지 주소 입력" class="formInput" name="">
+							</div>	
+							
+							<label for="inputLabel5">수취국가</label>
+							<div class="textInput">
+								<input type="text" id="inputLabel3" placeholder="VN 베트남" class="formInput" name="" disabled="disable">
+							</div>	
+							
+							<label for="inputLabel5">수취은행 정보(SWIFT CODE)</label>
+							<div class="textInput">
+								<input type="text" id="inputLabel3" placeholder="AGRI BANK(VBAAVNVXXXX)" class="formInput" name="" disabled="disable">
+							</div>	
+						</fieldset>
+					</section>
+					<button type="submit" class="btn primary submit selfBottom">다음</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

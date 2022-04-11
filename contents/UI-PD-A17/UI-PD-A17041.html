@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>오류 안내</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="javascript:void(0);">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header visualHide">
+					<h1 class="headerTitle">오류 안내</h1>
+				</div>
+				<div class="content errorPage" data-role="content">
+					<section>
+						<div class="completeMsg stopMsg">
+							<h2 class="error-headline">서비스 임시 중단 안내</h2>
+							<p class="errorMsg pdBothz">올원뱅크 APP 시스템 점검 및 개선 작업으로 인해 <span class="dp-inblock">서비스가 잠시 중단되었습니다.</span></p>
+							<p class="errorMsg pdBothz">보다 향상된 서비스를 제공하기 위함이니 <span class="dp-inblock">고객님들의 양해 부탁 드립니다.</span></p>
+						</div>
+					</section>
+					<p class="error-csInfo"><span class="iconTel">고객행복센터</span> : <a href="tel:1661-3000">1661-3000</a>, <a href="tel:1522-3000">1522-3000</a></p>
+					<button type="submit" class="btn primary submit selfBottom"">종료하기</button>
+
+				</div>
+			</div>
+		</div>
+		<!-- //fullPopup -->
+
+	</body>
+</html>

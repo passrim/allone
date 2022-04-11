@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>step1_NH농협생명 - 보험계약대출</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>신청정보입력</h2>
+						<ol class="step columnSet twoSet">
+							<li class="is-on">1</li>
+							<li class="is-off">5</li>
+						</ol>
+					</section>
+					<section class="">
+						<div class="formWrap">
+							<label for="inputLabel1">상품명</label>
+							<div class="textInput">
+								<input type="text" id="inputLabel1" placeholder="농협" class="formInput" name="" disabled="disabled">
+								<button type="button" class="btn deleteBtn" style="display: none;">삭제</button>
+							</div>
+							<label for="inputLabel2">증권번호</label>
+							<div class="textInput">
+								<input type="text" id="inputLabel2" placeholder="농협" class="formInput" name="" disabled="disabled">
+								<button type="button" class="btn deleteBtn" style="display: none;">삭제</button>
+							</div>
+							<label for="inputLabel3">대출이율</label>
+							<div class="textInput">
+								<input type="text" id="inputLabel3" placeholder="농협" class="formInput" name="" disabled="disabled">
+								<button type="button" class="btn deleteBtn" style="display: none;">삭제</button>
+							</div>
+							<label for="inputLabel4">대출가능금액</label>
+							<div class="numberInput">
+								<div class="balance balance-display" data-currency="원">
+									<input type="tel" id="inputLabel5" placeholder="1,000,000" class="formInput balance-input" name="" disabled="disabled">
+								</div>
+							</div>
+							<label for="inputLabel5">신청금액</label>
+							<div class="numberInput">
+								<div class="balance balance-display" data-currency="원">
+									<input type="tel" id="inputLabel5" placeholder="1,000,000" class="formInput balance-input" name="">
+								</div>
+							</div>
+							<label for="inputLabel6">지급일자</label>
+							<div class="textInput">
+								<input type="text" id="inputLabel6" placeholder="농협" class="formInput" name="" disabled="disabled">
+								<button type="button" class="btn deleteBtn" style="display: none;">삭제</button>
+							</div>
+						</div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="submit" class="btn primary submit">다음</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

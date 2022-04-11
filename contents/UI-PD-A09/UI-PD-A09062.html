@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>경조금보내기</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<nav class="tabNav tabOverflow">
+						<ul class="columnSet">
+							<li class="colItem is-on" data-tab="tabCont1"><a href="javascript:;">결혼</a></li>
+							<li class="colItem" data-tab="tabCont2"><a href="javascript:;">부고</a></li>
+							<li class="colItem" data-tab="tabCont3"><a href="javascript:;">첫돌/생일</a></li>
+							<li class="colItem" data-tab="tabCont4"><a href="javascript:;">회갑/칠순</a></li>
+							<li class="colItem" data-tab="tabCont5"><a href="javascript:;">감사장</a></li>
+							<li class="colItem" data-tab="tabCont6"><a href="javascript:;">기타</a></li>
+						</ul>
+					</nav>
+
+					<div id="tabCont1" class="tabContent is-current noPadding">
+						<section class="fullWidth">
+							<h2 class="visualHide">결혼</h2><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+							<div class="imgArea"> <!-- 1010 -->
+								<img src="../../assets/img/bank/invite_rolling/send01.jpg" alt="결혼을 축하합니다"/>
+								<!--
+								<img src="../../assets/img/bank/invite_rolling/send02.jpg" alt="고인의 명복을 빕니다"/>
+								<img src="../../assets/img/bank/invite_rolling/send03.jpg" alt="Happy Birthday"/>
+								<img src="../../assets/img/bank/invite_rolling/send04.jpg" alt="부모님 감사합니다"/>
+								<img src="../../assets/img/bank/invite_rolling/send05.jpg" alt="감사합니다"/>
+								<img src="../../assets/img/bank/invite_rolling/send06.jpg" alt="감사합니다"/> 
+								-->
+							</div>
+						</section>
+					</div>
+
+					<div id="tabCont2" class="tabContent noPadding">
+						<section class="fullWidth">
+							<h2 class="visualHide">부고</h2>
+							<div class="imgArea">
+								<img src="../../assets/img/bank/invite_rolling/send02.jpg" alt="부고"/>
+							</div>
+						</section>
+					</div>
+					<div id="tabCont3" class="tabContent noPadding">
+						<section class="fullWidth">
+							<h2 class="visualHide">첫돌/생일</h2>
+							<div class="imgArea">
+								<img src="../../assets/img/bank/invite_rolling/send03.jpg" alt="첫돌/생일"/>
+							</div>
+						</section>
+					</div>
+					<div id="tabCont4" class="tabContent noPadding">
+						<section class="fullWidth">
+							<h2 class="visualHide">회갑/칠순</h2>
+							<div class="imgArea">
+								<img src="../../assets/img/bank/invite_rolling/send04.jpg" alt="회갑/칠순"/>
+							</div>
+						</section>
+					</div>
+					<div id="tabCont5" class="tabContent noPadding">
+						<section class="fullWidth">
+							<h2 class="visualHide">감사장</h2>
+							<div class="imgArea">
+								<img src="../../assets/img/bank/invite_rolling/send05.jpg" alt="감사장"/>
+							</div>
+						</section>
+					</div>
+					<div id="tabCont6" class="tabContent noPadding">
+						<section class="fullWidth">
+							<h2 class="visualHide">기타</h2>
+							<div class="imgArea">
+								<img src="../../assets/img/bank/invite_rolling/send06.jpg" alt="기타"/>
+							</div>
+						</section>
+					</div>
+
+
+					<section class="fullWidth">
+						<div class="sectionWrap">
+							<label for="f_ment">인사말</label>
+							<div class="select-input">
+								<select id="f_ment" class="formInput">
+									<option value="default" label="인사말 선택">인사말 선택</option>
+								</select>
+							</div>
+
+							<label for="f_textArea" class="visualHide">직접입력</label>
+							<div class="limitTextArea">
+								<textarea class="" id="f_textArea" placeholder="원하는 안사말이 없을 경우 직접 입력" name="" ></textarea> <!--1010 -->
+								<div class="footObj floating">
+									<div class="score"><strong>0</strong>/50</div>
+								</div>
+							</div>
+							<!-- 1010 -->
+							<!-- <ul class="attachBtn mgT15">
+								<li data-type="smile"><a href="javascript:;"><span class="visualHide">이모티콘 추가</span></a></li>
+							</ul> -->
+						</div>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="submit" class="btn primary submit">송금하기</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

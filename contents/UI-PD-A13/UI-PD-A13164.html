@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>외화포켓예금</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>고객확인사항 및 약관동의</h2>
+						<ol class="step columnSet twoSet">
+							<li class="is-on">1</li>
+							<li class="is-off">3</li>
+						</ol>
+					</section>
+
+					<section class="fullWidth">
+						<div class="titleArea">
+							<div class="titleWrap">
+								<h3 class="tTitle">서비스 이용시간</h3>
+								<p><span class="greenOn">평일(은행영업일) 09:00~18:00, 토요일/일요일/공휴일 이용불가</span></p>
+							</div>
+						</div>
+
+						<div class="sectionWrap pdT10">
+							<ul class="dataType-list agreement">
+								<li>
+									<div class="checkbox ">
+										<input type="checkbox" id=""><label for="">전체동의</label>
+									</div>
+									<a href="javascript:void(0);">전체동의</a>
+									<!-- 화살표 링크 없는 케이스 -->
+									<!-- <div class="checkbox withLabel allAgree">
+										<input type="checkbox" id=""><label for="">전체동의</label>
+									</div> -->
+									<ul>
+										<li>
+											<div class="checkbox">
+												<input type="checkbox" id=""><label for="">체크</label>
+											</div>
+											<a href="javascript:;">외화예금거래 기본약관, 자동계좌이체약관, 인터넷연결계좌서비스이용약관</a>
+										</li>
+										<li>
+											<div class="checkbox">
+												<input type="checkbox" id=""><label for="">체크</label>
+											</div>
+											<a href="javascript:;">적립식예금약관</a>
+										</li>
+										<li>
+											<div class="checkbox">
+												<input type="checkbox" id=""><label for="">체크</label>
+											</div>
+											<a href="javascript:;">올원외화포켓적립예금 특약</a>
+										</li>
+										<!-- 0919 중복삭제 -->
+										<!-- <li>
+											<div class="checkbox">
+												<input type="checkbox" id=""><label for="">체크</label>
+											</div>
+											<a href="javascript:;">올원외화포켓적립예금 특약</a>
+										</li> -->
+										<li>
+											<div class="checkbox">
+												<input type="checkbox" id=""><label for="">체크</label>
+											</div>
+											<a href="javascript:;">올원외화포켓적립예금 상품설명서</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+
+							<ul class="dataType-list agreement">
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id=""><label for="">체크</label>
+									</div>
+									<a href="javascript:void(0);">불법&middot;탈법 차명거래금지 설명 확인</a>
+								</li>
+							</ul>
+
+							<!-- 
+							<ul class="dataType-list agreement">
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id=""><label for="">체크</label>
+									</div>
+									<a href="javascript:void(0);">외화예금거래 기본약관</a>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id=""><label for="">체크</label>
+									</div>
+									<a href="javascript:void(0);">적립식예금약관</a>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id=""><label for="">체크</label>
+									</div>
+									<a href="javascript:void(0);">자동계좌이체약관</a>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id=""><label for="">체크</label>
+									</div>
+									<a href="javascript:void(0);">인터넷연결계좌서비스이용약관</a>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id=""><label for="">체크</label>
+									</div>
+									<a href="javascript:void(0);">올원외화포켓적립예금 특약</a> 0827
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id=""><label for="">체크</label>
+									</div>
+									<a href="javascript:void(0);">올원외화포켓적립예금 상품설명서</a>0827
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id=""><label for="">체크</label>
+									</div>
+									<a href="javascript:void(0);">불법·탈법 차명거래 금지 설명 확인</a>0827
+								</li>
+							</ul>
+							 -->
+						</div>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

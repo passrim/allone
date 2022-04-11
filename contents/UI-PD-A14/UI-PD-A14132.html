@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>베트남간편송금 내역조회</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					
+					<section class="no-fixed fullWidth">
+						<p class="mgT15 pdBoth15">서비스 이용시간: <span class="greenOn">동 서비스는 00:30~24:00까지 조회가 가능합니다.(토,일,공휴일 포함)</span></p>
+						<div class="periodSearch marginT15">
+							<ul class="columnSet noGutterSet">
+								<li class="colItem">
+									<input type="radio" id="today" class="btn radioToggle" value="today" name="blockDate">
+									<label for="today" class="inputLabel secondary strokeType">당일</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" id="3days" class="btn radioToggle" value="3days" name="blockDate">
+									<label for="3days" class="inputLabel secondary strokeType">3일</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" id="1month" class="btn radioToggle" value="1month" name="blockDate">
+									<label for="1month" class="inputLabel secondary strokeType">1개월</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" id="3month" class="btn radioToggle" value="3month" name="blockDate">
+									<label for="3month" class="inputLabel secondary strokeType">3개월</label>
+								</li>
+								<li class="svgBtn detailSearch">
+									<input type="checkbox" id="detailBtn"><label for="detailBtn">상세검색</label>
+								</li>
+							</ul>
+						</div>
+						<div class="periodBox">
+							<ul class="columnSet calendarInput">
+								<li class="colItem">
+									<div class="calendar">
+										<input type="text" id="ip_calendar01_01" title="조회 시작일" placeholder="2018-05-01" class="formInput search-input"><!-- 0913 : 접근성 레이블 및 타이틀 반영 -->
+										<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+									</div>
+								</li>
+								<li class="colItem">
+									<div class="calendar">
+										<input type="text" id="ip_calendar01_02" title="조회 종료일" placeholder="2018-05-01" class="formInput search-input"><!-- 0913 : 접근성 레이블 및 타이틀 반영 -->
+										<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+									</div>
+								</li>
+							</ul>
+							<button type="submit" class="btn secondary-gray">조회</button>
+						</div>
+						<p class="sectionBordered"></p>
+						
+						<h3 class="marginT10">조회 건수 <span class="greenOn">2</span>건</h3>
+						<!-- 조회 결과값이 없을때  -->
+						<ul class="rowStyle">
+							<li class="noData"><p class="paddingAll">조회 결과가 없습니다.</p></li>
+						</ul>
+						<ul class="rowStyle bdB0">
+							<li>
+								<dl class="dataList bdB0 bdT0">
+									<dt>송금번호(PIN NO.)</dt>
+									<dd>NHA12345643</dd>
+									<dt>신청일자</dt>
+									<dd>2018-06-30 19:24:24</dd>
+									<dt>송금액</dt>
+									<dd>USD 361.00</dd>
+									<dt>수취인</dt>
+									<dd>MIKE</dd>
+									<dt>구분</dt>
+									<dd>0001</dd>
+								</dl>
+								<div class="actionBox">
+									<button type="submit" class="btn secondary">자세히보기</button>
+								</div>
+							</li>
+							<li>
+								<dl class="dataList bdB0 bdT0">
+									<dt>송금번호(PIN NO.)</dt>
+									<dd>NHA12345643</dd>
+									<dt>신청일자</dt>
+									<dd>2018-06-30 19:24:24</dd>
+									<dt>송금액</dt>
+									<dd>USD 361.00</dd>
+									<dt>수취인</dt>
+									<dd>MIKE</dd>
+									<dt>구분</dt>
+									<dd>0001</dd>
+								</dl>
+								<div class="actionBox">
+									<button type="submit" class="btn secondary">자세히보기</button>
+								</div>
+							</li>
+						</ul>
+						<button type="button" class="btn more-btn bdB1">더보기(<span>1</span><span>10</span>)<span></span></button>
+					</section>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>적립tab - 나의 리워드</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content newAccount" data-role="content">
+					<section class="rewardInfo">
+						<p class="myPointTxt">나의 올원캔디</p>
+						<p class="myPoint"><strong>1,832</strong>개</p>
+						<!-- <button type="button" class="btn reward">올원캔디 안내</button> -->
+						<ul class="infoBox">
+							<li>
+								<dl>
+									<dt>당월 적립</dt><dd>135<span>개</span></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>당월 차감</dt><dd>10<span>개</span></dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt>당월 소멸예정</dt><dd>0<span>개</span></dd>
+								</dl>
+							</li>
+						</ul>
+					</section>
+					<section class="fullWidth topbordered">
+						<!-- 2018-09-29 배너영역 추가 -->
+						<iframe src="../../cms/util/NABRW1001R_iframe01.html" class="iframes alloneEvent" title="인천공항 선착순 커피이벤트 배너"></iframe> <!-- 2018-10-26 클래스 추가  -->
+					</section>
+					<section class="fullWidth topbordered">
+						<nav class="tabNav">
+							<ul class="columnSet">
+								<li class="colItem is-on" data-tab="tabCont1"><a href="javascript:;">적립</a></li>
+								<li class="colItem" data-tab="tabCont2"><a href="javascript:;">차감</a></li>
+								<li class="colItem" data-tab="tabCont3"><a href="javascript:;">소멸</a></li>
+							</ul>
+						</nav>
+						<div id="tabCont1" class="tabContent fullWidth is-current">
+							<h2 class="visualHide">적립</h2><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+							<div class="periodSearch pdT15">
+								<ul class="columnSet noGutterSet">
+									<li class="colItem">
+										<input type="radio" id="today" class="btn radioToggle" value="today" name="blockDate">
+										<label for="today" class="inputLabel secondary strokeType">1주일</label>
+									</li>
+									<li class="colItem">
+										<input type="radio" id="3days" class="btn radioToggle" value="3days" name="blockDate">
+										<label for="3days" class="inputLabel secondary strokeType">1개월</label>
+									</li>
+									<li class="colItem">
+										<input type="radio" id="1month" class="btn radioToggle" value="1month" name="blockDate">
+										<label for="1month" class="inputLabel secondary strokeType">3개월</label>
+									</li>
+									<li class="colItem">
+										<input type="radio" id="3month" class="btn radioToggle" value="3month" name="blockDate">
+										<label for="3month" class="inputLabel secondary strokeType">6개월</label>
+									</li>
+									<li class="svgBtn detailSearch">
+										<input type="checkbox" id="detailBtn"><label for="detailBtn">상세검색</label>
+									</li>
+								</ul>
+							</div>
+							<div class="periodBox">
+								<ul class="columnSet calendarInput">
+									<li class="colItem">
+										<div class="calendar">
+											<input type="text" id="ip_calendar01_01" title="조회 시작일" placeholder="2018-05-01" class="formInput search-input"><!-- 0913 : 접근성 레이블 및 타이틀 반영 -->
+											<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+										</div>
+									</li>
+									<li class="colItem">
+										<div class="calendar">
+											<input type="text" id="ip_calendar01_02" title="조회 종료일" placeholder="2018-05-01" class="formInput search-input"><!-- 0913 : 접근성 레이블 및 타이틀 반영 -->
+											<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+										</div>
+									</li>
+								</ul>
+								<label for="inputLabel6">정렬순서</label>
+								<ul class="columnSet noGutterSet">
+									<li class="colItem">
+										<input type="radio" id="listNew" class="btn radioToggle" value="listNew" name="listOrder">
+										<label for="listNew" class="inputLabel secondary">최근순</label>
+									</li>
+									<li class="colItem">
+										<input type="radio" id="listPast" class="btn radioToggle" value="listPast" name="listOrder">
+										<label for="listPast" class="inputLabel secondary">과거순</label>
+									</li>
+								</ul>
+								<button type="submit" class="btn secondary-gray">조회</button> <!-- 2018-10-24 클래서 변경  -->
+							</div>
+							<ul class="rewardList">
+								<li>
+									<ul class="rewardUtil">
+										<li>
+											<p class="Day">2018-05-01</p>
+											<p class="Tit">모임개설</p>
+											<p class="Txt">직장인들 모여라!</p>
+										</li>
+										<li class="point blueOn">20개</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="rewardUtil">
+										<li>
+											<p class="Day">2018-05-01</p>
+											<p class="Tit">모임개설</p>
+										</li>
+										<li class="point blueOn">20개</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="rewardUtil">
+										<li>
+											<p class="Day">2018-05-01</p>
+											<p class="Tit">모임개설</p>
+											<p class="Txt">직장인들 모여라!</p>
+										</li>
+										<li class="point blueOn">20개</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="rewardUtil">
+										<li>
+											<p class="Day">2018-05-01</p>
+											<p class="Tit">모임개설</p>
+										</li>
+										<li class="point blueOn">20개</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div id="tabCont2" class="tabContent fullWidth">
+							<h2 class="visualHide">차감</h2><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+							<div class="periodSearch pdT15">
+								<ul class="columnSet noGutterSet">
+									<li class="colItem">
+										<input type="radio" id="today" class="btn radioToggle" value="today" name="blockDate">
+										<label for="today" class="inputLabel secondary strokeType">1주일</label>
+									</li>
+									<li class="colItem">
+										<input type="radio" id="3days" class="btn radioToggle" value="3days" name="blockDate">
+										<label for="3days" class="inputLabel secondary strokeType">1개월</label>
+									</li>
+									<li class="colItem">
+										<input type="radio" id="1month" class="btn radioToggle" value="1month" name="blockDate">
+										<label for="1month" class="inputLabel secondary strokeType">3개월</label>
+									</li>
+									<li class="colItem">
+										<input type="radio" id="3month" class="btn radioToggle" value="3month" name="blockDate">
+										<label for="3month" class="inputLabel secondary strokeType">6개월</label>
+									</li>
+									<li class="svgBtn detailSearch">
+										<input type="checkbox" id="detailBtn"><label for="detailBtn">상세검색</label>
+									</li>
+								</ul>
+							</div>
+							<div class="periodBox">
+								<ul class="columnSet calendarInput">
+									<li class="colItem">
+										<div class="calendar">
+											<input type="text" id="ip_calendar02_01" title="조회 시작일" placeholder="2018-05-01" class="formInput search-input"><!-- 0913 : 접근성 레이블 및 타이틀 반영 -->
+											<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+										</div>
+									</li>
+									<li class="colItem">
+										<div class="calendar">
+											<input type="text" id="ip_calendar02_02" title="조회 종료일" placeholder="2018-05-01" class="formInput search-input"><!-- 0913 : 접근성 레이블 및 타이틀 반영 -->
+											<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+										</div>
+									</li>
+								</ul>
+								<label for="inputLabel6">정렬순서</label>
+								<ul class="columnSet noGutterSet">
+									<li class="colItem">
+										<input type="radio" id="listNew" class="btn radioToggle" value="listNew" name="listOrder">
+										<label for="listNew" class="inputLabel secondary">최근순</label>
+									</li>
+									<li class="colItem">
+										<input type="radio" id="listPast" class="btn radioToggle" value="listPast" name="listOrder">
+										<label for="listPast" class="inputLabel secondary">과거순</label>
+									</li>
+								</ul>
+								<button type="submit" class="btn primary submit">조회</button>
+							</div>
+							<ul class="rewardList">
+								<li>
+									<ul class="rewardUtil">
+										<li>
+											<p class="Day">2018-05-01</p>
+											<p class="Tit">모임개설</p>
+											<p class="Txt">직장인들 모여라!</p>
+										</li>
+										<li class="point redOn">20P</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="rewardUtil">
+										<li>
+											<p class="Day">2018-05-01</p>
+											<p class="Tit">모임개설</p>
+											<p class="Txt">직장인들 모여라!</p>
+										</li>
+										<li class="point redOn">20P</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						
+						<div id="tabCont3" class="tabContent fullWidth">
+							<h2 class="visualHide">소멸</h2><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+							<p>※ 적립 월 기준 3개월 후 자동 소멸 됩니다.</p>
+							<ul class="rewardList">
+								<li>
+									<ul class="rewardUtil">
+										<li>
+											<p class="Day">2018-05-01</p>
+											<p class="Tit">모임개설</p>
+											<p class="Txt">직장인들 모여라!</p>
+										</li>
+										<li>20P</li>
+									</ul>
+								</li>
+								<li>
+									<ul class="rewardUtil">
+										<li>
+											<p class="Day">2018-05-01</p>
+											<p class="Tit">모임개설</p>
+											<p class="Txt">직장인들 모여라!</p>
+										</li>
+										<li>20P</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

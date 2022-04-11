@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>공인인증서 로그인 - AllOne BANK</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content loginFrame" data-role="content">
+					<ul class="loginContainer">
+						<li class="instruction">
+							<p class="pdB20">공인인증서로 로그인 시<br />아래의 인증서를 선택하세요.</p>
+						</li>
+						<li class="colItem">
+							<ul class="certifications">
+								<li>
+									<a href="javascript: void(0);" role="button" title="사용가능한 인증서">
+										<h3>김올리</h3>
+										<dl>
+											<dt>발급일</dt>
+											<dd>2018-05-01</dd>
+											<dt>구분</dt>
+											<dd>은행개인</dd>
+											<dt>만료일</dt>
+											<dd>2019-01-01</dd>
+										</dl>
+									</a>
+								</li>
+								<li>
+									<a href="javascript: void(0);" role="button" title="사용가능한 인증서">
+										<h3>김코리</h3>
+										<dl>
+											<dt>발급일</dt>
+											<dd>2018-05-01</dd>
+											<dt>구분</dt>
+											<dd>은행개인</dd>
+											<dt>만료일</dt>
+											<dd>2019-01-01</dd>
+										</dl>
+									</a>
+								</li>
+								<li>
+									<a href="javascript: void(0);" role="button" title="사용가능한 인증서">
+										<h3>김올리</h3>
+										<dl>
+											<dt>발급일</dt>
+											<dd>2018-05-01</dd>
+											<dt>구분</dt>
+											<dd>은행개인</dd>
+											<dt>만료일</dt>
+											<dd>2019-01-01</dd>
+										</dl>
+									</a>
+								</li>
+								
+								<li>
+									<a href="javascript: void(0);" role="button" title="사용가능한 인증서">
+										<h3>김올리</h3>
+										<dl>
+											<dt>발급일</dt>
+											<dd>2018-05-01</dd>
+											<dt>구분</dt>
+											<dd>은행개인</dd>
+											<dt>만료일</dt>
+											<dd>2019-01-01</dd>
+										</dl>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="login_btnBox"><button type="submit" class="btn primary submit"><span class="loginBtnTxt">로그인 방식 변경하기</span></button></li>
+						<li class="loginBanners"><iframe src="../../cms/util/ABETC1727R_SUB1_iframe01.html" class="iframes loginBanners" title="이벤트 배너 슬라이더"></iframe></li><!-- 0913 : 접근성 제목 제공  -->
+					</ul>
+					
+					<!-- section class="with-fixedBtn registerPw">
+						<p class="mgT40 faceidTxt centeredTxt">공인인증서로 로그인 시<br>아래의 인증서를 선택하세요.</p>
+						<div class="paddingSide">
+							<ul class="shieldListBox shieldListBoxW mgT20">
+								<li class="on">
+									<a href="javascript:;">
+										<div class="shield-ok">사용가능한인증서</div>
+										<div class="listBox">
+											<legend>인증서 세부내용 테이블</legend>
+											<p class="name">김올리</p>
+											<dl>
+												<dt>발급일</dt><dd>2018.05.01</dd>
+												<dt>구분</dt><dd>은행개인</dd>
+												<dt>만료일</dt><dd>2019.05.01</dd>
+											</dl>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+										<div class="shield-expire">만료인증서</div>
+										<div class="listBox">
+											<legend>인증서 세부내용 테이블</legend>
+											<p class="name">김올리</p>
+											<dl>
+												<dt>발급일</dt><dd>2017.03.01</dd>
+												<dt>구분</dt><dd>은행개인</dd>
+												<dt>만료일</dt><dd>2018.03.01</dd>
+											</dl>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+										<div class="shield-expire">만료인증서</div>
+										<div class="listBox">
+											<legend>인증서 세부내용 테이블</legend>
+											<p class="name">김올리</p>
+											<dl>
+												<dt>발급일</dt><dd>2017.03.01</dd>
+												<dt>구분</dt><dd>은행개인</dd>
+												<dt>만료일</dt><dd>2018.03.01</dd>
+											</dl>
+										</div>
+									</a>
+								</li>
+								
+								<!-- 
+								<li>
+									<a href="javascript:;">
+										<div class="shield-expire">만료인증서</div>
+										<div class="listBox">
+											<legend>인증서 세부내용 테이블</legend>
+											<p class="name">김올리</p>
+											<dl>
+												<dt>발급일</dt><dd>2017.03.01</dd>
+												<dt>구분</dt><dd>은행개인</dd>
+												<dt>만료일</dt><dd>2018.03.01</dd>
+											</dl>
+										</div>
+									</a>
+								</li>
+								 <li class="no">
+									<a href="javascript:;">
+										<div class="shield-sceap">폐기인증서</div>
+										<div class="listBox">
+											<legend>인증서 세부내용 테이블</legend>
+											<p class="name">김올리</p>
+											<dl>
+												<dt>발급일</dt><dd>2017.03.01</dd>
+												<dt>구분</dt><dd>은행개인</dd>
+												<dt>만료일</dt><dd>2018.03.01</dd>
+											</dl>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</section>
+					<div class="selfBottom login_bannerBox">
+						<button type="submit" class="btn primary submit submit02"><span class="loginBtnTxt">로그인 방식 변경하기</span></button>
+						
+						<iframe class="iframes" src="" title="개별 아이프레임 제목 삽입해주세요 (Dear.Dev)"></iframe>
+						<div class="swiper-container login_banner">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="javascript: void(0)"><img src="../../assets/img/banner/login_banner01.jpg" alt="이벤트배너" /></a>
+								</div>	
+								<div class="swiper-slide">
+									<a href="javascript: void(0)"><img src="../../assets/img/banner/login_banner02.jpg" alt="이벤트배너" /></a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript: void(0)"><img src="../../assets/img/banner/login_banner03.jpg" alt="이벤트배너" /></a>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div> 
+					</div -->
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

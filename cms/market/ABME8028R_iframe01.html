@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>올원뱅크 환전미이용고객</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/styles/cms.css">
+	<style>
+		body{background:transparent;}
+	</style>
+</head>
+<script type="text/javascript" src="https://allonebank.nonghyup.com/service/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="https://allonebank.nonghyup.com/service/js/common/bridge.js"></script>
+<script type="text/javascript" src="https://allonebank.nonghyup.com/service/js/common/opera.js"></script>
+<script type="text/javascript">
+	function page_detail(){
+		$AB_OPA.executeJavascript("iframe_AppCall('01')"); 			
+	}
+</script>
+<body>
+	<a href="#" onclick="javascript:page_detail();" title="NH올원 파이카드">
+		<div class="objHead card_thumnailBox">
+			<span class="imgArea"><img src="../../assets/img/card/thum_card_pi.png" alt="NH올원 파이카드"></span>
+			<strong class="dataTxt tTitle">NH올원 파이카드</strong>
+		</div>
+		<div class="objFoot">
+			<h4 class="tValue mgT20">파이서비스</h4>
+			<ul class="unorderList mgT5">
+				<li>온라인쇼핑과 선택업종 7~20%할인 <br>(선택업종 : 주유,통신,대형마트,의료,해외)</li>
+			</ul>
+			<h4 class="tValue mgT20">라이프서비스</h4>
+			<ul class="unorderList mgT5">
+				<li>커피전문점 20% 할인</li>
+				<li>대중교통/편의점/잡화/배달앱 5%할인</li>
+			</ul>
+		</div>
+	</a>
+</body>
+</html>

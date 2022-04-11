@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>모바일 초대장</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type03", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<!--
+					[category Class]
+					.invitePreview.invite01 : 결혼
+					.invitePreview.invite02 : 부고 (*** current***)
+					.invitePreview.invite03 : 첫돌생일
+					.invitePreview.invite04 : 회갑칠순
+					.invitePreview.invite05 : 기타
+				 -->
+				<div class="content invitePreview invite02" data-role="content"><!-- category Class -->
+					<section class="fullWidth">
+						<h2 class="visualHide">부고</h2>
+						<div class="imgArea">
+							<!-- <img src="../../assets/img/@tmp/invite_rolling/02_05.jpg" alt=""/> -->
+							<img src="../../assets/img/bank/invite_rolling/02_06.jpg" alt="부고" /><!-- 1010 : 이미지 경로 수정-->
+						</div>
+
+						<div class="sectionWrap">
+							<!-- topSection -->
+							<div class="topSection">
+								<div class="imgTitleArea">
+									<img src="../../assets/img/bank/txt_invite02.png" style="width:204px" alt="삼가 고인의 명복을 빕니다."/>
+									<!-- <p>삼가 고인의 명복을 빕니다.</p> --><!-- 텍스트로만 사용시  -->
+								</div>
+
+								<div class="mentArea">
+									최올리님의 부친 최장인님이 8월 16일 <br>향년 82세로 별세하셨기에 삼가 알려드립니다.
+								</div>
+
+								<div class="locationArea">
+									<dl class="dataList leftAlign noBorder ">
+										<dt>별세일</dt><dd>2018년 7월 28일(토)</dd>
+										<dt>빈소</dt>
+										<dd>
+											<p>한림대병원 장례식장 201호</p>
+											<small>(경기도 안양시 동안구 평촌동 87-3)</small>
+										</dd>
+										<dt>발인일</dt><dd>2018년 7월 30일(월)</dd>
+										<dt>장지</dt><dd>경기도 의왕시 의왕추모공원</dd>
+									</dl>
+								</div>
+							</div>
+							<!-- topSection -->
+
+							<!-- mapSection -->
+							<div class="mapSection">
+								<h3 class="visualHide">일시 &amp; 장소</h3>
+								<div class="mapArea">
+									<img src="../../assets/img/@tmp/map.png" alt="장례식장 지도">
+								</div>
+							</div>
+							<!-- //mapSection -->
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered with-fixedBtn">
+						<aside class="etcSection">
+							<p class="ect_notice">참석이 어려운 분들을 위하여 안내해 드립니다.</p>
+							<div class="ect_bankNum">
+								<span class="txt01">NH농협은행</span> <!-- 1017 -->
+								<span class="txt02">123-*****-*****-89</span>
+								<span class="txt03" >김농협</span>
+							</div>
+						</aside>
+					</section>
+
+					<button type="submit" class="btn primary submit selfBottom">올원뱅크 APP 다운로드</button>
+
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

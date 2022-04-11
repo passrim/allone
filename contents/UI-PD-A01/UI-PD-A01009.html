@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>전체메뉴</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+<script>
+		
+	// GNB 수정 <!-- 수정 -->
+	// 1. h2 -> 링크로 wrap
+	// 2. longin -> 링크로 수정
+	// 3. script 수정
+
+	// 열기 닫기 초기화 수정 //(수정 : 1022)
+
+	// (수정 : 1023)
+
+	var $UI = {
+		/*******************************************************************************
+		 *	전체메뉴 OPEN
+		 *******************************************************************************/
+		allMenuOpen : function(){
+			wrapLayerMask.dimmed(true);
+			$('#gnb').toggleClass('no-transform');
+			$('body').toggleClass('noScroll');
+
+			$('#wrap').attr('aria-hidden', true); //-----------------------aria-hidden
+			$('#gnb').attr('aria-hidden', false); //-----------------------aria-hidden
+
+			$GNB.re_init();//------------------- //(수정 : 1022)
+
+			$('#gnb_first').focus();
+
+			//개발용
+			// $UI.changeBackgroundColor(false);
+		},
+		/*******************************************************************************
+		 *	전체메뉴 CLOSE
+		 *******************************************************************************/
+		allMenuClose : function(){
+			var activeNum = 0;
+
+			$('#gnb').toggleClass('no-transform');
+			$('body').toggleClass('noScroll');
+
+			$GNB.re_init(activeNum, false);//------------------- //(수정 : 1022)
+
+			$('#wrap').attr('aria-hidden', false); //-----------------------aria-hidden
+			$('#gnb').attr('aria-hidden', true); //-----------------------aria-hidden
+
+			$('#navBtn').focus();// 이전 메뉴 포커스 복귀
+
+			wrapLayerMask.dimmed(false);
+
+			//개발용
+			/*if($("#" + layerPopup.getMaxLayerId4Close()).find(".modalFull").length == 0){
+				$UI.changeBackgroundColor(true);	
+			}*/
+		}
+	};
+
+	var wrapLayerMask = {
+		dimmed : function(isOpen){
+			if(isOpen){
+				$("body").append("<div id='layerMask' class='dimmed dp-block' style='z-index:1009'></div>");
+				if($("#layerMask").hasClass("dp-none")) $("#layerMask").removeClass("dp-none");
+				if(!$("#layerMask").hasClass("dp-block")) $("#layerMask").addClass("dp-block");
+			}else {
+				$("#layerMask").remove();
+			}
+		}
+	};
+
+	var $GNB = {
+		re_init : function(_activeNum, _openFlag){ //(수정 : 1022)
+			var activeNum = (_activeNum != null) ? _activeNum : 0;
+			var openFlag = (_openFlag != null) ? _openFlag : true; //(수정 : 1022)
+			var gnbNav = $('.gnb-nav > li');
+			var lnb = $('.lnb');
+			var lnbList = lnb.find('> li');
+			var lnbNav_link = $('.lnb-nav > li > a');
+			var lnbChild = $('.lnb-child');
+
+			gnbNav.find('>a').removeClass("is-active").attr('title','').attr('title', '1단계 메뉴');
+			gnbNav.eq(activeNum).find('>a').addClass("is-active").attr('title','').attr('title', '1단계 메뉴 선택됨');
+
+			lnbList.removeClass("is-lnbon").attr('aria-hidden', true);
+			if(openFlag) lnbList.eq(activeNum).addClass("is-lnbon").attr('aria-hidden', false);//(수정 : 1022)
+
+			lnbList.find('h2').attr('aria-hidden', true);
+			if(openFlag) lnbList.eq(activeNum).find('h2').attr('aria-hidden', false);//(수정 : 1022)
+
+			lnbNav_link.attr('aria-hidden', true);
+			if(openFlag) lnbList.eq(activeNum).find('.lnb-nav >li > a').attr('aria-hidden', false);//(수정 : 1022)
+
+			lnbChild.removeClass("is-open").attr('aria-hidden', true);
+		},
+		init : function(){
+			var activeNum = 0 ;
+			var gnbNav = $('.gnb-nav > li');
+			var lnb = $('.lnb');
+			var lnbList = lnb.find('> li');
+			var lnbNav = $('.lnb-nav > li');
+			var lnbNav_link = $('.lnb-nav > li > a');
+			var lnbChild = $('.lnb-child');
+			var skipHtml = '<a href="javascript:;" class="skipNav" aria-label="전체메뉴" title="1단계 메뉴 바로가기 Skip"></a>';
+
+			//Start of Set
+			//Skip
+			$('#gnb').prepend(skipHtml);
+			$('#gnb > .skipNav').attr('id', 'gnb_first');
+			lnbList.append(skipHtml);
+
+			//(수정 : 1022)
+			$(document).find('.skipNav').each(function(){
+				$(this).on('click', function(){
+					$GNB.re_init(activeNum);
+					$('.gnb-nav > li').eq(activeNum).find('a').blur().focus();
+					return false;
+				})
+			})
+			// $(document).on('click', '.skipNav', function(){
+			// 	$GNB.re_init(activeNum);
+			// 	$('.gnb-nav > li').eq(activeNum).find('a').blur().focus();
+			// 	return false;
+			// });
+
+			gnbNav.find('>a').attr('role', 'button');
+			lnbNav.each(function(){
+				var $dep3 = $(this).find('.lnb-child');
+				if($dep3.length){
+					$(this).addClass('hasSub');
+					$(this).find('>a').attr('title', '3단계 하위 메뉴 보기').attr('role', 'button');
+					$dep3.find('>a').attr('title', '2단계 상위 메뉴 보기').attr('role', 'button');
+				}
+			});
+
+			// $GNB.re_init(activeNum);//(수정 : 1022)
+			//End of Set
+
+			//EventHandler
+			gnbNav.click(function(){
+				activeNum = $(this).index();
+				gnbNav.find("a").removeClass('is-active').attr('title', '1단계 메뉴');
+				if(!$(this).find("a").hasClass('is-active')){
+					$(this).find("a").addClass('is-active').attr('title', '1단계 메뉴 선택됨');
+				}
+				$GNB.re_init(activeNum);
+			});
+
+			lnbNav_link.click(function(e){
+				if($(e.target).parent().hasClass('hasSub')){
+					/* 3단계 하위 메뉴 보기
+					1. h2 : noRead
+					2. activeNum > 2단계 메뉴 & this : noRead
+					3. lnb-Child : Read
+					*/
+					$(e.target).parent().parent().parent().find('h2').attr('aria-hidden', true);
+					lnbChild.removeClass("is-open");
+
+					var $dep3 = $(this).siblings('.lnb-child');
+					$dep3.addClass("is-open").attr('aria-hidden', false);
+
+					lnbNav_link.attr('aria-hidden', true);
+					$(e.target).attr('aria-hidden', true);
+
+					setTimeout(function(){//transition효과로 focus Null 방지
+						$dep3.find('>a').blur().focus();//기존 포커스 잔재로 blur().focus()실행
+					}, 300);
+				}
+			});
+
+			lnbChild.children("a").click(function(e){
+				/* 2단계 상위 메뉴보기 (.lnb-nav > li.hasSub > a)
+				1. this > h2 : Read
+				2. activeNum > 2단계 메뉴 Read
+				3. this(lnb-child) : noRead
+				*/
+				lnbList.eq(activeNum).find('.lnb-nav >li > a').attr('aria-hidden', false);
+				lnbChild.removeClass("is-open").attr('aria-hidden', true);
+				setTimeout(function(){
+					$(e.target).closest('.lnb-nav').parent().find('h2').attr('aria-hidden', false).find('>a').blur().focus();
+				}, 300);
+			});
+		},
+	};
+	//End of Gnb
+	//End of 개발 script
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		(function(){
+			var loginFlag = false;
+			//includePub.init("header_type01", loginFlag);//개발시 삭제
+			Layout.init({ loginFlag : loginFlag});
+			//레이어 팝업 샘플 이벤트
+			// layerPop.open('.modalWrap', '.layerOpenBtnSample');
+		})();
+
+		$GNB.init();
+		$('#navBtn').click()
+	});
+</script>
+
+
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- login 클래스 : 그린 컬러로 변경되고, loginDefault 클래스 : 화이트 컬러에 컬러 로고 메인 헤더에는 main 클래스 추가 -->
+			<header id="header" class="header menu-container chatBot" role="presentation">
+				<!-- 메인 헤더 -->
+				<!-- <nav>
+					<h1 class="headerTitle">allone Bank</h1>
+					<ul class="columnSet rightedColumn">
+						<li>
+							<a href="javascript:void(0);" class="headerNav alarmBtn">알림</a>
+						</li>
+						<li>
+							<input type="checkbox" class="headerNav navBtn" id="navBtn" onclick="$UI.allMenuOpen();"><label for="navBtn">전체메뉴</label>
+						</li>
+					</ul>
+				</nav> -->
+
+				<nav role="presentation">
+					<ul class="columnSet leftedColumn col-valign">
+						<li><a href="javascript:void(0);" class="headerNav backBtn" title="뒤로가기">뒤로가기</a></li>
+						<!--li><a href="javascript:void(0);" class="big-fontService" title="큰글서비스">큰글</a></li  -->
+					</ul>
+					<h1 class="headerTitle">전체메뉴</h1>
+					<ul class="columnSet rightedColumn">
+						<li>
+							<a href="javascript:void(0);" class="headerNav homeBtn">홈</a>
+						</li>
+						<li>
+							<input type="checkbox" class="headerNav navBtn" id="navBtn" onclick="$UI.allMenuOpen();" aria-describedby="openNav"><label for="navBtn" id="openNav">전체메뉴 열기</label>
+						</li>
+					</ul>
+				</nav>
+
+				<!-- <nav>
+					<h1 class="headerTitle logo">allone Bank</h1>
+					<ul class="columnSet rightedColumn">
+						<li>
+							<a href="javascript:void(0);" class="headerNav homeBtn" role="button">홈</a>
+						</li>
+						<li>
+							<input type="checkbox" class="headerNav navBtn" id="navBtn" onclick="$UI.allMenuOpen();"><label for="navBtn">전체메뉴</label>
+						</li>
+					</ul>
+				</nav> -->
+
+			</header>
+
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="layerPop.open('.modalWrap', this); return false;">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+
+		<!-- GNB -->
+		<!-- <aside data-role="global-navigation" class="gnb no-transform" id="gnb"> -->
+		<aside data-role="global-navigation" class="gnb" id="gnb">
+			<!-- 상단 메뉴 -->
+			<ul class="columnSet gnbNav rightedColumn">
+				<li class="mgRauto"><a href="javascript:void(0);" title="로그아웃" class="headerNav logoutBtn" role="button">로그아웃</a></li>
+				<li><a href="javascript:void(0);" class="headerNav homeBtn" title="홈으로 이동" role="button">홈으로 이동</a></li>
+				<li><a href="javascript:void(0);" class="headerNav searchBtn" title="검색하기" role="button">검색하기</a></li>
+				<li><a href="javascript:void(0);" class="headerNav settingBtn" title="설정화면으로 이동" role="button">설정화면으로 이동</a></li>
+			</ul>
+			<button type="button" class="headerNav closeBtn" id="gnbClose" onclick="$UI.allMenuClose();">전체메뉴 닫기</button>
+
+			<!-- user greeting -->
+			<ul class="columnSet greeting pdT20 pdB20 bdB1">
+				<!-- 로그인 전 노출
+				<li class="myallone_userPhoto"><a tabindex="-1" class="bg1"><span><img src="../../assets/img/myallone/profile_sample.png" alt="" /></span></a></li>
+				<li>
+					<span class="greeting_msg">로그인을 해주세요.</span>
+				</li>
+				-->
+				<li class="myallone_userPhoto"><a tabindex="-1" class="bg7" title="로그인 페이지 이동"><span><img src="../../assets/img/myallone/profile_sample.png" alt="사용자 프로필 사진" /></span></a></li><!--  (수정 : 1023) -->
+				 <!-- 수정 -->
+				<li>
+					<a href="javascript:;" title="로그인 페이지 이동">
+						<span class="greeting_msg mgB10">김농협님 오늘도 좋은하루 되세요!</span>
+						마지막 접속 2018-04-08 22:05
+					</a>
+				</li>
+			</ul>
+
+			<div class="gnbList">
+				<ul class="columnSet">
+					<li>
+						<ul class="gnb-nav" data-level="1">
+							<li><a href="javascript:void(0);" class="is-active">NH금융그룹</a></li>
+							<li><a href="javascript:void(0);">금융상품몰</a></li>
+							<li><a href="javascript:void(0);">간편뱅크</a></li>
+							<li><a href="javascript:void(0);">간편결제</a></li>
+							<li><a href="javascript:void(0);">공과금</a></li>
+							<li><a href="javascript:void(0);">환전/송금</a></li>
+							<li><a href="javascript:void(0);">FUN&amp;LIFE</a></li>
+							<li><a href="javascript:void(0);">고객센터</a></li>
+						</ul>
+					</li>
+					<li class="colItem">
+						<ul class="lnb" data-level="2">
+							<li class="is-lnbon">
+								<h2><a href="javascript:void(0);">NH금융그룹</a></h2> <!-- 수정 : 모두 A Link 삽입 -->
+								<ul class="lnb-nav" data-level="3">
+									<li>
+										<a href="javascript:void(0);">NH금융그룹</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">NH농협은행</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">NH농협카드</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<h2><a href="javascript:void(0);">금융상품몰</a></h2>
+								<ul class="lnb-nav" data-level="3">
+									<li>
+										<a href="javascript:void(0);" title="입출금계좌개설">입출금계좌개설</a>
+										<div class="lnb-child">
+											<a href="javascript:void(0);" title="입출금계좌개설">입출금계좌개설</a>
+											<ul data-level="4">
+												<li><a href="javascript:void(0);">입출금계좌개설</a></li>
+												<li><a href="javascript:void(0);">NH주거래우대통장</a></li>
+												<li><a href="javascript:void(0);">NH X 카카오페이통장</a></li>
+												<li><a href="javascript:void(0);">Magic Tree(매직트리)</a></li>
+												<li><a href="javascript:void(0);">NH모임통장</a></li>
+												<li><a href="javascript:void(0);">입출금계좌개설 FAQ</a></li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="javascript:void(0);" title="예/적금">예/적금</a>
+										<div class="lnb-child">
+											<a href="javascript:void(0);" title="예/적금">예/적금</a>
+											<ul data-level="4">
+												<li><a href="javascript:void(0);">예/적금</a></li>
+												<li><a href="javascript:void(0);">NH올원해봄적금</a></li>
+												<li><a href="javascript:void(0);">e금리우대예금</a></li>
+												<li><a href="javascript:void(0);">NH왈츠회전예금Ⅱ</a></li>
+												<li><a href="javascript:void(0);">NH직장인월복리적금</a></li>
+												<li><a href="javascript:void(0);">e금리우대적금</a></li>
+												<li><a href="javascript:void(0);">주택청약종합저축</a></li>
+												<li><a href="javascript:void(0);">NH오토적금</a></li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="javascript:void(0);" title="대출">대출</a>
+										<div class="lnb-child">
+											<a href="javascript:void(0);" title="대출">대출</a>
+											<ul data-level="4">
+												<li><a href="javascript:void(0);">대출</a></li>
+												<li><a href="javascript:void(0);">NH e직장인대출</a></li>
+												<li><a href="javascript:void(0);">NH e직장인중금리대출</a></li>
+												<li><a href="javascript:void(0);">NH모바일 전세 대출</a></li>
+												<li><a href="javascript:void(0);">NH간편오토론(신차)</a></li>
+												<li><a href="javascript:void(0);">NHU간편론</a></li>
+												<li><a href="javascript:void(0);">오토론신차</a></li>
+												<li><a href="javascript:void(0);">오토론중고차</a></li>
+												<li><a href="javascript:void(0);">오토리스</a></li>
+												<li><a href="javascript:void(0);">장기렌터카</a></li>
+												<li><a href="javascript:void(0);">NH미들론</a></li>
+												<li><a href="javascript:void(0);">햇살론</a></li>
+												<li><a href="javascript:void(0);">사잇돌대출Ⅱ</a></li>
+												<li><a href="javascript:void(0);">대출신청내역조회</a></li>
+												<li><a href="javascript:void(0);">대출약정신청/서류접수</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<h2><a href="javascript:void(0);">간편뱅크</a></h2>
+								<ul class="lnb-nav" data-level="3">
+									<li>
+										<a href="javascript:void(0);">올원송금</a>
+										<div class="lnb-child">
+											<a href="javascript:void(0);">올원송금</a>
+											<ul data-level="4">
+												<li><a href="javascript:void(0);">송금하기</a></li>
+												<li><a href="javascript:void(0);">자주쓰는송금</a></li>
+												<li><a href="javascript:void(0);">송금내역조회</a></li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="javascript:void(0);">더치페이</a>
+										<div class="lnb-child">
+											<a href="javascript:void(0);">더치페이</a>
+											<ul data-level="4">
+												<li><a href="javascript:void(0);">더치페이요청</a></li>
+												<li><a href="javascript:void(0);">더치페이내역조회</a></li>
+												<li><a href="javascript:void(0);">자주쓰는 더치페이</a></li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="javascript:void(0);">경조금</a>
+										<div class="lnb-child">
+											<a href="javascript:void(0);">경조금</a>
+											<ul data-level="4">
+												<li><a href="javascript:void(0);">경조금보내기</a></li>
+												<li><a href="javascript:void(0);">초대장보내기</a></li>
+												<li><a href="javascript:void(0);">초대장내역조회</a></li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="javascript:void(0);">토스송금</a>
+										<div class="lnb-child">
+											<a href="javascript:void(0);">토스송금</a>
+											<ul data-level="4">
+												<li><a href="javascript:void(0);">토스송금보내기</a></li>
+												<li><a href="javascript:void(0);">토스송금내역조회</a></li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="javascript:void(0);">스마트뱅킹 이체</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">CD/ATM출금</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<h2><a href="javascript:void(0);">간편결제</a></h2>
+								<ul class="lnb-nav" data-level="3">
+									<li>
+										<a href="javascript:void(0);" title="바코드결제">바코드결제</a>
+										<div class="lnb-child">
+											<a href="javascript:void(0);" title="바코드결제">바코드결제</a>
+											<ul data-level="4">
+												<li><a href="javascript:void(0);">바코드결제</a></li>
+												<li><a href="javascript:void(0);">바코드결제내역조회</a></li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="javascript:void(0);">모바일교통카드</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<h2><a href="javascript:void(0);">공과금</a></h2>
+								<ul class="lnb-nav" data-level="3">
+									<li>
+										<a href="javascript:void(0);">지로</a>
+										<div class="lnb-child">
+											<a href="javascript:void(0);">지로</a>
+											<ul data-level="4">
+												<li><a href="javascript:void(0);">지로납부</a></li>
+												<li><a href="javascript:void(0);">지로납부내역조회/취소</a></li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="javascript:void(0);">계좌이동제</a>
+										<div class="lnb-child">
+											<a href="javascript:void(0);">계좌이동제</a>
+											<ul data-level="4">
+												<li><a href="javascript:void(0);">서비스소개</a></li>
+												<li><a href="javascript:void(0);">자동납부등록내역조회/변경</a></li>
+												<li><a href="javascript:void(0);">자동납부변경신청조회/취소</a></li>
+												<li><a href="javascript:void(0);">자동송금내역조회/변경</a></li>
+												<li><a href="javascript:void(0);">자동송금변경신청결과조회</a></li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="javascript:void(0);" title="NH스마트고지서">NH스마트고지서</a>
+										<div class="lnb-child">
+											<a href="javascript:void(0);" title="NH스마트고지서">NH스마트고지서</a>
+											<ul data-level="4">
+												<li><a href="javascript:void(0);">NH스마트고지서 안내</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<h2><a href="javascript:void(0);">환전/송금</a></h2>
+								<ul class="lnb-nav" data-level="3">
+									<li>
+										<a href="javascript:void(0);">환율조회/계산기</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">환전가능통화조회</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">올원외화포켓</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" title="알뜰!환전">알뜰!환전</a>
+										<div class="lnb-child">
+											<a href="javascript:void(0);" title="알뜰!환전">알뜰!환전</a>
+											<ul data-level="4">
+												<li><a href="javascript:void(0);">환전신청</a></li>
+												<li><a href="javascript:void(0);">환전신청 내역조회</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<h2><a href="javascript:void(0);">FUN&amp;LIFE</a></h2>
+								<ul class="lnb-nav" data-level="3">
+									<li>
+										<a href="javascript:void(0);" title="FUN&amp;LIFE">FUN&amp;LIFE</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" title="결제">결제</a>
+										<div class="lnb-child">
+											<a href="javascript:void(0);" title="결제">결제</a>
+											<ul data-level="4">
+												<li><a href="javascript:void(0);">코나카드</a></li>
+												<li><a href="javascript:void(0);">캐시비</a></li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="javascript:void(0);" title="쇼핑">쇼핑</a>
+										<div class="lnb-child">
+											<a href="javascript:void(0);" title="쇼핑">쇼핑</a>
+											<ul data-level="4">
+												<li><a href="javascript:void(0);">모바일쿠폰</a></li>
+												<li><a href="javascript:void(0);">HOT!잇템</a></li>
+												<li><a href="javascript:void(0);">농협몰</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<h2><a href="javascript:void(0);">고객센터</a></h2>
+								<ul class="lnb-nav" data-level="3">
+									<li>
+										<a href="javascript:void(0);">고객센터안내</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);" title="인증서복사">인증서복사</a>
+										<div class="lnb-child">
+											<a href="javascript:void(0);" title="인증서복사">인증서복사</a>
+											<ul data-level="4">
+												<li><a href="javascript:void(0);">인증서복사</a></li>
+												<li><a href="javascript:void(0);">PC에서 인증서 가져오기</a></li>
+												<li><a href="javascript:void(0);">스마트폰에서 인증서 가져오기</a></li>
+												<li><a href="javascript:void(0);">PC로 인증서 내보내기</a></li>
+												<li><a href="javascript:void(0);">스마트폰으로 인증서 내보내기</a></li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</aside>
+		<!-- // GNB -->
+
+	</body>
+</html>

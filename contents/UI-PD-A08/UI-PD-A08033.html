@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>간편비밀번호 - AllOne BANK</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container colour1"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content loginFrame" data-role="content">
+					<ul class="loginContainer">
+						<li class="instruction">
+							<p>간편비밀번호<br />6자리를 입력해주세요</p>
+						</li>
+						<li class="colItem">
+							<dl>
+								<dt class="visualHide"><label for="_password">간편비밀번호 입력</label></dt>
+								<dd class="password pinNumWrap">
+									<span class="start filled"></span>
+									<span class="filled"></span>
+									<span></span>
+									<span></span>
+									<span></span>
+									<span></span>
+								</dd>
+							</dl>
+						</li>
+						<li>
+							<ul class="columnSet login_btnBox">
+								<li class="colItem"><button type="submit" class="btn primary submit">간편비밀번호 재등록</button></li>
+								<li class="colItem"><button type="submit" class="btn primary submit">로그인 방식 변경하기</button></li>
+							</ul>
+						</li>
+						<li class="loginBanners"><iframe src="../../cms/util/ABMA0100R_iframe03.html" class="iframes" title="이벤트 배너 슬라이더"></iframe></li><!-- 0913 : 접근성 제목 제공  -->
+					</ul>
+					
+					<!-- section class="with-fixedBtn registerPw centeredTxt">
+						<p class="mgT40 faceidTxt faceidTxtW"></p>
+						<div class="pinNumBox">
+							<div class="pinNum">
+								<span class="on"><input title="간편비밀번호 입력" type="password" id="_password" maxlength="1" disabled="disabled"></span>
+								<span class="on"><input type="password" title="간편비밀번호 입력" maxlength="1" disabled="disabled"></span>
+								<span><input type="password" title="간편비밀번호 입력" maxlength="1" readonly="readonly"></span>
+								<span><input type="password" title="간편비밀번호 입력" maxlength="1" disabled="disabled"></span>
+								<span><input type="password" title="간편비밀번호 입력" maxlength="1" disabled="disabled"></span>
+								<span><input type="password" title="간편비밀번호 입력" maxlength="1" disabled="disabled"></span>
+							</div>
+						</div>
+					</section>
+					<div class="selfBottom login_bannerBox">
+						<ul class="columnSet">
+							<li class="colItem"><button type="submit" class="btn primary submit submit02"><span class="loginBtnTxt bgNone">간편비밀번호 재등록</span></button></li>
+							<li class="colItem"><button type="submit" class="btn primary submit submit02"><span class="loginBtnTxt bgNone">로그인 방식 변경하기</span></button></li>
+						</ul>
+						
+						<iframe class="iframes" src="" title="개별 아이프레임 제목 삽입해주세요 (Dear.Dev)"></iframe>
+						<!-- <div class="swiper-container login_banner">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="javascript: void(0)"><img src="../../assets/img/banner/login_banner01.jpg" alt="이벤트배너" /></a>
+								</div>	
+								<div class="swiper-slide">
+									<a href="javascript: void(0)"><img src="../../assets/img/banner/login_banner02.jpg" alt="이벤트배너" /></a>
+								</div>
+								<div class="swiper-slide">
+									<a href="javascript: void(0)"><img src="../../assets/img/banner/login_banner03.jpg" alt="이벤트배너" /></a>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div> -->
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

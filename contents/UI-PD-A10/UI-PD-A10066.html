@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>지방세 납부</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- breadcrumb -->
+					<section class="breadcrumb columnSet">
+						<h2>납부완료</h2>
+						<ol class="step columnSet twoSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">5</li>
+						</ol>
+					</section>
+					<!-- //breadcrumb -->
+					<section class="fullWidth">
+						<div class="serviceNote doneMsg">
+							납부완료: 총 10건 중 정상납부 총 <strong>9</strong>건 (납부실패 <strong class="redOn">1</strong>건)
+						</div><!-- 실패가 없는 경우 "납부가 완료 되었습니다." -->
+
+						<ul class="rowStyle">
+							<li>
+								<div class="taxPay-heading actionBox">
+									<span>납부성공 내역1</span>
+									<button type="submit" class="btn">자세히보기</button>
+								</div>
+								<dl class="dataList">
+									<dt>과세기간</dt>
+									<dd>부산광역시 연제구</dd>
+									<dt>세목</dt>
+									<dd>주민세(개인균등주소지할)</dd>
+									<dt>고지구분</dt>
+									<dd>수시</dd>
+									<dt>납부기한</dt>
+									<dd>2018-08-05</dd>
+									<dt>납부금액</dt>
+									<dd>60,000원</dd>
+								</dl>
+							</li>
+							<li>
+								<div class="taxPay-heading actionBox">
+									<span>납부성공 내역2</span>
+									<div class="btnRightBox">
+										<button type="submit" class="btn">자세히보기</button>
+									</div>
+								</div>
+								<dl class="dataList">
+									<dt>지자체</dt>
+									<dd>서울시 중구</dd>
+									<dt>세금명</dt>
+									<dd>주민세(개인균등주소지할)</dd>
+									<dt>고지구분</dt>
+									<dd>수시</dd>
+									<dt>납부기한</dt>
+									<dd>2018-08-05</dd>
+									<dt>납부금액</dt>
+									<dd>60,000원</dd>
+								</dl>
+							</li>
+						</ul>
+					</section>
+
+					<section class="with-fixedBtn fullWidth topbordered">
+
+						<ul class="rowStyle">
+							<li>
+								<div class="taxPay-heading actionBox">
+									<span class="redOn">납부실패 내역1</span>
+									<div class="btnRightBox">
+										<button type="submit" class="btn">실패사유 확인</button>
+										<button type="submit" class="btn">자세히보기</button>
+									</div>
+								</div>
+								<dl class="dataList">
+									<dt>과세기간</dt>
+									<dd>부산광역시 연제구</dd>
+									<dt>세목</dt>
+									<dd>주민세(개인균등주소지할)</dd>
+									<dt>고지구분</dt>
+									<dd>수시</dd>
+									<dt>납부기한</dt>
+									<dd>2018-08-05</dd>
+									<dt>납부금액</dt>
+									<dd>60,000원</dd>
+								</dl>
+							</li>
+							<li>
+								<div class="taxPay-heading actionBox">
+									<span class="redOn">납부실패 내역2</span>
+									<div class="btnRightBox">
+										<button type="submit" class="btn">실패사유 확인</button>
+										<button type="submit" class="btn">자세히보기</button>
+									</div>
+								</div>
+								<dl class="dataList">
+									<dt>지자체</dt>
+									<dd>서울시 중구</dd>
+									<dt>세금명</dt>
+									<dd>주민세(개인균등주소지할)</dd>
+									<dt>고지구분</dt>
+									<dd>수시</dd>
+									<dt>납부기한</dt>
+									<dd>2018-08-05</dd>
+									<dt>납부금액</dt>
+									<dd>60,000원</dd>
+								</dl>
+							</li>
+						</ul>
+					</section>
+
+					<button type="submit" class="btn primary submit selfBottom">확인</button>
+
+					<!--  실패사유 팝업 시작  -->
+					<div class="modalWrap" id="modalDefault">
+						<div class="modalDefault">
+							<div class="header">
+								<h1 class="headerTitle"><a href="javascript:void(0)">공과금 납부 실패사유</a></h1>
+								<button type="button" class="btn closeBtn" id="defaultClose">닫기</button>
+							</div>
+							<div data-role="content" class="modal-contents">
+								<section class="with-fixedBtn">
+									<p>과오납 내역이 있어 정상 납부되지 않았습니다.</p>
+								</section>
+								<button type="submit" class="btn primary submit selfBottom">확인</button>
+							</div>
+						</div>
+					</div>
+					<!--  // 실패사유 팝업 끝  -->
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

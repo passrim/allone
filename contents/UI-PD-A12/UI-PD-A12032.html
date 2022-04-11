@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>회비내역 직접등록</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content alloneMeeting" data-role="content"> <!-- Category Class : alloneMeeting -->
+					<nav class="tabNav">
+						<ul class="columnSet">
+							<li class="colItem is-on" data-tab="tabCont1"><a href="javascript:;">지출</a></li>
+							<li class="colItem" data-tab="tabCont2"><a href="javascript:;">수입</a></li>
+						</ul>
+					</nav>
+
+					<!-- tabContent -->
+					<div id="tabCont1" class="tabContent fullWidth  is-current">
+						<h3 class="visualHide">지출</h3>
+						<section class="fullWidth with-fixedBtn">
+							<div class="sectionWrap">
+								<label for="f_cal01">일자</label>
+								<div class="calendar">
+									<input type="text" id="f_cal01" placeholder="" class="formInput search-input">
+									<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+								</div>
+
+								<label for="f_ip01_01">금액</label>
+								<div class="numberInput">
+									<div class="balance balance-display" data-currency="원">
+										<input type="tel" id="f_ip01_01" placeholder="지출금액 입력" class="formInput balance-input" name="">
+									</div>
+								</div>
+								<!-- <div class="textInput">
+									<input type="text" id="f_ip01_01" placeholder="지출금액 입력" class="formInput" name="">
+									<button type="button" class="btn deleteBtn">삭제</button>
+								</div> -->
+
+								<label for="f_ip01_02">내역</label>
+								<div class="textInput">
+									<input type="text" id="f_ip01_02" placeholder="지출내역 입력" class="formInput" name="">
+									<button type="button" class="btn deleteBtn">삭제</button>
+								</div>
+								<span class="balance balance-currency"><em> 0/20</em> byte</span>
+							</div>
+						</section>
+
+						<ul class="columnSet selfBottom">
+							<li class="colItem"><button type="submit" class="btn primary submit">내역등록</button></li>
+						</ul>
+					</div>
+					<!-- //tabContent -->
+
+					<!-- tabContent -->
+					<div id="tabCont2" class="tabContent fullWidth">
+						<h3 class="visualHide">수입</h3>
+						<section class="fullWidth with-fixedBtn">
+							<div class="sectionWrap">
+								<label for="f_cal02">일자</label>
+								<div class="calendar">
+									<input type="text" id="f_cal02" placeholder="" class="formInput search-input">
+									<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+								</div>
+
+								<label for="f_ip02_01">금액</label>
+								<div class="numberInput">
+									<div class="balance balance-display" data-currency="원">
+										<input type="tel" id="f_ip02_01" placeholder="지출금액 입력" class="formInput balance-input" name="">
+									</div>
+								</div>
+
+								<label for="f_ip02_02">내역</label>
+								<div class="textInput">
+									<input type="text" id="f_ip02_02" placeholder="수입내역 입력" class="formInput" name="">
+									<button type="button" class="btn deleteBtn">삭제</button>
+								</div>
+								<span class="balance balance-currency"><em> 0/20</em> byte</span>
+							</div>
+						</section>
+
+						<ul class="columnSet selfBottom">
+							<li class="colItem"><button type="submit" class="btn primary submit">내역등록</button></li>
+						</ul>
+					</div>
+					<!-- //tabContent -->
+
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

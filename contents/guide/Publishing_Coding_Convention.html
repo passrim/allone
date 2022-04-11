@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>2018 AllOne Style Guide</title>
+		<link rel="stylesheet" type="text/css" href="../guide/assets/css/style.css">
+		<script type="text/javascript" src="../../assets/dist/js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="assets/js/common.js"></script>
+	</head>
+
+<body class="guide">
+	<ul class="guideNav">
+		<li><h1>2018 AllOne</h1></li>
+		<li><h1>Coding Convention</h1></li>
+		<li><a href="Publishing_Style_Guide.html" target="_blank">Style Guide</a></li>
+		<li><a href="font_guide.html" target="_blank">Fonts Guide</a></li>
+		<li><a href="directory_map.html" target="_blank">Directory Map</a></li>
+	</ul>
+	
+	<div class="styleGrid">
+		<section>
+			<h2>파일명 규칙</h2>
+			<ul>
+				<li>메뉴구조도 화면ID.html 로 구성</li>
+				<li>폴더링은 화면ID중 UI-PD-N 뒤 숫자2자리 단위</li>
+			</ul>
+			<h2>주석 표기</h2>
+			<p><br /><h4>HTML</h4>
+				<code>
+					&lt;!-- 주석 --&gt;<br />
+					&lt;!-- // 주석 --&gt;
+				</code>
+
+				<code>
+					&lt;!-- 2018-03-26 수정 --&gt;<br />
+					&lt;!-- // 2018-03-26 수정 --&gt;
+				</code>
+				<h4>CSS</h4>
+				추가 및 수정이 되어 주석을 기입하는 경우 해당 수정날짜로 시작하는데 두 줄이상일 경우 범위로 표시하며, 한 줄일 경우 해당 선언 마지막 뒤에 이름과 같이 표시한다.
+				<code>
+						/* 2018-03-02 창표 수정 */ <br />
+						#gnb{overflow:hidden;width:980px;clear:both;}<br />
+						#gnb li{float:left;height:38px;}<br />
+						#gnb .menu{display:block;overflow:hidden;height:38px;}<br />
+						#gnb .home {width:80px;}<br />
+						#gnb .roadmap {width:98px;}<br />
+						#gnb .on .menu {margin:0 -1px;}/* 2018-03-05 창표 수정 */<br />
+				</code>
+
+			</p>
+			<h2>이미지(Images)</h2>
+			<ul>
+				<li>경량화 또는 파일 운영 용이성을 위해 서비스 또는 컨텐츠 성격에 따라 아이콘은 Sprite Image set을 생성</li>
+				<li>JPG는 인물이나 실사 이미지와 같이, 색 변화 및 그라데이션이 풍부한 경우 및 운영성 이미지에 주로 사용</li>
+				<li>Image Update의 용이성을 위해 image set PSD는 항상 업데이트</li>
+			</ul>
+		
+			<h2>명명(Naming)</h2>
+			<ul>
+				<li>naming의 첫 시작에 숫자, 특수문자, 대문자의 사용은 지양</li>
+				<li>기본적으로 Camelcase 또는 dash를 사용</li>
+				<li>폴더명은 컨텐츠에 따라 적절한 네이밍을 사용</li>
+			</ul>
+		</section>
+		<section>
+			<h2>마크업(Mark up)</h2>
+			<ul>
+				<li>
+					<h3>SEMANTIC LAYOUT</h3>
+					<h4>Doctype</h4>
+					<p>DOCTYPE은 html5 버전을 선언.
+						<code>
+							&lt;!DOCTYPE html&gt;
+						</code>
+					</p>
+
+					<h4>META Content</h4>
+					<p> iPhone X 등의 Notch를 가지고 있는 기종의 스크린사이즈 조절을 위해 "viewport-fit=cover" 추가.
+						<code>
+							&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, <strong>viewport-fit=cover</strong>"&gt;
+						</code>
+					</p>
+
+					<h4>HEADER</h4>
+					<p>header는 html5 semantic code를 사용하여 header 태그를 사용하며, 항상 클래스 header를 포함.<br />
+						
+						<code>
+							&lt;!-- header 시작 --&gt;<br />
+							&lt;<strong>header</strong> class="header"&gt;<br />
+							
+							&lt;/<strong>header</strong>&gt;<br />
+							&lt;!-- header 끝 --&gt;
+						</code>
+
+						단, 풀팝업(FULL POP-UP) 및 팝업(POP-UP)의 경우 div 태그에 header 클래스를 사용하여 페이지 header와 차별
+
+						<code>
+							&lt;!-- header 시작 --&gt;<br />
+							&lt;<strong>div</strong> class="header"&gt;<br />
+							
+							&lt;/<strong>div</strong>&gt;<br />
+							&lt;!-- header 끝 --&gt;
+						</code>
+					</p>
+
+					<h4>NAV</h4>
+					<p>상단 공통 네비게이션 메뉴는 header 태그 안에 nav로 선언.<br /><br />
+						<h4>뒤로가기 버튼, 페이지 타이틀 스타일</h4>
+						<code>
+							&lt;!-- header 시작 --&gt;<br />
+							&lt;header class="header"&gt;<br />
+							&nbsp;&nbsp;&lt;!-- nav 시작 --&gt;<br />
+							&nbsp;&nbsp;&lt;<strong>nav</strong>&gt;<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="javascript:void(0)" class="backBtn"&gt;뒤로가기&lt;/a&gt;<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1 class="headerTitle"&gt;&lt;a href="javascript:void(0)"&gt;e금리우대적금&lt;/a&gt;&lt;/h1&gt;<br />
+							&nbsp;&nbsp;&lt;/<strong>nav</strong>&gt;<br />
+							&nbsp;&nbsp;&lt;!-- nav 끝 --&gt;<br />
+							&lt;/header&gt; <br />
+							&lt;!-- header 끝 --&gt;
+						</code>
+
+						<h4>페이지 타이틀, 닫기 (팝업) 스타일</h4>
+						<code>
+							&lt;!-- header 시작 --&gt;<br />
+							&lt;div class="header"&gt;<br />
+							&nbsp;&nbsp;&lt;!-- nav 시작 --&gt;<br />
+							&nbsp;&nbsp;&lt;<strong>nav</strong>&gt;<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1 class="headerTitle"&gt;&lt;a href="javascript:void(0)"&gt;e금리우대적금&lt;/a&gt;&lt;/h1&gt;<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="javascript:void(0)" class="closeBtt"&gt;닫기&lt;/a&gt;<br />
+							&nbsp;&nbsp;&lt;/<strong>nav</strong>&gt;<br />
+							&nbsp;&nbsp;&lt;!-- nav 끝 --&gt;<br />
+							&lt;/div&gt; <br />
+							&lt;!-- header 끝 --&gt;
+						</code>
+
+						<h4>전체메뉴,설정, 페이지 타이틀과 로그인 스타일</h4>
+						<code>
+							&lt;!-- header 시작 --&gt;<br />
+							&lt;header class="header"&gt;<br />
+							&nbsp;&nbsp;&lt;<strong>nav</strong>&gt;<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="javascript:void(0)" class="headerNav navBtn"&gt;전체메뉴&lt;/a&gt;&lt;/li&gt;<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="javascript:void(0)" class="headerNav settingBtn"&gt;설정&lt;/a&gt;&lt;/li&gt;<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br />
+							&nbsp;&nbsp;&lt;h1 class="headerTitle"&gt;&lt;a href="javascript:void(0)"&gt;마이올원&lt;/a&gt;&lt;/h1&gt;<br />
+							&nbsp;&nbsp;&lt;a href="javascript:void(0)" class="headerNav loginBtn"&gt;로그인&lt;/a&gt;<br />
+							&nbsp;&nbsp;&lt;/<strong>nav</strong>&gt;<br />
+							&lt;/header&gt;<br />
+							&lt;!-- header 끝 --&gt;
+						</code>
+					</p>
+
+					<h4>CONTENTS</h4>
+					<p>모든 컨텐츠의 시작은 data-role="content" 값을 가진 div태그로 시작
+						<br /> 컨텐츠는 section태그로 시작하며, 컨텐츠를 분리할 경우 section태그로 구분.<br />
+						section 태그가 가지는 클래스명에 따라 공통 요소 블럭 재활용 가능.<br />
+						section 태그 자체가 가지는 양쪽 여백 15px을 배제하여야 할 경우<br />
+						클래스 <strong>'fullWidth'</strong>추가시 100% 넓이의 컨테이너로 활용 가능.<br />
+						<code>
+							&lt;/header&gt;<br />
+							&lt;!-- header 끝 --&gt;<br /><br />
+							&lt;!-- content 시작 --&gt;<br />
+							&lt;div <strong>data-role="content"</strong>&gt;<br />
+							&nbsp;&nbsp;&lt;!-- breadcrumb 시작 --&gt;<br />
+							&nbsp;&nbsp;&lt;<strong>section</strong> class="breadcrumb columnSet"&gt;<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;....<br />
+							&nbsp;&nbsp;&lt;/<strong>section</strong>&gt;<br />
+							&nbsp;&nbsp;&lt;!-- breadcrumb 끝 --&gt;<br /><br />
+							&nbsp;&nbsp;&lt;!-- form 시작 --&gt;<br />
+							&nbsp;&nbsp;&lt;<strong>section</strong>&gt;<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;form&gt;<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;fieldset class="formWrap"&gt;<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;.....<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;/fieldset&gt;<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;/form&gt;<br />
+							&nbsp;&nbsp;&lt;/<strong>section</strong>&gt;<br />
+							&nbsp;&nbsp;&lt;!-- form 끝 --&gt;<br />
+							&lt;/div&gt;<br />
+							&lt;!-- content 끝 --&gt;<br /><br />
+							&lt;!-- footer 시작 --&gt;<br />
+							&lt;footer&gt;<br />
+						</code>
+					</p>
+				</li>
+			</ul>
+		</section>
+
+		<section>
+			<h4>코드 재사용</h4>
+			<p>효율적으로 클래스 및 코드 재사용을 위한 OOCSS 기법으로 코딩. (중복되는 디자인 요소를 따로 선언하여 반복적으로 사용) </p>
+			<code>
+				&lt;button class=&quot;btn btn-gray border-secondary&quot;&gt;&lt;button&gt;
+			</code>
+
+			<h4>텍스트 Global Class</h4>
+			<p>기본 공통 스타일 가이드에서는 벗어나 강제로 스타일 변경이 있어야 할 경우 아래의 클래스를 추가하면 특정 요소 스타일 변경이 가능
+				<dl class="class">
+					<dt>uppercase</dt>
+					<dd>영문 전체를 대문자로 변경</dd>
+					<dt>lowercase</dt>
+					<dd>영문 전체를 소문자로 변경</dd>
+					<dt>capitalize</dt>
+					<dd>영문 제일 첫글자만 대문자로 변경</dd>
+					<dt>italic</dt>
+					<dd>텍스트를 이탤릭 스타일로 변경</dd>
+					<dt>fontBold</dt>
+					<dd>텍스트를 볼드 스타일로 변경</dd>
+					<dt>fontNormal</dt>
+					<dd>텍스트를 볼드체가 아닌 노멀 스타일로 변경</dd>
+					<dt>centeredTxt</dt>
+					<dd>텍스트를 가운데 정렬</dd>
+					<dt>leftTxt</dt>
+					<dd>텍스트를 왼쪽 정렬</dd>
+					<dt>rightTxt</dt>
+					<dd>텍스트를 오른쪽 정렬</dd>
+					<dt>valign-middle</dt>
+					<dd>텍스트 세로 가운데 정렬</dd>
+					<dt>valign-top</dt>
+					<dd>텍스트를 세로 위 정렬</dd>
+					<dt>valign-bottom</dt>
+					<dd>텍스트를 세로 아래 정렬</dd>
+					<dt>greenOn</dt>
+					<dd>텍스트를 하이라이트 그린 컬러로 변경</dd>
+				</dl>	
+			</p>
+			<h4>블럭 Global Class</h4>
+			<p>
+				<dl class="class">
+					<dt>dp-block</dt>
+					<dd>display: block</dd>
+					<dt>dp-none</dt>
+					<dd>display: none</dd>
+					<dt>vb-hidden</dt>
+					<dd>visibility: hidden</dd>
+					<dt>vb-visible</dt>
+					<dd>visibility: visible</dd>
+					<dt>poRelative</dt>
+					<dd>position: relative</dd>
+					<dt>poAbsolute</dt>
+					<dd>position: absolute</dd>
+					<dt>poFixed</dt>
+					<dd>position: fixed</dd>
+				</dl>
+			</p>
+
+			<h4>Column Set</h4>
+			<p>페이지 특정 요소가 페이지 전체 넓이 또는 BLOCK 넓이를 기준으로 <strong>요소의 사이즈에 따라 배분되어 1렬로 디스플레이</strong>가 필요한 경우 사용.<br />
+			모든 요소에 사용가능. 단, 'columnSet'이라고 하는 클래스는 요소들의 부모요소 즉, 디스플레이 되어질 요소들을 감싸는 wrapper에 선언<br />
+			</p>
+			<p><br />
+				<strong>** Column Set요소 CLASS</strong><br />
+				<dl class="class">
+					<dt>columnSet</dt>
+					<dd>요소들을 감싸는 부모 'div' 또는 'ul'요소에 선언</dd>
+					<dt>withGutter</dt>
+					<dd>각각의 요소들의 오른쪽에 여백이 필요할 경우 클래스 추가</dd>
+					<dt>colItem</dt>
+					<dd>각각의 컬럼의 넓이가 동일하게 디스플레이가 필요한 경우 컬럼 'li' 또는 특정 자식 요소에 클래스 추가</dd>
+					<dt>rowSpan1</dt>
+					<dd>넓이가 10% // 자식 요소에 상이한 넓이값을 주고 싶을 경우</dd>
+					<dt>rowSpan2</dt>
+					<dd>넓이가 16.6666% // 자식 요소에 상이한 넓이값을 주고 싶을 경우</dd>
+					<dt>rowSpan3</dt>
+					<dd>넓이가 25% // 자식 요소에 상이한 넓이값을 주고 싶을 경우</dd>
+					<dt>rowSpan4</dt>
+					<dd>넓이가 33.3333% // 자식 요소에 상이한 넓이값을 주고 싶을 경우</dd>
+					<dt>rowSpan6</dt>
+					<dd>넓이가 50% // 자식 요소에 상이한 넓이값을 주고 싶을 경우</dd>
+				</dl>
+				<code>
+					&nbsp;&nbsp;&lt;!-- columnSet 시작 --&gt;<br />
+					&nbsp;&nbsp;&lt;ul class="<strong>columnSet withGutter</strong>"&gt;<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="<strong>colItem</strong>"&gt;1&lt;/li&gt;<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="<strong>colItem</strong>"&gt;2&lt;/li&gt;<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="<strong>colItem</strong>"&gt;3&lt;/li&gt;<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="<strong>colItem</strong>"&gt;4&lt;/li&gt;<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="<strong>colItem</strong>"&gt;5&lt;/li&gt;<br />
+					&nbsp;&nbsp;&lt;/ul&gt;<br />
+					&nbsp;&nbsp;&lt;!-- columnSet 끝 --&gt;<br />
+				</code>
+			</p>
+			
+			<h4>&lt;button&gt; TAG</h4>
+			<p>Button은 <strong>Primary, Secondary</strong>로 Two-Type.<br />
+			<strong>* Primary : </strong>background-colored type<br />
+			<strong>* Secondary : </strong>bordered type</p>
+			<p>모든 button은 기본적으로 2개의 class를 가지며, 공통 '<strong>btn</strong>' class, <br />
+			타입에 따라 '<strong>primary</strong>', '<strong>secondary</strong>' class를 사용
+			</p>
+			<code>
+				&lt;button class="btn primary submit"&gt;<br />
+				&lt;button class="btn primary cancel"&gt;<br />
+				&lt;button class="btn secondary"&gt;
+			</code>
+			
+			<p>버튼이 페이지 하단에 붙어야 할 경우, 버튼과 같은 레벨의 가장 마지막 section에 클래스 'with-fixedBtn'을 추가해야만,
+			버튼 영역이 컨텐츠 영역을 가리지 않음.
+			<dl class="class">
+				<dt>selfBottom</dt>
+				<dd>position: fixed; bottom: 0;</dd>
+			</dl>
+			</p>
+			
+			<code>
+				&lt;section class="<strong>with-fixedBtn</strong>"&gt;<br />
+				&lt;/section&gt;<br />
+				&lt;button class="btn primary submit <strong>selfBotton</strong>"&gt;<br />
+			</code>
+
+			<p>
+				[+] script 처리로 마지막 section에 'no-fixed' 클래스 소유 여부를 확인하여 자동 addClass 처리됨. <br>
+				fixed button이 없는 페이지의 경우 마지막 section에 'no-fixed'를 추가해주어야 하단 padding-bottom이 해제됨.
+			</p>
+			
+			<code>
+				&nbsp;&nbsp;&lt;section class="<strong>no-fixed</strong>"&gt;<br />
+				&nbsp;&nbsp;&lt;/section&gt;<br />
+				&nbsp;&lt;/div><br />
+				&lt;/div><br />
+				&lt;!-- //#container -->
+			</code>
+			
+			<h4>&lt;a&gt; TAG</h4>
+			<p>a 태그 작성시 href에 '#'가 아닌 'javascript:void(0)'를 입력</p>
+			<code>
+				&lt;a href=&quot;<strong>javascript:void(0)</strong>&quot;&gt;&lt;/a&gt;
+			</code>
+			
+			<h4>Heading TAG</h4>
+			<p><strong>&lt;h1&gt;</strong> 태그는 페이지 타이틀 즉, 가장 상단에 노출될 타이틀의 성격을 가진 요소에만 사용</p>
+
+			<h4>&lt;form&gt; TAG</h4>
+			<p>모든 Form Input은 fieldset으로 그룹화</p>
+			<code>
+				&lt;fieldset class=&quot;formWrap&quot;&gt;<br /><br />
+					&nbsp;&nbsp;&lt;label for=&quot;inputLabel2&quot; class=&quot;required&quot;>Focused&lt;/label&gt;<br />
+					&nbsp;&nbsp;&lt;input type=&quot;text&quot; id=&quot;inputLabel2&quot; placeholder=&quot;19701215&quot; class=&quot;formInput focused&quot;&gt;<br />
+					&nbsp;&nbsp;&lt;span class=&quot;fieldNotes&quot;&gt;Input Tips :: 도움말 텍스트&lt;/span&gt;<br /><br />
+				&lt;/fieldset&gt; 
+			</code>
+			
+			<p>모든 input은 기본적으로 1개의 class를 가지며, 공통 '<strong>formInput</strong>' class를 사용</p>
+			<code>
+				&lt;input type="text" class="formInput text-input"&gt;<br />
+				&lt;input type="tel" class="formInput number-input"&gt;<br />
+				&lt;select class="formInput select-input"&gt;
+			</code>
+			
+			<p>Select Box 코딩시 접근성을 위한 value값, labe값 변경 필수.</p>
+			<code>
+				&lt;select&gt;<br />
+				&nbsp;&nbsp;&lt;option <strong>value="default" label="Select Default"</strong>&gt;Select Default&lt;/option&gt;<br />
+				&lt;/select&gt;
+			</code>
+		</section>
+		<section>
+			<h3>BLOCK</h3>
+			<h4>Breadcrumb</h4>
+			<p>상품 가입이나 회원가입등의 스텝별 위치 확인이 필요한 경우 페이지 상단에 붙는 breadcrumb</p>
+			<p><br />
+				<strong>** Breadcrumb요소 CLASS</strong><br />
+				<dl class="class">
+					<dt>breadcrumb</dt>
+					<dd>breadcrumb wrapper</dd>
+					<dt>step</dt>
+					<dd>breadcrumb order list</dd>
+					<dt>is-off</dt>
+					<dd>아직 진행되지 않은 스텝</dd>
+					<dt>is-on</dt>
+					<dd>현재 진행중인 스텝</dd>
+					<dt>is-done</dt>
+					<dd>완료한 스텝 is-off 클래스와 동시에 선언되어야 한다.</dd>
+				</dl>
+				<code>
+					&nbsp;&nbsp;&lt;!-- breadcrumb 시작 --&gt;<br />
+					&nbsp;&nbsp;&lt;section class="<strong>breadcrumb</strong> columnSet"&gt;<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;상품가입 약관 및 동의서&lt;/h2&gt;<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;ol class="<strong>step</strong> columnSet"&gt;<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="is-off is-done"&gt;1&lt;/li&gt;<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="is-on"&gt;2&lt;/li&gt;<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="is-off"&gt;3&lt;/li&gt;<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ol&gt;<br />
+					&nbsp;&nbsp;&lt;/section&gt;<br />
+					&nbsp;&nbsp;&lt;!-- breadcrumb 끝 --&gt;<br />
+				</code>
+			</p>
+			<h4>MODAL</h4>
+			<p>
+				'modalWrap' 기본 팝업 wrapper이며 'dimmed' 클래스가 같이 있어야 배경색이 적용<br />
+				팝업은 풀팝업(Full-Popup)과 기본팝업 두가지로 구분.<br />
+				기본팝업의 클래스는 modalDefault이고, 풀팝업의 경우 modalFull로 클래스를 사용.<br />
+				팝업은 header, modal-contents, columnSet 으로 구분<br />
+				<strong>header</strong>는 상단 타이틀과 닫기 버튼으로 구성<br />
+				<strong>modal-contents</strong>는 컨텐츠로 구성<br />
+				<strong>columnSet</strong>은 하단에 버튼셋이 필요한 경우 content 블럭 아래에 위치<br />
+				<code>
+						&lt;div class="modalWrap"&gt;<br />
+						&lt;div class="modalDefault"&gt;<br />
+						&nbsp;&nbsp;&lt;div class="header"&gt;<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1 class="headerTitle"&gt;&lt;a href="javascript:void(0)"&gt;기본팝업&lt;/a&gt;&lt;/h1&gt;<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type="button" class="btn closeBtn"&gt;닫기&lt;/button&gt;<br />
+						&nbsp;&nbsp;&lt;/div&gt;<br />
+						&nbsp;&nbsp;&lt;div data-role="content" class="modal-contents"&gt;<br />
+						&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2&gt;우대환율 가이드&lt;/h2&gt;<br />
+						&nbsp;&nbsp;&lt;/div&gt;<br />
+						&nbsp;&nbsp;&lt;ul class="columnSet"&gt;<br />
+						&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="colItem rowSpan6"&gt;&lt;a href="#" class="btn primary cancel"&gt;취소&lt;/a&gt;&lt;/li&gt;<br />
+						&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="colItem rowSpan6"&gt;&lt;a href="#" class="btn primary submit"&gt;확인&lt;/a&gt;&lt;/li&gt;
+						&nbsp;&nbsp;&lt;/ul&gt;
+						&lt;/div&gt;
+						&lt;/div&gt;
+				</code>
+				modal-contents에 <strong>'fullWidth'</strong>라고 하는 클래스를 추가할 경우 modal content의 기본 패딩 0으로 리셋<br />
+				<code>
+						&lt;div class="modalWrap"&gt;<br />
+						&lt;div class="modalDefault"&gt;<br />
+						&nbsp;&nbsp;&lt;div class="header"&gt;<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;h1 class="headerTitle"&gt;&lt;a href="javascript:void(0)"&gt;기본팝업&lt;/a&gt;&lt;/h1&gt;<br />
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type="button" class="btn closeBtn"&gt;닫기&lt;/button&gt;<br />
+						&nbsp;&nbsp;&lt;/div&gt;<br />
+						&nbsp;&nbsp;&lt;div data-role="content" class="modal-contents <strong>fullWidth</strong>"&gt;<br />
+						&nbsp;&nbsp;&nbsp;&nbsp;&lt;nav class="tabNav tabOverflow"&gt;<br />
+						&nbsp;&nbsp;&lt;/div&gt;<br />
+						&nbsp;&nbsp;&lt;ul class="columnSet <strong>selfBottom</strong>"&gt;<br />
+						&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="colItem rowSpan6"&gt;&lt;a href="#" class="btn primary cancel"&gt;취소&lt;/a&gt;&lt;/li&gt;<br />
+						&nbsp;&nbsp;&nbsp;&nbsp;&lt;li class="colItem rowSpan6"&gt;&lt;a href="#" class="btn primary submit"&gt;확인&lt;/a&gt;&lt;/li&gt;
+						&nbsp;&nbsp;&lt;/ul&gt;
+						&lt;/div&gt;
+						&lt;/div&gt;
+				</code>
+			</p>
+			
+		</section>
+		<section>
+			<h2>CSS(Cascading Style Sheets)</h2>
+			<ul>
+				<li>Single-line 코드로 작성한다.</li>
+				<li>!important 사용 자제한다.</li>	
+				<li>iframe으로 불어오는 페이지가 많이 있어서 전체 선택자(*) 사용을 자제</li>
+				<li>
+					색상 스타일 선언시 축약형을 사용한다.
+					<code>
+						.txt{color:#333333;} (x)<br />
+						.txt{color:#333;} (o)
+					</code>
+				</li>
+				<li>
+					<h3>z-index 값 적용 가이드</h3>
+					<ul>
+						<li>z-index 수치 간격은 100단위로 적용</li>
+						<li>팝업레이어의 경우는 1000부터 시작</li>
+						<li>최고 수치는 9999로 고정</li>
+						<li>필요시 z-index를 재정의</li>
+					</ul>
+				</li>
+				<li>자바스크립트에서 주로 이벤트 trigging을 위해 사용되는 ID에는 스타일 적용하지 않는다.</li>
+				<li>
+					<p>class명에 html tag는 사용하지 않는다.</p> 
+					<code>
+						div.header (X)
+					</code>
+				</li>
+			</ul>
+		</section>
+	</div>
+</body>
+</html>

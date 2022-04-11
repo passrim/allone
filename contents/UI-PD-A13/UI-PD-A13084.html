@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>step4_간편오토론 - 대출</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>NH간편오토론<span>서울보증보험 보증한도 조회</span></h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">4</li>
+							<li class="is-off">7</li>
+						</ol>
+					</section>
+					<section class="has-fixedBtn">
+						<div class="formWrap">
+							<label for="inputLabel1">성명</label>
+							<div class="textInput">
+								<input type="text" id="inputLabel1" placeholder="김*협" class="formInput" name="" disabled="disabled">
+								<button type="button" class="btn deleteBtn" style="display: none;">삭제</button>
+							</div>
+							<label for="inputLabel2">주민등록번호</label>
+							<div class="textInput">
+								<input type="text" id="inputLabel2" placeholder="8010**-*******" class="formInput" name="" disabled="disabled">
+								<button type="button" class="btn deleteBtn" style="display: none;">삭제</button>
+							</div>
+							<label for="inputLabel3">연소득금액</label>
+							<div class="numberInput">
+								<div class="balance balance-display" data-currency="원">
+									<input type="tel" id="inputLabel5" placeholder="1,000,000" class="formInput balance-input" name="" disabled="disabled">
+								</div>
+							</div>
+							<button type="submit" class="btn secondary-gray strokeType mgT10">본인소득확인</button>
+						</div>
+					</section>
+					<section class="fullWidth topbordered">
+						<h3>대출한도를 조회하시겠습니까?</h3>
+						<div class="paddingAll pdT5">
+							<ul class="columnSet withGutter mgB10">
+								<li class="colItem"><button type="button" class="btn secondary-gray">과거심사내역조회</button></li>
+								<li class="colItem"><button type="submit" class="btn secondary-gray submit">신규조회</button></li>
+							</ul>
+						</div>
+					</section>
+					<section class="fullWidth topbordered">
+						<p class="basisTxt mgT15 pdRL15 pdB10">과거 서울보증보험 보증한도 조회 결과</p>
+						<dl class="dataList">
+							<dt>상품명</dt><dd>NH간편오토론</dd>
+							<dt>보증한도</dt><dd class="blueOn">2,000 만원</dd>
+							<dt>유효기일</dt><dd class="redOn">2016.07.07</dd>
+						</dl>
+						<ul class="unorderList hyphenList pdT5 pdB20">
+							<li class="certifyTxt fz-11">조회일 시점에서의 보증가능금액으로 대출시점에서 고객님의 신용도 등이 변경될 경우 달라질 수 있습니다.</li>
+							<li class="certifyTxt fz-11">유효기일 이내 대출 미실행 시 보증가능한도 내역은 삭제됩니다.</li>
+						</ul>
+					</section>
+					<section class="fullWidth with-fixedBtn topbordered">
+						<ul class="accordion bdB0"><!-- 2018-09-29 클래스 추가  -->
+							<li>
+								<dl>
+									<dt class="js-active" aria-label="꼭 알아두세요!"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a></dt>  <!-- 2018-09-07 클래스 추가 -->
+									<dd>
+										<ul class="unorderList">
+											<li>대출최대한도는 서울보증보험 보증한도 내에서 최대 1억원원까지 가능합니다.</li>
+											<li>농협은행 요구불(입출식)계좌가 없을 시 대출신청이 되지 않으니 통장 발급 후 신청하시기 바랍니다. (보증한도 조회는 가능)</li>
+											<li>카드 포인트 적립 서비스는 농협은행서 발급한 채움 신용(체크)카드가 있어야만 가능합니다.</li>
+										</ul>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">심사내역취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

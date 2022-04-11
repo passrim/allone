@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>IOS 문자안내- 휴대폰인증_USIM - 입출금계좌개설</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="pdBz bdB1">
+						<dl class="numberList">
+							<dt><span>1</span></dt><dd>동의 및 휴대폰번호 확인 버튼을 누르세요</dd>
+							<dt><span>2</span></dt><dd>메시지 보내기 창에 번호 확인을 위한 인증 메시지가 자동으로 입력됩니다.</dd>
+							<dt><span>3</span></dt><dd>인증 메시지를 수정없이 그대로 보내주세요. 발신번호가 휴대폰 본인확인에 이용됩니다.</dd>
+							<dt><span>4</span></dt><dd>통신사 요금제에 따라 SMS전송비용(20원)이 부과될 수 있습니다.</dd>
+						</dl>
+						<div class="imgCenterBox"><img src="../../assets/img/certifySms.png" width="256" alt="인증문자 받는 이미지"></div>
+					</section>
+					<button type="submit" class="btn primary submit selfBottom">SMS로 휴대단말기 등록</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

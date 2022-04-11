@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>마이올원 - 내 활동내역</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+				
+				$('.graphBase').each(function(){
+					$(this).find('.graphActive').animate({
+						width:$(this).attr('data-percent')
+					}, 3000);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="no-fixed fullWidth">
+						<div class="AlloneComm  List commentList myActivity">
+							<nav class="tabNav tabOverflow pageTab"> <!-- pageTab 클래스 제거 시 페이지 이동이 아닌 탭기능 구현 가능 -->
+								<ul class="columnSet">
+									<li class="colItem" data-tab="tabCont1"><a href="javascript:;">올원커뮤니티</a></li>
+									<li class="colItem is-on" data-tab="tabCont2"><a href="javascript:;">더<sup>+</sup>모임</a></li>
+									<li class="colItem" data-tab="tabCont3"><a href="javascript:;">이벤트 참여</a></li>
+									<li class="colItem" data-tab="tabCont4"><a href="javascript:;">상품상담</a></li>
+								</ul>
+							</nav>
+
+							<div id="tabCont2" class="tabContent is-current myAct02">
+								<h2 class="visualHide">모임</h2><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+								<h3 class="serviceTitle">총 <span class="greenOn">25</span>개의 글이 있습니다.</h3>
+								<ul class="boardList showLayer">
+									<!-- <li>
+										<div class="boxHead noData">
+											<span>조회내역이 없습니다.</span>
+										</div>
+									</li> -->
+									<li>
+										<a href="javascript:;" class="objCon">
+											<div class="descBox">
+												<div class="tLabel"><span class="txtLabel greenOn">자유글</span></div>
+												<span class="dataTxt tTitle">홍*동 님</span>
+												<span class="dataTxt tDesc">사용자가 작성한 게시물의 제목이 최대 2줄까지 표시됩니다. 사용자가 작성한 게시물의 제목이 최대 2줄까지 표시됩니다. </span>
+											</div>
+											<div class="thumbBox">
+												<img src="../../assets/img/the-k_award01.jpg" alt="Thumbnail image">
+											</div>
+										</a>
+										<div class="objFoot posLeft">
+											<span class="dataTxt tDate">2018-06-28 06:22:11</span>
+										</div>
+										<div class="objFoot posRight">
+											<a href="javascript:;" class="commentCounter" role="button" title="댓글 갯수" ><em>100</em></a>
+										</div>
+										<div class="layerBtn">
+											<a href="javascript:void(0);" class="i_moreBtn" role="button" title="옵션 열기"></a>
+										</div>
+										<div class="editorLayer ">
+											<h3 class="visualHide">내가 쓴 글 메뉴</h3>
+											<div class="btnArea">
+												<a href="javascript:void(0);" role="button" class="mo_btn">수정</a>
+												<a href="javascript:void(0);" role="button" class="del_btn">삭제</a>
+											</div>
+											<a href="javascript:void(0);" role="button" class="close_btn">닫기</a>
+										</div>
+									</li>
+									<li>
+										<a href="javascript:;" class="objCon">
+											<div class="descBox">
+												<div class="tLabel"><span class="txtLabel redOn">일정</span></div>
+												<span class="dataTxt tTitle">홍*동 님</span>
+												<span class="dataTxt tDesc">환전</span>
+											</div>
+											<div class="thumbBox">
+												<img src="../../assets/img/the-k_award01.jpg" alt="Thumbnail image">
+											</div>
+										</a>
+										<div class="objFoot posLeft">
+											<span class="dataTxt tDate">2018-06-27 08:26:46</span>
+										</div>
+										<div class="objFoot posRight">
+											<a href="javascript:;" class="commentCounter" role="button" title="댓글 갯수" ><em>15</em></a>
+										</div>
+										<div class="layerBtn">
+											<a href="javascript:void(0);" class="i_moreBtn" role="button" title="옵션 열기"></a>
+										</div>
+										<div class="editorLayer ">
+											<h3 class="visualHide">내가 쓴 글 메뉴</h3>
+											<div class="btnArea">
+												<a href="javascript:void(0);" role="button" class="mo_btn">수정</a>
+												<a href="javascript:void(0);" role="button" class="del_btn">삭제</a>
+											</div>
+											<a href="javascript:void(0);" role="button" class="close_btn">닫기</a>
+										</div>
+									</li>
+									<li class="myReply">
+										<!-- 내댓글 원본 게시글 출력 영역 -->
+										<a href="javascript:;" class="objCon pdB10">
+											<div class="descBox">
+												<div class="tLabel"><span class="txtLabel greenOn">자유글</span></div>
+												<span class="dataTxt tTitle">올원뱅크 광고~ 보고가시죠! 올원뱅크 광고~ 보고가시죠!</span>
+											</div>
+										</a>
+										<!-- 내댓글 출력 영역 -->
+										<div class="pdBoth15">
+											<ul class="boardList eventType">
+												<li class="writter">
+													<div class="objCon">
+														<span class="dataTxt tName">홍길동 <em>작성자</em></span>
+														<span class="dataTxt tCon">주택청약종합저축 신규가입 이벤트!</span>
+													</div>
+													<div class="objFoot posRight myMenu layerBtn">
+														<a href="javascript:void(0);" class="i_moreBtn" role="button" title="댓글편집창 열기"></a>
+													</div>
+													<div class="editorLayer">
+														<h3 class="visualHide">댓글편집</h3>
+														<div class="btnArea">
+															<a href="javascript:void(0);" role="button" class="mo_btn">수정</a>
+															<a href="javascript:void(0);" role="button" class="del_btn">삭제</a>
+														</div>
+														<a href="javascript:void(0);" role="button" class="close_btn">닫기</a>
+													</div>
+													<div class="boxFoot boxLeft">
+														<p class="dataTxt tDate">2018-06-26 16:43:37</p>
+													</div>
+													<div class="boxFoot posRight writeReply">
+														<button type="button" class="replayBtn">답글달기</button>
+													</div>
+												</li>
+												<!-- 댓글 박스 -->
+												<li class="replyBox writter">
+													<div class="objCon">
+														<span class="dataTxt tName">홍길동 <em>작성자</em></span>
+														<span class="dataTxt tCon">주택청약종합저축 신규가입 이벤트!</span>
+														<!-- 2018-09-18 댓글창 날짜 표기  -->
+														<p class="dataTxt tDate">2018-06-26 16:43:37</p>
+													</div>
+													<div class="objFoot posRight myMenu layerBtn">
+														<a href="javascript:void(0);" class="i_moreBtn" role="button" title="댓글편집창 열기"></a>
+													</div>
+													<div class="editorLayer">
+														<h3 class="visualHide">댓글편집</h3>
+														<div class="btnArea">
+															<a href="javascript:void(0);" role="button" class="mo_btn">수정</a>
+															<a href="javascript:void(0);" role="button" class="del_btn">삭제</a>
+														</div>
+														<a href="javascript:void(0);" role="button" class="close_btn">닫기</a>
+													</div>
+													<div class="inputCmt editorArea">
+														<div class="serchWrap">
+															<div class="scrInput">
+																<div class="comment">
+																	<textarea placeholder="댓글 수정중"></textarea>
+																</div>
+																<button type="buton">수정</button>
+																<div class="score">
+																	<strong>12</strong>/200
+																</div>
+															</div>
+														</div>
+													</div>
+												</li>
+												<!-- //댓글 박스 -->
+												<li class="writter">
+													<div class="objCon">
+														<span class="dataTxt tName">홍길동 <em>작성자</em></span>
+														<span class="dataTxt tCon">주택청약종합저축 신규가입 이벤트!</span>
+													</div>
+													<div class="objFoot posRight myMenu layerBtn">
+														<a href="javascript:void(0);" class="i_moreBtn" role="button" title="댓글편집창 열기"></a>
+													</div>
+													<div class="editorLayer">
+														<h3 class="visualHide">댓글편집</h3>
+														<div class="btnArea">
+															<a href="javascript:void(0);" role="button" class="mo_btn">수정</a>
+															<a href="javascript:void(0);" role="button" class="del_btn">삭제</a>
+														</div>
+														<a href="javascript:void(0);" role="button" class="close_btn">닫기</a>
+													</div>
+													<div class="boxFoot boxLeft">
+														<p class="dataTxt tDate">2018-06-26 16:43:37</p>
+													</div>
+													<div class="boxFoot posRight writeReply">
+														<button type="button" class="replayBtn">답글달기</button>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li>
+										<a href="javascript:;" class="objCon pdB30">
+											<div class="descBox">
+												<div class="tLabel"><span class="txtLabel">나눔갤러리</span></div>
+												<span class="dataTxt tTitle">홍*동 님</span>
+												<span class="dataTxt tDesc">할인 짱짱!</span>
+											</div>
+										</a>
+										<div class="objFoot posLeft">
+											<span class="dataTxt tDate">2018-06-28 06:22:11</span>
+										</div>
+										<div class="objFoot posRight">
+											<a href="javascript:;" class="commentCounter" role="button" title="댓글 갯수" ><em>100</em></a>
+										</div>
+										<div class="layerBtn">
+											<a href="javascript:void(0);" class="i_moreBtn" role="button" title="옵션 열기"></a>
+										</div>
+										<div class="editorLayer ">
+											<h3 class="visualHide">내가 쓴 글 메뉴</h3>
+											<div class="btnArea">
+												<a href="javascript:void(0);" role="button" class="mo_btn">수정</a>
+												<a href="javascript:void(0);" role="button" class="del_btn">삭제</a>
+											</div>
+											<a href="javascript:void(0);" role="button" class="close_btn">닫기</a>
+										</div>
+									</li>
+								</ul>
+								<button type="button" class="btn more-btn">더보기(<span>1</span><span>10</span>)<span></span></button>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

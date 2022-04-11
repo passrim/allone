@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>송금한도 변경</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+			$(document).ready(function() {
+				$('.dayLimit').slider({
+					range: "min",
+					value: 1,
+					min: 1,
+					max: 300,
+					slide: function(event, ui) {
+						$("#dayAmount").val(ui.value);
+					}
+				});
+				$("#dayAmount").val($('.dayLimit').slider("value"));
+				
+				$('.monthLimit').slider({
+					range: "min",
+					value: 1,
+					min: 1,
+					max: 1000,
+					slide: function(event, ui) {
+						$("#monthAmount").val(ui.value);
+					}
+				});
+				$("#monthAmount").val($('.monthLimit').slider("value"));
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth">
+						<h3>현재 송금한도</h3>
+						<dl class="dataList accountInfo bdB0">
+							<dt>1일 송금한도</dt>
+							<dd class="blueOn fontBold">3,000,000원</dd> <!-- 2018-09-27 클래스 추가  -->
+							<dt>월간 송금한도</dt>
+							<dd class="blueOn fontBold">10,000,000원</dd>
+						</dl>
+						<h3 class="topbordered bdB1">변경 후 1일 송금한도</h3>
+						<div class="transferLimit">
+							<div class="dayLimit" data-min="10,000원" data-max="3,000,000원"></div>
+							<div class="numberInput">
+								<input type="tel" id="dayAmount" class="formInput balance-input" />
+								<span class="balance_currency">만원</span>
+							</div>
+						</div>
+						<h3 class="topbordered bdB1">변경 후 월간 송금한도</h3>
+						<div class="transferLimit">
+							<div class="monthLimit" data-min="10,000원" data-max="10,000,000원"></div>
+							<div class="numberInput">
+								<input type="tel" id="monthAmount" class="formInput balance-input" />
+								<span class="balance_currency">만원</span>
+							</div>
+						</div>
+						
+						<ul class="accordion topbordered">
+							<li class="bdB0">
+								<dl>
+									<dt class="js-active" aria-label="꼭 알아두세요!"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a></dt> <!-- 2018-09-04 클래스 추가 -->
+									<dd class="dp-block">
+										<ul class="unorderList">
+											<li>송금한도는 1일 최대 3,000,000원, 월간 최대 10,000,000원을 초과할 수 없습니다.</li>
+										</ul>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

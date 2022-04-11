@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>예약송금 완료 - 뱅크</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="layerPop.open('.modalWrap', this); return false;">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header">
+					<h1 class="headerTitle">예약송금 완료</h1>
+					<button type="button" class="btn closeBtn" id="fullClose">닫기</button>
+				</div>
+				<div data-role="content" class="modal-contents with-fixedBtn">
+					<section class="fullWidth with-fixedBtn">
+						<div class="completeMsg">
+							<p class="desc1"><span class="redOn">00</span>건의 예약송금이 완료되었습니다.</p>
+							<div class="sectionWrap toplined">
+								<p class="desc1">
+									총 <span class="greenOn">999,999</span><em class="greenOn">원</em>이 <br>
+									2018년 5월 26일 14시에 송금될 예정입니다.</p>
+								<p class="desc2 mgT10">받는분에게 아래 버튼을 눌러 <br> 카카오톡/SMS 메시지를 전송하세요.</p><!-- 1010 -->
+							</div>
+
+							<div class="sectionWrap">
+								<ul class="columnSet withGutter">
+									<li class="colItem"><button type="submit" class="btn secondary strokeType">카카오톡 보내기</button></li>
+									<li class="colItem"><button type="button" class="btn secondary strokeType">SMS 보내기</button></li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered">
+						<ul class="accordion">
+							<li>
+								<dl>
+									<dt aria-label="꼭 알아두세요!"><a href="javascript:void(0);">꼭 알아두세요!</a></dt>
+									<dd style="display: none;">
+										<ul class="unorderList">
+											<li>송금 실행 시점에 잔액이 부족할 경우 송금이 실패할 수 있습니다. </li>
+										</ul>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</section>
+
+				</div>
+			</div>
+		</div>
+		<!-- //fullPopup -->
+
+	</body>
+</html>

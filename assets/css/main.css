@@ -1,0 +1,19 @@
+@import url("styles/base.css");
+@import url("styles/layout.css");
+@import url("styles/modules.css");
+@import url("styles/theme.css");
+@import url("styles/state.css");
+@import url("styles/theme_go.css");
+/* ////////////////
+
+	** CSS는 기본적으로 Skin + Structure의 형태로 분리
+	*** Skin은 스타일 즉, 겉으로 보여지는 형태
+	*** Structure는 보이지 않는 골격의 형태 (Grid, Layout 등)
+	1. main.css				// import parent css files
+	2. styles/base.css      // import base css files (reset, color, typo, buttons, inputs, icons)
+	3. styles/layout.css    // grid, layout
+	4. styles/modules.css   // import module css files (nav, tab, slider, accordion, table, list, popup, iframe)
+	5. styles/theme.css     // import page theme css files
+	6. styles/state.css     // active, inactive, able, disable, error, failed, success, focused, hover, selected, filled
+
+//////////////// */

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>모임명</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+
+				//초성검색
+				$('.initial li > a').each(function(){
+					$(this).on({
+						click : function(){
+							var $id = $(this).data('loc');
+							var headrH = $('header').outerHeight();
+							if(!$('#'+$id).length) return false;
+							var goPos = $('#'+$id).offset().top - headrH;
+							$(document).scrollTop(goPos);
+							return false;
+						}
+					});
+				});
+
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content alloneMeeting" data-role="content"> <!-- Category Class : alloneMeeting -->
+					<section class="fullWidth">
+						<ul class="meetNav grid5"><!-- 1002 : 접근성 -->
+							<li><a href="javascript:;" aria-selected="false"><span class="icon"></span>홈</a></li>
+							<li class="off"><a href="javascript:;" aria-selected="false" title="비활성 탭"><span class="icon"></span>회비납부</a></li>
+							<li><a href="javascript:;" aria-selected="true"><span class="icon"></span>회비장부</a></li>
+							<li class="on"><a href="javascript:;" aria-selected="false" title="현재 탭"><span class="icon"></span>회비관리</a></li>
+							<li><a href="javascript:;" aria-selected="false"><span class="icon"></span>설정</a></li>
+						</ul>
+					</section>
+
+					<section class="fullWidth toplined">
+						<h3 class="visualHide">회비관리</h3><!--접근성 탭 타이틀 -->
+						<div class="titleArea">
+							<ul class="unorderList">
+								<li>거래내역을 확인하시고 &quot;납부명단관리&quot;를 선택하여 모임 멤버 회비납부여부를 체크하실 수 있습니다.</li>
+							</ul>
+						</div>
+						<!-- 0827 -->
+						<dl class="dataList totlaSum blueOn toplined">
+							<dt>회비 누적잔액</dt>
+							<dd>48,260<em class="won">원</em></dd>
+						</dl>
+					</section>
+
+					<section class="fullWidth topbordered">
+						<div class="moveCalArea ">
+							<span class="tMonth">2018-05</span>
+							<a href="javascript:;" class="monthBtn prev fl" role="button"><i class="i-navigate_before"></i><span class="visualHide">이전달</span></a>
+							<a href="javascript:;" class="monthBtn next fr" role="button"><i class="i-navigate_next"></i><span class="visualHide">다음달</span></a>
+						</div>
+
+						<dl class="dataList bdB0">
+							<dt>납부인원</dt>
+							<dd>
+								<strong>00<em>명</em></strong>
+								<!-- <strong> / </strong><strong class="tMoney02 blueOn">15,542<em>원</em></strong> -->
+							</dd>
+							<dt>미납인원</dt>
+							<dd>
+								<strong>00<em>명</em></strong>
+								<!-- <strong> / </strong><strong class="tMoney02 redOn">15,542<em>원</em></strong> -->
+							</dd>
+						</dl>
+						<!-- <div class="sectionWrap rightTxt mgT0 pdT10">
+							<button type="button" class="btn secondary strokeType subSmallType ">자세히 보기</button>
+						</div> -->
+					</section>
+
+					<section class="fullWidth topbordered">
+						<div class="sectionWrap pdT10 mgB5 clearfix">
+							<div class="selectSearchForm ">
+								<div class="select-input div3_1">
+									<label for="f_searchSelect" class="visualHide">조회조건선택</label>
+									<select id="f_searchSelect" class="formInput">
+										<option>납부자</option>
+										<option value="default" label="미납자">미납자</option>
+										<option>전체</option>
+									</select>
+								</div>
+							</div>
+							<button type="button" class="btn secondary strokeType subSmallType fr mgT10">납부명단 관리</button>
+						</div>
+					</section>
+
+					<section class="fullWidth fullWidth toplined with-fiexdBtn">
+						<ul class="boardList justify bdB0">
+							<li id="aa">
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">가올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">감올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">강올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">거올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">고올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">구올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">권올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+
+							<li id="ab">
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">나올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">너올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">노올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">노올원1</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">노올원2</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">노올원3</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">노올원4</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+
+							<li id="ac">
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">다올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">다올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">다올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">다올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">다올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+
+							<li id="ad">
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">라올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">라올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">라올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">라올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">라올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">라올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+
+							<li id="ae">
+								<div class="boxHead" >
+									<div class="objHead">
+										<span class="dataTxt tName">마올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead" >
+									<div class="objHead">
+										<span class="dataTxt tName">마올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead" >
+									<div class="objHead">
+										<span class="dataTxt tName">마올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead" >
+									<div class="objHead">
+										<span class="dataTxt tName">마올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead" >
+									<div class="objHead">
+										<span class="dataTxt tName">마올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead" >
+									<div class="objHead">
+										<span class="dataTxt tName">마올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead" >
+									<div class="objHead">
+										<span class="dataTxt tName">마올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead" >
+									<div class="objHead">
+										<span class="dataTxt tName">마올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead" >
+									<div class="objHead">
+										<span class="dataTxt tName">마올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead" >
+									<div class="objHead">
+										<span class="dataTxt tName">마올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead" >
+									<div class="objHead">
+										<span class="dataTxt tName">마올원</span>
+										<span class="dataTxt tTitle blueOn">납부자</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</section>
+
+					<!-- 초성검색 -->
+					<ul class="initial">
+						<li><a href="javascript:;" data-loc="aa" title="ㄱ 자음목록 바로가기">ㄱ</a></li>
+						<li><a href="javascript:;" data-loc="ab" title="ㄴ 자음목록 바로가기">ㄴ</a></li>
+						<li><a href="javascript:;" data-loc="ac" title="ㄷ 자음목록 바로가기">ㄷ</a></li>
+						<li><a href="javascript:;" data-loc="ad" title="ㄹ 자음목록 바로가기">ㄹ</a></li>
+						<li><a href="javascript:;" data-loc="ae" title="ㅁ 자음목록 바로가기">ㅁ</a></li>
+						<li><a href="javascript:;" data-loc="af" title="ㅂ 자음목록 바로가기">ㅂ</a></li>
+						<li><a href="javascript:;" data-loc="ag" title="ㅅ 자음목록 바로가기">ㅅ</a></li>
+						<li><a href="javascript:;" data-loc="ah" title="ㅇ 자음목록 바로가기">ㅇ</a></li>
+						<li><a href="javascript:;" data-loc="ai" title="ㅈ 자음목록 바로가기">ㅈ</a></li>
+						<li><a href="javascript:;" data-loc="aj" title="ㅊ 자음목록 바로가기">ㅊ</a></li>
+						<li><a href="javascript:;" data-loc="ak" title="ㅋ 자음목록 바로가기">ㅋ</a></li>
+						<li><a href="javascript:;" data-loc="al" title="ㅌ 자음목록 바로가기">ㅌ</a></li>
+						<li><a href="javascript:;" data-loc="am" title="ㅍ 자음목록 바로가기">ㅍ</a></li>
+						<li><a href="javascript:;" data-loc="an" title="ㅎ 자음목록 바로가기">ㅎ</a></li>
+						<li><a href="javascript:;" data-loc="ao" title="기타 자음목록 바로가기">#</a></li>
+					</ul>
+
+					<ul class="columnSet selfBottom marginT10">
+						<li class="colItem"><button type="submit" class="btn primary submit">납부정보공유</button></li>
+					</ul>
+
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

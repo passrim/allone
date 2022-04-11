@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>초대장 보내기</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content bigFont" data-role="content"><!-- 큰글형 : .bigFont -->
+					<section class="breadcrumb columnSet">
+						<h2>초대정보입력</h2>
+						<ol class="step columnSet twoSet">
+							<li class="is-on is-done">1</li>
+							<li class="is-on">4</li>
+						</ol>
+					</section>
+
+					<section class="fullWidth">
+						<div class="sectionWrap">
+							<!-- 2018-09-06 도움말을 위한 코드 수정  -->
+							<label for="f_acc01" class="helpLabel">경조금 받을 계좌 <button class="helpTooltip" name="tipbox01" title="펼쳐짐">도움말 <span></span></button>
+								<span class="helpBubble tipbox01"><button type="button" class="btn closeBtn">닫기</button>
+									경조금 받을 계좌를 설정하시면 해당 계좌로 경조금을 바로 입금 받을 수 있습니다.
+								</span>
+							</label>
+							<!-- // 2018-09-06 도움말을 위한 코드 수정 -->
+
+							<nav class="tabNavSub col6">
+								<ul class="columnSet noGutterSet">
+									<li class="colItem is-on" data-tab="tabSubCon01"><a href="javascript:;">계좌선택</a></li>
+									<li class="colItem" data-tab="tabSubCon02"><a href="javascript:;">직접입력</a></li>
+								</ul>
+							</nav>
+
+							<!-- tabContent  -->
+							<div id="tabSubCon01" class="tabContent noPadding is-current">
+								<h3 class="visualHide">계좌선택</h3><!-- 접근성 탭 컨텐트 -->
+								<div class="select-input mgT10">
+									<select id="f_acc01" class="formInput">
+										<option value="default" label="받을 계좌 선택">받을 계좌 선택</option>
+									</select>
+								</div>
+							</div>
+							<div id="tabSubCon02" class="tabContent noPadding">
+								<h3 class="visualHide">직접입력</h3><!-- 접근성 탭 컨텐트 -->
+
+								<!-- 1008 -->
+								<label for="ip_bank" class="visualHide">은행선택</label>
+								<div class="select-input disabled"><!-- 1015 : disabled 추가 -->
+									<button type="button" id="ip_bank" class="btn formInput" title="은행선택" >NH농협</button>
+								</div>
+								<label for="ip_account" class="visualHide">계좌번호</label>
+								<div class="numberInput mgT10">
+									<input type="text" id="ip_account" placeholder="-없이 입력" maxlength="16" class="formInput" name="">
+								</div>
+								<!-- //1008 -->
+								<!-- <ul class="columnSet withGutter mgT10">
+									<li class="rowSpan6">
+										<div class="select-input">
+											<button type="button" class="btn formInput">NH농협</button>
+										</div>
+									</li>
+									<li class="rowSpan6">
+										<label for="f_account" class="visualHide">계좌번호 입력</label>
+										<div class="numberInput">
+											<input type="tel" id="f_account" placeholder="계좌번호 입력" maxlength="16" class="formInput" name="">
+										</div>
+									</li>
+								</ul> -->
+								<label for="f_ip04" class="visualHide">예금주명 </label>
+								<div class="textInput mgT10">
+									<input type="text" id="f_ip04" placeholder="예금주명  입력" class="formInput" name="">
+									<button type="button" class="btn deleteBtn">삭제</button>
+								</div>
+								<span class="fieldNotes normal-info"> 올원계좌 외 타계좌로 송금을 받으시는 경우 은행명, 계좌번호, 예금주명을 직접 입력해주세요.</span><!-- 0913 : 마크업 태그 수정 -->
+							</div>
+							<!--//tabContent  -->
+						</div>
+					</section>
+
+					<section class="fullWidth with-fiexdBtn">
+						<div class="sectionWrap">
+							<!-- 2018-09-06 도움말을 위한 코드 수정  -->
+							<label for="f_open01" class="helpLabel">경조금 계좌 공개여부  <button class="helpTooltip" name="tipbox02" title="펼쳐짐">도움말 <span></span></button>
+								<span class="helpBubble tipbox02"><button type="button" class="btn closeBtn">닫기</button>받을 계좌를 공개로 설정하면 초대메시지에 계좌번호가 노출됩니다.</span>
+							</label>
+							<!-- // 2018-09-06 도움말을 위한 코드 수정 -->
+							<ul class="columnSet noGutterSet">
+								<li class="colItem">
+									<input type="radio" name="f_open" id="f_open01" class="btn radioToggle" checked="checked">
+									<label for="f_open01" class="inputLabel secondary strokeType">비공개</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" name="f_open" id="f_open02" class="btn radioToggle">
+									<label for="f_open02" class="inputLabel secondary strokeType">공개</label>
+								</li>
+							</ul>
+						</div>
+
+						<div class="sectionWrap topbordered">
+							<button type="submit" class="btn secondary">미리보기</button>
+						</div>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="submit" class="btn primary cancel">이전</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">카카오톡 보내기</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

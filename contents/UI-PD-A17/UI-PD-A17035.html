@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>전자서명(올원인증)</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="javascript:void(0);">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header">
+					<h1 class="headerTitle">전자서명(올원인증)</h1>
+					<button type="button" class="btn closeBtn" id="fullClose">닫기</button>
+				</div>
+				<div class="modal-contents" data-role="content">
+					<!-- section class="topNotice">
+						<ul class="unorderList">
+							<li>
+								<strong class="greenOn">[확인]</strong> 선택 시 거래가 완료됩니다.
+							</li>
+						</ul>
+					</section--> <!-- // 2018-10-13 삭제 -->
+					<section class="fullWidth with-fixedBtn auth"> <!-- 2018-10-13 클래스 삭제 및 추가  -->
+						<div class="completeMsg">
+							<p class="desc2"> 
+								<strong class="greenOn">받는 분 정보</strong>를 확인하시고,<br>
+								<strong class="greenOn">[확인]</strong>을 누르시면 송금이 완료됩니다.
+							</p>
+						</div>
+						
+						<ul class="rowStyle">
+							<li class="bdT0">
+								<div class="requiredBox"> <!-- 2018-10-13 클래스 삭제 -->
+									<h3 class="flL">송금정보 1</h3>
+									<span class="flR"><strong>10,000</strong> 원</span> <!-- 2018-10-13 문구 삭제 및 클래스 삭제  -->
+								</div>
+								<dl class="dataList">
+									<dt>출금계좌</dt><dd>김올리계좌 <em class="dp-inblock">302-0620-0171-21</em></dd>
+									<dt>수수료</dt><dd>0원</dd>
+									<dt class="long2Td">받는분</dt><dd class="greenOn">김올리<br>NH농협은행 302-0620-0171-21</dd> <!-- 181029 : [레드마인] #1698 / long2Td 추가  --><!-- 2018-10-13 클래스 추가  -->
+									<dt>내통장표시</dt><dd>김*리</dd>
+									<dt>받는통장표시</dt><dd>이*이</dd>
+								</dl>
+							</li>
+							<li>
+								<div class="requiredBox"> <!-- 2018-10-13 클래스 삭제 -->
+									<h3 class="flL">송금정보 2</h3>
+									<span class="flR"><strong>10,000</strong> 원</span> <!-- 2018-10-13 문구 삭제 및 클래스 삭제  -->
+								</div>
+								<dl class="dataList">
+									<dt>출금계좌</dt><dd>NH All100플랜 통장 <em class="dp-inblock">123-****-****-89</em></dd>
+									<dt>수수료</dt><dd>0원</dd>
+									<dt>받는분</dt><dd class="greenOn">김*리<br />0000********000</dd><!-- 2018-10-13 클래스 추가  -->
+									<dt>내통장표시</dt><dd>김*리</dd>
+									<dt>받는통장표시</dt><dd>이*이</dd>
+								</dl>
+							</li>
+							<li>
+								<div class="requiredBox"> <!-- 2018-10-13 클래스 삭제 -->
+									<h3 class="flL">송금정보 3</h3>
+									<span class="flR"><strong>10,000</strong> 원</span> <!-- 2018-10-13 문구 삭제 및 클래스 삭제  -->
+								</div>
+								<dl class="dataList">
+									<dt>출금계좌</dt><dd>NH All100플랜 통장 <em class="dp-inblock">123-****-****-90</em></dd>
+									<dt>수수료</dt><dd>0원</dd>
+									<dt>받는분</dt><dd class="greenOn">김*리<br />0000********000</dd><!-- 2018-10-13 클래스 추가  -->
+									<dt>내통장표시</dt><dd>김*리</dd>
+									<dt>받는통장표시</dt><dd>이*이</dd>
+								</dl>
+							</li>
+						</ul>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+
+				</div>
+			</div>
+		</div>
+		<!-- //fullPopup -->
+
+	</body>
+</html>

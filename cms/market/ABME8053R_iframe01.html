@@ -1,0 +1,176 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>골드바 FAQ | 골드바 | NH금융상품관</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/styles/cms.css">
+	<script src="../../assets/dist/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../../assets/dist/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../assets/dist/js/jquery.ui.touch-punch.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/common.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			function getFaqDetail(sweetIndex){
+					 if($("#faqLIst li").eq(sweetIndex).attr("class") == "hide1"){
+						 $("#faqLIst li").eq(sweetIndex).removeClass("hide1");
+						 $("#faqLIst li").eq(sweetIndex).addClass("show");
+						 $(".faqCont").eq(sweetIndex).show();
+					}else{
+						$("#faqLIst li").eq(sweetIndex).removeClass("show");
+						$("#faqLIst li").eq(sweetIndex).addClass("hide1");
+					   $(".faqCont").eq(sweetIndex).hide();
+					}
+
+			 };
+
+			$('body').on('click', '.faqTitle', function(){
+					var sweetIndex = $(".faqTitle").index(this);
+					getFaqDetail(sweetIndex);
+
+					var currIdx = $(this).parent("li").index();
+					var prevIdx = $(".faqListV1>li").index();
+					var prevMenuHt = $(".faqListV1>li>.faqCont").height();
+
+					var pos = $(this).offset();
+					var movePos = 0;
+					if(prevIdx > -1 && prevIdx < currIdx) {
+						movePos = 5 + prevMenuHt;
+					} else {
+						movePos = 110;
+					}
+
+					var temp = pos.top - movePos;
+
+					$("body").scrollTop(temp);
+					/*$("html, body").animate({
+						scrollTop : pos.top - movePos
+					});*/
+
+				});
+
+
+		});
+	</script>
+
+</head>
+<body>
+	<section class="fullWidth">
+		<ul class="accordion faqList" id="faqLIst">
+		<!-- faq_1 s-->	
+			<li class="hide1">
+				<dl>
+					<dt><a href="javascript:;"><span class="icon_q" aria-hidden="true">Q</span>골드바 가격은 어떻게 결정되나요?</a></dt>
+					<dd>
+						골드바 가격은 국내 금기준가격을 기반으로 책정됩니다. 국내 금기준가격은 런던금시장에서 거래되는 실시간 국제금시세(USD/T.oz)를 그램(gram)과 원화로 환산한 가격입니다.<br><br>
+	
+						1g당 국내 금기준가격 = 국제금시세(USD/T.oz) × 환율(원/USD) ÷ 중량환산값 [31.1034768(g/T.oz)]<br>
+						※ T.oz(트로이온스, Troy Ounce) : 전세계적으로 사용되는 귀금속 중량단위 (1트로이온스 = 31.1034768g)<br>
+						(예시) 1,350USD(국제금시세) × 1,200원(환율) ÷ 31.1034768g(중량환산값) = 52,084원(1g당 국내 금기준가격)
+					</dd>
+				</dl>
+			</li>
+			<li class="hide1">
+				<dl>
+					<dt><a href="javascript:;"><span class="icon_q" aria-hidden="true">Q</span>골드바를 구매할 때 부가가치세는 왜 내야 하나요?</a></dt>
+					<dd>
+						골드바는 상품으로 취급되기 때문에 세법에 의해 부가가치세(10%) 과세대상에 포함됩니다. 단, 구매하신 골드바를 파실 경우에는 부가가치세가 없습니다.
+					</dd>
+				</dl>
+			</li>
+			<li class="hide1">
+				<dl>
+					<dt><a href="javascript:;"><span class="icon_q" aria-hidden="true">Q</span>골드바 가격은 어떻게 변동되나요?</a></dt>
+					<dd>
+						골드바는 국제금시세와 환율의 영향으로 가격이 변동됩니다. 국제금시세가 하락하면 골드바 가격도 하락하고, 국제금시세가 상승하면 골드바 가격도 상승합니다.<br>
+							원달러 환율이 하락하면(평가절상, 1USD에 1천원이던 환율이 900원으로 변경된 경우) 골드바 가격이 하락하고, 원달러 환율이 상승하면(평가절하, 1USD에 1천원이던 환율이 1,300원으로 변경된 경우) 골드바 가격이 상승합니다.<br>
+							단, 국제금시세가 상승했는데(골드바 가격상승) 원달러 환율이 하락(골드바 가격하락)하거나, 국제금시세가 하락했으나(골드바 가격하락) 원달러 환율이 상승(골드바 가격상승)한 경우에는 두가지 요인 중 더 큰 가격 결정요인 따라 골드바 가격의 상승·하락이 결정됩니다.<br>
+							국제금시세와 환율변동은 정치·경제·물가·수요 등 수많은 요인에 의해 변동됩니다.
+					</dd>
+				</dl>
+			</li>
+			<li class="hide1">
+				<dl>
+					<dt><a href="javascript:;"><span class="icon_q" aria-hidden="true">Q</span>은행에서 판매하는 골드바는 예금자보호법 보호대상인가요?</a></dt>
+					<dd>
+						골드바는 상품으로 예금자보호법 보호대상이 아닙니다. 골드바는 이익 또는 손실이 발생할 수 있으므로, 구매하시기 전에 충분한 상담과 구매 필요성 등을 검토 하시고 장기적인 관점에서 구매를 결정하시기 바랍니다. 단기매매 목적으로는 적합하지 않은 상품입니다.
+					</dd>
+				</dl>
+			</li>
+			<li class="hide1">
+				<dl>
+					<dt><a href="javascript:;"><span class="icon_q" aria-hidden="true">Q</span>골드바의 투자가치는 무엇인가요?</a></dt>
+					<dd>
+						전세계 모든 국가에서 발행하는 화폐의 가치가 변동되듯이, 골드바의 가치도 변동됩니다. 그러나 금(Gold)은 주식, 부동산, 채권 등의 금융상품과 상관관계가 낮기 때문에 자산 포트폴리오 구성에 있어서 대체 실물 투자자산으로 관심을 받고 있습니다. <br>저금리시대에 들어서면서 현금과 예금은 시간이 지날 수록 가치가 하락(물가상승률 대비)하지만, 금은 통상적으로 시세변동을 통해 가치를 보전합니다. <br>(단, 국제금시세 또는 환율의 영향으로 가치가 하락하거나 상승할 수 있습니다.) 그러나 장기적 관점에서 매장량이 유한하며, 전세계에서 대용화폐로서[환금성] 인정받기 때문에 장기적으로 금에 대한 장기 투자수요는 증가하는 추세입니다. <br>단기매매차익을 추구하는 경우에는 적합하지 않습니다.
+					</dd>
+				</dl>
+			</li>
+			<li class="hide1">
+				<dl>
+					<dt><a href="javascript:;"><span class="icon_q" aria-hidden="true">Q</span>세금계산서 발급이 가능한가요?</a></dt>
+					<dd>
+						예, 가능합니다. 하지만, 개인에게 발행되는 세금계산서는 개인사업자나 소속 법인의 세금 신고에 사용될 수 없고, 세금계산서 발행을 요청할 경우에는 현금영수증 발행이 불가합니다. (현금영수증 발급은 인터넷뱅킹과 영업점에서 가능하지만, 세금계산서를 요청하실 경우 현금영수증 발급 신청을 하지 마시고, 영업점에서 신청하시기 바랍니다.) 
+					</dd>
+				</dl>
+			</li>
+			<li class="hide1">
+				<dl>
+					<dt><a href="javascript:;"><span class="icon_q" aria-hidden="true">Q</span>골드바 구매에 제한이 있나요?</a></dt>
+					<dd>
+						골드바 구매금액과 수량은 제한이 없습니다. 단, 1회 구매수량을 5개로 제한하여 반복 구매하셔야 합니다.
+					</dd>
+				</dl>
+			</li>
+			<li class="hide1">
+				<dl>
+					<dt><a href="javascript:;"><span class="icon_q" aria-hidden="true">Q</span>골드바 구매내역이 국세청에 신고되나요?</a></dt>
+					<dd>
+						골드바 거래내역은 상시 보고사항은 아닙니다. 은행에서 판매되는 상품인 만큼 금융실명제법과 자금세탁 방지법에 위배되지 않도록 실명을 확인합니다. 단, 국세청 등 정부기관에서 적법한 자료제출 요청이 (고액탈세자에 대한 세무조사 등)있을 경우 법 준수를 위해 자료를 제출할 수 있습니다.
+					</dd>
+				</dl>
+			</li>
+			<li class="hide1">
+				<dl>
+					<dt><a href="javascript:;"><span class="icon_q" aria-hidden="true">Q</span>골드바는 금융소득 종합과세에 해당되나요?</a></dt>
+					<dd>
+						아닙니다. 골드바는 상품으로 이자소득, 배당소득, 금융소득 종합과세에 해당되지 않습니다. 고객께서 사실 때 부가가치세만 10% 납부하시고, 파실때는 부가세가 없습니다.
+					</dd>
+				</dl>
+			</li>
+			<li class="hide1">
+				<dl>
+					<dt><a href="javascript:;"><span class="icon_q" aria-hidden="true">Q</span>구매한 골드바를 되팔때 본인이 가야 하나요?</a></dt>
+					<dd>
+						아닙니다. 골드바는 상품으로 실소유자의 실명을 확인합니다. 구매하신 고객과 되파시는 고객이 일치할 필요는 없습니다.
+					</dd>
+				</dl>
+			</li>
+			<li class="hide1">
+				<dl>
+					<dt><a href="javascript:;"><span class="icon_q" aria-hidden="true">Q</span>구매한 골드바를 되팔려면 어떻게 하나요?</a></dt>
+					<dd>
+						당행은 당행이 판매한 골드바에 한하여 매입합니다. 당행에서도 매입이 가능하지만, 고객님께서 인근 금은방, 골드바 판매업체, 금거래업체에 직접 되파실 수도 있습니다. 단, 골드바의 중량 또는 외형이 변경된 경우 매입이 거절될 수 있습니다.
+					</dd>
+				</dl>
+			</li>
+			<li class="hide1">
+				<dl>
+					<dt><a href="javascript:;"><span class="icon_q" aria-hidden="true">Q</span>골드바 구매가격은 어떻게 결정되나요?</a></dt>
+					<dd>
+						고객께서 사실 때 금액은 국내 금기준가격에 권종별 판매수수료율을 가산하고, 부가가치세 10%를 별도 부과한 금액입니다. (예시) 국내금기준가격 52,084원 X 100g(고객이 선택한 권종) X 105%(100g 권종 판매수수료율 5%) X 110% (부가가치세 10%) = 6,015,702원 (고객께서 골드바 100g을 사실 때 금액)
+					</dd>
+				</dl>
+			</li>
+			<li class="hide1">
+				<dl>
+					<dt><a href="javascript:;"><span class="icon_q" aria-hidden="true">Q</span>구매한 골드바를 되팔때 가격은 어떻게 결정되나요?</a></dt>
+					<dd>
+						고객께서 파실 때 금액은 국내 금기준가격에서 매입수수료율 5%(모든 권종 동일)를 차감하여 결정됩니다. (파실때는 부가세가 없습니다.) (예시) 국내금기준가격 52,084원 X 100g(고객이 파시는 골드바 중량) X 95% (매입수수료율 5% 차감) = 4,947,980원 (고객께서 골드바 100g을 되파실 때 받는 금액)
+					</dd>
+				</dl>
+			</li>
+		</ul>
+	</section>
+</body>
+</html>

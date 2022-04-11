@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>카드</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>단기카드대출(현금서비스)<span>현금서비스 신청</span></h2>
+						<ol class="step columnSet twoSet">
+							<li class="is-on is-done">1</li>
+							<li class="is-off">3</li>
+						</ol>
+					</section>
+					<section class="fullWidth">
+						<div class="sectionWrap">
+							<label for="f_cardNum">카드번호</label>
+							<div class="select-input">
+								<select id="f_cardNum" class="formInput">
+									<option value="default" label="선택">선택</option>
+								</select>
+							</div>
+
+							<label for="f_password01">카드비밀번호</label>
+							<input type="password" id="f_password01" placeholder="숫자 4자리" class="formInput" maxlength="4">
+							
+							<!-- 2018-09-06 도움말을 위한 코드 수정  -->
+							<label for="f_cvc" class="helpLabel">CVC 번호 <button class="helpTooltip" name="tipbox01" title="펼쳐짐">도움말 <span></span></button>
+								<span class="helpBubble tipbox01"><button type="button" class="btn closeBtn">닫기</button>
+									<strong class="title">CVC(Card Validation Code)번호란? </strong>
+								<p class="desc">고객님이 소지한 카드 진위여부를 재확인하는 3자리 숫자로써, 카드실물 뒷면의 서명란에 인자된 7자리 숫자 중뒤의 3자리를 말합니다.</p>
+								</span>
+							</label>
+							<!-- // 2018-09-06 도움말을 위한 코드 수정 -->
+						
+							<div class="text-input">
+								<input type="text" id="f_cvc" placeholder="CVC 번호입력" class="formInput">
+							</div>
+
+							<label for="f_accNum">입금계좌번호 <i class="required"></i></label>
+							<div class="select-input">
+								<select id="f_accNum" class="formInput">
+									<option value="default" label="선택">선택</option>
+								</select>
+							</div>
+
+							<label for="f_money01">단기카드대출(현금서비스 가능금액)</label>
+							<div class="search">
+								<input type="text" id="f_money01" placeholder="" class="formInput balance-input search-input" value="3,333만원" readonly="readonly"> <!-- 2018-10-08 클래스 추가 및 diabled -> readonly로 변경  -->
+								<button type="submit" id="" class="btn searchTxtBtn" name="">조회</button>
+							</div>
+
+							<label for="f_money02">단기카드대출(현금서비스 이용금액)</label>
+							<div class="balance balance-display" data-currency="만원">
+								<input type="text" id="f_money02" placeholder="예시)9,999만원" class="formInput balance-input len2" name=""> <!-- 0927 -->
+							</div>
+
+						</div>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

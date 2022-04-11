@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>뱅크 - 토스송금</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth with-fixedBtn topbordered">
+						<div class="titleArea">
+							<h3 class="tTitle">TOSS송금에 이용하실 계좌를 선택하세요</h3>
+						</div>
+						<ul class="boardList justify checkTop toplined">
+							<li>
+								<div class="checkbox">
+									<input type="checkbox" id="ch01_01"><label for="ch01_01">체크</label> <!-- id & label for 값 매칭 -->
+								</div>
+								<div class="formPad">
+									<label for="ch01_01" class="boxHead"><!-- id & label for 값 매칭 -->
+										<div class="objHead">
+											<div>
+												 <span class="txtLabel redOn fl">주계좌 </span><span class="dataTxt tAccNum fl">123-****-****-89</span><!-- 아이콘 작업 예정?? -->
+											</div>
+											<button type="button" class="btn secondary strokeType subSmallType">연계 해지</button>
+										</div>
+										<div class="objCon">
+											<span class="dataTxt tAccName">NH All100플랜 저축통장1</span>
+										</div>
+										<span class="objFoot rightTxt"> <!-- rightTxt -->
+											<span class="dataTxt tMoney"><em>잔액 </em>100,000,000<em>원</em></span>
+										</span>
+									</label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox">
+									<input type="checkbox" id="ch01_02"><label for="ch01_02">체크</label>
+								</div>
+								<div class="formPad">
+									<label for="ch01_02" class="boxHead">
+										<div class="objHead">
+											<span class="dataTxt tAccNum">123-****-****-89</span> 
+										</div>
+										<div class="objCon">
+											<span class="dataTxt tAccName">NH All100플랜 저축통장1</span>
+										</div>
+										<span class="objFoot rightTxt"> <!-- rightTxt -->
+											<span class="dataTxt tMoney"><em>잔액 </em>100,000,000<em>원</em></span>
+										</span>
+									</label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox">
+									<input type="checkbox" id="ch01_03"><label for="ch01_03">체크</label>
+								</div>
+								<div class="formPad">
+									<label for="ch01_03" class="boxHead">
+										<div class="objHead">
+											<span class="dataTxt tAccNum">123-****-****-89</span> 
+										</div>
+										<div class="objCon">
+											<span class="dataTxt tAccName">NH All100플랜 저축통장1</span>
+										</div>
+										<span class="objFoot rightTxt"> <!-- rightTxt -->
+											<span class="dataTxt tMoney"><em>잔액 </em>100,000,000<em>원</em></span>
+										</span>
+									</label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox">
+									<input type="checkbox" id="ch01_04"><label for="ch01_04">체크</label>
+								</div>
+								<div class="formPad">
+									<label for="ch01_04" class="boxHead">
+										<div class="objHead">
+											<span class="dataTxt tAccNum">123-****-****-89</span> 
+										</div>
+										<div class="objCon">
+											<span class="dataTxt tAccName">NH All100플랜 저축통장1</span>
+										</div>
+										<span class="objFoot rightTxt"> <!-- rightTxt -->
+											<span class="dataTxt tMoney"><em>잔액 </em>100,000,000<em>원</em></span>
+										</span>
+									</label>
+								</div>
+							</li>
+							<li>
+								<div class="checkbox">
+									<input type="checkbox" id="ch01_05"><label for="ch01_05">체크</label>
+								</div>
+								<div class="formPad">
+									<label for="ch01_05" class="boxHead">
+										<div class="objHead">
+											<span class="dataTxt tAccNum">123-****-****-89</span> 
+										</div>
+										<div class="objCon">
+											<span class="dataTxt tAccName">NH All100플랜 저축통장1</span>
+										</div>
+										<span class="objFoot rightTxt"> <!-- rightTxt -->
+											<span class="dataTxt tMoney"><em>잔액 </em>100,000,000<em>원</em></span>
+										</span>
+									</label>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead noData">
+									<span>조회내역이 없습니다.</span>
+								</div>
+							</li>
+						</ul>
+
+						<div class="titleArea">
+							<p>마이올원 &gt; 올원계좌 등록/관리 메뉴에서 농협계좌를 등록하신 후 이용할 수 있습니다.</p>
+							<!-- <div class="sectionWrap toplined"> -->
+								<!-- <button type="button" class="btn secondary strokeType subSmallType02 fr">계좌등록</button> -->
+								<button type="button" class="btn secondary widthAuto fr">올원계좌 등록/해지</button><!-- 1025-->
+							<!-- </div> -->
+						</div>
+
+					</section>
+
+					<button type="button" class="btn primary submit selfBottom">확인</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

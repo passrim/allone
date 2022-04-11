@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>step3_NH간편오토론_개인고객 정보확인  - 대출</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>NH모바일 전세대출<span>보증한도  조회</span></h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">5</li>
+							<li class="is-off">8</li>
+						</ol>
+					</section>
+					<section class="fullWidth">
+						<h3>서울보증보험 보증한도 조회</h3>
+						<dl class="dataList bdB0">
+							<dt>성명</dt><dd>1</dd>
+							<dt>주민등록번호</dt><dd>1324</dd>
+						</dl>
+					</section>
+					<section class="fullWidth topbordered">
+						<ul class="accordion">
+							<li>
+								<dl>
+									<dt class="js-active"><a href="javascript:;">한도조회 안내</a></dt>
+									<dd style="display: none;">
+										<ul class="unorderList">
+											<li>대출최대한도는 서울보증보험 보증한도 이내에서 최대 5억원까지 가능합니다.</li>
+											<li>본 전세대출상품은 임대인의 협조 또는 동의가 필요합니다.<br>(채권양도통지 관련 등기우편 수령 협조 또는 채권양도승낙 관련 동의 등)</li>
+											<li>고객님의 소득 대비 대출금(본 대출신청금액 포함)이 과다할 경우 대출이 불가할 수 있습니다.</li>
+											<li>고객님이 입력 하신 정보가 정확하지 않을 경우, 대출이 불가하거나 대출 한도가 변경될 수 있습니다.</li>
+											<li>농협은행 입출식 계좌가 없을 시 대출신청이 되지 않으니 통장 발급 후 신청하시기 바랍니다.</li>
+											<li>
+												[대출가능금액공식]<br>
+												Min={서울보증보험 보증한도, 임차보증금 X 80%, (매매시세의 80%-선순위설정금액)}
+											</li>
+										</ul>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+						<div class="formWrap paddingAll">
+							<p class="fz-12">대출한도를 조회하시겠습니까?</p>
+							<ul class="columnSet withGutter subSmallset mgT10">
+								<li class="colItem"><button type="button" class="btn secondary strokeType subSmallType">취소</button></li>
+								<li class="colItem"><button type="submit" class="btn secondary strokeType subSmallType">신규조회</button></li><!-- 10/16 수정 -->
+							</ul>
+						</div>
+					</section>
+					<section class="fullWidth topbordered">
+						<h3>서울보증보험 보증한도 결과</h3>
+						<dl class="dataList bdB0">
+							<dt>상품명</dt><dd>5+4654</dd>
+							<dt>보증한도(①)</dt><dd>4566</dd>
+							<dt>임차보증금＊80%(②)</dt><dd>454</dd>
+							<dt>아파트시세＊80%-선순위설정금액 (③)</dt><dd>4654</dd>
+							<dt>대출가능금액<br>(①,②,③중 가장 작은 금액)</dt><dd>45641</dd>
+							<dt>유효기일</dt><dd>564654</dd>
+						</dl>
+					</section>
+					<section class="fullWidth with-fixedBtn topbordered">
+						<ul class="accordion">
+							<li>
+								<dl>
+									<dt class="js-active" aria-label="꼭 알아두세요!"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a></dt>  <!-- 2018-09-07 클래스 추가 -->
+									<dd style="display: none;">
+										<ul class="unorderList">
+											<li>조회일 시점에서의 대출가능금액으로 대출실행 시점에고객님의 신용도, 대출 정보 등에 따라 달라질 수 있습니다.</li>
+											<li>고객님의 연소득 대비 금융비용 부담률이 40%초과 시 대출이 불가할 수 있습니다.</li>
+											<li>금융비용 : 금차 신청대출금액을 포함한 고객님 총 부채의 연간 이자상환액</li>
+										</ul>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

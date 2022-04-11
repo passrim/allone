@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>카카오페이</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #header -->
+		<header class="header menu-container">
+			<nav>
+				<a href="javascript:void(0)" class="headerNav backBtn">뒤로가기</a>
+				<h1 class="headerTitle"><a href="javascript:void(0)">카카오페이 계좌 등록</a></h1>
+			</nav>
+		</header>
+		<!-- //#header -->
+		
+		<div data-role="content">
+		
+			<section class="fullWidth">
+				<div class="payUtil PUkakao"><!-- 0929 :: PUkakao 클래스 이동 및 마크업 변경 -->
+					<p class="visualHide">카카오페이</p>
+					<p class="PUTit">
+						당신이 생각한 편리함을 닮고<br> <!-- 2018-10-04 문구 수정 -->
+						생활 속 금융의 즐거움을 담다
+					</p>
+				</div>
+				<div class="prd-listMain"><!-- 2018-10-02 클래스 삭제 -->
+					<ul class="boardList showArrow toplined">
+						<li>
+							<a href="javascript:;" class="boxHead">
+								<div class="objCon">
+									<strong class="dataTxt tTitle">농협계좌 등록</strong>
+									<span class="dataTxt tCon">계좌정보 한번만 등록하고 안전하게 이용하세요!</span>
+								</div>
+							</a>
+						</li>
+						<!-- 2018-10-02 서비스 삭제 -->
+						<!-- <li>
+							<a href="javascript:;" class="boxHead">
+								<div class="objCon">
+									<strong class="dataTxt tTitle">간편송금</strong>
+									<span class="dataTxt tCon">카카오페이에 등록한 농협계좌로 간편 송금하기</span>
+								</div>
+							</a>
+						</li> -->
+					</ul>
+				</div>
+			</section>
+			<section class="fullWidth topbordered">
+				<ul class="accordion bdB0">
+					<li>
+						<dl>
+							<dt class="js-active" aria-label="꼭 알아두세요!"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a></dt>  <!-- 2018-09-07 클래스 추가 -->
+							<dd>
+								<ul class="unorderList">
+									<li>
+										<strong>청구서</strong><br>
+										 카톡에서 확인하고, 사용내역은 알기 쉽게, 연체료 걱정 없이 미리 알려드립니다.
+									</li>
+									<li>
+										<strong>인증</strong><br>
+										별도 앱 설치없이, 비밀번호만으로 인증, 인증 홈에서 인증 내역 확인까지 할 수 있습니다.
+									</li>
+									<li>
+										<strong>송금</strong><br>
+										카톡친구라면 누구나, 채팅방에서 바로 송금, 지문 혹은 비밀번호 하나만 있으면 가능합니다.
+									</li>
+									<li>
+										<strong>결제</strong><br>
+										카톡 이용자라면 비밀번호로 바로 결제! 보안 걱정 없이 이용하세요.
+									</li>
+									<li>
+										<strong>멤버십</strong><br>
+										나만의 멤버십 바코드에 다양한 멤버십을 담고 바코드 하나로 포인트 적립/사용이 가능합니다.
+									</li>
+								</ul>
+							</dd>
+						</dl><!-- END OF TOGGLE -->
+					</li>
+				</ul>
+			</section>
+		</div>
+	</body>
+</html>

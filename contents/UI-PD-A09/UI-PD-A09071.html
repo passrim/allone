@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>경조금 받기</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type03", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- // 0921
+						[category Class]
+						.receiveBank.invite01 : 결혼 (*** current***)
+						.receiveBank.invite02 : 부고
+						.receiveBank.invite03 : 첫돌생일
+						.receiveBank.invite04 : 회갑칠순
+						.receiveBank.invite05 : 감사장
+						.receiveBank.invite06 : 기타
+					 -->
+					<section class="fullWidth receiveBank invite01"><!-- 0921 -->
+						<div class="imgArea"><!-- 1010 -->
+							<img src="../../assets/img/bank/invite_rolling/send01.jpg" alt="결혼을 축하합니다"/>
+							<!-- <img src="../../assets/img/bank/invite_rolling/send02.jpg" alt="고인의 명복을 빕니다"/>
+							<img src="../../assets/img/bank/invite_rolling/send03.jpg" alt="Happy Birthday"/>
+							<img src="../../assets/img/bank/invite_rolling/send04.jpg" alt="부모님 감사합니다"/>
+							<img src="../../assets/img/bank/invite_rolling/send05.jpg" alt="감사합니다"/>
+							<img src="../../assets/img/bank/invite_rolling/send06.jpg" alt="감사합니다"/>  -->
+						</div>
+						<div class="descArea">
+							<div class="boxHead">
+								<div class="ment">
+									<p>결혼을 진심으로 축하합니다.</p><!-- 0918 -->
+								</div>
+							</div>
+							<div class="boxCon">
+								<div class="conWrap">
+									<div class="objCon">
+										<p><span>김농협님</span> 결혼을 진심으로 축하합니다. <br>
+										두분의 앞날에 행복만 가득하시길 바랍니다.<br>
+										신혼여행가서 좋은 추억 많이 만들고 오세요~</p>
+									</div>
+									<div class="thumBgArea"></div><!-- 0921 -->
+									<div class="objFoot"><!-- 0918 -->
+										<p><span class="greenOn">홍*동님</span>이 <span>올원뱅크</span>로 <br><!-- 2018-10-17 클래스 추가  -->
+										<strong class="greenOn">50,000원</strong>을 보내셨습니다.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered selfBottom">
+						<ul class="accordion bdB0"><!-- 2018-10-17 클래스 추가  -->
+							<li>
+								<dl>
+									<dt aria-label="꼭 알아두세요!" class="js-active"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a></dt> <!-- 2018-10-17 클래스 추가  -->
+									<dd>
+										<ul class="unorderList">
+											<li>지금 올원뱅크 앱을 설치하시면 매번 계좌번호 입력할 필요 없이 편하게 송금 받으실 수 있습니다.</li>
+											<li>올원뱅크 앱이 설치되지 않았다면, 직접받기로도 받으실 수 있습니다.</li>
+										</ul>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="submit" class="btn primary cancel">직접받기</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">올원뱅크로 받기</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

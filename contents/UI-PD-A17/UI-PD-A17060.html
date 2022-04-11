@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>전자서명</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div data-role="content" class="content authFrame">
+					<ul class="loginContainer">
+						<li class="instruction">
+							<p>간편비밀번호<br />6자리를 입력해주세요</p>
+						</li>
+						<li class="colItem">
+							<dl>
+								<dt class="visualHide"><label for="_password">간편비밀번호 입력</label></dt>
+								<dd class="password pinNumWrap">
+									<span class="start filled"><input title="간편비밀번호 입력" type="password" id="_password" maxlength="1" disabled="disabled"></span>
+									<span class="filled"><input title="간편비밀번호 입력" type="password" id="_password" maxlength="1" disabled="disabled"></span>
+									<span><input title="간편비밀번호 입력" type="password" id="_password" maxlength="1" disabled="disabled"></span>
+									<span><input title="간편비밀번호 입력" type="password" id="_password" maxlength="1" disabled="disabled"></span>
+									<span><input title="간편비밀번호 입력" type="password" id="_password" maxlength="1" disabled="disabled"></span>
+									<span><input title="간편비밀번호 입력" type="password" id="_password" maxlength="1" disabled="disabled"></span>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

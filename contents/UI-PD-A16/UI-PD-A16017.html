@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>인증서 가져오기</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content newAccount" data-role="content">
+					<section class="fullWidth">
+						<div class="titleArea">
+							<h3 class="tTitle">스마트기기에서 스마트기기로 공인인증서 가져오기</h3>
+						</div>
+						<div class="sectionWrap pdT0">
+							<p class="certifyTxt">다른 스마트 기기에 저장되어 있는 인증서를 스마트폰으로 복사하여 다른 스마트기기와 동일한 인증서를 사용합니다.</p>
+
+							<div class="visualArea certify pdT0">
+								<ul class="grid2 clearfix">
+									<li class="smart">스마트 기기</li>
+									<li class="smart">스마트 기기</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered">
+						<div class="titleArea">
+							<h3 class="tTitle">인증번호</h3>
+						</div>
+						<div class="sectionWrap toplined">
+							<p class="certifyTxt">내보내기할 스마트기기의 인증번호를 입력하세요.</p>
+							<ul class="inputWrap columnSet designInput outline"><!-- 1012 -->
+								<li>
+									<label for="ip_certi01_01" class="visualHide">인증번호 첫번째 4자리</label>
+									<div class="numberInput">
+										<input type="text" id="ip_certi01_01" placeholder="" class="formInput" value="">
+									</div>
+								</li>
+								<li>
+									<label for="ip_certi01_02" class="visualHide">인증번호 두번째 4자리</label>
+									<div class="columnSet withGutter col-valign">
+										<input type="text" id="ip_certi01_02" placeholder="" class="formInput" value="">
+									</div>
+								</li>
+								<li>
+									<label for="ip_certi01_03" class="visualHide">인증번호 세번째 4자리</label>
+									<div class="columnSet withGutter col-valign">
+										<input type="text" id="ip_certi01_03" placeholder="" class="formInput" value="">
+									</div>
+								</li>
+								<li>
+									<label for="ip_certi01_04" class="visualHide">인증번호 네번째 4자리</label>
+									<div class="columnSet withGutter col-valign">
+										<input type="text" id="ip_certi01_04" placeholder="" class="formInput" value="">
+									</div>
+								</li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="fullWidth with-fixedBtn topbordered mgT30">
+						<ul class="accordion">
+							<li>
+								<dl>
+									<dt class="js-active"><a href="javascript:;">인증서 복사 안내</a></dt>
+									<dd>
+										<dl class="numberList">
+											<dt><span>1</span></dt><dd>내보내기할 스마트폰에서 농협 스마트뱅킹 혹은 올원뱅크 앱을 실행</dd>
+											<dt><span>2</span></dt><dd>해당 기기에서 인증서 내보내기 메뉴를 선택
+												<ul>
+													<li>- 스마트뱅킹 : 인증센터 > 인증서 내보내기 > 스마트폰→스마트폰</li>
+													<li>- 올원뱅크 : 고객센터 > 인증서복사 > 스마트폰으로 인증서 내보내기</li>
+												</ul>
+											</dd>
+											<dt><span>3</span></dt><dd>내보낼 공인인증서를 선택하고 공인인증서 암호를입력</dd>
+											<dt><span>4</span></dt><dd>해당 스마트기기에 나타나는 인증번호를 위 화면에 입력(하고 다음으로 진행)</dd>
+											<dt><span>5</span></dt><dd>위 화면의 인증서 가져오기 버튼 선택</dd>
+											<dt><span>6</span></dt><dd>공인인증서 암호를 입력</dd>
+											<dt><span>7</span></dt><dd>공인인증서 복사 완료</dd>
+										</dl>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+
+							</li>
+						</ul>
+					</section>
+
+					<button type="button" class="btn primary submit selfBottom">다음</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

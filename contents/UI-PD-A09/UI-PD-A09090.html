@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>초대장 보내기</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content bigFont" data-role="content"><!-- 큰글형 : .bigFont -->
+					<section class="breadcrumb columnSet">
+						<h2>초대정보입력</h2>
+						<ol class="step columnSet">
+							<li class="is-on is-done">1</li>
+							<li class="is-on">3</li>
+							<li class="is-off">4</li>
+						</ol>
+					</section>
+
+					<section class="fullWidth with-fiexdBtn">
+						<div class="sectionWrap">
+							<label for="f_cal">별세일자</label>
+							<div class="calendar">
+								<input type="text" id="f_cal" placeholder="별세일자 선택" class="formInput search-input">
+								<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+							</div>
+
+							<label for="f_hole">빈소 <i class="required"></i></label>
+							<div class="search">
+								<input type="text" id="f_hole" placeholder="행사장/홀 이름 입력" class="formInput search-input">
+								<button type="submit" id="" class="btn searchTxtBtn" name="">지도첨부</button>
+							</div>
+							<div class="mapArea">
+								<img src="../../assets/img/@tmp/map.png" alt="행사장/홀 지도">
+							</div>
+
+							<label for="f_cal02">발인일자 <i class="required"></i></label>
+							<div class="calendar">
+								<input type="text" id="f_cal02" placeholder="발인일자 선택" class="formInput search-input">
+								<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+							</div>
+
+							<label for="f_loc">장지 </label>
+							<div class="textInput">
+								<input type="text" id="f_loc" placeholder="" class="formInput" name="">
+								<button type="button" class="btn deleteBtn">삭제</button>
+							</div>
+						</div>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="submit" class="btn primary cancel">이전</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">다음</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>송금! 미리메모</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+		<script>
+		$(document).ready(function(){
+			$('#autoTrue').change(function(){
+				if($(this).is(':checked')) {
+					$('#toggleTab1').toggleClass('is-current');
+					$('#toggleTab2').toggleClass('is-current');
+				}
+			});
+			$('#autoFalse').change(function(){
+				if($(this).is(':checked')) {
+					$('#toggleTab2').toggleClass('is-current');
+					$('#toggleTab1').toggleClass('is-current');
+				}
+			});
+			
+			$('.i_moreBtn').click(function(){
+				$(this).siblings('.editorLayer').toggleClass('dp-block');
+			});
+			
+			$('.editorLayer .close_btn').click(function(){
+				$(this).parent('.editorLayer').toggleClass('dp-block');
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth">
+						<nav class="tabNav">
+							<ul class="columnSet">
+								<li class="colItem data-tab="tabCont1"><a href="javascript:;">해외송금 미리메모</a></li>
+								<li class="colItem is-on"" data-tab="tabCont2"><a href="javascript:;">무계좌해외송금 미리메모</a></li>
+							</ul>
+						</nav>
+						
+						<div id="tabCont2" class="tabContent fullWidth is-current">
+							<h2 class="visualHide">무계좌해외송금 미리메모</h2>
+							<!-- 2018-10-17 국기 추가 -->
+							<section class="pdBz">
+								<!-- ul class="filter columnSet noGutterSet mgB5">
+									<li class="colItem">
+										<input type="radio" value="베트남" name="calendarType" id="solar" class="btn radioToggle" checked="">
+										<label for="solar" class="inputLabel strokeType">베트남</label>
+									</li>
+									<li class="colItem">
+										<input type="radio" value="필리핀" name="calendarType" id="lunar" class="btn radioToggle">
+										<label for="lunar" class="inputLabel strokeType">필리핀</label>
+									</li>
+								</ul -->
+								<ul class="countryOpt language noGutterSet">
+									<li class="vietnam">
+										<input type="radio" value="베트남" name="calendarType" id="korean" class="btn radioToggle" checked="checked">
+										<label for="korean" class="inputLabel strokeType">
+											<h3>베트남</h3>
+											VIETNAMESE
+										</label>
+									</li>
+									<li class="philippine">
+										<input type="radio" value="필리핀" name="calendarType" id="english" class="btn radioToggle">
+										<label for="english" class="inputLabel strokeType">
+											<h3>필리핀</h3>
+											ENGLISH
+										</label>
+									</li>
+								</ul>
+							</section>
+							<ul class="historyWrap">
+								<li class="bdT1">
+									<div class="listHead">
+										둘째조카 김*용
+									</div>
+									<a href="javascript:void(0);" class="i_moreBtn" role="button" title="옵션 열기"></a>
+									<div class="editorLayer">
+										<div class="btnArea">
+											<a href="javascript:void(0);" role="button" class="mo_btn">수정</a>
+											<a href="javascript:void(0);" role="button" class="del_btn">삭제</a>
+											<a href="javascript:void(0);" role="button" class="extend_btn">기간연장</a>
+										</div>
+										<a href="javascript:void(0);" role="button" class="close_btn">닫기</a>
+									</div>
+									<dl class="dataList bdT0">
+										<dt class="tData">받는분 성명</dt>
+										<dd class="tValue">MI**</dd>
+										<dt class="tData">입금국가</dt>
+										<dd class="tValue">UNITED STATES(미국)</dd>
+										<dt class="tData">송금통화</dt>
+										<dd class="tValue">USD</dd>
+										<dt class="tData">입금계좌번호</dt>
+										<dd class="tValue"></dd>
+									</dl>
+								</li>
+								<li>
+									<div class="listHead">
+										둘째조카 김*용 <span class="noteTag">50일 후 삭제</span>
+									</div>
+									<a href="javascript:void(0);" class="i_moreBtn" role="button" title="옵션 열기"></a>
+									<div class="editorLayer">
+										<div class="btnArea">
+											<a href="javascript:void(0);" role="button" class="mo_btn">수정</a>
+											<a href="javascript:void(0);" role="button" class="extend_btn">기간연장</a>
+											<a href="javascript:void(0);" role="button" class="del_btn">삭제</a>
+										</div>
+										<a href="javascript:void(0);" role="button" class="close_btn">닫기</a>
+									</div>
+									<dl class="dataList bdT0 bdB0">
+										<dt class="tData">받는분 성명</dt>
+										<dd class="tValue">MI**</dd>
+										<dt class="tData">입금국가</dt>
+										<dd class="tValue">UNITED STATES(미국)</dd>
+										<dt class="tData">송금통화</dt>
+										<dd class="tValue">USD</dd>
+										<dt class="tData">입금계좌번호</dt>
+										<dd class="tValue"></dd>
+									</dl>
+								</li>
+							</ul>
+
+						</div>
+						<ul class="accordion topbordered bdB0"><!-- 2018-09-13 클래스 변경 -->
+							<li>
+								<dl>
+									<dt class="js-active" aria-label="꼭 알아두세요!"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a></dt> <!-- 2018-09-13 클래스 추가  -->
+									<dd>
+										<ul class="unorderList"><!-- 2018-09-13 컨텐츠 수정 -->
+											<li>해외송금 미리메모 등록서비스(Remittance information pre-registration service)란?
+												<ul>
+													<li>해외송금정보(수취인정보)를 송금신청 전에 미리 등록하실 수 있는 서비스로, 해외송금 신청 시 간편하게 메모내역 불러오기를 통하여 송금처리를 할 수 있습니다.</li>
+													<li>무계좌해외송금 미리메모 서비스는 수취인의 해외은행 계좌번호를 아실 때 사용 가능합니다.</li>
+													<li>서비스 이용 가능 시간 : 24시간 365일</li>
+													<li>서비스 이용 채널 : 인터넷뱅킹,올원뱅크, 영업점(등록, 변경, 삭제, 조회 가능, 단, 스마트뱅킹은 메모내역 확인 및 불러오기만 가능)</li>
+													<li>미리메모 서비스로 등록하신 정보의 유효기간은 등록일로부터 1년이며, 유효기간 중에만 연장등록이 가능합니다.</li>
+													<li>유효기간 경과 후 해당 정보는 고객님의 정보보호를 위해 자동 삭제됩니다.</li>
+												</ul>
+											</li>
+										</ul>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+						</ul>
+					</section>
+
+					<button type="submit" class="btn primary submit selfBottom">무계좌 해외송금 미리메모 등록</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

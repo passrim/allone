@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title> 금융그룹 - 분할해지 완료</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>해지완료</h2>
+						<ol class="step columnSet twoSet">
+							<li class="is-done">1</li>
+							<li class="is-on">3</li>
+						</ol>
+					</section>
+					<section class="with-fixedBtn fullWidth">
+						<div class="completeMsg pdBoth15">
+							<h3>계좌 분할해지 정상 완료</h3>
+							해지금액은 입금계좌로 정상적으로 입금되었습니다.
+						</div>
+						<dl class="dataList">
+							<dt>처리일자/시간</dt><dd>2018-07-02 12:12:12</dd>
+							<dt>해지계좌번호</dt><dd>231**313**123</dd>
+							<dt>예금종류</dt><dd>해봄적금</dd>
+							<dt>입금계좌번호</dt><dd>231**313**123</dd>
+							<dt>예금주명</dt><dd>홍*동</dd>
+							<dt>해지구분</dt><dd>일반해지</dd>
+							<dt>예금주명</dt><dd>홍*동</dd>
+							<dt>해지구분</dt><dd>일반해지</dd>
+						</dl>
+						<h3 class="serviceTitle">해지지급액</h3>
+						<dl class="dataList bdT0">
+							<dt>세후지급액</dt><dd>10,000,000원</dd>
+							<dt>해지 요청금액</dt><dd>10,000,000원</dd>
+							<dt>이자합계액</dt><dd>10,000,000원</dd>
+							<dt>소득세</dt><dd>10,000,000원</dd>
+							<dt>지방소득세</dt><dd>10,000,000원</dd>
+							<dt>농특세</dt><dd>10,000,000원</dd>
+						</dl>
+
+						<h3 class="serviceTitle">해지처리 후 입금계좌</h3>
+						<dl class="dataList bdT0">
+							<dt>입금계좌 잔액</dt><dd>10,000,000원</dd>
+							<dt>입금계좌 지급가액</dt><dd>10,000,000원</dd>
+						</dl>
+					</section>
+
+					<button type="submit" class="btn primary submit selfBottom">확인</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

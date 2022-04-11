@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>올원뱅크 튜토리얼</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+					var swiper = new Swiper('.tutorial-Slider', {
+						// initialSlide:3, // 로그인 후 메인의 시작 슬라이드 index 설정
+						slidesPerView: 'auto',
+						centeredSlides: true,
+						pagination: {
+							el: '.swiper-pagination',
+							clickable: true
+						},
+						navigation: {
+							nextEl: '.swiper-button-next',
+							prevEl: '.swiper-button-prev',
+						}
+					});
+					
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="javascript:void(0);">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull tutorialPop">
+				<div class="header">
+					<button type="button" class="btn closeBtn" id="fullClose">닫기</button>
+				</div>
+				<div class="modal-contents" data-role="content">
+					<div class="swiper-container tutorial-Slider">
+						<div class="swiper-wrapper">
+							<!-- Slides -->
+							<div class="swiper-slide">
+								<div class="tutorialText">
+									<img src="../../assets/img/tutorial/tutorial_text01.png" alt="24시간!365일!잠들지 않는 올원뱅크 #새로운서비스 #새로운기능 #새로운 상품 새롭게 바뀐 올원뱅크 어떻게 달라졌을까요?"/>
+								</div>
+								<div class="tutorialContent">
+									<img src="../../assets/img/tutorial/tutorial_content01.png" alt="올원뱅크 메인 화면" />
+								</div>
+							</div>
+							
+							<div class="swiper-slide">
+								<div class="tutorialText">
+									<img src="../../assets/img/tutorial/tutorial_text02.png" alt="24시간!365일!잠들지 않는 올원뱅크 #새로운서비스 #새로운기능 #새로운 상품 새롭게 바뀐 올원뱅크 어떻게 달라졌을까요?"/>
+								</div>
+								<div class="tutorialContent">
+									<ul class="slidesAnimation">
+										<li class="ani1"><img src="../../assets/img/tutorial/tutorial_content02.gif" alt="올원뱅크 메인 화면" /></li>
+									</ul>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="tutorialText">
+									<img src="../../assets/img/tutorial/tutorial_text03.png" alt="24시간!365일!잠들지 않는 올원뱅크 #새로운서비스 #새로운기능 #새로운 상품 새롭게 바뀐 올원뱅크 어떻게 달라졌을까요?"/>
+								</div>
+								<div class="tutorialContent">
+									<ul class="slidesAnimation">
+										<li class="ani1"><img src="../../assets/img/tutorial/tutorial_content03.gif" alt="올원뱅크 메인 화면" /></li>
+									</ul>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="tutorialText">
+									<img src="../../assets/img/tutorial/tutorial_text04.png" alt="24시간!365일!잠들지 않는 올원뱅크 #새로운서비스 #새로운기능 #새로운 상품 새롭게 바뀐 올원뱅크 어떻게 달라졌을까요?"/>
+								</div>
+								<div class="tutorialContent">
+									<ul class="slidesAnimation">
+										<li class="ani1"><img src="../../assets/img/tutorial/tutorial_content04.gif" alt="올원뱅크 메인 화면" /></li>
+									</ul>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="tutorialText">
+									<img src="../../assets/img/tutorial/tutorial_text05.png" alt="24시간!365일!잠들지 않는 올원뱅크 #새로운서비스 #새로운기능 #새로운 상품 새롭게 바뀐 올원뱅크 어떻게 달라졌을까요?"/>
+								</div>
+								<div class="tutorialContent">
+									<ul class="slidesAnimation">
+										<li class="ani1"><img src="../../assets/img/tutorial/tutorial_content05.gif" alt="올원뱅크 메인 화면" /></li>
+									</ul>
+								</div>
+							</div>
+							<div class="swiper-slide SliderLast">
+								<div class="tutorialText">
+									<img src="../../assets/img/tutorial/tutorial_text06.png" alt="24시간!365일!잠들지 않는 올원뱅크 #새로운서비스 #새로운기능 #새로운 상품 새롭게 바뀐 올원뱅크 어떻게 달라졌을까요?"/>
+								</div>
+								<div class="tutorialContent">
+									<ul class="slidesAnimation">
+										<li class="ani1"><img src="../../assets/img/tutorial/tutorial_content06.gif" alt="올원뱅크 메인 화면" /></li>
+									</ul>
+								</div>								
+								<ul class="columnSet selfBottom">
+									<li class="colItem"><button type="submit" class="btn primary submit">시작하기</button></li>
+								</ul>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+						<div class="swiper-button-next tutorial-next"></div>	
+						<div class="swiper-button-prev tutorial-prev"></div>	
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //fullPopup -->
+
+	</body>
+</html>

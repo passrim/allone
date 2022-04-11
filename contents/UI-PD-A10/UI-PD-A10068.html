@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>교통범직금 조회</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- breadcrumb -->
+					<section class="breadcrumb columnSet">
+						<h2>조회</h2>
+						<ol class="step columnSet twoSet">
+							<li class="is-on">1</li>
+							<li class="is-off">5</li>
+						</ol>
+					</section>
+					<!-- //breadcrumb -->
+					<section>
+						<ul class="unorderList">
+							<li>서비스 이용시간: 00:30 ~ 23:10</li>
+							<li>교통범칙금은 가입자 본인내역만 조회/납부 하실 수 있습니다.</li>
+							<li>고지서에 인자된 “고객관리번호“ 또는 “전자납부번호＂를 입력하여 주시기 바랍니다</li>
+							<li>고객관리번호 &lt;주민 또는 법인(사업자)번호&gt;로 조회하시면 고객님께 부과된 전체 경찰청 교통범칙금 고지서를 확인 후 납부하실 수 있습니다.</li>
+							<li>전자납부번호(종이 고지서에 표기됨)로 조회하시면 해당 교통범칙금 고지서를 확인 후 납부할 수 있습니다.</li>
+						</ul>
+					</section>
+					<section class="fullWidth topbordered">
+						<div class="paddingAll">
+							<div class="radioBtn withLabel">
+								<input type="radio" id="" checked="checked"><label for="">고객관리번호(주민번호)</label>
+							</div>
+						
+							<div class="radioBtn withLabel mgT10">
+								<input type="radio" id="" ><label for="">전자납부번호</label>
+							</div>
+						</div>
+						
+						<div class="">
+							<div class="formWrap paddingAll">
+								<ul class="columnSet socialnumInput">
+									<li>
+										<div class="numberInput">
+											<input type="tel" id="inputLabel5" placeholder="숫자 4자리" class="formInput" maxlength="8">
+										</div>
+									</li>
+									<li>
+										<label for="inputLabel5" class="visualHide">Number Input</label>
+										<div class="columnSet withGutter col-valign">
+											<input type="password" id="inputLabel5" placeholder="숫자 15자리 입력" class="formInput" maxlength="8">
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						
+					</section>
+					<button type="submit" class="btn primary submit selfBottom">조회</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

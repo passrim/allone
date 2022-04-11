@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>Step1_기본정보입력 - 입출금계좌개설</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>Magic Tree (매직트리)<span>기본정보입력</span></h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">4</li>
+							<li class="is-off">6</li>
+						</ol>
+					</section>
+					<section>
+						<label for="inputLabel1">성명 <i class="required"></i></label>
+						<input type="text" id="inputLabel1" placeholder="홍*동" class="formInput" disabled="disabled">
+
+						<label for="inputLabel2">생년월일 <i class="required"></i></label>
+						<ul class="columnSet noGutterSet mgB5">
+							<li class="colItem">
+								<input type="radio" value="양력" name="calendarType" id="solar" class="btn radioToggle" disabled checked>
+								<label for="solar" class="inputLabel strokeType">양력</label>
+							</li>
+							<li class="colItem">
+								<input type="radio" value="음력" name="calendarType" id="lunar" class="btn radioToggle" disabled>
+								<label for="lunar" class="inputLabel strokeType">음력</label>
+							</li>
+						</ul>
+						<label for="inputLabel2-2" class="visualHide">저장된 생년월일 확인</label>
+						<input type="text" id="inputLabel2-2" placeholder="1987-12-12" class="formInput" disabled="disabled">
+
+						<label for="inputLabel3">휴대폰번호 <i class="required"></i></label>
+						<input type="text" id="inputLabel3" placeholder="010-12**-12**" class="formInput"  disabled="disabled">
+
+						<label for="inputLabel4">자택 주소 <i class="required"></i></label>
+						<div class="adr-input">
+							<div class="search">
+								<input type="text" id="inputLabel4" placeholder="231-32" class="formInput search-input" disabled="disabled">
+								<button type="submit" id="" class="btn searchTxtBtn" name="" title="팝업으로 열림">주소찾기</button><!-- 181023 : 접근성 alt값 수정 -->
+							</div>
+							<input type="text" id="inputLabel5" placeholder="서울시 강** 논**" class="formInput mgT10"  disabled="disabled">
+							<label for="inputLabel6" class="visualHide">상세주소 직접입력</label>
+							<div class="textInput mgT10">
+								<input type="text" id="inputLabel6" placeholder="상세주소  직접입력" class="formInput" name="">
+							</div>
+						</div>
+
+						<label for="selectLabel7">자택 전화번호 <i class="required"></i></label>
+						<dl class="columnSet phoneInput">
+							<dt>
+								<label for="phoneNum" class="visualHide">지역번호</label>
+								<div class="select-input">
+									<select id="phoneNum" class="formInput" name="">
+										<option value="02" label="02">02</option>
+										<option value="031" label="031">031</option>
+										<option value="031" label="031">031</option>
+										<option value="031" label="031">031</option>
+									</select>
+								</div>
+							</dt>
+							<dd>
+								<label for="inputLabel8" class="visualHide">Number Input</label> 
+								<input type="tel" id="inputLabel8" placeholder="- 없이 입력" class="formInput" name="phone" maxlength="8">	
+							</dd>
+						</dl>
+
+						<label for="inputLabel9">E-Mail</label>
+						<dl class="columnSet emailInput">
+							<dt class="colItem">
+								<input type="text" id="inputLabel9" placeholder="아이디입력" class="formInput" name="emailId">
+							</dt>
+							<dd class="colItem">
+								<label for="mailProvider" class="visualHide">Email Provider</label>
+								<div class="select-input">
+									<select id="mailProvider" class="formInput" name="">
+										<option value="gmail.com" label="gmail.com">gmail.com</option>
+										<option value="hanmail.net" label="hanmail.net">hanmail.net</option>
+										<option value="naver.com" label="naver.com">naver.com</option>
+										<option value="nate.com" label="nate.com">nate.com</option>
+										<option value="직접입력" label="direct input">직접입력</option>
+									</select>
+								</div>
+							</dd>
+						</dl>
+						<label for="inputLabel10" class="visualHide">직접입력</label>
+						<div class="textInput">
+							<input type="text" id="inputLabel10" placeholder="도메인주소 직접 입력" class="formInput mgT10 mgB10" name="">
+						</div>
+
+					</section>
+
+					<section class="topbordered">
+						<label for="selectLabel1">직업분류 <i class="required"></i></label>
+						<div class="job-input">
+							<div class="select-input">
+								<select id="selectLabel1" class="formInput">
+									<option value="default" label="직업분류">직업분류</option>
+									<option value="option2" label="직업분류2">직업분류2</option>
+									<option value="option3" label="직업분류3">직업분류3</option>
+									<option value="option4" label="직업분류4">직업분류4</option>
+								</select>
+							</div>
+							<div class="select-input mgT10">
+								<select id="selectLabel1-2" class="formInput">
+									<option value="default" label="중분류">중분류</option>
+									<option value="option2" label="중분류2">중분류2</option>
+									<option value="option3" label="중분류3">중분류3</option>
+									<option value="option4" label="중분류4">중분류4</option>
+								</select>
+							</div>
+							<div class="select-input mgT10">
+								<select id="selectLabel1-3" class="formInput">
+									<option value="default" label="소분류">소분류</option>
+									<option value="option2" label="소분류2">소분류2</option>
+									<option value="option3" label="소분류3">소분류3</option>
+									<option value="option4" label="소분류4">소분류4</option>
+								</select>
+							</div>
+						</div>
+
+						<label for="inputLabel2">직장명</label>
+						<input type="text" id="inputLabel2" placeholder="직장명 입력" class="formInput" >
+
+						<label for="inputLabel3">부서명</label>
+						<input type="text" id="inputLabel3" placeholder="부서명 입력" class="formInput" >
+
+						<label for="selectLabel4">직장전화번호 <i class="required"></i></label>
+						<dl class="columnSet phoneInput">
+							<dt>
+								<label for="phoneNum" class="visualHide">지역번호</label>
+								<div class="select-input">
+									<select id="phoneNum" class="formInput" name="">
+										<option value="02" label="02">02</option>
+										<option value="031" label="031">031</option>
+										<option value="031" label="031">031</option>
+										<option value="031" label="031">031</option>
+									</select>
+								</div>
+							</dt>
+							<dd>
+								<label for="inputLabel5" class="visualHide">Number Input</label> 
+								<input type="tel" id="inputLabel5" placeholder="- 없이 입력" class="formInput" name="phone" maxlength="8">	
+							</dd>
+						</dl>
+
+						<label for="inputLabel6">직장 주소 <i class="required"></i></label>
+						<div class="adr-input">
+							<div class="search">
+								<input type="text" id="inputLabel6" placeholder="231-32" class="formInput search-input" disabled="disabled">
+								<button type="submit" id="" class="btn searchTxtBtn" name="" title="팝업으로 열림">주소찾기</button><!-- 181023 : 접근성 alt값 수정 -->
+							</div>
+							<input type="text" id="inputLabel7" placeholder="서울시 강** 논**" class="formInput mgT10"  disabled="disabled"><!-- 0913 : 접근성 레이블 제공 -->
+							<label for="inputLabel8" class="visualHide">상세주소 직접입력</label>
+							<div class="textInput mgT10">
+								<input type="text" id="inputLabel8" placeholder="상세주소 직접입력" class="formInput" name="">
+							</div>
+						</div>
+
+						<label for="inputLabel9">연락 받을 곳 <i class="required"></i></label>
+						<ul class="columnSet noGutterSet">
+							<li class="colItem">
+								<input type="radio" id="calling01" class="btn radioToggle" value="phone" name="callingNum">
+								<label for="calling01" class="inputLabel secondary strokeType">휴대전화</label>
+							</li>
+							<li class="colItem">
+								<input type="radio" id="calling02" class="btn radioToggle" value="home" name="callingNum">
+								<label for="calling02" class="inputLabel secondary strokeType">집전화</label>
+							</li>
+							<li class="colItem">
+								<input type="radio" id="calling03" class="btn radioToggle" value="office" name="callingNum">
+								<label for="calling03" class="inputLabel secondary strokeType">직장전화</label>
+							</li>
+						</ul>
+
+						<label for="inputLabel10">우편물 수령 <i class="required"></i></label>
+						<ul class="columnSet noGutterSet">
+							<li class="colItem">
+								<input type="radio" id="mailing01" class="btn radioToggle" value="home" name="mailingAdr">
+								<label for="mailing01" class="inputLabel secondary strokeType">집</label>
+							</li>
+							<li class="colItem">
+								<input type="radio" id="mailing02" class="btn radioToggle" value="office" name="mailingAdr">
+								<label for="mailing02" class="inputLabel secondary strokeType">직장</label>
+							</li>
+						</ul>
+
+						<label for="inputLabel11">상품서비스 안내 수단 선택</label>
+						<ul class="columnSet withGutter mgT10">
+							<li class="colItem">
+								<div class="checkbox withLabel">
+									<input type="checkbox" id="postWay01"><label for="postWay01">전체</label>
+								</div>
+							</li>
+							<li class="colItem">
+								<div class="checkbox withLabel">
+									<input type="checkbox" id="postWay02"><label for="postWay02">전화</label>
+								</div>
+							</li>
+							<li class="colItem">
+								<div class="checkbox withLabel">
+									<input type="checkbox" id="postWay03"><label for="postWay03">우편물</label>
+								</div>
+							</li>
+						</ul>
+						<ul class="columnSet withGutter mgT10 mgB20">
+							<li class="colItem">
+								<div class="checkbox withLabel">
+									<input type="checkbox" id="postWay04"><label for="postWay04">SMS</label>
+								</div>
+							</li>
+							<li class="colItem">
+								<div class="checkbox withLabel">
+									<input type="checkbox" id="postWay05"><label for="postWay05">이메일</label>
+								</div>
+							</li>
+							<li class="colItem"></li>
+						</ul>
+
+						<label for="selectLabel12">거래목적 <i class="required"></i></label>
+						<div class="select-input">
+							<select id="selectLabel12" class="formInput">
+								<option value="default" label="거래목적 선택">거래목적 선택</option>
+								<option value="option2" label="거래목적2">거래목적2</option>
+								<option value="option3" label="거래목적3">거래목적3</option>
+								<option value="option4" label="거래목적4">거래목적4</option>
+							</select>
+						</div>
+
+						<label for="selectLabel13">자금의 원천 <i class="required"></i></label>
+						<div class="select-input">
+							<select id="selectLabel13" class="formInput">
+								<option value="default" label="자금의 선택">자금의 선택</option>
+								<option value="option2" label="자금의2">자금의2</option>
+								<option value="option3" label="자금의3">자금의3</option>
+								<option value="option4" label="자금의4">자금의4</option>
+							</select>
+						</div>
+
+						<label for="inputLabel14">실소유자 여부 <i class="required"></i></label>
+						<ul class="columnSet noGutterSet">
+							<li class="colItem">
+								<input type="radio" id="radio01" class="btn radioToggle" value="y" name="yesno01" checked="checked">
+								<label for="radio01" class="inputLabel secondary strokeType">네 본인이 맞습니다</label>
+							</li>
+							<li class="colItem">
+								<input type="radio" id="radio02" class="btn radioToggle" value="n" name="yesno01">
+								<label for="radio02" class="inputLabel secondary strokeType">아니오</label>
+							</li>
+						</ul>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

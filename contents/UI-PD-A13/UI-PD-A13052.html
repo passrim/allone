@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title> 상품 목표/해봄금액 설정 - NH올원해봄적금 - 예/적금</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth">
+						<!-- 2018-10-11 퍼블 수정  -->
+						<div class="heabomPlan topVisual">
+							<div class="marker"><strong>오늘부터 1일!</strong><span></span></div><!-- 181017 : visual 디자인 적용 /마크업 변경  -->
+							<h2>내일도 <strong>#해봄</strong> 하러<br>오실거죠?</h2><!-- 181017 : span -> strong  -->
+							<p class="visualTag"><span>#도전</span><span>#매일</span><span>#해봄</span></p>
+						</div>
+						<!-- // 2018-10-11 퍼블 수정  -->
+					</section>
+
+					<section>
+						<label for="radio01_1">나의 해봄하기 목표설정</label>
+						<ul class="columnSet noGutterSet">
+							<li class="colItem">
+								<input type="radio" id="radio01_1" class="btn radioToggle" value="hbPlan01" name="hbPlan">
+								<label for="radio01_1" class="inputLabel secondary strokeType">금연</label>
+							</li>
+							<li class="colItem">
+								<input type="radio" id="radio01_2" class="btn radioToggle" value="hbPlan02" name="hbPlan">
+								<label for="radio01_2" class="inputLabel secondary strokeType">다이어트</label>
+							</li>
+							<li class="colItem">
+								<input type="radio" id="radio01_3" class="btn radioToggle" value="hbPlan03" name="hbPlan">
+								<label for="radio01_3" class="inputLabel secondary strokeType">NO커피</label>
+							</li>
+							<li class="colItem">
+								<input type="radio" id="radio01_4" class="btn radioToggle" value="hbPlan04" name="hbPlan">
+								<label for="radio01_4" class="inputLabel secondary strokeType">여행</label>
+							</li>
+						</ul>
+						<input type="text" id="inputLabel2" placeholder="기타 직접 입력 (최대 10자)" class="formInput"><!-- 0913 : 접근성 레이블 제공 -->
+						<span class="fieldNotes normal-info">올원뱅크와 함께 도전 할 목표를 설정해 주세요.</span>
+
+						<label for="inputLabel3">해봄하기 금액설정 <i class="required"></i> 
+							<button class="helpTooltip" name="tipbox01" title="펼쳐짐">도움말 <span></span></button>
+							<span class="helpBubble tipbox01">
+								<button type="button" class="btn closeBtn">닫기</button>
+								<ul class="unorderList">
+									<li>매일매일 해봄하기 하실 금액을 설정 해 주세요.</li>
+									<li>설정하신 금액은 마이올원을 통해 빠르고 간편하게 적립이 가능합니다.</li>
+								</ul>
+							</span>
+						</label>
+						
+						<ul class="columnSet noGutterSet mgT10">
+							<li class="colItem">
+								<input type="radio" id="radio02_1" class="btn radioToggle" value="planPay01" name="planPay">
+								<label for="radio02_1" class="inputLabel secondary strokeType">1,000원</label>
+							</li>
+							<li class="colItem">
+								<input type="radio" id="radio02_2" class="btn radioToggle" value="planPay02" name="planPay">
+								<label for="radio02_2" class="inputLabel secondary strokeType">5,000원</label>
+							</li>
+							<li class="colItem">
+								<input type="radio" id="radio02_3" class="btn radioToggle" value="planPay03" name="planPay">
+								<label for="radio02_3" class="inputLabel secondary strokeType">10,000원</label>
+							</li>
+							<li class="colItem">
+								<input type="radio" id="radio02_4" class="btn radioToggle" value="planPay04" name="planPay">
+								<label for="radio02_4" class="inputLabel secondary strokeType">기타</label>
+							</li>
+						</ul>
+						
+						<!-- 2018-10-11 퍼블 수정 -->
+						<div class="balance balance-display" data-currency="원">
+							<input type="tel" id="inputLabel2" placeholder="" class="formInput balance-input" name="">
+						</div>
+						<span class="balance balance-currency greenOn" data-currency="원"><strong class="greenOn">36</strong>만 <strong class="greenOn">8,700</strong> </span>
+						<span class="fieldNotes normal-info"> 최소 1,000원 이상 ~ 최대 10,000원 이하 원 이하 단위:1원</span><!-- 181015 : br 삭제  -->
+						<!-- // 2018-10-11 퍼블 수정 -->
+						
+						<ul class="unorderList">	
+							<li class="redOn">해봄하기를 통한 간편적립은 적금가입 시 등록된 올원계좌를 통해 출금이체가 가능합니다.</li>
+						</ul>
+
+						<label for="selectLabel4">해봄하기 연결계좌 설정 <i class="required"></i></label>
+						<div class="select-input">
+							<select id="selectLabel4" class="formInput">
+								<option value="default" label="302-4567-4567-11 올리내꺼">302-4567-4567-11 올리내꺼</option>
+								<option value="option2" label="계좌번호2">계좌번호2</option>
+								<option value="option3" label="계좌번호3">계좌번호3</option>
+								<option value="option4" label="계좌번호4">계좌번호4</option>
+							</select>
+						</div>
+					</section>
+					
+					<section class="fullWidth topbordered">
+						<ul class="accordion">
+							<li>
+								<dl>
+									<dt class="js-active"><a href="javascript:;" title="펼치기">올원프렌즈 e-스티커 적립에 따른 우대금리 안내</a></dt>
+									<dd class="pdzero">
+										<iframe class="iframes" src="../../cms/market/ABMN1205R_iframe01.html" title="개별 아이프레임 제목 삽입해주세요 (Dear.Dev)"style="height:700px;"></iframe>
+										
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</section>
+					<!-- 09/20 아이프레임 수정 -->
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="submit" class="btn primary submit">신청하기</button></li>
+					</ul>
+					<!-- 마이올원> 해봄하기 금액수정으로 접근했을 경우 노출 -->
+					<!-- <ul class="columnSet selfBottom">
+						<li class="colItem"><button type="submit" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul> -->
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

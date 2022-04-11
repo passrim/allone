@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>계좌확인 - 입출금계좌개설</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>Magic Tree (매직트리)<span>계좌확인</span></h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">3</li>
+							<li class="is-off">6</li>
+						</ol>
+					</section>
+					<section class="fullWidth">
+						<ul class="unorderList paddingAll bdB1">
+							<li>비대면 계좌 개설을 위한 인증절차로 보유하고 있는 농협계좌 또는 타 금융기관 계좌 정보를 입력해 주시기 바랍니다.</li>
+						</ul>
+						<div class="accountConfirm">
+							<nav class="tabNav">
+							<!-- <nav class="tabNav pageTab "> -->
+								<ul class="columnSet">
+									<li class="colItem is-on" data-tab="tabCont1"><a href="javascript:;">농협계좌확인</a></li>
+									<li class="colItem" data-tab="tabCont2"><a href="javascript:;">타은행계좌확인</a></li>
+								</ul>
+							</nav>
+							<div id="tabCont1" class="tabContent is-current">
+								<h3 class="visualHide">농협계좌확인</h3><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+								<label for="selectLabel1">계좌선택</label>
+								<div class="select-input">
+									<select id="selectLabel1" class="formInput">
+										<option value="default" label="선택">선택</option>
+										<option value="option2" label="123-456-789987">123-456-789987</option>
+										<option value="option3" label="456-465-345324">456-465-345324</option>
+										<option value="option4" label="243-243-532432">243-243-532432</option>
+										<option value="write" label="직접입력">직접입력</option>
+									</select>
+								</div>
+								<div class="search mgT10 dp-none">
+								<!-- <div class="search mgT10"> -->
+									<input type="text" id="inputLabel5" placeholder="- 없이 숫자로만 계좌를 입력" class="formInput search-input"><!-- 0913 : 접근성 레이블 제공 -->
+									<button type="submit" id="" class="btn searchTxtBtn" name="">계좌선택</button>
+								</div>
+								<span class="fieldNotes normal-info">유효한 계좌만 보여줍니다.</span>
+								<!-- <span class="fieldNotes normal-info dp-none">유효한 계좌만 보여줍니다.</span> -->
+
+								<label for="inputLabel2">계좌비밀번호</label>
+								<input type="password" id="inputLabel2" placeholder="계좌비밀번호 4자리 입력" class="formInput" maxlength="4">
+								<span class="fieldNotes normal-info">비밀번호 3회 오류 시 계좌 거래가 정지되오니 유의하시기 바랍니다.</span>
+
+							</div>
+							<div id="tabCont2" class="tabContent">
+								<h3 class="visualHide">타은행계좌확인</h3><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+								<label for="selectLabel3">은행선택</label>
+								<div class="select-input">
+									<button type="button" class="btn formInput">선택</button>
+								</div>
+
+								<label for="inputLabel4">계좌번호</label>
+								<div class="search">
+									<input type="text" id="inputLabel4" placeholder="계좌번호 입력" class="formInput search-input">
+									<button type="submit" id="" class="btn searchTxtBtn" name="">계좌검증</button>
+								</div>
+								<span class="fieldNotes normal-info">1원송금 횟수 : 1회 (총 5회 가능)</span>
+							</div>
+
+						</div>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">다음</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

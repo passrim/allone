@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>공과금 - 계좌이동제 - 자동송금내역조회/변경 - 자동송금내역조회/변경신청</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>내역 조회/변경신청</h2>
+						<ol class="step columnSet twoSet">
+							<li class="is-on">1</li>
+							<li class="is-off">4</li>
+						</ol>
+					</section>
+
+					<section>
+						<ul class="unorderList">
+							<li>자동송금 등록 내역입니다.</li>
+							<li>예금주 조회를 하셔야 체크박스가 활성화 됩니다.</li>
+						</ul>
+					</section>
+
+					<section class="topbordered">
+						<h3>변경할 대상을 선택하세요.</h3>
+						<table class="dataTable rowStyle">
+							<caption>조회 결과 및 변경신청 선택; 선택 체크박스, 자동송금 내역 상세의 항목으로 정보 제공</caption>
+							<thead>
+								<tr>
+									<th scope="col" class="rowSpan2">선택</th>
+									<th scope="col" colspan="2">자동송금 내역</th>
+								</tr>
+							</thead>
+							<tbody>
+								<!-- 2018-10-15 내역이 없을 경우 추가  -->
+									<tr>
+										<td colspan="2">조회내역이 없습니다.</td>
+									</tr>
+								<tr>
+									<td>
+										<!-- 선택형 테이블 체크박스 -->
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<!-- // 선택형 테이블 체크박스 -->
+									</td>
+									<td>
+										<dl class="dataList fiveEle">
+											<dt>번호</dt><dd>1</dd>
+											<dt>입금은행</dt><dd>기업</dd>
+											<dt>입금계좌번호</dt><dd>468*******</dd>
+											<dt>이체금액</dt><dd>100,000 원</dd>
+											<dt>예금주</dt>
+											<dd>
+												<span class="checkOwner">확인불가</span>
+											</dd>
+											<dt>출금은행</dt><dd>농협</dd>
+											<dt>출금계좌번호</dt><dd>123-****-****-18</dd>
+											<dt>출금계좌기록</dt><dd>카카오적금</dd>
+											<dt>입금계좌기록</dt><dd>신*욱</dd>
+											<dt>이체주기</dt><dd>매월납</dd>
+											<dt>이체일</dt><dd>21</dd>
+											<dt>이체시작일</dt><dd>2017-12-31</dd>
+											<dt>이체종료일</dt><dd>2018-12-31</dd>
+											<dt>변경접수가능여부</dt><dd>변경가능</dd>
+										</dl>
+										<div class="showMore">
+											<input type="checkbox" class="moreBtn"><label for="">더보기</label><!-- 0913 : 접근성 레이블 제공 -->
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+									</td>
+									<td>
+										<dl class="dataList fiveEle">
+											<dt>번호</dt><dd>1</dd>
+											<dt>입금은행</dt><dd>기업</dd>
+											<dt>입금계좌번호</dt><dd>468*******</dd>
+											<dt>이체금액</dt><dd>100,000 원</dd>
+											<dt>예금주</dt>
+											<dd>
+												<span class="checkOwner"><button type="button" class="btn secondary strokeType subSmallType">조회</button></span>
+											</dd>
+											<dt>출금은행</dt><dd>농협</dd>
+											<dt>출금계좌번호</dt><dd>123-****-****-18</dd>
+											<dt>출금계좌기록</dt><dd>카카오적금</dd>
+											<dt>입금계좌기록</dt><dd>신*욱</dd>
+											<dt>이체주기</dt><dd>매월납</dd>
+											<dt>이체일</dt><dd>21</dd>
+											<dt>이체시작일</dt><dd>2017-12-31</dd>
+											<dt>이체종료일</dt><dd>2018-12-31</dd>
+											<dt>변경접수가능여부</dt><dd>변경가능</dd>
+										</dl>
+										<div class="showMore">
+											<input type="checkbox" class="moreBtn"><label for="">더보기</label><!-- 0913 : 접근성 레이블 제공 -->
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<!-- 선택형 테이블 체크박스 -->
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<!-- // 선택형 테이블 체크박스 -->
+									</td>
+									<td>
+										<dl class="dataList fiveEle">
+											<dt>번호</dt><dd>1</dd>
+											<dt>입금은행</dt><dd>기업</dd>
+											<dt>입금계좌번호</dt><dd>468*******</dd>
+											<dt>이체금액</dt><dd>100,000 원</dd>
+											<dt>예금주</dt>
+											<dd>
+												<span class="checkOwner blackOn ">홍길동</span>
+											</dd>
+											<dt>출금은행</dt><dd>농협</dd>
+											<dt>출금계좌번호</dt><dd>123-****-****-18</dd>
+											<dt>출금계좌기록</dt><dd>카카오적금</dd>
+											<dt>입금계좌기록</dt><dd>신*욱</dd>
+											<dt>이체주기</dt><dd>매월납</dd>
+											<dt>이체일</dt><dd>21</dd>
+											<dt>이체시작일</dt><dd>2017-12-31</dd>
+											<dt>이체종료일</dt><dd>2018-12-31</dd>
+											<dt>변경접수가능여부</dt><dd>변경가능</dd>
+										</dl>
+										<div class="showMore">
+											<input type="checkbox" class="moreBtn"><label for="">더보기</label><!-- 0913 : 접근성 레이블 제공 -->
+										</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<button type="button" class="btn more-btn">더보기(<span>1</span><span>10</span>)<span></span></button>
+					</section>
+
+					<section class="fullWidth topbordered">
+						<h3 class="serviceTitle">변경대상 정보입력</h3>
+
+						<div class="paddingAll">
+							<label for="selectLabel1">변경출금계좌(NH농협은행) <i class="required"></i></label>
+							<div class="select-input">
+								<select id="selectLabel1" class="formInput">
+									<option value="default" label="123-****-****-89 NH All100플랜 통장">123-****-****-89 NH All100플랜 통장</option>
+								</select>
+							</div>
+							<span class="balance balance-currency" data-currency="원">잔액 <strong>10,000,000</strong></span>
+
+							<label for="selectLabel2">변경출금계좌(NH농협은행) <i class="required"></i></label>
+							<dl class="columnSet phoneInput">
+								<dt>
+									<label for="phoneNum" class="visualHide">phone start number</label>
+									<div class="select-input">
+										<select id="phoneNum" class="formInput" name="">
+											<option value="010" label="010">010</option>
+											<option value="017" label="017">017</option>
+										</select>
+									</div>
+								</dt>
+								<dd>
+									<label for="inputLabel3" class="visualHide">Number Input</label> 
+									<input type="tel" id="inputLabel3" placeholder="- 없이 입력" class="formInput" name="phone" maxlength="8">
+								</dd>
+							</dl>
+							<span class="fieldNotes normal-info">변경신청 실패한 경우와 결과를 알수 없는 경우에만 sms발송됩니다.</span>
+
+							<label for="inputLabel5">권유직원 정보(선택사항)</label>
+							<div class="search">
+								<input type="text" id="inputLabel5" placeholder="조회" class="formInput search-input">
+								<button type="submit" id="" class="btn searchTxtBtn" name="">직원찾기</button>
+							</div>
+							<span class="fieldNotes normal-info">상품 가입에 도움을 준 직원번호(숫자 8자리)를 직접 입력하시거나 “직원찾기”로 검색하실 수 있습니다.</span>
+
+						</div>
+					</section>
+
+					<section class="fullWidth with-fixedBtn topbordered">
+						<ul class="accordion">
+							<li>
+								<dl>
+									<dt class="js-active"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a></dt> <!-- 2018-09-07 클래스 추가 -->
+									<dd class="btmNotice">
+										<ul class="unorderList">
+											<li>
+												<strong class="title">서비스 이용시간</strong>
+												(조회) 평일/토요일/일요일/공휴일 09:00~22:00<br>
+												(변경) 평일 09:00~22:00
+											</li>
+											<li>변경처리된 내역은 취소가 불가하오니 확인 후 처리하여 주시기 바랍니다.</li>
+											<li>변경신청시1회, 최대 10건까지 처리 가능합니다.</li>
+										</ul>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">다음</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

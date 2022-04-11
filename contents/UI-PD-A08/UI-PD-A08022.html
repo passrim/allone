@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>Step1_회원인증 - 회원확인</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>회원인증<span>Identity Verification</span></h2>
+						<ol class="step columnSet">
+							<li class="is-on is-done">1</li>
+							<li class="is-on">2</li>
+							<li class="is-off">6</li>
+						</ol>
+					</section>
+
+					<section class="fullWidth no-fixed">
+						<nav class="tabNav">
+							<ul class="columnSet">
+								<li class="colItem" data-tab="tabCont1"><a href="javascript:;">계좌번호<span>Account Number</span></a></li>
+								<li class="colItem is-on" data-tab="tabCont2"><a href="javascript:;">공인인증서<span>Public Certification</span></a></li>
+							</ul>
+						</nav>
+						<div id="tabCont1" class="tabContent noPadding">
+							
+						</div>
+						<div id="tabCont2" class="tabContent authFrame noPadding is-current">
+							<h2 class="visualHide">공인인증서 (Public Certification)</h2><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+							<ul class="loginContainer">
+								<li class="instruction">
+									아래 공인인증서 선택 후 인증서 암호를 입력하세요.
+								</li>
+								<li class="colItem">
+									<ul class="certifications">
+										<li>
+											<a href="javascript: void(0);" role="button" title="사용가능한 인증서" class="on"> <!-- 선택시 클래스 on 토글 -->
+												<h3>김올리</h3>
+												<dl>
+													<dt>발급일</dt>
+													<dd>2018-05-01</dd>
+													<dt>구분</dt>
+													<dd>은행개인</dd>
+													<dt>만료일</dt>
+													<dd>2019-01-01</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="expired"> <!-- 만료된 인증서 --> 
+											<a href="javascript: void(0);" role="button" title="만료된 인증서">
+												<h3>김코리</h3>
+												<dl>
+													<dt>발급일</dt>
+													<dd>2018-05-01</dd>
+													<dt>구분</dt>
+													<dd>은행개인</dd>
+													<dt>만료일</dt>
+													<dd>2019-01-01</dd>
+												</dl>
+											</a>
+										</li>
+										<li class="disposal"> <!-- 폐기된 인증서 -->
+											<a href="javascript: void(0);" role="button" title="폐기한 인증서">
+												<h3>김올리</h3>
+												<dl>
+													<dt>발급일</dt>
+													<dd>2018-05-01</dd>
+													<dt>구분</dt>
+													<dd>은행개인</dd>
+													<dt>만료일</dt>
+													<dd>2019-01-01</dd>
+												</dl>
+											</a>
+										</li>
+										
+										<li>
+											<a href="javascript: void(0);" role="button" title="사용가능한 인증서">
+												<h3>김올리</h3>
+												<dl>
+													<dt>발급일</dt>
+													<dd>2018-05-01</dd>
+													<dt>구분</dt>
+													<dd>은행개인</dd>
+													<dt>만료일</dt>
+													<dd>2019-01-01</dd>
+												</dl>
+											</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

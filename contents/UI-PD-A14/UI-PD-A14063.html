@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>WU-AUTOSEND 내역조회</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					
+					<section class="with-fixedBtn fullWidth">
+						<div class="periodSearch marginT15">
+							<ul class="columnSet noGutterSet">
+								<li class="colItem">
+									<input type="radio" id="today" class="btn radioToggle" value="today" name="blockDate">
+									<label for="today" class="inputLabel secondary strokeType">당일</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" id="3days" class="btn radioToggle" value="3days" name="blockDate">
+									<label for="3days" class="inputLabel secondary strokeType">3일</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" id="1month" class="btn radioToggle" value="1month" name="blockDate">
+									<label for="1month" class="inputLabel secondary strokeType">1개월</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" id="3month" class="btn radioToggle" value="3month" name="blockDate">
+									<label for="3month" class="inputLabel secondary strokeType">3개월</label>
+								</li>
+								<li class="svgBtn detailSearch">
+									<input type="checkbox" id="detailBtn"><label for="detailBtn">상세검색</label>
+								</li>
+							</ul>
+						</div>
+						<div class="periodBox">
+							<ul class="columnSet calendarInput">
+								<li class="colItem">
+									<div class="calendar">
+										<input type="text" id="ip_calendar01_01" title="조회 시작일" placeholder="2018-05-01" class="formInput search-input"><!-- 0913 : 접근성 레이블 및 타이틀 반영 -->
+										<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+									</div>
+								</li>
+								<li class="colItem">
+									<div class="calendar">
+										<input type="text" id="ip_calendar01_02" title="조회 종료일" placeholder="2018-05-01" class="formInput search-input"><!-- 0913 : 접근성 레이블 및 타이틀 반영 -->
+										<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+									</div>
+								</li>
+							</ul>
+	
+							<label for="inputLabel6">정렬순서</label>
+							<ul class="columnSet noGutterSet">
+								<li class="colItem">
+									<input type="radio" id="listNew" class="btn radioToggle" value="listNew" name="listOrder">
+									<label for="listNew" class="inputLabel secondary">최근순</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" id="listPast" class="btn radioToggle" value="listPast" name="listOrder">
+									<label for="listPast" class="inputLabel secondary">과거순</label>
+								</li>
+							</ul>
+							<button type="submit" class="btn secondary-gray">조회</button>
+						</div>
+						<p class="sectionBordered"></p>
+						
+						<h3 class="marginT10">조회 건수 <span class="greenOn">2</span>건</h3>
+						<ul class="rowStyle">
+							<li>
+								<div class="taxPay-heading actionBox">
+									송금일자: 2018-06-30 <button type="submit" class="btn">자세히보기</button>
+								</div>
+								<dl class="dataList">
+									<dt>REF-NO</dt>
+									<dd>RO000368T1******</dd>
+									<dt>신청일자</dt>
+									<dd>2018-07-05</dd>
+									<dt>송금액</dt>
+									<dd>USD 361.00</dd>
+									<dt>MTCN</dt>
+									<dd></dd>
+									<dt>수취인이름</dt>
+									<dd>MIKE</dd>
+									<dt>수취국가</dt>
+									<dd>VN VIETNAM</dd>
+								</dl>
+							</li>
+							<li>
+								<div class="taxPay-heading actionBox">
+									송금일자: 2018-06-30 <button type="submit" class="btn">자세히보기</button>
+								</div>
+								<dl class="dataList bdB0">
+									<dt>REF-NO</dt>
+									<dd>RO000368T1******</dd>
+									<dt>신청일자</dt>
+									<dd>2018-07-05</dd>
+									<dt>송금액</dt>
+									<dd>USD 361.00</dd>
+									<dt>MTCN</dt>
+									<dd></dd>
+									<dt>수취인이름</dt>
+									<dd>MIKE</dd>
+									<dt>수취국가</dt>
+									<dd>VN VIETNAM</dd>
+								</dl>
+							</li>
+						</ul>
+						<ul class="accordion topbordered bdB0"> <!-- 2018-09-19 클래스 추가  -->
+							<li>
+								<dl>
+									<dt class="js-active"><a href="javascript:;" class="pinned">꼭 알아두세요!</a></dt> <!-- 2018-09-19 클래스 추가  -->
+									<dd>
+										<ul class="unorderList">
+											<li>서비스 이용시간
+												<ul>
+													<li>평일: 04:00 ~ 23:00</li>
+													<li>토요일: 04:00 ~ 23:00</li>
+													<li>일요일/공휴일: 04:00 ~ 23:00</li>
+												</ul>
+											</li>
+											<li>고객님이 NH농협은행을 통해 이용한 전체 웨스턴유니온송금 거래내역을 조회합니다.</li>
+											<li>NH농협은행에서 제공하는 웨스턴유니온송금은 NH특급송금서비스, NH WU-AUTOSEND와 비대면 NH웨스턴유니온자동송금(WU-AUTOSEND)이 있으며, 영업점을 방문하여 서비스 이용신청이 가능합니다.</li>
+										</ul>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+						</ul>
+						
+					</section>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

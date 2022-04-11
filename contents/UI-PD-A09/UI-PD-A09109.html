@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>출금이체동의</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content AlloneComm write" data-role="content">
+					<section class="fullWidth ">
+						<!-- 1026 -->
+						<div class="visualArea accAggrement">
+							<div class="titleBox">
+								<p class="desc1">ARS 인증 전화를 요청하신 후 전화 연결이 되면 <br> 아래 인증번호를 전화기에 입력하세요.</p>
+							</div>
+						</div>
+						<!-- <div class="visualArea undefined">
+							<div class="titleBox">
+								<p class="desc2">ARS 인증 전화를 요청하신 후 전화 연결이 되면 <br> 아래 인증번호를 전화기에 입력하세요.</p>
+							</div>
+						</div> -->
+
+						<div class="sectionWrap certifyNumberBoxWrap"><!-- 1026 -->
+							<div class="certifyNumberBox noPadding mgT0">
+								<div class="txtLRAlign">
+									<p>인증번호</p>
+									<span class="redOn">3:00</span>
+								</div>
+								<div class="certifyNumber">
+									<span>5</span><span>5</span>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section class="fullWidth with-fixedBtn topbordered">
+						<ul class="accordion">
+							<li>
+								<dl>
+									<dt aria-label="꼭 알아두세요!" class="js-active"><a href="javascript:void(0);">꼭 알아두세요!</a>
+									<dd>
+										<ul class="unorderList">
+											<li>주의! 착신전환 시 인증 불가합니다.</li>
+											<li>ARS인증을 위해 NH농협은행 <span class="redOn">스마트금융센터(1600-2800)</span>에서 전화를 합니다.</li>
+										</ul>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+						</ul>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="submit" class="btn primary submit">ARS 전화요청</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

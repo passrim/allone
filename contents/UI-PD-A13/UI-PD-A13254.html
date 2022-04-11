@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title> step2.상품가입설계 - NH직장인월복리적금 - 예/적금</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>NH직장인월복리적금<span>상품가입설계</span></h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">2</li>
+							<li class="is-off">3</li>
+						</ol>
+					</section>
+
+					<section>
+						<ul class="unorderList">
+							<li>관리자 정보 노출</li>
+						</ul>
+					</section>
+
+					<section class="topbordered fullWidth">
+						<h3 class="bdB1">상품가입정보입력</h3>
+						<div class="paddingAll">
+							<label for="selectLabel1">계약기간 <i class="required"></i></label>
+							<div class="select-input">
+								<select id="selectLabel1" class="formInput">
+									<option value="default" label="선택하세요">선택하세요</option>
+									<option value="option2" label="1년 (12개월)">1년 (12개월)</option>
+									<option value="option3" label="1년 (12개월)">1년 (12개월)</option>
+									<option value="option4" label="1년 (12개월)">1년 (12개월)</option>
+								</select>
+							</div>
+							<label for="inputLabel3">초입금액(월 불입액) <i class="required"></i></label>
+							<div class="numberInput">
+								<div class="balance balance-display" data-currency="원">
+									<input type="tel" id="inputLabel3" placeholder="" class="formInput balance-input" name="">
+								</div>
+								<span class="fieldNotes normal-info">최소 : 50,000원 이상</span>
+							</div>
+	
+	
+							<label for="radioLabel6">자동이체여부 <i class="required"></i></label>
+							<ul class="columnSet noGutterSet">
+								<li class="colItem">
+									<input type="radio" id="radio01_1" class="btn radioToggle" value="rdo01" name="payments">
+									<label for="radio01_1" class="inputLabel secondary strokeType">자동이체 함</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" id="radio01_2" class="btn radioToggle" value="rdo02" name="payments">
+									<label for="radio01_2" class="inputLabel secondary strokeType">자동이체 안함</label>
+								</li>
+							</ul>
+							
+							<label for="inputLabe20">자동이체 납입금액 <i class="required"></i></label>
+							<div class="numberInput">
+								<div class="balance balance-display" data-currency="원">
+									<input type="tel" id="inputLabe20" placeholder="" class="formInput balance-input" name="">
+								</div>
+							</div>
+							<label for="inputLabe21">
+								자동이체시작일 <i class="required"></i>
+							</label>
+							<div class="calendar">
+								<input type="text" id="inputLabe21" placeholder="시작일 설정" class="formInput search-input">
+								<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+							</div>
+							<ul class="unorderList hyphenList mgT5">
+								<li class="certifyTxt fz-11">신규가입 월에 자동이체 입금을 원하시는 경우, 자동이체 시작 월은 변경하여 주시기 바랍니다.</li>
+								<li class="certifyTxt fz-11">정기적금의 경우, 자동이체 일을 신규일 이후 일자로 선택하시면, 지연일수에 해당하는 이자가 해지 일에 차감됩니다.</li>
+								<li class="certifyTxt fz-11">매월 해당일에 출금됩니다.</li>
+							</ul>
+							
+							<label for="radioLabel9">비과세종합저축 가입여부 <i class="required"></i></label>
+							<ul class="columnSet noGutterSet toggleRadio">
+								<li class="colItem">
+									<input type="radio" id="radio02_1" class="btn radioToggle" value="rdo01" name="join">
+									<label for="radio02_1" class="inputLabel secondary strokeType">일반가입</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" id="radio02_2" class="btn radioToggle toggleLayer" value="rdo02" name="join">
+									<label for="radio02_2" class="inputLabel secondary strokeType">비과세종합저축</label>
+								</li>
+							</ul>
+							<div class="rightTxt toggleLayerOn">
+								<!-- 2018-10-16 가능금액 디자인 변경으로 인한 코드 이동 및 클래스 변경  -->
+								<div class="rightTxt">
+									<div class="balance balance-display search howMuch" data-currency="원">
+										<input type="text" id="inputLabel13" placeholder="" class="formInput balance-input" title="비과세종합저축가입 가능 금액" readonly="readonly">
+										<button type="submit" class="btn searchTxtBtn">조회</button>
+									</div>
+								</div>
+								
+								<div class="balance balance-display mgT10" data-currency="원">
+									<input type="tel" id="inputLabel15" placeholder="비과세종합저축가입금액을 입력" class="formInput balance-input utf8" title="비과세종합저축가입금액 입력">
+								</div>
+							</div>
+	
+							<label for="radioLabel10">SMS만기안내 동의여부 <i class="required"></i><button class="helpTooltip">도움말 </button></label>
+							<ul class="columnSet noGutterSet">
+								<li class="colItem">
+									<input type="radio" id="radio03_1" class="btn radioToggle" value="y" name="yesno01">
+									<label for="radio03_1" class="inputLabel secondary strokeType">동의</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" id="radio03_2" class="btn radioToggle" value="n" name="yesno01">
+									<label for="radio03_2" class="inputLabel secondary strokeType">동의안함</label>
+								</li>
+							</ul>
+	
+							<label for="inputLabel11">만기시 자동해지여부</label>
+							<input type="text" id="inputLabel11" placeholder="만기시 자동해지함" class="formInput" disabled="disabled">
+	
+							<label for="selectLabel12">출금 계좌번호 <i class="required"></i></label>
+							<div class="select-input">
+								<select id="selectLabel12" class="formInput">
+									<option value="default" label="출금계좌번호 선택">출금계좌번호 선택</option>
+									<option value="option2" label="계좌번호2">계좌번호2</option>
+									<option value="option3" label="계좌번호3">계좌번호3</option>
+									<option value="option4" label="계좌번호4">계좌번호4</option>
+								</select>
+							</div>
+	
+							<div class="numberInput mgT10">
+								<div class="balance balance-display" data-currency="원">
+									<input type="tel" id="inputLabel5" placeholder="1,000,000" class="formInput balance-input" name=""readonly="readonly">
+								</div>
+							</div><!-- 10/17 수정 -->
+							<!-- <label for="inputLabel13">이체가능금액 <i class="required"></i></label>
+							2018-10-16 가능금액 디자인 변경으로 인한 코드 이동 및 클래스 변경 
+							<div class="rightTxt">
+								<div class="balance balance-display search howMuch" data-currency="원">
+									<input type="text" id="inputLabel13" placeholder="" class="formInput balance-input" readonly="readonly">
+									<button type="submit" class="btn searchTxtBtn">조회</button>
+								</div>
+							</div> -->
+
+							<label for="inputLabel14">출금 계좌비밀번호 <i class="required"></i></label>
+							<input type="password" id="inputLabel14" placeholder="비밀번호 4자리" class="formInput" maxlength="4">
+	
+							<div class="checkbox withLabel checkToggleBox mgT10">
+								<input type="checkbox" id="checkToggleBox01"><label for="checkToggleBox01">출금계좌 비밀번호로 신규계좌 비밀번호 설정</label><!-- 181015 : 띄어쓰기 적용  -->
+								<span class="fieldNotes normal-info paddingAll marginSide pdT5">신규 비밀번호 미설정 시 선택하신 출금계좌 비밀번호로 자동설정 됩니다.</span>
+							</div>
+	
+							<div class="checkedPrint"><!-- 181015 : dp-none 삭제  -->
+								<label for="inputLabel7">신규통장 비밀번호 <i class="required"></i></label>
+								<input type="password" id="inputLabel7" placeholder="비밀번호 4자리" class="formInput" maxlength="4">
+	
+								<label for="inputLabel8">신규통장 재확인 <i class="required"></i></label>
+								<input type="password" id="inputLabel8" placeholder="비밀번호 4자리" class="formInput mgT5" maxlength="4">
+							</div>
+							
+							<label for="inputLabel22">
+								추천 예금계좌번호 <button class="helpTooltip" name="tipbox05" title="닫혀짐">도움말 <span></span></button>
+								<span class="helpBubble  tipbox05"><button type="button" class="btn closeBtn">닫기</button>상품 가입을 추천하신 분이 계시면 추천하신분의 e금리우대 예금계좌번호를 입력하시기 바랍니다(고객님과 추천인 각각0.1%(최고 0.3%) 금리우대 제공)</span>
+							</label>
+							<div class="numberInput">
+								<input type="tel" id="inputLabel22" placeholder="계좌번호 입력" class="formInput">
+							</div>
+							
+							<label for="inputLabel16">
+								쿠폰 번호 입력 <button class="helpTooltip" name="tipbox02" title="닫혀짐">도움말 <span></span></button>
+								<span class="helpBubble  tipbox02"><button type="button" class="btn closeBtn">닫기</button>쿠폰번호를 입력 후 [쿠폰확인]버튼을 클릭하여 확인하시기 바랍니다.</span>
+							</label>
+							<div class="search">
+								<input type="text" id="inputLabel16" placeholder=" " class="formInput search-input">
+								<button type="submit" id="" class="btn searchTxtBtn" name="">쿠폰확인</button>
+							</div>
+							<span class="fieldNotes normal-info"> 쿠폰 우대금리 0.00% 적용 됩니다.</span>
+	
+							<label for="inputLabel17">
+								권유직원번호(선택사항) <button class="helpTooltip" name="tipbox03" title="닫혀짐">도움말 <span></span></button>
+								<span class="helpBubble  tipbox03"><button type="button" class="btn closeBtn">닫기</button>상품가입에 도움을 준 직원번호(숫자 8자리)를 “직원찾기”로 검색하실 수 있습니다.</span>
+							</label>
+							<div class="search">
+								<input type="text" id="inputLabel17" placeholder=" " class="formInput search-input">
+								<button type="submit" id="" class="btn searchTxtBtn" name="">직원찾기</button>
+							</div>
+	
+							<label for="inputLabel18">
+								개설 영업점(선택사항) <button class="helpTooltip" name="tipbox04" title="닫혀짐">도움말 <span></span></button>
+								<span class="helpBubble  tipbox04"><button type="button" class="btn closeBtn">닫기</button>출금계좌 영엽점으로 자동처리되므로,개설영업점 변경이 필요하신 고객님만 이용하시기 바랍니다.</span>
+							</label>
+							<div class="search">
+								<input type="text" id="inputLabel18" placeholder=" " class="formInput search-input">
+								<button type="submit" id="" class="btn searchTxtBtn" name="">영업점검색</button>
+							</div>
+						</div>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>너도나도 환전신청</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>통지정보입력</h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">3</li>
+							<li class="is-off">5</li> <!-- 2018-09-10 breadcrumb 수정 -->
+						</ol>
+					</section>
+					
+					<section class="with-fixedBtn fullWidth">
+						<fieldset class="formWrap">
+							<legend>환전 통지정보 입력</legend>
+							
+							<!-- 이름 -->
+							<label for="inputLabel3">성명</label> 
+							<div class="textInput">
+								<input type="text" id="inputLabel3" placeholder="홍*동" class="formInput" name="" readonly="readonly "/> <!-- 2018-09-10 input 상태변경 -->
+							</div>
+							
+							<!-- 생년월일 -->
+							<label for="inputLabel2">생년월일</label> 
+							<div class="numberInput">
+								<input type="tel" id="inputLabel3" placeholder="80****-******" class="formInput" name="" readonly="readonly "/> <!-- 2018-09-10 input 코드 변경 상태변경 -->
+							</div>
+							
+							<!-- 2018-09-10 생년월일 입력창 문구 삭제 -->
+							
+							<!-- 연락처 -->
+							<label for="inputLabel1">전화번호</label>
+							<div class="numberInput">
+								<input type="tel" id="inputLabel3" placeholder="010-****-****" class="formInput" name="" readonly="readonly "/> <!-- 2018-09-10 input 코드 변경 상태변경 -->
+							</div>
+							
+							<!-- 이메일 -->
+							<label for="inputLabel2">E-Mail(선택사항)</label>
+							<div class="search">
+								<input type="text" id="inputLabel2" placeholder="Noe****@naver.com" class="formInput" name="" disabled="disabled">
+								<button type="submit" class="btn searchTxtBtn">변경</button>
+							</div>
+							
+							<!-- 외화수령 영업점 -->
+							<label for="inputLabel3">외화수령 영업점  <i class="required"></i> <button type="button" class="btn secondary strokeType subSmallType">최근 신청 영업점 불러오기</button></label>
+							<div class="search">
+								<input type="text" id="inputLabel3" placeholder="" class="formInput" name="" disabled="disabled" aria-required="true">
+								<button type="submit" class="btn searchTxtBtn">영업점 검색</button>
+							</div>
+							
+							<!-- 외화수령일자 -->
+							<label for="inputLabel4">외화수령일자  <i class="required"></i></label>
+							<div class="calendar">
+								<input type="text" id="inputLabel4" placeholder="선택" class="formInput search-input" aria-required="true">
+								<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+							</div>
+							<span class="fieldNotes normal-info">수령일은 익일부터(당일불가) 1개월 지정하실 수 있습니다.</span> <!-- 2018-09-10 문구 수정 -->
+
+							<p class="basisTxt mgT20 mgB10">환전신청을 위해 약관에 동의합니다.</p>
+							<ul class="dataType-list agreement">
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id=""><label for="">체크</label>
+									</div>
+									<a href="javascript:void(0);"><span class="greenOn">[필수]</span>외환거래 기본약관</a>
+								</li>
+								<li>
+									<div class="checkbox">
+										<input type="checkbox" id=""><label for="">체크</label>
+									</div>
+									<a href="javascript:void(0);"><span class="greenOn">[필수]</span>비여신 개인정보 수집 이용 동의</a>
+								</li>
+
+							</ul>
+						</fieldset>
+					</section>
+					<button type="submit" class="btn primary submit selfBottom">다음</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

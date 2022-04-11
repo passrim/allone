@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>NH손해보험 - 사고보험금 청구내역 조회</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class=" ">
+						<ul class="unorderList">
+							<li>사고번호를 클릭하시면 해당 보상처리 현황의 상세내용을 확인하실 수 있습니다.</li>
+							<li>피보험자 현황조회는 “NH농협손해보험” APP을 이용해 주시기 바랍니다.</li>
+						</ul>
+					</section>
+					<section class="topbordered mgB15">
+						<div class="formWrap">
+							<label for="inputLabel1">조회기간 </label>
+						</div>
+						<div class="calendar">
+							<input type="text" id="ip_calendar01_01" title="조회 시작일" placeholder="시작일 설정" class="formInput search-input"><!-- 0913 : 접근성 레이블 및 타이틀 반영 -->
+							<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+						</div>
+						<button type="submit" class="btn secondary-gray mgT20">조회</button>
+					</section>
+					<section class="fullWidth topbordered no-fixed">
+						<ul class="accordion">
+							<li>
+								<p class="centeredTxt paddingAll">
+									조회내역이 없습니다.
+								</p>
+							</li>
+							<li class="on">
+								<dl>
+									<dt class="js-active"><a href="javascript:;"><p class="fz-14 blackOn">접수번호 115111-654897</p><p class="fz-12 mgT5">사고일자 2018-05-30</p></a></dt>
+									<dd class="dp-block fullWidth" style="display: block;">
+										<div class="dataListGray">
+											<dl class="dataList bdzero">
+												<dt>손해목적</dt><dd>인</dd>
+												<dt>상품명</dt><dd>무배당 채움스마트상해공재</dd>
+												<dt>증권번호</dt><dd>0**838-**3-21**56</dd>
+												<dt>계약자</dt><dd>홍*동</dd>
+												<dt>피보험자</dt><dd>홍*동</dd>
+												<dt>청구유형</dt><dd>상해</dd>
+												<dt>사고일자</dt><dd>2018-05-05</dd>
+												<dt>접수일자</dt><dd>2018-05-05</dd>
+												<dt>진행현황</dt><dd>보험금 진행 </dd>
+											</dl>
+											<div class="rightTxt pdRL15 pdB20">
+												<button type="button" class="btn secondary strokeType subSmallType">지급현황</button>
+											</div>
+										</div>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+			
+							<li>
+								<dl>
+									<dt><a href="javascript:;"><p class="fz-14 blackOn">접수번호 115111-654897</p><p class="fz-12 mgT5">사고일자 2018-05-30</p></a></dt>
+									<dd class="fullWidth">
+										<div class="dataListGray">
+											<dl class="dataList bdzero">
+												<dt>손해목적</dt><dd>인</dd>
+												<dt>상품명</dt><dd>무배당 채움스마트상해공재</dd>
+												<dt>증권번호</dt><dd>0**838-**3-21**56</dd>
+												<dt>계약자</dt><dd>홍*동</dd>
+												<dt>피보험자</dt><dd>홍*동</dd>
+												<dt>청구유형</dt><dd>상해</dd>
+												<dt>사고일자</dt><dd>2018-05-05</dd>
+												<dt>접수일자</dt><dd>2018-05-05</dd>
+												<dt>진행현황</dt><dd>보험금 진행 </dd>
+											</dl>
+											<div class="rightTxt pdRL15 pdB20">
+												<button type="button" class="btn secondary strokeType subSmallType">지급현황</button>
+											</div>
+										</div>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+							
+						</ul>
+					</section>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

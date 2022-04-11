@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>개인(신용)정보 조회 동의</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="javascript:void(0);">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header">
+					<h1 class="headerTitle">전화상담예약 서비스 안내</h1>
+					<button type="button" class="btn closeBtn" id="defaultClose">닫기</button>
+				</div>
+				<div data-role="content" class="modal-contents">
+					<section class="with-fixedBtn">
+						<div class="topAdvice">
+							<p>상품내용이나 가입방법 등 고객님께서 평소에 궁금하셨던 내용에 대해 올원고객상담 서비스를 통해 제공해 드립니다.<br>상담내용과 시간 등을 간략하게 작성하여 전화상담을 예약하시면 예약시간에 맞춰 전화를 드립니다.</p>
+						</div>
+						<div class="adviceUtil">
+							<ul class="adviceList">
+								<li class="step2_1">
+									<dl>
+										<dt>1. 전화상담예약 신청</dt>
+										<dd>전화상담예약 신청 부분에 신청내용을 작성합니다.</dd>
+									</dl>
+								</li>
+								<li class="step2_2">
+									<dl>
+										<dt>2. 예약접수 확인</dt>
+										<dd>고객님께서 신청하신 내용은 <span class="greenOn">마이올원 &gt; 내활동내역</span>에서 확인하실 수 있습니다.</dd>
+									</dl>
+								</li>
+								<li class="step2_3">
+									<dl>
+										<dt>3. 전화상담</dt>
+										<dd>올원뱅크의 전문상담원이 고객님께 상담전화를 드립니다.</dd>
+									</dl>
+								</li>
+								<li class="step2_4">
+									<dl>
+										<dt>4. 상담이력확인</dt>
+										<dd>NH전문상담원과의 상담내용을 <span class="greenOn">마이올원 &gt; 내활동내역</span>에서 확인하실 수 있습니다.</dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><a href="#" class="btn primary submit">전화상담내역 확인하기</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //fullPopup -->
+
+	</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>글쓰기</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content alloneMeeting" data-role="content"> <!-- Category Class : alloneMeeting -->
+					<!-- 0827 -->
+					<div class="paddingSide mgT15">
+						<nav class="tabNavSub col6 ">
+							<ul class="columnSet noGutterSet">
+								<li class="colItem" data-tab="tabCont1"><a href="javascript:;">자유글</a></li>
+								<li class="colItem is-on" data-tab="tabCont2"><a href="javascript:;">일정등록</a></li>
+							</ul>
+						</nav>
+					</div>
+					<!-- <nav class="tabNav">
+						<ul class="columnSet">
+							<li class="colItem" data-tab="tabCont1"><a href="javascript:;">자유글</a></li>
+							<li class="colItem is-on" data-tab="tabCont2"><a href="javascript:;">일정등록</a></li>
+						</ul>
+					</nav> -->
+
+
+					<div id="tabCont1" class="tabContent fullWidth">
+						<h3 class="visualHide">자유글</h3>
+					</div>
+
+					<div id="tabCont2" class="tabContent fullWidth  is-current">
+						<h3 class="visualHide">일정등록</h3>
+						<section class="fullWidth with-fixedBtn ">
+							<div class="sectionWrap mgT0 pdT15"><!-- 0827 : pdT15추가-->
+								<div class="checkbox withLabel">
+									<input type="checkbox" id="f_check"><label for="f_check">중요일정으로 등록</label>
+								</div>
+							</div>
+
+							<div class="sectionWrap pdT10">
+								<label for="f_ip01">제목</label>
+								<div class="textInput">
+									<input type="text" id="f_ip01" placeholder="일정 제목 입력" class="formInput" name="">
+									<button type="button" class="btn deleteBtn">삭제</button>
+								</div>
+
+								<label for="f_text" class="visualHide">내용</label>
+								<div class="textAreaSt3">
+									<textarea class="textArea" id="f_text" placeholder="일정 내용 입력" name=""></textarea>
+								</div>
+
+								<label for="f_cal">일시</label>
+								<ul class="clearfix">
+									<li class="span6">
+										<label for="f_cal" class="visualHide">일정일 설정</label>
+										<div class="calendar">
+											<input type="text" id="f_cal" placeholder="일정일 설정" class="formInput search-input">
+											<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+										</div>
+									</li>
+									<li class="span6 last">
+										<label for="f_time" class="visualHide">시간 설정</label>
+										<div class="select-input">
+											<select id="f_time" class="formInput" name="">
+												<option>12:30</option>
+												<option>13:00</option>
+											</select>
+										</div>
+									</li>
+								</ul>
+
+								<label for="f_loc" >위치</label>
+								<div class="search">
+									<input type="text" id="f_loc" placeholder="위치 입력" class="formInput search-input">
+									<button type="submit" id="" class="btn searchTxtBtn" name="">지도첨부</button>
+								</div>
+								<div class="mapArea">
+									<img src="../../assets/img/@tmp/map.png" alt="모임 장소">
+								</div>
+							</div>
+						</section>
+
+						<ul class="columnSet selfBottom">
+							<li class="colItem"><button type="submit" class="btn primary cancel">취소</button></li>
+							<li class="colItem"><button type="submit" class="btn primary submit">등록</button></li>
+						</ul>
+					</div>
+
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

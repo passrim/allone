@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>올원모임</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="layerPop.open('.modalWrap', this); return false;">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header">
+					<h1 class="headerTitle">멤버초대</h1>
+					<button type="button" class="btn closeBtn" id="fullClose">닫기</button>
+				</div>
+				<div data-role="content" class="modal-contents with-fixedBtn alloneMeeting"> <!-- Category Class : alloneMeeting -->
+					<section class="fullWidth with-fixedBtn">
+						<div class="visualArea  pdBZ"><!-- 0827 : .meeting 삭제 -->
+							<div class="titleBox">
+								<p class="desc1">올원뱅크가입자모임</p>
+								<p class="desc2">함께 할 멤버들을 초대해보세요!</p>
+							</div>
+						</div>
+
+						<div class="sectionWrap centeredTxt mgT10">
+							<ul class="rectBox inviteRect grid2 pad">
+								<li>
+									<a href="javascript:;">
+										<div class="imgArea kakao"></div>
+										<strong class="tTitle">카카오톡 친구 초대</strong>
+										<span class="tCon">카카오톡으로 친구에게 메시지를 보내세요</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:;">
+										<div class="imgArea allone"></div>
+										<strong class="tTitle">연락처 친구 초대</strong>
+										<span class="tCon">주소록에 있는 친구에게 메시지를 보내세요</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</section>
+
+				</div>
+			</div>
+		</div>
+		<!-- //fullPopup -->
+
+	</body>
+</html>

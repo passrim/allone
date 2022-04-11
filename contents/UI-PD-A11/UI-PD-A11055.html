@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>어린이/청소년 등록</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<div class="serviceNote">
+						<ul class="unorderList">
+							<li>어린이/청소년 할인등록을 위해 본인의 생년월일을 입력해주세요.</li>
+						</ul>
+					</div>
+					<section>
+						<label for="inputLabel3" class="inputLable">생년월일 <i class="required"></i></label>
+						<div class="calendar">
+							<input type="text" id="inputLabel3" placeholder="생년월일 선택" class="formInput search-input">
+							<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+						</div>
+						<label for="selectLabel1" class="inputLable">학년 <i class="required"></i></label>
+						<div class="select-input">
+							<select id="selectLabel1" class="formInput">
+								<option value="default" label="학년 선택">학년 선택</option>
+								<option value="option1" label="초등학교 1학년">초등학교 1학년</option>
+								<option value="option2" label="초등학교 2학년">초등학교 2학년</option>
+								<option value="option3" label="초등학교 3학년">초등학교 3학년</option>
+								<option value="option4" label="초등학교 4학년">초등학교 4학년</option>
+								<option value="option5" label="초등학교 5학년">초등학교 5학년</option>
+								<option value="option6" label="초등학교 6학년">초등학교 6학년</option>
+								<option value="option7" label="중학교 1학년">중학교 1학년</option>
+								<option value="option8" label="중학교 2학년">중학교 2학년</option>
+								<option value="option9" label="중학교 3학년">중학교 3학년</option>
+								<option value="option10" label="고등학교 1학년">고등학교 1학년</option>
+								<option value="option11" label="고등학교 2학년">고등학교 2학년</option>
+								<option value="option12" label="고등학교 3학년">고등학교 3학년</option>
+							</select>
+						</div>
+						
+					</section>
+					<section class="fullWidth topbordered">
+						<ul class="accordion">
+							<li>
+								<dl>
+									<dt class="js-active" aria-label="꼭 알아두세요!"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a></dt>  <!-- 2018-09-07 클래스 추가 -->
+									<dd>
+										<ul class="unorderList">
+											<li>경부(경산, 구미, 김천, 경주), 전남, 전북, 충북, 원주 지역은 학년제로 등록하시기 바랍니다.</li>
+											<li>초등학교/중학교/고등학교 재학중인 만 18세 초과 ~ 만 24세 이하 고객님의 청소년 할인 등록은 특별 할인으로 등록하시기 바랍니다.</li>
+											<li>어린이 요금 적용 : 만 6세 ~ 만 12세<br />
+											청소년 요금 적용 : 만 13세 ~ 만 18세</li>
+											<li>할인 등록은 반드시 카드 사용자의 생년월일/학년을 입력하셔야 하며 입력된 생년월일은 할인등록을 위한 용도로만 이용됩니다.</li>
+											<li class="redOn">일반인이 청소년/어린이 카드를 사용하다 적발되면 관련법에 의거하여 해당 승차구간 운임과 그 30배의 부가운임을 징수하오니 유의하시기 바랍니다.</li>
+											<li>학교/학년은 새학기 시작 전인 2월 28일로 학생 할인기간 만료일이 자동 설정되며, 학교(초/중/고)의 요금이 변경되는 시점은 매년 3월 1일입니다.</li>
+											<li>등록 해지(일반카드로 변경)를 원하시면, <a href="javascript: void(0);" title="할인등록 해지 화면으로 이동" class="greenOn">여기</a>를 눌러주세요.</li>
+										</ul>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+						</ul>
+					</section>
+					<button type="submit" class="btn primary submit selfBottom">확인</button>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

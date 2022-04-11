@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>계좌개설안내 - 입출금계좌개설</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content newAccount" data-role="content">
+					<section class="fullWidth">
+						<div class="visualBox paddingSide">
+							<div class="visual">
+								신분증만 있으면<br>
+								<span>영업점 방문없이 OK</span>
+							</div>
+						</div>
+						<div class="stepBubble">
+							<ul class="clearfix">
+								<li>
+									<div class="stepNum">STEP. 1</div>
+									<h4>본인확인</h4>
+									<p>휴대폰 본인확인<br><br></p>
+								</li>
+								<li>
+									<div class="stepNum">STEP. 2</div>
+									<h4>신분증촬영</h4>
+									<p>주민등록증 또는 운전면허증 촬영</p>
+								</li>
+								<li>
+									<div class="stepNum">STEP. 3</div>
+									<h4>본인명의계좌확인</h4>
+									<p>본인실명 계좌확인</p>
+								</li>
+								<li>
+									<div class="stepNum">STEP. 4</div>
+									<h4>개설완료</h4>
+									<p>올원서비스 이용</p>
+								</li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered no-double">
+						<h3 class="serviceTitle">서비스안내</h3>
+						<div class="paddingSide serviceInfo">
+							<ul class="columnSet iconSet">
+								<li class="colItem">
+									<div class="icon"></div>
+									<h4>대한민국 성인 </h4>
+									<p>만 19세 이상</p>
+								</li>
+								<li class="colItem">
+									<div class="icon"></div>
+									<h4>24시간 </h4>
+									<p>시스템 점검시간 제외</p>
+								</li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered">
+						<!-- 2018-09-06 도움말을 위한 코드 수정  -->
+						<h3 class="serviceTitle helpLabel">1일 이체한도 <button class="helpTooltip" name="tipbox01" title="펼쳐짐">도움말 <span></span></button>
+							<span class="helpBubble tipbox01"><button type="button" class="btn closeBtn">닫기</button>
+								금융거래 목적확인 증빙자료를 지참하시어 영업점 방문 후 한도 해제 가능하며, 이체 거래 하기 위해서 영업점 방문이 필요할 수 있습니다.
+							</span>
+						</h3>
+						<!-- // 2018-09-06 도움말을 위한 코드 수정 -->
+						<div class="paddingSide oneDay">
+							<ul class="columnSet iconSet">
+								<li class="colItem">
+									<div class="icon"></div>
+									<h4>자동화기기 (인출,이체)<br><strong class="greenOn">30만원</strong></h4>
+								</li>
+								<li class="colItem">
+									<div class="icon"></div>
+									<h4>전자금융 (이체)<br><strong class="greenOn">100만원</strong></h4>
+								</li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered">
+						<h3 class="serviceTitle">본인 인증 진행이 불가한 경우</h3>
+						<div class="paddingAll">
+							<ul class="unorderList">
+								<li>단기 다수계좌 개설 명의인(최근 입출금 계좌 개설)</li>
+								<li>주민등록증 또는 운전면허증이 없는 경우</li>
+								<li>미성년자(만19세 미만),외국인(재외국인 제외)</li>
+								<li>대포통장 또는 전자금융 사기계좌 명의인</li>
+								<li>개인정보 노출자 사고예방시스템에 등록된 경우</li>
+								<li>고객확인제도에 따른 금융거래 제한 대상자 등</li>
+								<li>본인명의의 휴대전화가 아닌 경우</li>
+							</ul>
+							<p class="fourBallList redOn mgT10"><i class="redOn">&#8251;</i>각 진행단계 중 추가 진행이 되지 않거나 본인 인증이 불가한 경우 신청이 취소되며 위에 해당되는 고객님은 관련 법률 등에 따라 개설이 불가하오니 영업점 창구를 이용하여 주시기 바랍니다.</p>
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered">
+						<h3 class="serviceTitle">국내 거주여부 확인</h3>
+						<div class="paddingAll">
+							<ul class="columnSet noGutterSet">
+								<li class="colItem">
+									<input type="radio" id="radio01" class="btn radioToggle" value="y" name="yesno01">
+									<label for="radio01" class="inputLabel secondary strokeType">거주</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" id="radio02" class="btn radioToggle" value="y" name="yesno01">
+									<label for="radio02" class="inputLabel secondary strokeType">비거주</label>
+								</li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="topbordered">
+						<p class="fourBallList">
+							<i>※</i>
+							<strong>상기 유의사항을 인지하였으며, 이체 거래를 위해서는 영업점 방문이 필요할 수 있습니다. 입출금계좌개설을 진행하시겠습니까?</strong><br>
+							개설 진행 중인 내역이 있는 경우 "입출금계좌개설 신청"하시면 단계 조회와 이어서 진행하기가 가능합니다.
+						</p>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">비대면 (FAQ)</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">입출금계좌개설 신청</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

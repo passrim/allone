@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>홈 - Fun & Life</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth no-fixed">
+						<div class="funlife-listMain">
+							<nav class="tabNav tabOverflow">
+								<ul class="columnSet">
+									<li class="colItem" data-tab="tabCont1"><a href="javascript:;">결제</a></li>
+									<li class="colItem" data-tab="tabCont2"><a href="javascript:;">쇼핑</a></li>
+									<li class="colItem" data-tab="tabCont3"><a href="javascript:;">FUN</a></li>
+									<li class="colItem" data-tab="tabCont4"><a href="javascript:;">LIFE</a></li>
+									<li class="colItem is-on" data-tab="tabCont5"><a href="javascript:;">재태크</a></li>
+								</ul>
+							</nav>
+
+							<!-- 재태크  -->
+							<div id="tabCont5" class="tabContent is-current funlife05">
+								<h2 class="visualHide">재태크</h2><!-- 0914 : 접근성 : 탭 컨텐트 타이틀 제공 -->
+								<div class="topVisual"> <!-- 18.09.20 :: 비주얼 전체 변경 -->
+									<p class="imgTitle autoVisual">
+										<img src="../../assets/img/funlife/home_title05.png" alt="내삶의 All100플랜! 100세 시대 은퇴 파트너 당신은 준비되셨습니까?">
+									</p>
+									<!-- <p class="desc"><a href="javascript:;">바로가기</a></p> -->
+								</div>
+
+								<div>
+									<ul class="boardList toplined"> <!-- 18.09.20 :: showArrow 클래스 삭제 -->
+										<li>
+											<a href="javascript:;" class="boxHead">
+												<div class="objCon">
+													<strong class="dataTxt tTitle">All100플랜</strong>
+													<span class="dataTxt tCon">은퇴설계, 귀농/귀촌, 재취업, 창업<br>당신의 인생설계 파트너!</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" class="boxHead">
+												<div class="objCon">
+													<strong class="dataTxt tTitle">골드바</strong>
+													<span class="dataTxt tCon">금시세조회, 골드바 가격조회, 금 투자포인트<br>여유 자금 장기 투자는 골드바 구매로 하세요</span>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="javascript:;" class="boxHead">
+												<div class="objCon">
+													<strong class="dataTxt tTitle">환테크</strong>
+													<span class="dataTxt tCon">해외여행준비 + 환테크 고민 한번에!<br>환율 우대와 이자 수익을 동시에!</span>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<!-- //재태크  -->
+
+						</div>
+					</section>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

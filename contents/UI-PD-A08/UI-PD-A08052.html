@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>Step2_본인인증 - 간편비밀번호 재등록</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>본인인증<span>Verify Using Cell Phone Number</span></h2>
+						<ol class="step columnSet">
+							<li class="is-on is-done">1</li>
+							<li class="is-on">2</li>
+							<li class="is-off">4</li>
+						</ol>
+					</section>
+					<section>
+						<label for="inputLabel4">본인인증 <i class="required"></i></label>
+						<ul class="columnSet noGutterSet">
+							<li class="colItem">
+								<input type="radio" id="skT" class="btn radioToggle" value="SKT" name="mobileProvider">
+								<label for="skT" class="inputLabel secondary strokeType">SKT</label>
+							</li>
+							<li class="colItem">
+								<input type="radio" id="ktT" class="btn radioToggle" value="KT" name="mobileProvider">
+								<label for="ktT" class="inputLabel secondary strokeType">KT</label>
+							</li>
+							<li class="colItem">
+								<input type="radio" id="lgT" class="btn radioToggle" value="LG" name="mobileProvider">
+								<label for="lgT" class="inputLabel secondary strokeType">LG</label>
+							</li>
+						</ul>
+						<dl class="columnSet phoneInput">
+							<dt>
+								<label for="phoneNum" class="visualHide">phone start number</label>
+								<div class="select-input">
+									<select id="phoneNum" class="formInput" name="">
+										<option value="010" label="010">010</option>
+										<option value="017" label="017">017</option>
+									</select>
+								</div>
+							</dt>
+							<dd>
+								<label for="inputLabel5" class="visualHide">Number Input</label> 
+								<input type="tel" id="inputLabel4" placeholder="1234-2345" class="formInput" name="phone" maxlength="8" />	
+								<button type="button" class="btn submit reAuth-btn">다시요청</button>					
+							</dd>
+						</dl>
+						<label for="inputLabel4" class="visualHide">인증번호 <i class="required"></i></label>
+						<input type="tel" id="inputLabel4" placeholder="인증번호 입력" class="formInput" name="phone" maxlength="6" />
+
+						<p class="basisTxt mgT30 mgB10">본인인증을 위한 약관에 동의합니다.</p>
+						<ul class="dataType-list agreement">
+							<li>
+								<div class="checkbox">
+									<input type="checkbox" id=""><label for="">체크</label>
+								</div>
+								<a href="javascript:;" >전체동의</a>
+								<ul>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:;"><spam class="greenOn">[필수]</spam> 개인정보 수집&middot;이용 동의</a>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:;"><spam class="greenOn">[필수]</spam> 개인정보제공 동의</a>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:;"><spam class="greenOn">[필수]</spam> 서비스 이용약관 동의</a>
+									</li>
+									<li>
+										<div class="checkbox">
+											<input type="checkbox" id=""><label for="">체크</label>
+										</div>
+										<a href="javascript:;"><spam class="greenOn">[필수]</spam> 통신사 이용약관 동의</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					
+					</section>
+					<section class="fullWidth with-fixedBtn topbordered">
+						<ul class="accordion">
+							<li>
+								<dl>
+									<dt class="js-active"><a href="javascript:;" class="pinned">꼭 알아두세요!</a></dt><!-- 2018-09-07 클래스 추가 -->
+									<dd>
+										<ul class="unorderList">
+											<li>본인명의 휴대폰이 아닐 경우(예 : 법인폰 등) 전자금융사기예방 서비스에 가입된 전화번호로 ARS인증을 받으시면 e금융 가입자 가입을 하실 수 있습니다</li>
+											<li class="clear-bullet pdT10"><button type="button" class="btn secondary strokeType subSmallType">e금융 가입자 회원가입</button></li>
+										</ul>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+						</ul>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">납부</button></li>
+					</ul>
+
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

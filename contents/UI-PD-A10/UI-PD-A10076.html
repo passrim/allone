@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>교통범직금 조회</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="layerPop.open('.modalWrap', this); return false;">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header">
+					<h1 class="headerTitle">교통범칙금 내역조회</h1>
+					<button type="button" class="btn closeBtn" id="fullClose">닫기</button>
+				</div>
+				<div data-role="content" class="modal-contents with-fixedBtn">
+					<section class="fullWidth with-fixedBtn">
+						<h3 class="bdB1">납부완료 상세 내역</h3>
+						<h3>범칙자 적발 보고서(운전자)</h3>
+						<dl class="dataList">
+							<dt>통고서 번호</dt><dd><strong>06465787263415674899</strong></dd>
+							<dt>(1차)납부기한</dt><dd>2016/07/30</dd>
+							<dt>(2차)납부기한</dt><dd>2016/07/30</dd>
+							<dt>금액</dt><dd><strong>1,254</strong>원</dd>
+							<dt>가산금액</dt><dd><strong>1,235</strong>원</dd>
+							<dt>적용법조</dt><dd>도로교통법 제 1조 25항</dd>
+							<dt>법칙내용</dt><dd>운전자 범칙금</dd>
+							<dt>법칙자</dt><dd></dd>
+							<dt>성명</dt><dd>홍*동</dd>
+							<dt>주민등록번호</dt><dd>801***-*******</dd>
+							<dt>면허번호</dt><dd>1234567890</dd>
+							<dt>전화</dt><dd>010123**56**</dd>
+							<dt>주소</dt><dd>서울시 강남구 논현동 123</dd>
+							<dt>차량조회</dt><dd>12가1234</dd>
+							<dt>차종</dt><dd>승용, 승합, 화물, 특수, 건설기계</dd>
+							<dt>용도</dt><dd>사업용, 비사업용</dd>
+						</dl>
+					</section>
+					<button type="submit" class="btn primary submit selfBottom">닫기</button>
+				</div>
+			</div>
+		</div>
+		<!-- //fullPopup -->
+
+	</body>
+</html>

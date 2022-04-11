@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>서비스 안내</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="fullWidth">
+						<nav class="tabNav compact"><!-- 0907 -->
+							<ul class="columnSet">
+								<li class="colItem" data-tab="tabCont1"><a href="javascript:">서비스 소개</a></li>
+								<li class="colItem is-on" data-tab="tabCont2"><a href="javascript:;">프렌즈 소개</a></li>
+								<li class="colItem" data-tab="tabCont3"><a href="javascript:">프렌즈 다운로드</a></li>
+							</ul>
+						</nav>
+					</section>
+
+					<section class="fullWidth">
+						<h2 class="visualHide">프렌즈 소개</h2> <!-- 접근성 탭 컨텐트명 -->
+						<div class="introCharacter character01"><!-- 0907 (이하 동일) -->
+							<h3 class="visualHide">프렌즈 소개</h3>
+							<div class="imgArea">
+								<img src="../../assets/img/aboutApp/character01.png" alt="올리 캐릭터"><!-- 0907 (이하 동일) -->
+							</div>
+							<div class="deacArea">
+								<span class="tTxt01">모두에게 이로운, 올려주다</span>
+								<strong class="tTxt02">올(All) + 리(利, 이로울 리)</strong>
+								<span class="tTxt03">고객과 항상 함께하는 든든한 아기공룡 <br>고객의 효익은 올리가 책임진다.</span>
+							</div>
+							<p class="deacArea02">NH금융의 모든(all) 계열사가 참여하여 모든(all) 서비스를 <br>듬직하게 제공함으로써 고객의 생활편의(利)를 높이 올려주는<br> 공룡 모바일 뱅크의 효익 표현</p> <!-- 1004 -->
+						</div>
+					</section>
+
+					<section class="fullWidth toplined">
+						<div class="introCharacter character02">
+							<h3 class="visualHide">원이 캐릭터 소개</h3>
+							<div class="imgArea">
+								<img src="../../assets/img/aboutApp/character02.png" alt="원이 캐릭터">
+							</div>
+							<div class="deacArea">
+								<span class="tTxt01">금융서비스를 하나로 원하다.</span>
+								<strong class="tTxt02">원(ONE) + 이(移, 이동할 이)</strong>
+								<span class="tTxt03">한 곳에서 고객을 품어주는 어미새<br>고객의 편리함은 원이가 책임진다!</span>
+							</div>
+							<p class="deacArea02">고객이 원하는 금융서비스를 한 곳에 품어주는 어미새<br>모바일 뱅크의 간편한 표현</p>
+						</div>
+					</section>
+
+					<section class="fullWidth toplined">
+						<div class="introCharacter character03">
+							<h3 class="visualHide">단지 캐릭터 소개</h3>
+							<div class="imgArea">
+								<img src="../../assets/img/aboutApp/character03.png" alt="단지 캐릭터">
+							</div>
+							<div class="deacArea">
+								<span class="tTxt01">저축을 상징</span>
+								<strong class="tTxt02">수줍음 많은 아기돼지 단지</strong>
+							</div>
+							<p class="deacArea02">동전을 모으고 모아 부자가 되지만, <br>어려운 친구들을 도와주는 기부천사</p>
+						</div>
+					</section>
+
+					<section class="fullWidth toplined">
+						<div class="introCharacter character04">
+							<h3 class="visualHide">달리 캐릭터 소개</h3>
+							<div class="imgArea">
+								<img src="../../assets/img/aboutApp/character04.png" alt="달리 캐릭터">
+							</div>
+							<div class="deacArea">
+								<span class="tTxt01">모험, 도전, 2030 상징</span>
+								<strong class="tTxt02">밝고 활당한 달리</strong>
+							</div>
+							<p class="deacArea02">여행, 모험, 도전을 즐기는 강아지,<br>꿈을 향해 달리는 20대 대학생이다.<br>농촌 일손을 잘 좁고 벼농사, 과실수확, 가축돌보기,<br>가축 몰기 등 농활 참여</p>
+						</div>
+					</section>
+
+					<section class="fullWidth toplined">
+						<div class="introCharacter character05">
+							<h3 class="visualHide">코리 캐릭터 소개</h3>
+							<div class="imgArea">
+								<img src="../../assets/img/aboutApp/character05.png" alt="코리 캐릭터">
+							</div>
+							<div class="deacArea">
+								<span class="tTxt01">해결사</span>
+								<strong class="tTxt02">포용력이 넓은 코리</strong>
+							</div>
+							<p class="deacArea02">큰 귀로 친구들의 말을 잘 들어주며 마을에<br>어려운 일이 생기면 앞장서서 해결하는<br>해결사(NH농협생명 케릭터)</p>
+						</div>
+					</section>
+
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

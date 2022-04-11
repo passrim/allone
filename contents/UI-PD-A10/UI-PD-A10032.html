@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>지방세 납부</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+		<script>
+		$(document).ready(function(){
+			$('#autoTrue').change(function(){
+				if($(this).is(':checked')) {
+					$('#toggleTab1').toggleClass('is-current');
+					$('#toggleTab2').toggleClass('is-current');
+				}
+			});
+			$('#autoFalse').change(function(){
+				if($(this).is(':checked')) {
+					$('#toggleTab2').toggleClass('is-current');
+					$('#toggleTab1').toggleClass('is-current');
+				}
+			});
+		});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- breadcrumb -->
+					<section class="breadcrumb columnSet">
+						<h2>출금정보 입력</h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">4</li>
+							<li class="is-off">5</li>
+						</ol>
+					</section>
+					<!-- //breadcrumb -->
+					<div class="serviceNote">
+						<ul class="unorderList">
+							<li>납부  이후에는 입력사항 수정이 불가능 하므로 정확하게 입력하여 주시기 바랍니다.</li>
+						</ul>
+					</div>
+
+					<section class="with-fixedBtn">
+						<form>
+							<fieldset class="formWrap">
+								<legend>납부방법 선택</legend>
+								<label for="selectLabel0" class="inputLable">납부방법</label>
+								<ul class="columnSet noGutterSet">
+									<li class="colItem">
+										<input type="radio" value=즉시납부 name="paySelect" id="autoTrue" checked="checked" class="btn radioToggle">
+										<label for="autoTrue" class="inputLabel secondary strokeType">즉시납부</label>
+									</li>
+									<li class="colItem">
+										<input type="radio" value="예약납부" name="paySelect" id="autoFalse" class="btn radioToggle">
+										<label for="autoFalse" class="inputLabel secondary strokeType">예약납부</label>
+									</li>
+								</ul>
+								
+								<span class="fieldNotes normal-info">예약납부 취소는 예약납부 예정일 전영업일까지 가능합니다.</span>
+								
+								<!-- 즉시납부 컨텐츠 영역  -->
+								<div class="tabContent is-current" id="toggleTab1">
+									<label for="selectLabel1" class="inputLable">출금계좌  <i class="required"></i></label>
+									<div class="select-input">
+										<select id="selectLabel1" class="formInput">
+											<option value="default" label="출금계좌 선택">출금계좌 선택</option>
+											<option value="option2" label="123-456-789987">123-456-789987</option>
+											<option value="option3" label="456-465-345324">456-465-345324</option>
+											<option value="option4" label="243-243-532432">243-243-532432</option>
+										</select>
+									</div>
+									<span class="balance balance-currency" data-currency="원">잔액 <strong>10,000,000</strong></span>
+									<label for="inputLabel2">납부금액</label>
+									<div class="numberInput">
+										<div class="balance balance-display" data-currency="원">
+											<input type="tel" id="inputLabel2" value="1,000,000" class="formInput balance-input" name="" disabled="disabled">
+										</div>
+									</div>
+									<label for="inputLabel2">계좌 비밀번호  <i class="required"></i></label>
+									<input type="tel" id="inputLabel2" placeholder="계좌비밀번호 4자리 입력" class="formInput" maxlength="4">
+								</div>
+								
+								<!-- 예약납부 컨텐츠 영역  -->
+								<div class="tabContent" id="toggleTab2">
+									<label for="inputLabel3" class="inputLable">예약일자  <i class="required"></i></label>
+									<div class="calendar">
+										<input type="text" id="inputLabel3" placeholder="예약일자 선택" class="formInput search-input">
+										<button type="submit" id="" class="btn calendarBtn" name="">캘린더</button>
+									</div>
+									<span class="fieldNotes normal-info">예약납부 취소는 예약납부 예정일 전영업일까지 가능합니다.</span>
+									
+									<label for="selectLabel1" class="inputLable mgT5">출금계좌  <i class="required"></i></label>
+									<div class="select-input">
+										<select id="selectLabel1" class="formInput">
+											<option value="default" label="출금계좌 선택">출금계좌 선택</option>
+											<option value="option2" label="123-456-789987">123-456-789987</option>
+											<option value="option3" label="456-465-345324">456-465-345324</option>
+											<option value="option4" label="243-243-532432">243-243-532432</option>
+										</select>
+									</div>
+									<span class="balance balance-currency" data-currency="원">잔액 <strong>10,000,000</strong></span>
+									<label for="inputLabel2">납부금액</label>
+									<div class="numberInput">
+										<div class="balance balance-display" data-currency="원">
+											<input type="tel" id="inputLabel2" value="1,000,000" class="formInput balance-input" name="" disabled="disabled">
+										</div>
+									</div>
+									<label for="inputLabel2">계좌 비밀번호  <i class="required"></i></label>
+									<input type="tel" id="inputLabel2" placeholder="계좌비밀번호 4자리 입력" class="formInput" maxlength="4">
+								</div>
+							</fieldset>
+						</form>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">납부</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

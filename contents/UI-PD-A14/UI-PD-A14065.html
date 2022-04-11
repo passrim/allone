@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>무계좌 해외송금</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<div class="fxIntro withVisual"> <!-- 2018-09-10 코드 수정 --> <!-- 181002 : withVisual 추가 및 마크업 변경 -->
+						<!-- 이미지 영역  -->
+						<img src="../../assets/img/foreign_exchange/noaccount_visual.jpg" alt="" />
+						<!-- 서비스 안내 타이틀 영역  -->
+						<div>
+							<h2>송금보내실 국가를 선택하세요.</h2>
+							<p>Choose country to remit</p>
+						</div>
+					</div>
+					<section class="with-fixedBtn fullWidth">
+						<ul class="countryOpt account">
+							<li class="vietnam">
+								<a href="javascript: void(0)" title="베트남 NH-AGRI 무계좌 해외송금 바로가기">
+								<h3>[베트남] NH-AGRI 무계좌 해외송금</h3>
+								NH-AGRI Account-Free Remittance
+								</a>
+							</li>
+							<li class="philippine">
+								<a href="javascript: void(0)" title="필리핀 NH-METRO 무계좌 해외송금 바로가기">
+								<h3>[필리핀] NH-METRO 무계좌 해외송금</h3>
+								NH-METRO Account-Free Remittance
+								</a>
+							</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

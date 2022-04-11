@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>카드 - 금융상품몰</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+
+					<!-- iFrame Content -->
+					<section class="fullWidth productDetails">
+						<iframe class="iframes" src="" title="개별 아이프레임 제목 삽입해주세요 (Dear.Dev)"></iframe>
+					</section>
+					<!-- //iFrame Content -->
+
+					<section class="fullWidth">
+						<ul class="accordion">
+							<li>
+								<dl>
+									<dt class="js-active"><a href="javascript:;">상품 상세내용</a></dt>
+									<dd>
+										<!--cpLoadArea -->
+										<div class="cpLoadArea">
+											<h3>카드서비스</h3>
+											<ul class="unorderList">
+												<li>공통서비스
+													<p>11번가 11%~22% 청구할인</p>
+													<table class="dataTable rowStyle">
+														<caption>청구할인</caption>
+														<thead>
+															<tr>
+																<th scope="col" class="rowSpan4">구분</th>
+																<th scope="col" class="rowSpan4">인터넷</th>
+																<th scope="col" class="rowSpan4">모바일</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td>할인율</td>
+																<td>11%</td>
+																<td>22%</td>
+															</tr>
+														</tbody>
+													</table>
+												</li>
+												<li>이용건당 2만원 이상건에 한함</li>
+												<li>통합 월할인한도 내 혜택 제공, 할인 횟수 제한 없음 <br>
+													온라인쇼핑 및 해외거래 5%~7%청구할인
+												</li>
+											</ul>
+										</div>
+										<!--//cpLoadArea -->
+									</dd>
+								</dl>
+							</li>
+							<li>
+								<dl>
+									<dt><a href="javascript:;">서비스 이용조건</a></dt>
+									<dd>
+										<!--cpLoadArea -->
+										<div class="cpLoadArea">
+											<h3>기본할인대상업종(변경불가)</h3>
+											<table class="dataTable rowStyle">
+												<caption>기본할인대상업종(변경불가)</caption>
+												<thead>
+													<tr>
+														<th scope="col" class="rowSpan4">업종</th>
+														<th scope="col" class="rowSpan4">할인대상</th>
+														<th scope="col" class="rowSpan4">선택기준</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>①주유</td>
+														<td>농협주유소/SK에너지/G S칼텍스/S-Oil/현대오일뱅크/알뜰주유소 등 모든 주유소 <br> ※ 충전소 제외</td>
+														<td rowspan="2">①~⑤ 업종 중 1개 또는 2개 업종 선택 가능</td>
+													</tr>
+													<tr>
+														<td>②이동통신</td>
+														<td>SK텔레콤/KT/LGU+본 카드로 자동납부 신청 후 결제된 건</td>
+													</tr>
+												</tbody>
+											</table>
+
+											<h3>라이프서비스 월 할인한도</h3>
+											<table class="dataTable rowStyle">
+												<caption>라이프서비스 월 할인한도</caption>
+												<colgroup>
+													<col width="10%"/>
+													<col width="23%"/>
+													<col width="33%"/>
+													<col width="auto"/>
+												</colgroup>
+												<thead>
+													<tr>
+														<th scope="col" colspan="2">전월실적</th>
+														<th scope="col">30만원 이상 ~ 80만원 미만</th>
+														<th scope="col">80만원 이상</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td rowspan="2" class="">할인한도</td>
+														<td>커피전문점</td>
+														<td>3,000원</td>
+														<td>6,000원</td>
+													</tr>
+													<tr>
+														<td class="borderLeft">대중교통,편의점,잡화,배달앱</td>
+														<td>2,000원</td>
+														<td>4,000원</td>
+													</tr>
+													<tr>
+														<td colspan="2">총 할인한도</td>
+														<td>5,000원</td>
+														<td>10,000원</td>
+													</tr>
+												</tbody>
+											</table>
+											<ul class="unorderList">
+												<li>결제건당 1만원 이상 이용건에 한해 제공</li>
+												<li>할인 횟수는 별도제한 없음</li>
+											</ul>
+
+											<h3>서비스 이용조건</h3>
+											<ul class="unorderList">
+												<li>카드사용등록일로부터 다음 달 말일까지는 전월 실적 미달 시에도 최저한도 기준으로 서비스를 제공하며, 전월실적조건 달성시 해당 구간의 적립률 또는 할인한도를 제공합니다.</li>
+											</ul>
+										</div>
+										<!-- //cpLoadArea -->
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">전화신청</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">카드신청</button></li>
+					</ul>
+
+
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

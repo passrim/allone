@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>출금예정알림</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+				
+				$('.graphBase').each(function(){
+					$(this).find('.graphActive').animate({
+						width:$(this).attr('data-percent')
+					}, 1);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="no-fixed fullWidth">
+						<!-- 출금계좌 선택  -->
+						<div class="accountSelect">
+							<div class="select-input" data-account-name="NH All100플랜 저축통장" data-account-number="123-345-23423423">
+								<select id="selectLabel1" class="formInput account-label">
+									<option value="option2" label="NH All100플랜 저축통장 123-456-789987">NH All100플랜 저축통장 123-456-789987</option>
+									<option value="option3" label="NH All100플랜 저축통장 456-465-345324">NH All100플랜 저축통장 456-465-345324</option>
+									<option value="option4" label="NH All100플랜 저축통장 243-243-532432">NH All100플랜 저축통장 243-243-532432</option>
+								</select>
+								<span></span>
+							</div>
+							<ul class="columnSet accountBalance columnSet-valign-end">
+								<li class="colItem rightTxt">
+									잔액 <span>3,615,532</span>원
+								</li>
+							</ul>
+						</div>
+						
+						<!-- 출금예정 리스트  -->
+						<div>
+							<ul class="columnSet history_calendar bdB1">
+								<li class="colItem"><button type="button" class="btn prevBtn">이전달</button></li>
+								<li class="rowSpan7 fz-16">2018-05</li>
+								<li class="colItem"><button type="button" class="btn nextBtn">다음달</button></li>								
+							</ul>
+							
+							<!-- 출금예정 그래프  -->
+							<div class="barGraph mgT15">
+								<div class="graphBase sum" data-percent="20%" aria-describedby="graphLabel1">
+									<div class="graphActive remainder" aria-describedby="graphLabel2"></div>
+								</div>
+								<ul class="columnSet">
+									<li id="graphLabel1">
+										당월 출금 예정금액
+										<span class="deposit">1,987,000원</span>
+									</li>
+									<li id="graphLabel2" class="rightTxt">
+										남은 출금 예정금액
+										<span class="withdraw">1,987,000원</span>
+									</li>
+								</ul>
+							</div>
+							
+							<!-- 출금 내역 히스토리 -->
+							<ul class="withdraw-history">
+								<li>
+									<!-- 출금 예정일 -->
+									<span class="date rowSpan2"><em>1</em>일</span>
+									
+									<!-- 출금예정 내역 -->
+									<ul class="colItem">
+										<li class="expired">
+											<!-- 출금상세내역 -->
+											<dl>
+												<dt>아파트 관리비</dt>
+												<dd>휴먼시아1단지 아파트 35동 701호</dd>
+											</dl>
+											<!-- 출금액 -->
+											<span class="balance rowSpan6">300,000원</span>
+											<button type="button" class="btn editBtn">수정하기</button>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<!-- 출금 예정일 -->
+									<span class="date rowSpan2"><em>3</em>일</span>
+									
+									<!-- 출금예정 내역 -->
+									<ul class="colItem">
+										<li class="expired">
+											<!-- 출금상세내역 -->
+											<dl>
+												<dt>아파트 관리비</dt>
+												<dd>휴먼시아1단지 아파트 35동 701호</dd>
+											</dl>
+											<!-- 출금액 -->
+											<span class="balance rowSpan6">300,000원</span>
+											<button type="button" class="btn editBtn">수정하기</button>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<!-- 출금 예정일 -->
+									<span class="date rowSpan2"><em>28</em>일</span>
+									
+									<!-- 출금예정 내역 -->
+									<ul class="colItem">
+										<li>
+											<!-- 출금상세내역 -->
+											<dl>
+												<dt>아파트 주차비</dt>
+												<dd>휴먼시아1단지 아파트 35동 701호</dd>
+											</dl>
+											<!-- 출금액 -->
+											<span class="balance rowSpan6">4,300,000원</span>
+											<button type="button" class="btn editBtn">수정하기</button>
+										</li>
+										<li>
+											<!-- 출금상세내역 -->
+											<dl>
+												<dt>대출금 자동이체</dt>
+												<dd>NH농협대출</dd>
+											</dl>
+											<!-- 출금액 -->
+											<span class="balance rowSpan6">600,000원</span>
+											<button type="button" class="btn editBtn">수정하기</button>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<!-- 출금 예정일 -->
+									<span class="date rowSpan2"><em>30</em>일</span>
+									
+									<!-- 출금예정 내역 -->
+									<ul class="colItem">
+										<li>
+											<!-- 출금상세내역 -->
+											<dl>
+												<dt>아파트 주차비</dt>
+												<dd>휴먼시아1단지 아파트 35동 701호</dd>
+											</dl>
+											<!-- 출금액 -->
+											<span class="balance rowSpan6">4,300,000원</span>
+											<button type="button" class="btn editBtn">수정하기</button>
+										</li>
+										<li>
+											<!-- 출금상세내역 -->
+											<dl>
+												<dt>대출금 자동이체</dt>
+												<dd>NH농협대출</dd>
+											</dl>
+											<!-- 출금액 -->
+											<span class="balance rowSpan6">600,000원</span>
+											<button type="button" class="btn editBtn">수정하기</button>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						
+					</section>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>설정 - 바코드결제 설정</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="topNotice">
+						<ul class="unorderList">
+							<li>자주 사용하는 사용처를 설정하여 보다 쉽고 빠르게 바코드결제를 사용하실 수 있습니다.</li>
+						</ul>
+					</section>
+					<section class="fullWidth topbordered inputRowList loginSetting">
+						<ul class="rowStyle dlData bdB1">
+							<li class="bdT0 columnSet">
+								<div class="radioBtn withLabel">
+									<input type="radio" id="appCard01" name="appCard"/>
+									<label for="appCard01">하나로마트</label>
+								</div>
+							</li>
+							<li class="columnSet">
+								<div class="radioBtn withLabel">
+									<input type="radio" id="appCard02" name="appCard"/>
+									<label for="appCard02">Mtic + GS 25</label>
+								</div>
+							</li>
+						</ul>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

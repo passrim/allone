@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>신분증 촬영 확인 - 입출금계좌개설</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>Magic Tree (매직트리)<span>신분증 촬영 확인</span></h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">2</li>
+							<li class="is-off">6</li>
+						</ol>
+					</section>
+					<section class="fullWidth">
+						<ul class="unorderList paddingAll">
+							<li>신분증 촬영 상세 내용을 꼭! 확인해주시기 바랍니다.</li>
+							<li>신분증 내용과 화면에 표시된 내용이 다를 경우 주민번호를 제외하고 수정이 가능합니다.</li>
+						</ul>
+						<div class="got-idcard">
+							<img src="../../assets/img/mall/sample_idcard.png" alt="촬영된 신분증 이미지">
+						</div>
+					</section>
+					<section>
+						<label for="inputLabel4">신분증타입</label>
+						<div class="textInput">
+							<input type="text" id="inputLabel5" placeholder="운전면허증" class="formInput" name="" disabled="disabled"><!-- 0913 : 접근성 레이블 제공 -->
+						</div>
+
+						<label for="inputLabel1">이름</label>
+						<div class="textInput">
+							<input type="text" id="inputLabel1" placeholder="홍*동" class="formInput" name="" disabled="disabled">
+						</div>
+
+						<label for="inputLabel2">면허번호</label>
+						<div class="textInput">
+							<input type="text" id="inputLabel2" placeholder="면허일련번호" class="formInput" name="" disabled="disabled">
+						</div>
+
+						<label for="inputLabel3">발급일자</label>
+						<div class="textInput">
+							<input type="text" id="inputLabel3" placeholder="2015.01.01" class="formInput" name="" disabled="disabled">
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered">
+						<ul class="accordion bdB0"><!-- 2018-09-29 클래스 추가  -->
+							<li>
+								<dl>
+									<dt class="js-active"><a href="javascript:;" class="pinned">꼭 알아두세요!</a></dt><!-- 2018-09-29 클래스 추가  -->
+									<dd>
+										<ul class="unorderList">
+											<li>신분증 정보과 촬영정보가 다른 경우  재촬영하시거나 수정하여 주시기 바랍니다.</li>
+											<li>[다음]을 누르시면 추출된 신분증 정보를 행정기관 시스템을 통해 신분증에 대한 진위확인을 진행합니다.</li>
+										</ul>
+									</dd>
+								</dl><!-- END OF TOGGLE -->
+							</li>
+						</ul>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">재촬영</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">다음</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

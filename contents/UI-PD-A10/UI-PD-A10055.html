@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>정보입력 - 아파트관리비납부</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<!-- breadcrumb -->
+					<section class="breadcrumb columnSet">
+						<h2>정보입력</h2>
+						<ol class="step columnSet twoSet">
+							<li class="is-on">1</li>
+							<li class="is-off">3</li>
+						</ol>
+					</section>
+					<!-- //breadcrumb -->
+
+					<section class="pdBz">
+						<div class="formWrap">
+							<legend>정보입력</legend>
+
+							<label for="selectLabel1">올원출금계좌 선택</label>
+							<div class="select-input">
+								<select id="selectLabel1" class="formInput">
+									<option value="default" value="00">123-****-****-89 NH All100플랜 통장</option>
+									<option value="option2" value="01">123-****-****-97 NH All100플랜 통장</option>
+									<option value="option3" value="02">123-****-****-74 NH All100플랜 통장</option>
+									<option value="option4" value="03">123-****-****-85 NH All100플랜 통장</option>
+								</select>
+							</div>
+							<span class="balance balance-currency" data-currency="원">잔액 <strong>10,000,000</strong></span>
+						</div>
+					</section>
+					<!-- //breadcrumb -->
+
+					<section class="fullWidth with-fixedBtn topbordered">
+						<div class="taxPay-heading actionBox">
+							<span>관리비 입금정보</span> <button type="submit" class="btn">자주쓰는 아파트관리비</button>
+						</div>
+						<div class="paddingAll formWrap">
+							<!-- 2018-09-06 도움말을 위한 코드 수정  -->
+							<label for="inputLabel2" class="helpLabel">관리비 입금은행  <i class="required"></i> <button class="helpTooltip" name="tipbox01" title="펼쳐짐">도움말 <span></span></button>
+								<span class="helpBubble tipbox01"><button type="button" class="btn closeBtn">닫기</button>
+								<ul class="unorderList">
+									<li>관리비 고지서에 기재된 계좌번호 입력</li>
+									<li>타행 계좌로 관리비를 납부하는 경우, 고객조건에 따라 송금 수수료가 부과될 수 있습니다.</li>
+									<li>납부금액은 송금한도에서 차감됩니다.</li>
+								</ul>
+								</span>
+							</label>
+							<!-- // 2018-09-06 도움말을 위한 코드 수정 -->
+							
+							<ul class="columnSet withGutter">
+								<li class="rowSpan4">
+									<div class="select-input">
+										<button type="button" class="btn formInput">은행선택</button>
+									</div>
+								</li>
+								<li class="rowSpan7">
+									<label for="inputLabel6" class="visualHide">관리비 입금은행</label>
+									<div class="numberInput">
+										<input type="tel" id="inputLabel6" placeholder="계좌번호 입력" maxlength="16" class="formInput" name="">
+									</div>
+								</li>
+							</ul>
+							<div class="search mgT10">
+								<input type="text" id="inputLabel5" placeholder="예금주명 입력" class="formInput search-input" >
+								<button type="button" class="btn deleteBtn" style="display: none;">삭제</button>
+								<button type="submit" id="" class="btn searchTxtBtn" name="">계좌확인</button>
+							</div>
+
+							<label for="inputLabel5">관리비금액 <i class="required"></i></label>
+							<div class="numberInput">
+								<div class="balance balance-display" data-currency="원">
+									<input type="tel" id="inputLabel5" placeholder="1,000,000" class="formInput balance-input" name="">
+								</div>
+								<span class="balance balance-currency greenOn" data-currency="원"><strong class="greenOn">36</strong>만 <strong class="greenOn">8,700</strong> </span>
+							</div>
+							<label for="inputLabel3">아파트 정보입력<i class="required"></i></label>
+							<dl class="columnSet aptlInput">
+								<dt class="colItem">
+									<input type="text" id="inputLabel3" placeholder="동 입력" class="formInput" name="">
+								</dt>
+								<dt class="colItem">
+									<input type="text" id="inputLabel4" placeholder="호수 입력" class="formInput" name=""><!-- 0913 : 접근성 레이블 제공 -->
+								</dt>
+							</dl>
+
+						</div>
+
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">납부</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

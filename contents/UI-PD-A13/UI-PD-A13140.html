@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>step3_NH간편오토론_개인고객 정보확인  - 대출</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="breadcrumb columnSet">
+						<h2>NH 모바일 전세대출<span>개인고객정보확인</span></h2>
+						<ol class="step columnSet">
+							<li class="is-off is-done">1</li>
+							<li class="is-on">3</li>
+							<li class="is-off">8</li>
+						</ol>
+					</section>
+					<section class="topNotice">
+						<ul class="unorderList">
+							<li>변경 내용이 있는 경우 반드시 <button type="button" class="infoChangeBtn">고객정보 변경</button> 후 거래 하시기 바랍니다.</li>
+						</ul>
+					</section>
+					<section class="fullWidth topbordered">
+						<dl class="dataList bdT0">
+							<dt class="rowSpan3">자택주소</dt>
+							<dd class="rowSpan7">111**(121-111)<br>서울특별시 강남구*** 1**</dd>
+							<dt class="rowSpan3">자택전화번호</dt>
+							<dd class="rowSpan7">010-12**-12**</dd>
+							<dt class="rowSpan3">직장주소</dt>
+							<dd class="rowSpan7">111**(121-111)<br>서울특별시 강남구*** 1**</dd>
+							<dt class="rowSpan3">직장전화번호</dt>
+							<dd class="rowSpan7">010-12**-12**</dd>
+							<dt class="rowSpan3">휴대전화</dt>
+							<dd class="rowSpan7">010-12**-12**</dd>
+							<dt class="rowSpan3">이메일주소</dt>
+							<dd class="rowSpan7">Qwe245@naver.com</dd>
+						</dl>
+						<p class="fourBallList">대출에 필요한 고객님의 정보는 위와 같습니다.<br>대출을 원하시면 <span class="greenOn">확인</span> 버튼을 누르세요.</p>
+					</section>
+
+					<section class="fullWidth with-fixedBtn topbordered">
+						<ul class="accordion bdB0"><!-- 2018-09-29 클래스 추가  -->
+							<li>
+								<dl>
+									<dt class="js-active" aria-label="꼭 알아두세요!"><a href="javascript:void(0);" class="pinned">꼭 알아두세요!</a></dt>  <!-- 2018-09-07 클래스 추가 -->
+									<dd style="display: none;">
+										<ul class="unorderList">
+											<li>확인을 모두 마치셨으면 회원정보가 다른 사람에게 알려지지 않도록 주의하시기 바랍니다.</li>
+											<li>고객님의 정보는 이용자의 동의 없이는 절대 공개되지 않습니다.</li>
+											<li>자택주소는 대출약정서의 주소로 입력되므로 주민등록 주소와 일치해야 합니다.</li>
+										</ul>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary cancel">취소</button></li>
+						<li class="colItem"><button type="submit" class="btn primary submit">확인</button></li>
+					</ul>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

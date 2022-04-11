@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>카드 - 금융상품몰</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="layerPop.open('.modalWrap', this); return false;">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header">
+					<h1 class="headerTitle">제휴서비스 정보조회</h1>
+					<button type="button" class="btn closeBtn" id="fullClose">닫기</button>
+				</div>
+				<div data-role="content" class="modal-contents with-fixedBtn">
+					<section class="fullWidth ">
+						<div class="titleArea">
+							<h3>이동통신</h3>
+						</div>
+						<div class="sectionWrap pdT10 toplined">
+							<ul class="unorderList">
+								<li>커피전문점 20% 청구할인(이동통신)_30만원~</li>
+								<li>커피전문점 20% 청구할인(이동통신)_80만원~</li>
+								<li>온라인쇼핑+이동통신 10% 청구할인(30만원~)</li>
+								<li>온라인쇼핑+이동통신 10% 청구할인(60만원~)</li>
+								<li>온라인쇼핑+이동통신 20% 청구할인(100만원~)</li>
+								<li>온라인쇼핑+이동통신 20% 청구할인(150만원~)</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(이동통신)_30만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(이동통신)_80만원</li>
+							</ul>
+							</div>
+					</section>
+
+					<section class="fullWidth topbordered"> <!-- topbordered 삭제 -->
+						<div class="titleArea">
+							<h3>대형마트</h3>
+						</div>
+						<div class="sectionWrap pdT10 toplined">
+							<ul class="unorderList">
+								<li>온라인쇼핑+대형마트 10% 청구할인(30만원~)</li>
+								<li>온라인쇼핑+대형마트 10% 청구할인(60만원~)</li>
+								<li>온라인쇼핑+대형마트 20% 청구할인(100만원~)</li>
+								<li>온라인쇼핑+대형마트 20% 청구할인(150만원~)</li>
+								<li>커피전문점 20% 청구할인(대형마트)_30만원~</li>
+								<li>커피전문점 20% 청구할인(대형마트)_80만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(대형마트)_30만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(대형마트)_80만원</li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered"> <!-- topbordered 삭제 -->
+						<div class="titleArea">
+							<h3>의료</h3>
+						</div>
+						<div class="sectionWrap pdT10 toplined">
+							<ul class="unorderList">
+								<li>온라인쇼핑+의료 10% 청구할인(30만원~)</li>
+								<li>온라인쇼핑+의료 10% 청구할인(60만원~)</li>
+								<li>온라인쇼핑+의료 20% 청구할인(100만원~)</li>
+								<li>온라인쇼핑+의료 20% 청구할인(150만원~)</li>
+								<li>커피전문점 20% 청구할인(의료)_30만원~</li>
+								<li>커피전문점 20% 청구할인(의료)_80만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(의료)_30만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(의료)_80만원</li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered"> <!-- topbordered 삭제 -->
+						<div class="titleArea">
+							<h3>해외</h3>
+						</div>
+						<div class="sectionWrap pdT10 toplined">
+							<ul class="unorderList">
+								<li>온라인쇼핑+해외 10% 청구할인(30만원~)</li>
+								<li>온라인쇼핑+해외 10% 청구할인(60만원~)</li>
+								<li>온라인쇼핑+해외 20% 청구할인(100만원~)</li>
+								<li>온라인쇼핑+해외 20% 청구할인(150만원~)</li>
+								<li>커피전문점 20% 청구할인(해외)_30만원~</li>
+								<li>커피전문점 20% 청구할인(해외)_80만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(해외)_30만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(해외)_80만원</li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered"> <!-- topbordered 삭제 -->
+						<div class="titleArea">
+							<h3>주유+이동통신</h3>
+						</div>
+						<div class="sectionWrap pdT10 toplined">
+							<ul class="unorderList">
+								<li>온라인쇼핑+주유+이동통신 7% 청구할인(30만원~)</li>
+								<li>온라인쇼핑+주유+이동통신 7% 청구할인(60만원~)</li>
+								<li>온라인쇼핑+주유+이동통신 15% 청구할인(100만원~)</li>
+								<li>온라인쇼핑+주유+이동통신 15% 청구할인(150만원~)</li>
+								<li>커피전문점 20% 청구할인(주유+이동통신)_30만원~</li>
+								<li>커피전문점 20% 청구할인(주유+이동통신)_80만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(주유+이동통신)_30만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(주유+이동통신)_80만원</li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered"> <!-- topbordered 삭제 -->
+						<div class="titleArea">
+							<h3>주유+의료</h3>
+						</div>
+						<div class="sectionWrap pdT10 toplined">
+							<ul class="unorderList">
+								<li>온라인쇼핑+주유+의료 7% 청구할인(30만원~)</li>
+								<li>온라인쇼핑+주유+의료 7% 청구할인(60만원~)</li>
+								<li>온라인쇼핑+주유+의료 15% 청구할인(100만원~)</li>
+								<li>온라인쇼핑+주유+의료 15% 청구할인(150만원~)</li>
+								<li>커피전문점 20% 청구할인(주유+의료)_30만원~</li>
+								<li>커피전문점 20% 청구할인(주유+의료)_80만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(주유+의료)_30만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(주유+의료)_80만원</li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered"> <!-- topbordered 삭제 -->
+						<div class="titleArea">
+							<h3>이동통신+대형마</h3>
+						</div>
+						<div class="sectionWrap pdT10 toplined">
+							<ul class="unorderList">
+								<li>온라인쇼핑+이동통신+대형마트 7% 청구할인(30만원~)</li>
+								<li>온라인쇼핑+이동통신+대형마트 7% 청구할인(60만원~)</li>
+								<li>온라인쇼핑+이동통신+대형마트 15% 청구할인(100만원~)</li>
+								<li>온라인쇼핑+이동통신+대형마트 15% 청구할인(150만원~)</li>
+								<li>커피전문점 20% 청구할인(이동통신+대형마트)_30만원~</li>
+								<li>커피전문점 20% 청구할인(이동통신+대형마트)_80만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(이동통신+대형마트)_30만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(이동통신+대형마트)_80만원</li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered"> <!-- topbordered 삭제 -->
+						<div class="titleArea">
+							<h3>이동통신+해외</h3>
+						</div>
+						<div class="sectionWrap pdT10 toplined">
+							<ul class="unorderList">
+								<li>온라인쇼핑+이동통신+해외 7% 청구할인(30만원~)</li>
+								<li>온라인쇼핑+이동통신+해외 7% 청구할인(60만원~)</li>
+								<li>온라인쇼핑+이동통신+해외 15% 청구할인(100만원~)</li>
+								<li>온라인쇼핑+이동통신+해외 15% 청구할인(150만원~)</li>
+								<li>커피전문점 20% 청구할인(이동통신+해외)_30만원~</li>
+								<li>커피전문점 20% 청구할인(이동통신+해외)_80만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(이동통신+해외)_30만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(이동통신+해외)_80만원</li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered"> <!-- topbordered 삭제 -->
+						<div class="titleArea">
+							<h3>대형마트+해외</h3>
+						</div>
+						<div class="sectionWrap pdT10 toplined">
+							<ul class="unorderList">
+								<li>온라인쇼핑+대형마트+해외 7% 청구할인(30만원~)</li>
+								<li>온라인쇼핑+대형마트+해외 7% 청구할인(60만원~)</li>
+								<li>온라인쇼핑+대형마트+해외 15% 청구할인(100만원~)</li>
+								<li>온라인쇼핑+대형마트+해외 15% 청구할인(150만원~)</li>
+								<li>커피전문점 20% 청구할인(대형마트+해외)_30만원~</li>
+								<li>커피전문점 20% 청구할인(대형마트+해외)_80만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(대형마트+해외)_30만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(대형마트+해외)_80만원</li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered"> <!-- topbordered 삭제 -->
+						<div class="titleArea">
+							<h3>주유+대형마트</h3>
+						</div>
+						<div class="sectionWrap pdT10 toplined">
+							<ul class="unorderList">
+								<li>온라인쇼핑+주유+대형마트 7% 청구할인(30만원~)</li>
+								<li>온라인쇼핑+주유+대형마트 7% 청구할인(60만원~)</li>
+								<li>온라인쇼핑+주유+대형마트 15% 청구할인(100만원~)</li>
+								<li>온라인쇼핑+주유+대형마트 15% 청구할인(150만원~)</li>
+								<li>커피전문점 20% 청구할인(주유+대형마트)_30만원~</li>
+								<li>커피전문점 20% 청구할인(주유+대형마트)_80만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(주유+대형마트)_30만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(주유+대형마트)_80만원</li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered"> <!-- topbordered 삭제 -->
+						<div class="titleArea">
+							<h3>주유+해외</h3>
+						</div>
+						<div class="sectionWrap pdT10 toplined">
+							<ul class="unorderList">
+								<li>온라인쇼핑+주유+해외 7% 청구할인(30만원~)</li>
+								<li>온라인쇼핑+주유+해외 7% 청구할인(60만원~)</li>
+								<li>온라인쇼핑+주유+해외 15% 청구할인(100만원~)</li>
+								<li>온라인쇼핑+주유+해외 15% 청구할인(150만원~)</li>
+								<li>커피전문점 20% 청구할인(주유+해외)_30만원~</li>
+								<li>커피전문점 20% 청구할인(주유+해외)_80만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(주유+해외)_30만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(주유+해외)_80만원</li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered"> <!-- topbordered 삭제 -->
+						<div class="titleArea">
+							<h3>이동통신+의료</h3>
+						</div>
+						<div class="sectionWrap pdT10 toplined">
+							<ul class="unorderList">
+								<li>온라인쇼핑+이동통신+의료 7% 청구할인(30만원~)</li>
+								<li>온라인쇼핑+이동통신+의료 7% 청구할인(60만원~)</li>
+								<li>온라인쇼핑+이동통신+의료 15% 청구할인(100만원~)</li>
+								<li>온라인쇼핑+이동통신+의료 15% 청구할인(150만원~)</li>
+								<li>커피전문점 20% 청구할인(이동통신+의료)_30만원~</li>
+								<li>커피전문점 20% 청구할인(이동통신+의료)_80만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(이동통신+의료)_30만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(이동통신+의료)_80만원</li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered"> <!-- topbordered 삭제 -->
+						<div class="titleArea">
+							<h3>대형마트+의료</h3>
+						</div>
+						<div class="sectionWrap pdT10 toplined">
+							<ul class="unorderList">
+								<li>온라인쇼핑+대형마트+의료 7% 청구할인(30만원~)</li>
+								<li>온라인쇼핑+대형마트+의료 7% 청구할인(60만원~)</li>
+								<li>온라인쇼핑+대형마트+의료 15% 청구할인(100만원~)</li>
+								<li>온라인쇼핑+대형마트+의료 15% 청구할인(150만원~)</li>
+								<li>커피전문점 20% 청구할인(대형마트+의료)_30만원~</li>
+								<li>커피전문점 20% 청구할인(대형마트+의료)_80만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(대형마트+의료)_30만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(대형마트+의료)_80만원</li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="fullWidth topbordered with-fixedBtn"> <!-- topbordered 삭제 -->
+						<div class="titleArea">
+							<h3>의료+해외</h3>
+						</div>
+						<div class="sectionWrap pdT10 toplined">
+							<ul class="unorderList">
+								<li>온라인쇼핑+의료+해외 7% 청구할인(30만원~)</li>
+								<li>온라인쇼핑+의료+해외 7% 청구할인(60만원~)</li>
+								<li>온라인쇼핑+의료+해외 15% 청구할인(100만원~)</li>
+								<li>온라인쇼핑+의료+해외 15% 청구할인(150만원~)</li>
+								<li>커피전문점 20% 청구할인(의료+해외)_30만원~</li>
+								<li>커피전문점 20% 청구할인(의료+해외)_80만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(의료+해외)_30만원~</li>
+								<li>교통/편의점/잡화/배달앱 5% 할인(의료+해외)_80만원</li>
+							</ul>
+						</div>
+					</section>
+
+					<button type="submit" class="btn primary submit selfBottom" onclick="layerPop.close('.modalWrap');return false;">확인</button>
+
+				</div>
+			</div>
+		</div>
+		<!-- //fullPopup -->
+
+	</body>
+</html>

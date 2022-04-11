@@ -1,0 +1,294 @@
+@charset "utf-8";
+
+/***************************************************************************************
+                        reset
+***************************************************************************************/
+blockquote,body,button,code,dd,div,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,pre,select,td,textarea,th,ul {margin:0; padding:0;}
+fieldset,img {border:0 none}
+dl,li,menu,ol,ul {list-style:none}
+blockquote,q {quotes:none}
+blockquote:after,blockquote:before,q:after,q:before {content:''; content:none}
+button,input,select,textarea {vertical-align:middle}
+button {border:0 none; background-color:transparent; cursor:pointer}
+table {border-collapse:collapse; border-spacing:0}
+table caption {overflow:hidden;width:0;height:0;font-size:0;line-height:0;text-indent:-9999px;}
+body{-webkit-text-size-adjust:none; /*background:#e5e5e5;*/ font-family:sans-serif;overflow:hidden;}
+input:checked[type=checkbox] {background-color:#666; -webkit-appearance:checkbox}
+html input[type=button],input[type=email],input[type=password],input[type=reset],input[type=search],input[type=submit],input[type=tel],input[type=text] {-webkit-appearance:none}
+body,button,input,select,td,textarea,th {font-size:12px;line-height:1.385;color:#333;font-family: "Nanum Gothic", "나눔고딕", "맑은 고딕", "MalgunGothic","돋움", Dotum, Gulim,"굴림";}
+h1,h2,h3,h4,h5,h6 {font-size:16px;}
+a {color:#666; text-decoration:none}
+a:active,a:hover {text-decoration:none}
+address,caption,cite,code,dfn,em,var {font-style:normal; font-weight:400}
+button::-moz-focus-inner {padding:0; border:0}
+article,aside,footer,header,hgroup,main,nav,section {display:block; margin:0; padding:0}
+article,aside,header,nav,section {background:#fff;}
+.blind {overflow:hidden;position:absolute;top:-9999em;left:0;width:1px;height:1px;font-size:1;}
+img {width:100%;max-width:100%;}
+body {line-height:normal;font-size:12px;font-family:"Nanum Gothic", "나눔고딕", "맑은 고딕", "MalgunGothic","돋움", Dotum, Gulim,"굴림";color:#333;}
+/* wrap */
+.pb_45{padding:50px 0 45px 0!important;}
+
+/* Header */
+#chtHeader {position:fixed; width:100%; height:50px; background:#caeaff; padding-right:38px; box-sizing:border-box; -o-box-sizing:border-box; -ms-box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;  z-index:100; top:0;}
+#chtHeader .leftArea .btImg.prev, #chtHeader .leftArea .btImg.allMenu {float:left;margin-top:12px;margin-left:15px;}
+#chtHeader .leftArea .pTit {float:left;color:#3c3c3c;font-size:15px;font-weight:bold; margin:15px 10px;}
+#chtHeader .pTit_sub {text-align:center;color:#3c3c3c;font-size:15px;font-weight:bold; padding-top:15px;}
+#chtHeader .btnRight {position:absolute; top:4px; right:6px}
+
+/* Container */
+#container {/*min-height:300px;*//* margin-top:50px; */}
+
+/* Contents */
+#contents {margin:0;padding:0;/*min-height:300px;*/}
+
+
+/* 유의사항안내 */
+.contList01 {margin-top:10px; height:315px; overflow-y:auto;padding:3px 0;}
+.contList01 ol {width:100%;}
+.contList01 ol li {text-align: left;line-height:16px;margin-bottom:12px;}
+.contList01 ol li span.con {display:block;overflow:hidden;padding-left:30px;margin-top:-17px;}
+.contList01 ol li span.num {display:block;overflow:hidden;width: 19px;height: 17px;border-radius: 3px;background: #fea835;color: #fff;text-align: center;font-weight: bold;}
+
+/* 코드입력 */
+.CodeArea{width:100%;padding:0 10px;display:inline-block;margin-top:10px;
+   box-sizing:border-box; -o-box-sizing:border-box; -ms-box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;
+}
+.CodeArea .In{display:inline-block;width:100%;border:1px solid #777;background:#fff;
+   box-sizing:border-box; -o-box-sizing:border-box; -ms-box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box;
+}
+.CodeArea .In .bd_r{display:inline-block;width:37%;padding:12px 15px;margin-right:5px;line-height:17px;border-right:1px solid #777;box-sizing:border-box;}
+.CodeArea .In input{width:59%;letter-spacing:20px;text-align:center;font-weight:bold;border:0px;background:#fff;}
+
+/*채팅상담*/
+.notice {padding:20px 12px;}
+.notice p {color:#c1daf9;line-height:1.4;padding-left:18px; background:url('../../../content/nhbank/images/ch/bullet_noti.png') 0 3px no-repeat;}
+.InputArea{padding:0 12px 15px 12px;}
+.InputArea p input[type=radio]+label{color:#fff;}
+.chat_bg {margin-top:50px;display:block;overflow:hidden;background:#1046a0;}
+.chat_mylist {display:block;overflow:hidden;background:#f1f2f4;padding-bottom:30px;}
+.chat_type {display:block;overflow:hidden;margin:12px;}
+.chat_type ul {display:block;width:100%;margin-bottom:5px;}
+.chat_type ul:after {clear:boht; content:""; display:block;}
+.chat_type ul li {float:left; display:inline-block; zoom:1; width:23%; padding:0 2px;text-align:center; margin-bottom:10px; }
+.chat_type ul li a {display:block; height:100%;background:#e0eafc;color:#111;font-size:13px;padding:10px 0;}
+.chat_type ul li a.on {font-weight: bold;background:#57ace5;color:#fff;}
+.code_connect , .code_input_box{overflow:hidden;padding:10px 12px;}
+.code_connect li{float:left;width:48%;background: url("../../../content/nhbank/images/ch/radio_connect.png") no-repeat 0 0;}
+
+.code_input_box p{padding: 10px 0;color: #111;}
+.code_connect li.on{background: url("/content/nhbank/images/ch/radio_connect_on.png") no-repeat 0 0;}
+.code_connect li a{padding-left:34px;display: block;line-height: 31px; color: #fff;}
+.code_input_box {display:none;color: #666;border:1px solid #c1daf9;border-radius: 3px;padding:10px;margin:10px;background: #c1daf9;}
+.code_input_box .codenum{border:none;line-height: 20px;margin-left:10px;border:1px solid #ccc;padding:3px;}
+.disnone{display: none;}
+textarea.chat_qan_box {overflow-y:auto;border: 0;height:250px;width:100%;}
+.arrow_box {margin:25px 12px 12px;padding:5px;height:250px;position: relative;background: #fff;border: 1px solid #57ace5;border-radius: 5px;}
+.arrow_box:after, .arrow_box:before {top: 100%;left: 50%;border: solid transparent;content: " ";height: 0;width: 0;position: absolute;pointer-events: none;}
+.arrow_box:after {border-color: rgba(255, 255, 255, 0);border-top-color: #fff;border-width: 8px;margin-left: -8px;}
+.arrow_box:before {border-color: rgba(87, 172, 229, 0);border-top-color: #57ace5;border-width: 9px;margin-left: -9px;}
+
+
+/*채팅 UI*/
+.chat_header {background:#fdc53b;padding:10px;position: relative;height:50px;top:0;z-index:100;}
+.chat_header .bg {
+    margin-right:18px;
+    display:block;
+    overflow:hidden;
+    width:50px;
+    height:50px;
+    background-image:url('../../../content/nhbank/images/ch/icon_nh.png');
+    background-repeat:no-repeat;
+    background-size:50px 50px;
+    }
+.chat_header .chat_req {position:absolute; top:0; left:85px;display:block;overflow:hidden;}
+.chat_header .tit{background:#877f79;margin-top:10px;color:#fff;font-size:11px;border-radius: 3px; padding:2px 3px;}
+.chat_header .chat_man{display:block;overflow:hidden;background:#fdc53b;color:#333;font-size:15px;font-weight: bold;margin-top:5px;}
+.chat_header .chat_man strong{background:#fdc53b;font-size:21px;}
+.chat_header .chat_tel{position:absolute; top:13px; right:12px;display:block;overflow:hidden;width:106px;}
+
+.popTit_msg {padding:20px 20px 18px; border-bottom:3px solid #e5e5e5; background:#fcaf17;}
+.popTit_msg h1 {font-size:21px; font-weight:normal; color:#fff;}
+.popTit_msg p {font-weight:normal; color:#fff; margin-top:5px;}
+.chat_layout {padding:10px;overflow-y:auto;/*height:345px;*/position:fixed;top:100px;bottom:104px; height: calc(100% - 200px);}
+.chat_layout.shot {height:285px;}
+.chat_layout .msg_date {display:block;color:#666; text-align: center; margin-bottom:15px;padding-bottom:10px;border-bottom:2px dotted #dedede;}
+.chat_layout .msg_noti {display:block;color:#fff; line-height: 16px;text-align: left; background:#9b928d url("../../../content/nhbank/image/msg/msg_noti.png") 10px 15px no-repeat; padding:15px;padding-left:35px;}
+.chat_layout .msg_left{margin-bottom:12px;width:100%;display:inline-block;}
+.chat_layout .msg_left ul {float:left;display:inline-block;width:auto;}
+.chat_layout .msg_right{margin-bottom:12px;width:100%;display:inline-block;}
+.chat_layout .msg_right ul {float:right;display:inline-block;width:auto;}
+.chat_layout .send_con {float:left;width:220px;vertical-align: bottom;display: inline-block;max-width:140px;word-break:break-all;color:#333; font-size: 12px;border-radius: 10px; padding:8px;}
+.chat_layout .send_time {float:left;vertical-align: bottom;display: inline-block;color:#888; font-size: 12px; padding:5px;}
+.chat_layout .msg_left .send_con{background:#ffcc00; }
+.chat_layout .msg_right .send_con{background:#dedede;}
+.chat_layout .msg_right img, #popWrap .pop_msg_layout .msg_left img{vertical-align: middle;}
+.chat_layout .floatingWrap {position:fixed;bottom:0;left:0;right:0;z-index:100;}
+.floatingWrap {position:fixed;bottom:10px;width:100%;z-index:1; height: 50px;}
+#fltMenu_noti {position:absolute;top:-44px;width:100%;padding:10px 0 10px 10px;background:#fff;text-align: center;padding-right:30px;}
+#fltMenu_noti span.send_con.gray {float:left;color:#fff; font-size: 12px;background:#dedede; border-radius: 10px; padding:3px 10px;}
+#fltMenu_noti span.note {color:#888;}
+#fltMenu_wr {padding:10px;background:#f2f2f2;border-top:#e1e1e1 solid 1px;}
+.msg_wr {display:table; width:100%;}
+.msg_wr > span {display:table-cell; vertical-align:top;padding-left:10px;}
+.msg_wr > span:first-child {padding-left:0;width:35px;height:35px;}
+.msg_wr > span:last-child {width:80px;}
+.smile {position:relative; display:block;width:cals()}
+.smile a.btn_smilekey {position:absolute; right:0; top:0; display:block; width:33px; height:33px; text-indent:-9999px; background:url('../../../content/nhbank/images/ch/icon_smile.png') 50% 50% no-repeat; background-size:16px 16px;}
+.msg_wr > span .inp01 {width:100%;background:#fff;padding-right:30px;}
+.msg_wr > span .btn_send {display:inline-block;padding:9px 15px;margin-left:5px;border-radius:5px;font-weight:bold;background:#3598db;font-size:13px;color:#fff;}
+.inp01 {padding:2px;height:35px; line-height:35px;border:1px solid #ccc; background:#929292;}
+.msg_wr > span:first-child label {margin-bottom:0;}
+
+.chat_layout ul {display:table;width:100%;margin-bottom:5px;}
+.chat_layout ul li {display:inline-block; zoom:1; position:relative;}
+.msg_right > ul > .customer {margin-right:10px;}
+.msg_right > ul > .customer:before {content:""; position:absolute; left:99%; top:24%; width:0; height:0; border-top:5px solid transparent; border-left:10px solid #dedede; border-bottom:5px solid transparent;}
+.msg_left > ul > .nh_consult {margin-left:10px;}
+.msg_left > ul > .nh_consult:after {content:""; position:absolute; right:99%; top:24%; width:0; height:0; border-top:5px solid transparent; border-right:10px solid #ffcc00; border-bottom:5px solid transparent;}
+
+/*추후수정*/
+.msg_left > ul > li {vertical-align:top;}
+.msg_left > ul > li > img {width:50px; height:50px; padding-top:0px;}
+
+/*채팅상담창 기본 UI - 슬라이드메뉴 노출*/
+.chat_slidemenuBg {display: none;position: fixed;top: 100px;left: 0; width: 100%;height: 100%;background: #000;opacity: 0.6;filter: alpha(opacity=60);z-index: 99;}
+#chat_slidemenu {display:none; overflow: hidden;position: fixed;top: 100px;bottom: 0;left: 101%;width: 100%;background: #000;opacity: 0.6;filter: alpha(opacity=80);z-index: 1000;padding:10px 0;}
+#chat_slidemenu a {padding:5px 16px 5px 17px;display:inline-block;}
+
+
+/* 나의상담내역 */
+.chat_mylist_f {font-size:14px;position:relative;margin:12px; padding:10px; background:#fff; border-bottom:1px solid #9d9e9f;}
+.chat_mylist_f span {width:65px;padding:3px 0;font-size:11px; text-align:center;background:#888;color:#fff;position:absolute; top:0; right:0;}
+.chat_mylist_i {font-size:14px;position:relative;margin:12px; padding:10px; background:#fff; border-bottom:1px solid #9d9e9f;}
+.chat_mylist_i img {width:50%;}
+.chat_mylist_i span {width:65px;padding:3px 0;font-size:11px; text-align:center;background:#1cbbb4;color:#fff;position:absolute; top:0; right:0;}
+.chat_mylist_i .date, .chat_mylist_f .date{font-size:11px;margin-top:10px;}
+
+.chat_smy {display:block;overflow:hidden;}
+.chat_smy ul {display:table;width:100%;margin-bottom:5px;}
+.chat_smy ul li {display:table-cell;width:25%;text-align:center;}
+.chat_smy ul li span.all {display:block;height:100%;font-size: 14px;background:#169698;color:#fff;font-size:13px;padding:15px 0 10px;}
+.chat_smy ul li span.final {display:block;height:100%;font-size: 14px;background:#18ada6;color:#fff;font-size:13px;padding:15px 0 10px;}
+.chat_smy ul li span.ing {display:block;height:100%;font-size: 14px;background:#1cbbb4;color:#fff;font-size:13px;padding:15px 0 10px;}
+.chat_smy ul li p {padding:30px;color:#333;font-size:35px;}
+.chat_smy ul li p.ing {padding:30px;color:#fff;background-position:15px 18px;background:url('../../../content/nhbank/images/ch//chat_ing_bg.png');background-size:78px auto;-webkit-background-size:78px auto;background-repeat:no-repeat; background-position:50% 50%;}
+.chat_mylist {border:solid 1px #ccc;}
+
+
+
+/* ****************************************************************
+ 이미지버튼 / Button
+ **************************************************************** */
+.btImg {display:block;overflow:hidden;background-image:url('../../../content/nhbank/images/ch/btn_icon.png');background-size:125px auto;-webkit-background-size:125px auto;background-repeat:no-repeat;}
+.btImg span {display:block;overflow:hidden;position:relative;width:0;height:0;font-size:0;z-index:-1}
+.btImg.allMenu {width:19px; height:24px; background:url('../../../content/nhbank/images/ch/btn_gnb.png') no-repeat 0 0px;background-size: cover;}
+.btImg.prev {width:38px; height:38px;background:url('../../../content/nhbank/images/ch/btn_prev.png') no-repeat 0 0px;background-size: cover;}
+.btImg.close {width:38px; height:38px; background: url('../../../content/nhbank/images/ch/btn_close01.png') no-repeat 0 0;background-size: cover;}
+.btImg.close2 {width:38px; height:38px; background-position:0 -42px;}
+.btImg.lyClose {width:41px;height:41px; background:url('../../../content/nhbank/images/ch/btn_close.png') no-repeat 0 0px;background-size: cover;}
+.btImg.lyClose2 {width:25px;height:25px;background-position:-85px -50px;}
+.btImg.chatbg {width:61px;height:67px;background-position:0 -87px;}
+
+.btnS {display:inline-block;padding:10px 25px;border-radius:5px;font-weight:bold;background:#3598db;font-size:16px;color:#fff;}
+.btnS_chat {display:inline-block;margin:5px 5px 0 0;padding:6px 15px;border-radius:5px;font-weight:bold;background:#3598db;font-size:13px;color:#fff;}
+.btnPop {display:inline-block;margin-top:10px; border-radius: 5px;height:100%;background:#fff;color:#3598db;border:1px solid #3598db; font-size:13px;padding:10px;letter-spacing:-1px;}
+.btnPop.type2 {font-weight: bold;background:#3598db;color:#fff;}
+.btnWrap {overflow:hidden;padding:10px;text-align:center;}
+.btnWrap.type2 {padding:20px 0 0;}
+.btnWrap02 {overflow:hidden;margin:15px 0 17px;padding:0;text-align:center;}
+
+.btnS_note {margin-top:20px;display:inline-block;padding:8px 5px;
+    border-top-left-radius:5px;
+    border-top-right-radius:0;
+    border-bottom-right-radius:0;
+    border-bottom-left-radius:5px;
+    font-weight:bold;background:#dedede;font-size:10px;color:#666; letter-spacing:-1px;}
+.btnS_note2 {display:inline-block;padding:8px 20px 8px 5px;
+    border-top-left-radius:0;
+    border-top-right-radius:5px;
+    border-bottom-right-radius:5px;
+    border-bottom-left-radius:0;
+    font-weight:bold;font-size:10px;color:#fff;letter-spacing: -1px;
+    background:#2aa9c5 url('../../../content/nhbank/images/ch//icon_arrow.png') 90% 50% no-repeat;background-size:10px auto;-webkit-background-size:10px auto;}
+.btnS_note_time {display:block;color:#888; font-size: 12px; padding:5px;text-align: right;}
+
+/* ****************************************************************
+    Layer Popup (alert)
+**************************************************************** */
+#lyPopWrap {display:none;position:fixed;_position:absolute;top:0;left:0;width:100%;height:100%;z-index:10000;}
+#lyPopWrap .lyPopBg {position:absolute;top:0;left:0;width:100%;height:100%;background:#000;opacity:0.6;filter:alpha(opacity=60);}
+.lyPop {display:none;position:absolute;top:15%;left:0;background:#fff;border-radius:5px;border:1px solid #555;margin:2%;box-sizing:border-box;}
+.lyPop div {box-sizing:border-box;}
+.lyPop.type2 {display:none;position:none;top:43px;left:0px;background:#fff;border-radius:5px;border:1px solid #555; z-index:1001;}
+.lyPop.type2.left {z-index:1001; left:20px;}
+.lyPop.type3 {display:none;position:absolute;top:0;left:0;background:#fff;border-radius:5px;border:1px solid #555;}
+.lyPop .lyHeader {height :18px;padding:8px 0 9px;background:#46373a;color:#fff;font-size:15px;font-weight:bold;text-align:center;}
+.lyPop .lyContents {padding:20px 15px; font-size:12px;line-height:15px;font-weight:bold;text-align:center;}
+.lyPop.type2 .btImg.lyClose {position:absolute;top:-50px;left:50%;margin-left:-19px;}
+.lyPop .btImg.lyClose2 {position:absolute;top:15px;right:15px;}
+.lyPop .lyContents .ly_tit {padding-bottom:20px;border-bottom:1px solid #555; text-align:center;margin-bottom:15px;}
+.lyPop .lyContents .ly_tit.type2 {margin-bottom:0;}
+.lyPop .lyContents .ly_tit.type3 {text-align:left;}
+.lyPop .lyContents .ly_tit p {display:inline-block; font-size:18px;}
+.lyPop .lyContents .ly_con {overflow:hidden;background:#f1f2f4;text-align:left;padding:15px;}
+.lyPop .lyContents .ly_con p{font-size: 14px;color:#666;font-weight:normal;line-height: 18px;}
+.lyPop .lyContents .ly_con p strong{font-weight:bold;}
+
+.arrow_box_t {position: relative;background: #fff;border: 1px solid #fff;}
+.arrow_box_t:after, .arrow_box_t:before {bottom: 100%;left: 50%;border: solid transparent;content: " ";height: 0;width: 0;position: absolute;pointer-events: none;}
+.arrow_box_t:after {border-color: rgba(255, 255, 255, 0);border-bottom-color: #fff;border-width: 8px;margin-left: -8px;}
+.arrow_box_t:before {border-color: rgba(255, 255, 255, 0);border-bottom-color: #fff;border-width: 9px;margin-left: -9px;}
+
+.fc_point1 {color:#ff6600;}
+.btnS_chat > span {color:#fff;}
+#chat_icon {
+    display:none;
+    width:100%;
+    margin-top:10px;
+    border:solid 1px #ccc;
+    height:45px;
+    overflow:hidden;
+    padding:5px 30px;
+    box-sizing:border-box;
+    position:relative;
+    }
+#chat_icon .btnChat {position:absolute;}
+#chat_icon .btnChat img {width:15px;height:24px;}
+#chat_icon .btnChat.left {left:0;top:10px;}
+#chat_icon .btnChat.right {right:0;top:10px;}
+#chat_icon ul{position:absolute;left:30px;top:5px;width:100%;}
+#chat_icon ul li{display: inline-block;width:35px;text-align: center;padding-right:15px;}
+#chat_icon ul li a{display: inline-block;}
+#chat_icon ul li a img{width: 35px;height:35px;}
+.btn_more {text-align:center; background:#fff; margin:12px; padding:10px; border:solid 1px #ccc;}
+.btn_more a {display:block; line-height:20px; font-size:14px; color:3333; font-weight:bold;}
+#chat_slidemenu > a > img {width:60px; height:78px; max-width:60px; }
+
+/* 로딩이미지 사이즈 */
+.loadingbar > img {width:32px;height:32px;}
+
+/*2016-07-22 추가*/
+/*#header{position:fixed;top:0;left:0;z-index:90;}
+#container{margin-top:100px;}*/
+
+/*2017-06-28 추가*/
+.chat_smy ul li em {display:block;padding:30px;color:#333;font-size:35px;}
+.chat_smy ul li em.ing {padding:30px;color:#fff;background-position:15px 18px;background:url('../../../content/nhbank/images/ch/chat_ing_bg.png');background-size:78px auto;-webkit-background-size:78px auto;background-repeat:no-repeat; background-position:50% 50%;}
+
+.chat_mylist div > p{width:95%;}
+.chat_mylist .chat_mylist_i:after{content:'';display:block;background:url('../../../content/nhbank/nhbank/images/cn/icon/ic_link.png') center center no-repeat;background-size:9px 17px;width:9px;height:17px;position:absolute;right:10px;top:50%;margin-top:-5px;}
+.chat_mylist .chat_mylist_f:after{content:'';display:block;background:url('../../../content/nhbank/nhbank/images/cn/icon/ic_link.png') center center no-repeat;background-size:9px 17px;width:9px;height:17px;position:absolute;right:10px;top:50%;margin-top:-5px;}
+
+.btn_counsel{position:fixed; bottom:130px;right:10px;}
+.btn_counsel a{display:block;width:70px;height:70px;overflow:hidden;text-indent:-9999px;background:url('../../../content/nhbank/nhbank/images/ch/btn_consel.png') no-repeat;background-size:70px 70px;}
+
+.chat_bg .tab_area{background:#fff;}
+.chat_bg .tab_area > div a:first-child{width:50%;}
+
+.arrow_box{position:relative;}
+.arrow_box > textarea{position:relative;z-index:5;background:none;font-size:15px;}
+.arrow_box p{position:absolute;top:7px;left:7px;line-height:18px;color:#3c3c3c;z-index:1;}
+
+
+

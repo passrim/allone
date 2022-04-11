@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>외환 고객 등록</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="layerPop.open('.modalWrap', this); return false;">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header">
+					<h1 class="headerTitle">외환 고객 등록</h1>
+					<button type="button" class="btn closeBtn" id="fullClose">닫기</button>
+				</div>
+				<div data-role="content" class="modal-contents">
+					<!-- 181005 : page -> full pop page 마크업 전체 이동  -->
+					<section class="with-fixedBtn fullWidth">
+						<!-- 실명 번호  -->
+						<fieldset class="formWrap">
+							<legend>외환 고객 등록 정보</legend>
+							<label for="inputLabel1">실명번호</label> 
+							<ul class="columnSet socialnumInput">
+								<li>
+									<div class="numberInput">
+										<input type="tel" id="inputLabel1" placeholder="80****" class="formInput" maxlength="8" readonly="readonly" />
+									</div>
+								</li>
+								<li>
+									<label for="inputLabel2" class="visualHide">실명번호 뒷자리</label>
+									<div class="columnSet withGutter col-valign">
+										<input type="password" id="inputLabel2" placeholder="******" class="formInput" maxlength="8" readonly="readonly" />
+									</div>
+								</li>
+							</ul>
+							
+							<!-- 영문명 -->
+							<label for="inputLabel3">영문성명 <i class="required"></i></label> 
+							<div class="textInput">
+								<input type="text" id="inputLabel3" placeholder="영문이름 입력" class="formInput"  aria-required="true" name="" />
+							</div>
+							
+							<!-- 영문주소 -->
+							<label for="inputLabel4">영문주소 <i class="required"></i></label> 
+							<div class="textInput">
+								<input type="text" id="inputLabel4" aria-required="true" placeholder="주소입력" class="formInput" name="" />
+								<input type="text" id="inputLabel5" placeholder="나머지주소 입력" class="formInput" name="" /><!-- 0913 : 접근성 레이블 제공 -->
+							</div>
+							
+							<label for="inputLabel6">외환거래법거주구분</label> 
+							<ul class="columnSet noGutterSet">
+								<li class="colItem">
+									<input type="radio" value="(국내)거주자" name="residential" id="autoTrue" class="btn radioToggle" checked="checked">
+									<label for="autoTrue" class="inputLabel secondary strokeType">(국내)거주자</label>
+								</li>
+								<li class="colItem">
+									<input type="radio" value="(국내)비거주자" name="residential" id="autoFalse" class="btn radioToggle">
+									<label for="autoFalse" class="inputLabel secondary strokeType">(국내)비거주자</label>
+								</li>
+							</ul>
+							<ul class="columnSet columnSet-valign withGutter leftedColumn mgT5">
+								<li class="fieldNotes normal-info">거주성의 판정기준표</li>
+								<li> <button type="submit" class="btn secondary subSmallType">자세히</button></li>
+							</ul>
+
+							<label for="selectLabel1">국적 <i class="required"></i></label>
+							<div class="select-input">
+								<select id="selectLabel1" class="formInput" aria-required="true">
+									<option value="default" label="선택">선택</option>
+									<option value="option2" label="option2">Option2</option>
+									<option value="option3" label="option3">Option3</option>
+									<option value="option4" label="option4">Option4</option>
+								</select>
+							</div>
+							<label for="selectLabel2">외환우편발송처 <i class="required"></i></label>
+							<div class="select-input">
+								<select id="selectLabel2" class="formInput" aria-required="true">
+									<option value="default" label="자택">자택</option>
+									<option value="option2" label="직장">직장</option>
+									<option value="option3" label="기타">기타</option>
+								</select>
+							</div>
+							<label for="selectLabel3">거래주체구분  <i class="required"></i></label>
+							<div class="select-input">
+								<select id="selectLabel3" class="formInput" aria-required="true">
+									<option value="default" label="개인기타">개인기타</option>
+									<option value="option2" label="국외개인기타">국외개인기타</option>
+								</select>
+							</div>
+						</fieldset>
+					</section>
+
+					<button type="submit" class="btn primary submit selfBottom">완료</button>
+
+				</div>
+			</div>
+		</div>
+		<!-- //fullPopup -->
+
+	</body>
+</html>

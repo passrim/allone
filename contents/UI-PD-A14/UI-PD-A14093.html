@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>거주성의 판정기준표</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+					//레이어 팝업 샘플 이벤트
+					layerPop.open('.modalWrap', '.layerOpenBtnSample');
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<header id="header" class="header menu-container"></header>
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="with-fixedBtn">
+						<div style="width:100%; height:900px; background:#ddd"></div>
+					</section>
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="button" class="btn primary submit layerOpenBtnSample" onclick="javascript:void(0);">팝업 열기</button></li>
+					</ul>
+				</div>
+			</div>
+			<footer id="footer"></footer>
+		</div>
+		<!-- //#wrap -->
+
+		<!-- fullPopup -->
+		<div class="modalWrap" id="modalFull">
+			<div class="modalFull">
+				<div class="header">
+					<h1 class="headerTitle">거주성의 판정기준표</h1>
+					<button type="button" class="btn closeBtn" id="fullClose">닫기</button>
+				</div>
+				<div data-role="content" class="modal-contents with-fixedBtn">
+					<section class="with-fixedBtn">
+						<ul class="unorderList">
+							<li>1. <strong>원칙</strong>
+								<ul>
+									<li>1. 거주자 <br />
+										- 대한민국내에 주소 또는 거소를 둔 개인 및 주된 사무소를 둔 법인
+									</li>
+									<li>2. 비거주자 <br />
+										- 거주자외의 개인 및 법인
+									</li>
+								</ul>
+							</li>
+							<li>2. <strong>대한민국 국민</strong>
+								<ul>
+									<li>1. 거주자 <br />
+										- 대한민국 재외공관에서 근무할 목적으로 외국에 파견되어 체재하고 있는 자<br />
+										- 비거주자이었던 자로 입국하여 국내에 3개월 이상 체재하고 있는 자
+									</li>
+									<li>2. 비거주자 <br />
+										- 외국에서 영업활동에 종사하고 있는 자<br />
+										- 외국에 있는 국제기구에서 근무하고 있는 자<br />
+										- 2년이상을 외국에 체재하고 있는 자, 이 경우 일시 귀국의 목적으로 귀국하여 3개월 이내의 기간동안 체재한 경우 그 체재기간은 2년 포함.
+									</li>
+								</ul>
+							</li>
+							<li>3. <strong>외국인</strong>
+								<ul>
+									<li>1. 거주자 <br />
+										- 국내에서 영업활동에 종사하고 있는 자<br />
+										- 6개월 이상 국내에서 체재하고 있는 자
+									</li>
+									<li>2. 비거주자 <br />
+										- 국내에 있는 외국정보의 공관 또는 국제기구에서 근무하는 외교관, 영사 또는 그 수행원이나 사용인<br />
+										- 외국정보 또는 국제기구의 공무로 입국하는 자<br />
+										- 거주자였던 외국인이 출국하여 외국에서 3개월 이상 체재중인 자
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<button type="submit" class="btn primary submit selfBottom" onclick="layerPop.close('.modalWrap');return false;">확인</button>
+
+				</div>
+			</div>
+		</div>
+		<!-- //fullPopup -->
+
+	</body>
+</html>

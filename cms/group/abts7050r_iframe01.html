@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>NH손해보험 상품소개 배너 슬라이더</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="../../assets/dist/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/styles/cms.css">
+	<script type="text/javascript" src="../../assets/dist/js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="../../assets/dist/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../../assets/dist/js/jquery.ui.touch-punch.min.js"></script>
+	<script type="text/javascript" src="../../assets/dist/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../assets/js/common.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			var widthSize = $('body').width();
+			var swiper = new Swiper('.app_banner', {
+				loop: true,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true
+				}, 
+				paginationClickable:true,
+				width:widthSize
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<div class="content">
+		<div class="swiper-container app_banner">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a href="javascript:;" class="eventBanner defaultBanner" onclick="javascript:parent.webcall_a('https://m.nhfire.co.kr/mhwr/direct/html/main/main.html','1');return false;" style="background-color: #fff;" title="NH농협손해보험 다이렉트 마음을 헤아리는 가장 가까운 보험"><img src="../../assets/img/cms/group/nh_insurance_direct_banner01.jpg" alt="NH농협손해보험 다이렉트 마음을 헤아리는 가장 가까운 보험" /></a>
+				</div>	
+				<div class="swiper-slide">
+					<a href="javascript:;" class="eventBanner defaultBanner" onclick="javascript:parent.webcall_a('https://m.nhfire.co.kr/mhwr/web/html/main/main.html','2');return false;" style="background-color: #fff;" title="지문,홍채,PIN으로 공인인증서가 없어도 OK"><img src="../../assets/img/cms/group/nh_insurance_direct_banner02.jpg" alt="지문,홍채,PIN으로 공인인증서가 없어도 OK" /></a>
+				</div>
+				<div class="swiper-slide">
+					<a href="javascript:;" class="eventBanner defaultBanner" onclick="javascript:parent.webcall_a('https://m.nhfire.co.kr/mhwr/direct/html/simple/simpleFixed01.html?menuId=M700000300','3');return false;""    style="background-color: #fff;" title="NH농협손해보험 다이렉트 주택화재보험 (아파트에한함) 우리 집을 화재위험으로부터 보호하세요."><img src="../../assets/img/cms/group/nh_insurance_direct_banner03.jpg" alt="NH농협손해보험 다이렉트 주택화재보험 (아파트에한함) 우리 집을 화재위험으로부터 보호하세요." /></a>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</div>
+</body>
+</html>
+

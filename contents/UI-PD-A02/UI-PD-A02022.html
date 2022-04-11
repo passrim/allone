@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>마이올원 - 제휴서비스 사용/해지</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+				
+				$('.graphBase').each(function(){
+					$(this).find('.graphActive').animate({
+						width:$(this).attr('data-percent')
+					}, 3000);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content" data-role="content">
+					<section class="no-fixed fullWidth endService">
+						<ul class="boardList justify">
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">TOSS</span>
+										<span class="dataTxt tInfo fz-14 blueOn">사용중</span>
+									</div>
+									<div class="objCon">
+										<span class="dataTxt tCon">편리하고 안전한 대표적인 송금서비스</span>
+									</div>
+								</div>
+								<div class="boxFoot posRight">
+									<button type="button" class="btn secondary strokeType subSmallType">바로가기</button>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">바코드(엠틱) 결제</span>
+										<span class="dataTxt tInfo fz-14 blueOn">사용중</span>
+									</div>
+									<div class="objCon">
+										<span class="dataTxt tCon">지갑 없이도 휴대폰만 있으면 결제 <em class="dp-inblock">가능한 엠틱결제 서비스</em></span>
+									</div>
+								</div>
+								<div class="boxFoot posRight">
+									<button type="button" class="btn secondary strokeType subSmallType">바로가기</button>
+									<button type="button" class="btn secondary strokeType subSmallType">가입해지</button>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">캐시비</span>
+										<span class="dataTxt tInfo fz-14 blueOn">사용중</span>
+									</div>
+									<div class="objCon">
+										<span class="dataTxt tCon">전국 어디서나 올원뱅크 캐시비 하나면 끝!</span>
+									</div>
+								</div>
+								<div class="boxFoot posRight">
+									<button type="button" class="btn secondary strokeType subSmallType">바로가기</button>
+									<button type="button" class="btn secondary strokeType subSmallType">가입해지</button>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">모바일 쿠폰(기프티쇼)</span>
+										<span class="dataTxt tInfo fz-14 redOn">미사용</span>
+									</div>
+									<div class="objCon">
+										<span class="dataTxt tCon">친구, 지인들에게 모바일 쿠폰 선물</span>
+									</div>
+								</div>
+								<div class="boxFoot posRight">
+									<button type="button" class="btn secondary strokeType subSmallType">바로가기</button>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">농산물장터(농협몰)</span>
+										<span class="dataTxt tInfo fz-14 redOn">미사용</span>
+									</div>
+									<div class="objCon">
+										<span class="dataTxt tCon">최고의 품질과 합리적인 가격의 농축산물</span>
+									</div>
+								</div>
+								<div class="boxFoot posRight">
+									<button type="button" class="btn secondary strokeType subSmallType">바로가기</button>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">올원 <span class="kona"></span>코나카드 </span>
+										<span class="dataTxt tInfo fz-14 redOn">미사용</span>
+									</div>
+									<div class="objCon">
+										<span class="dataTxt tCon">연회비 NO, 신용조회 NO, 제휴사 할인혜택!</span>
+									</div>
+								</div>
+								<div class="boxFoot posRight">
+									<button type="button" class="btn secondary strokeType subSmallType">바로가기</button>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">쉐어하우스</span>
+										<span class="dataTxt tInfo fz-14 redOn">미사용</span>
+									</div>
+									<div class="objCon">
+										<span class="dataTxt tCon">우리 같이 살아볼까요?<br>사람과 사람이 만나는 공간 쉐어하우스</span>
+									</div>
+								</div>
+								<div class="boxFoot posRight">
+									<button type="button" class="btn secondary strokeType subSmallType">바로가기</button>
+								</div>
+							</li>
+							<li>
+								<div class="boxHead">
+									<div class="objHead">
+										<span class="dataTxt tName">HOT!잇템!</span>
+										<span class="dataTxt tInfo fz-14 redOn">미사용</span>
+									</div>
+									<div class="objCon">
+										<span class="dataTxt tCon">저렴한 가격으로 타임세일 및 기획전!</span>
+									</div>
+								</div>
+								<div class="boxFoot posRight">
+									<button type="button" class="btn secondary strokeType subSmallType">바로가기</button>
+								</div>
+							</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

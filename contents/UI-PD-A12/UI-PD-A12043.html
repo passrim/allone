@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<title>총무변경</title>
+		<script type="text/javascript" src="../guide_include/head.js"></script><!-- 개발시 재작업 바랍니다.-->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				(function(){
+					var loginFlag = false;
+					includePub.init("header_type01", loginFlag);//개발시 삭제
+					Layout.init({ loginFlag : loginFlag});
+				})();
+			});
+		</script>
+	</head>
+	<body>
+		<!-- #wrap -->
+		<div id="wrap">
+			<!-- #header -->
+			<header id="header" class="header menu-container"></header>
+			<!-- //#header -->
+
+			<!-- #container -->
+			<div id="container">
+				<div class="content alloneMeeting" data-role="content"> <!-- Category Class : alloneMeeting -->
+					<section class="fullWidth">
+						<div class="sectionWrap mgT0">
+							<div class="search tag">
+								<label for="f_search" class="visualHide">검색조건</label>
+								<input type="text" id="f_search" placeholder="멤버 검색" class="formInput search-input">
+								<button type="button" class="btn deleteBtn">삭제</button>
+								<button type="submit" class="btn searchBtn" name="">조회</button>
+							</div>
+						</div>
+					</section>
+
+					<section class="fullWidth with-fixedBtn topbordered">
+						<ul class="formList fullSelect meetMember">
+							<li>
+								<div class="objForm radioBtn inline withLabel">
+									<input type="radio" id="ch_select01_02" name="ra_select" disabled="disabled">
+									<label for="ch_select01_02">
+										<span class="tName">홍길동</span>
+										<span class="icon_leader"><span class="visualHide">총무</span></span>
+										<span class="tDate">가입 2018-2-13</span>
+									</label>
+								</div>
+							</li>
+							<li>
+								<div class="objForm radioBtn inline withLabel">
+									<input type="radio" id="ch_select01_03" name="ra_select">
+									<label for="ch_select01_03">
+										<span class="tName">김올리</span>
+										<span class="tDate">가입 2018-2-13</span>
+									</label>
+								</div>
+							</li>
+							<li>
+								<div class="objForm radioBtn inline withLabel">
+									<input type="radio" id="ch_select01_03" name="ra_select">
+									<label for="ch_select01_03">
+										<span class="tName">홍길동</span>
+										<span class="tDate">가입 2018-2-13</span>
+									</label>
+								</div>
+							</li>
+						</ul>
+					</section>
+
+					<ul class="columnSet selfBottom">
+						<li class="colItem"><button type="submit" class="btn primary submit">총무변경</button></li>
+					</ul>
+
+
+				</div>
+			</div>
+			<!-- //#container -->
+
+			<!-- #footer -->
+			<footer id="footer"></footer>
+			<!-- //#footer -->
+		</div>
+		<!-- //#wrap -->
+
+	</body>
+</html>

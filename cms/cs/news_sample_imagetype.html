@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>새소식 샘플 타입</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="../../assets/css/styles/cms.css">
+	<script type="text/javascript" src="../../assets/dist/js/jquery-1.9.1.min.js"></script>
+	<!-- 유튜브 등 동영상 관련 이벤트가 들어갈 시 해당 스크립트를 입력 -->
+	<script>
+        function urlCallback() {
+	   		var url = "https://youtu.be/zyseOMbtH_I";
+			window.parent.moveOtherPage(url,"NH이벤트&유준호 드라마");
+   		 }
+	 </script>
+	
+</head>
+<body>
+	<!-- 새소식 상세 박스 시작  -->
+	<div class="eventDesc">
+		<!-- 새소식 상세 컨텐츠 시작  -->
+		<div class="rowSet">
+		
+			<img src="../../assets/img/cms/etc/cms_event_sample_cut1.png" alt="" />
+			<img src="../../assets/img/cms/etc/cms_event_sample_cut2.png" alt="" />
+			<img src="../../assets/img/cms/etc/cms_event_sample_cut3.png" alt="" />
+			
+			<!-- 새소식 관련 **이미지에 링크**를 거는 경우 -->
+			<a href="#" onclick="javascript:parent.fn_goAllOnePage('ABFL9046R');return false;"><img src="../../assets/img/cms/etc/cms_event_sample_cut4.png" alt="이미지 타이틀"></a>
+
+			<!-- 새소식 관련 **동영상 링크**를 거는 경우 -->
+			<a href="#" onclick="urlCallback();"><img src="../../assets/img/cms/etc/cms_event_sample_cut4.png" alt="이미지 타이틀"></a>
+			
+			<!-- 새소식 관련 이동 버튼 색상이 그레이 바탕색일때-->
+			<button type="submit" onclick="javascript:parent.fn_goAllOnePage('ABFL9046R');return false;" class="btn secondary-gray" >모바일쿠폰 바로가기</button>
+			
+			<!-- 새소식 관련 이동 버튼 색상이 화이트  바탕색일때-->
+			<button type="submit" onclick="javascript:parent.fn_goAllOnePage('ABFL9046R');return false;" class="btn secondary" >모바일쿠폰 바로가기</button>
+
+		</div>
+		<!-- // 이벤트 상세 컨텐츠 끝  -->
+	</div>
+	<!-- // 이벤트 상세 박스 끝  -->
+</body>
+</html>
