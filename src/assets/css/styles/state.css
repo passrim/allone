@@ -1,0 +1,205 @@
+@charset "utf-8";
+/* ////////////////////////////////////////////////
+
+	** CSS는 기본적으로 Skin + Structure의 형태로 분리
+	*** Skin은 스타일 즉, 겉으로 보여지는 형태
+	*** Structure는 보이지 않는 골격의 형태 (Grid, Layout 등)
+
+	1. clear
+	2. display
+	3. visibility
+	4. on - off
+	5. current
+	5. active - inacitve :: js on-off
+	5. able - disable
+	5. current
+	5. current
+
+//////////////////////////////////////////////// */
+
+/* //////////////// 1. clear ////////////////*/
+.is-clear::after {content: ''; display: table; clear: both;}
+
+/* //////////////// 2. display ////////////////*/
+.dp-block {display: block !important;}
+.dp-none {display: none !important;}
+.dp-inblock {display: inline-block !important;}
+
+/* //////////////// 3. visibility ////////////////*/
+.vb-hidden {visibility: hidden !important;}
+.vb-visible {visibility: visible !important;}
+.no-transform {-webkit-transform: none; transform: none;}
+
+.op-on {opacity: 0; -webkit-transition: all .5s ease-in; transition: all .5s ease-in; z-index: -1;}
+.op-off {opacity: 1; -webkit-transition: all .5s ease-in; transition: all .5s ease-in;}
+
+/* for form label */
+.visualHide {border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px;}
+
+/* //////////////// 4. on - off ////////////////*/
+.is-on {background-color: #fff; border: 1px solid #12a396; color: #12a396;}
+.is-off {background-color: #fff; border: 1px solid #d7d7d7;}
+.is-off::before {color: #222;}
+
+.is-added {color: #f5e100;}
+.is-on sup {color: #12a396;}
+
+/* gnb set */
+.gnb-nav .is-active {color: #3ea1b3;}
+.is-lnbon {height: 100% !important; visibility: visible !important; overflow-y: auto;}
+.is-open {-webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); z-index: 2;}
+
+/* margin 0 auto + 개별 클래스에 width값 커스터마이징*/
+.boxCenter {position:relative; margin:0 auto;}
+
+/* tab module */
+.tabNav .is-on {background-color: #fff; color: #12a396; border: none; border-bottom: 2px solid #12a396;}
+.tabNav .is-on a,
+.tabNav .is-on a span {color: #12a396;}
+
+/* //////////////// 5. current ////////////////*/
+.is-current {display: block;}
+.columnSet.is-current {display: flex};
+	
+/* //////////////// 6. active - inacitve :: js on-off ////////////////*/
+/* slideModal nav */
+.slideModal li.active {background: #e2ede9;}
+.slideModal li.active::after {font-family: 'test'; content:'\e93e'; font-size: 24px; color: #12a396; position: absolute; top: 50%; right: 12px; -webkit-transform: translateY(-50%); transform: translateY(-50%);}
+
+
+/* accordion */
+.accordion li > dl > dt.js-active a {border-bottom: 1px solid #e0e0e0 !important;}
+.accordion li > dl > dt.js-active::after {content: '\e977';}
+
+/* //////////////// 7. able - disable ////////////////*/
+input:disabled,
+input:read-only,
+textarea:disabled,
+select:disabled {background-color: #f9f9f9; color: #222; border-bottom: 1px solid #f3f3f3;}
+button:disabled {background-color: #e0e0e0; color: #959595; border: none;}
+
+input[type="text"]:disabled,
+input[type="tel"]:disabled,
+input[type="number"]:disabled,
+input[type="password"]:disabled,
+input[type="search"]:disabled,
+input[type="text"]:read-only,
+input[type="tel"]:read-only,
+input[type="number"]:read-only,
+input[type="password"]:read-only,
+input[type="search"]:read-only {-webkit-text-fill-color: #222; opacity: 1;}
+.formInput:read-only::-webkit-input-placeholder,
+.formInput:disabled::-webkit-input-placeholder,
+.formInput:read-only::-webkit-input-placeholder,
+.formInput:disabled::-webkit-input-placeholder {-webkit-text-fill-color: #959595; font-size: 16px;}
+
+.select-input select:disabled {background-color: #f9f9f9 !important; z-index:10 !important; -webkit-text-fill-color: #959595; opacity: 1;}
+.select-input select:disabled::after {color: #222; z-index:20 !important;}
+.select-input.disabled::after {z-index:20 !important;}
+
+input[type="checkbox"]:disabled,
+input[type="checkbox"]:read-only {background-color: transparent; border: none;}
+input[type="checkbox"]:disabled + label::before,
+input[type="checkbox"].readOnly + label::before,
+input[type="radio"]:disabled + label::before,
+input[type="radio"].readOnly + label::before {background-color: #f9f9f9; border: 1px solid #e0e0e0;}
+input[type="checkbox"]:disabled + label::after,
+input[type="checkbox"]:read-only + label::after {color: #e0e0e0;}
+
+input[type="checkbox"].readOnly:checked + label::before,
+input[type="checkbox"]:disabled:checked + label::before {border-color:#d0edea; background-color: #d0edea;}
+input[type="radio"].readOnly:checked + label::before {border-color:#e0e0e0; background-color: #e0e0e0;}
+input[type="checkbox"].readOnly:checked + label::after {color: #fff;}
+
+.accountBalance input[type="checkbox"]:read-only + label::after {color: #ff4848;}
+
+.radioToggle:disabled,
+.radioToggle:read-only,
+.stats .btn.prevBtn:disabled,
+.stats .btn.nextBtn:disabled {background-color: transparent; border: none;}
+
+.stats .btn.prevBtn:disabled::after,
+.stats .btn.nextBtn:disabled::after {color: #e3e3e3;}
+
+.msgBox li button:disabled, 
+.msgBox li button:disabled:hover {background-color: #f5f5f5;}
+.msgBox li button:disabled::after {color: #959595;}
+
+.pinNumWrap input:disabled,
+.pinNumWrap input:read-only {background-color: transparent; border: none;}
+
+.calendar > .search-input:disabled,
+.calendar > .search-input:read-only {background: transparent; color: #222;}	
+
+.accountList ul li > .search .confirm-btn:disabled {background: transparent; color: #12a396;}
+/* 챗봇 계좌선택 */
+.disabled .accountList-slide > .swiper-slide::after {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; background-color: rgba(0,0,0,0.3); border-radius: 10px;}
+
+/* 주소록 아이콘 */
+.btn.searchAddrBtn:disabled:after {background-color: #fff;}
+.balance.disabled::after {color: #959595;}
+	
+/* //////////////// 8. focused ////////////////*/
+input:not([type='radio']):focus,
+select:focus,
+.focused {border-bottom: 1px solid #12a396;color: #12a396;}
+.balance-input:focus {color: #12a396;}
+
+ul[class$="Search"] .formInput:focus,
+.msgBox input[type="text"]:focus {border-bottom: 1px solid #bdbdbd;}
+
+input:disabled:focus,
+input:read-only:focus,
+select:disabled:focus,
+select:read-only:focus {border-bottom: 1px solid #f3f3f3; color: #222}
+
+.helpTooptip:focus,
+.helpTooptip:active {border: 0; padding: 0;}
+
+/* buttons */
+.primary:focus {border-bottom: none;}
+.primary.cancel:focus{color: #222;}
+.primary.cancel:active,
+.primary.cancel:hover {color: #222;}
+.primary:disabled:hover {background-color: #f5f5f5; color: #959595;}
+
+.login_btnBox .primary.submit:active,
+.login_btnBox .primary.submit:hover {color: #fff;}
+
+.secondary-gray:disabled:hover {background-color: #f5f5f5; color: #959595;}
+.action-btn:focus,
+.showMore .moreBtn:focus {border-bottom: none; outline: none;}
+
+.underline:focus,
+.underline:active,
+.underline:hover {text-decoration: underline;}
+/* //////////////// 9.selected ////////////////*/
+.radioToggle:checked + label {border: 1px solid #222; color: #222; z-index:199;}
+
+.noGutterSet .colItem {margin-left:-1px;} /* 이하나 [18.06.28] 라디오 no Gutter border :: 공통 디자인 컨펌 후 스타일 코딩 */
+.noGutterSet .colItem:first-child {margin-left:0;}
+.radioToggle + label {position:relative; z-index:100;}
+
+.svgBtn {position:relative;} /* 이하나 [18.06.29] 기간조회Set :: 공통 디자인 컨펌 후 스타일 코딩 */
+.svgBtn input[type="checkbox"] {position:relative; display:block; width:100%; height:100%; box-sizing:border-box; margin:0; border:1px solid #d7d7d7;}
+.svgBtn input[type="checkbox"]::after {display:inline-block; width:100%; height:100%; font-family: 'allonebank'; text-indent: 0; line-height: 1; text-align:center;}
+.svgBtn input[type="checkbox"]:checked {border:1px solid #12a396;}
+.svgBtn input[type="checkbox"]:checked::after {color:#12a396;}
+.svgBtn input[type="checkbox"] + label {position:absolute; display:block; left:0; top:0; width:100%; color:transparent;}
+
+input.navBtn:focus {border-bottom: none; color: #222;}
+
+/* 공인인증서 선택 */
+.authFrame .certifications li a.selected {}
+
+/* //////////////// 10. error ////////////////*/
+.invaildError > input{border-bottom: 1px solid #e60026;}
+.invaildError + .fieldNotes {color: #e60026; display: block; padding: 5px; font-size: 12px; position: relative; line-height: 1.4;}
+.invaildError + .fieldNotes .i-error {position: absolute; top: 7px; left: 0; font-size: 14px; color: #e60026; margin-right: 2px;}
+.fieldNotes.normal-info {position:relative; font-size: 12px; line-height:16px; padding:5px 5px 5px 0; color: #666;}
+.fieldNotes.normal-info i {font-size: 14px; color: #666;}
+.fieldNotes.normal-info .i-error {position: absolute; top: 7px; left: 1px; font-size: 14px; }
+ .balance + .withGutter + .fieldNotes.normal-info {padding-top: 10px;}
+/* //////////////// 11. failed ////////////////*/
+/* //////////////// 12. success ////////////////*/
+
